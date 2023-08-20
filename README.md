@@ -1,5 +1,7 @@
 # CARRO NA MÃO
 
+![Logo](/docs/img/Logo.jpeg)
+
 `ANÁLISE E DESENVOLVIMENTO DE SISTEMAS`
 
 `Projeto: Desenvolvimento de uma Aplicação Distribuída`
@@ -16,7 +18,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 * Maykon Edésio Rosa
 * Pedro Assis de Almeida
 * Roger Bastos Mendes
-* Victor Hugo Silva Ribeiro
+* Vitor Hugo Silva Ribeiro
 
 ## Orientador
 

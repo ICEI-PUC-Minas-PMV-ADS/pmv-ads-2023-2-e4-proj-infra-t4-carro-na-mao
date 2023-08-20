@@ -16,21 +16,23 @@ Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thin
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+A aplicação "Carro na Mão", tem como objetivo dar maior eficiência no processo de locação e validação dos dados dos locatários de veículos, para que torne um processo mais ágil e transparente para cada cliente, sem comprometer a experiência de uso. 
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+> **Como objetivos específicos, podemos ressaltar:** 
+
+> -Transparência, agilidade e modernidade; 
+
+> -Apresentação do bloqueio de cada usuário; 
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+De acordo com o Reclame aqui, muitos usuários estão insatisfeitos por supostamente alugarem um veículo, mas ao chegar no momento da retirada do mesmo, ser informado que estava “bloqueado” e não conseguir retirar o veículo. 
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+>“Alugo carro com a LOCALIZA a anos, inclusive fiz uma viagem utilizando carro da mesma em maio de 2022. No mês de julho eu fiz uma reserva e me programei para fazer mais uma viagem, chegando lá a atendente me informou que eu estava bloqueada e que só em 180 dias para eu tentar novamente! Me causando um prejuízo absurdo, com chalé alugado e tudo mais. Na segunda feira eu liguei pra saber o que tinha acontecido, me foi informado que bloqueou porque acusou restrições, sem mais nenhuma explicação e nem porquê. Conferi tudo se eu tinha levado alguma multa e não tinha nada! A localiza era a única locadora que eu tinha locado até então, tinha quase 2.000 pontos. Fiquei extremamente decepcionada.” (Reclame Aqui). 
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Além desta reclamação de exemplo, temos vários pontos onde podemos notar uma altíssima insatisfação do cliente, o que não tem benefício para nenhuma das duas partes, cliente e locadora. 
+
+Nestes conformes, este projeto busca ser uma aplicação ágil e transparente para seu cliente e com isto, ter uma ótima avaliação no mercado de locação de veículos. 
 
 ## Público-Alvo
 

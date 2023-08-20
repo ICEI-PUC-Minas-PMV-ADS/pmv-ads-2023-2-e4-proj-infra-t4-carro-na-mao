@@ -191,9 +191,13 @@ Com diagramas bem organizados que permitem gerenciar o tempo nos projetos, o ger
 
 ![Diagrama de rede simplificado notação francesa (método francês)](img/02-diagrama-rede-simplificado.png)
 
-O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utilizada para controlar e gerenciar o cronograma de atividades de um projeto. Com ele, é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las.
+O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utilizada para controlar e gerenciar o cronograma de atividades de um projeto. Com ele, é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las. A imagem a seguir e uma representação de como  ficara dividido as etapas do nosso projeto nesse semestre 
 
-![Gráfico de Gantt](img/02-grafico-gantt.png)
+![Gráfico de Gantt](img/gerenciador%20do%20projeto%20.png)
+
+Para gerir o projeto de uma maneira eficaz, iremos utilizar a ferramenta trello. Pois a mesma nos permite criar alertas de quando tempo falta para terminar cada tarefa, quem será o responsável por executar a Task e categorizar as atividades. Abaixo a imagem de como está atualmente o trello da equipe. 
+
+![Trello equipe](img/trello%20proj.png)
 
 ## Gerenciamento de Equipe
 
@@ -203,6 +207,19 @@ O gerenciamento adequado de tarefas contribuirá para que o projeto alcance alto
 
 ## Gestão de Orçamento
 
-O processo de determinar o orçamento do projeto é uma tarefa que depende, além dos produtos (saídas) dos processos anteriores do gerenciamento de custos, também de produtos oferecidos por outros processos de gerenciamento, como o escopo e o tempo.
+Os valores dos custos do projeto foram calculados com a estimativa de tempo de quatro meses, utilizando sete profissionais. Qualquer alteração de custos que ultrapassar a estimativa da linha de base deverá ser avaliada pelo cliente e gerente do projeto. 
 
-![Orçamento](img/02-orcamento.png)
+|Recursos Necessários| Valor      |
+|-----------------|---------------|
+|Recursos Humanos | R$ 116.480,00 |
+|Software         | R$ 1.008,00   |
+|Serviços         | R$ 2.240,00   |
+|Total            | R$ 119.728,00 |
+
+Cálculo: 
+
+Recursos Humanos = 7 Profissionais x R$ 40,00/hora x 416 horas (4 meses) = R$ 116.480,00 
+
+Softwares = 7 locações (office + windows) x R$ 36,00/Mês x 4 Meses = R$ 1.008,00 
+
+Serviços = 7 despesas (energia + hospedagem) x R$ 80,00/Mês x 4 Meses = R$ 2.240,00 

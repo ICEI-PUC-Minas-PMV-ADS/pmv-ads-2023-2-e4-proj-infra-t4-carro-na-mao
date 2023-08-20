@@ -16,12 +16,13 @@ Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thin
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+A aplicação "Carro na Mão", tem como objetivo dar maior eficiência no processo de locação e validação dos dados dos locatários de veículos, para que torne um processo mais ágil e transparente para cada cliente, sem comprometer a experiência de uso. 
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+> **Como objetivos específicos, podemos ressaltar:** 
+
+> -Transparência, agilidade e modernidade; 
+
+> -Apresentação do bloqueio de cada usuário; 
 
 ## Justificativa
 

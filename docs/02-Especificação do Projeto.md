@@ -2,43 +2,78 @@
 
 <span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+A definição do problema e dos pontos mais relevantes relacionados ao projeto foi realizada por meio de discussões entre os membros da equipe. Os pontos mais relevantes observados durante as discussões foram então consolidados na por meio da elaboração de personas e histórias de usuário, que são mostradas nas seções a seguir.
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+|Lucas      | Informações:                       |                                        |
+|--------------------|------------------------------------|----------------------------------------|
+| ![Lucas](docs\img\Personas\Persona-Lucas.png) | **Idade:** 32 <br> **Ocupação:** Executivo de Vendas <br> **Uso do Cartão de Credito:** Utiliza um cartão corporativo fornecido pela empresa. <br> **Opinião sobre Aplicação Financeira:** Lucas valoriza uma aplicação que possa ajudá-lo a monitorar os gastos de suas viagens de negócios, incluindo as despesas com locação de veículos.  |**Aplicativos:**<br>● Whatsapp <br>● Instagram<br>● Facebook  |
+|**Motivações:**<br>● Eficiência em viagens de negócios <br>●  Prestação de contas simplificada. |**Frustrações:**<br>● Atrasos em locações de carros  <br>● Processos de reembolso complicados. |**Hobbies:**<br>● Jogar Tênis<br>● Explorar novos restaurantes <br>● Ler |
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+|Sofia      | Informações:                       |                                        |
+|--------------------|------------------------------------|----------------------------------------|
+| ![Sofia](docs\img\Personas\Persona-Sofia.png)  | **Idade:** 28 <br> **Profissão:** Designer Gráfica <br> **Uso do Cartão de Crédito:** Utiliza seu cartão pessoal para transações. <br> **Opinião sobre Aplicação Financeira:** Sofia gosta da ideia de uma aplicação financeira que possa ajudá-la a rastrear os gastos de suas viagens, incluindo os custos de locação de carros.  |**Aplicativos:**<br>● Instagram <br>● Google Maps<br>● Airbnb  |
+|**Motivações:**<br>● Experiências autênticas em viagens <br>● Itinerários flexíveis. |**Frustrações:**<br>● Filas longas em locadoras <br>● Falta de orientação em destinos desconhecidos. |**Hobbies:**<br>● Fotografia<br>● Aulas de culinária <br>● Praticar ioga |
+
+|André      | Informações:                       |                                        |
+|--------------------|------------------------------------|----------------------------------------|
+| ![André](docs\img\Personas\Persona-Andre.png) | **Idade:** 40 <br> **Profissão:** Empresário <br> **Uso do Cartão de Crédito:** Utiliza seu cartão pessoal para transações. <br> **Opinião sobre Aplicação Financeira:** André vê valor em uma aplicação financeira que o ajude a acompanhar os gastos com locação de carros, além de outras despesas.  |**Aplicativos:**<br>● WhatsApp <br>● Waze<br>● IFood  |
+|**Motivações:**<br>● Acesso fácil a veículos temporários <br>● Conveniência. |**Frustrações:**<br>● Bloqueios indevidos em locações <br>● Custos inesperados |**Hobbies:**<br>● Correr<br>● Jardinagem <br>● Assistir a filmes de comédia |
+
+
+|Marina      | Informações:                       |                                        |
+|--------------------|------------------------------------|----------------------------------------|
+| ![Marina](docs\img\Personas\Persona-Marina.png) | **Idade:** 25 <br> **Profissão:** Aventureira e Blogueira de Viagens <br> **Uso do Cartão de Crédito:** Utiliza seu cartão pessoal para transações. <br> **Opinião sobre Aplicação Financeira:** Marina vê a aplicação financeira como uma ferramenta útil para monitorar seus gastos em suas aventuras, incluindo as locações de carros.  |**Aplicativos:**<br>● AllTrails <br>● Instagram<br>● Spotify  |
+|**Motivações:**<br>● Veículos adequados para aventuras <br>● Facilidade em planejar expedições |**Frustrações:**<br>● Falta de veículos 4x4 <br>● Dificuldade em encontrar trilhas seguras |**Hobbies:**<br>● Escalada, acampamento<br>● Fotografia de natureza |
+
+|Renata      | Informações:                       |                                        |
+|--------------------|------------------------------------|----------------------------------------|
+| ![Renata](docs\img\Personas\Persona-Renata.png) | **Idade:** 38 <br> **Profissão:** Gerente de Recursos Humanos <br> **Uso do Cartão de Crédito:** Utiliza um cartão corporativo fornecido pela empresa. <br> **Opinião sobre Aplicação Financeira:** Renata vê grande utilidade em uma aplicação financeira que possa ajudá-la a rastrear os gastos da conferência corporativa, incluindo as locações de carros.  |**Aplicativos:**<br>• Microsoft Teams <br>• MegaConcursos<br>• SeuRH |
+|**Motivações:**<br>● Soluções eficientes para eventos corporativos <br>● Controle de gastos |**Frustrações:**<br>● Atrasos na entrega de veículos <br>● Problemas de faturamento |**Hobbies:**<br>• Leitura de negócios<br>• Networking <br>• Culinária gourmet |
+
+|Rodrigo     | Informações:                       |                                        |
+|--------------------|------------------------------------|----------------------------------------|
+| ![Rodrigo](docs\img\Personas\Persona-Rodrigo.png) | **Idade:** 45 <br> **Cargo:** CEO de uma Empresa de Locação <br> **Uso do Cartão de Crédito:** Utiliza um cartão corporativo fornecido pela empresa. <br> **Necessidade:** Melhorar a eficiência operacional e a experiência do cliente em sua locadora.  |**Aplicativos:**<br>• Slack <br>• Trello<br>• Bloomberg |
+|**Motivações:**<br>● Melhorar eficiência operacional <br>● Aumentar a fidelidade do cliente |**Frustrações:**<br>● Processos manuais demorados <br>● Feedback negativo dos clientes |**Hobbies:**<br>• Golfe<br>• Ler sobre gestão <br>• Assistir a documentários de negócios |
+
+|Camila      | Informações:                       |                                        |
+|--------------------|------------------------------------|----------------------------------------|
+| ![Camila](docs\img\Personas\Persona-Camila.png) | **Idade:** 38 <br> **Cargo:** Gerente de Frota de uma Locadora <br> **Uso do Cartão de Crédito:** Utiliza um cartão corporativo fornecido pela empresa. <br> **Necessidade:** Manter um controle eficiente da frota e monitorar a utilização dos veículos.  |**Aplicativos:**<br>• Asana <br>• Fleet Complete<br>• Spotify |
+|**Motivações:**<br>● Gestão eficaz da frota <br>● Manutenção preventiva |**Frustrações:**<br>● Falta de informações sobre uso dos veículos <br>● Manutenções não agendadas |**Hobbies:**<br>• Passeios de bicicleta<br>• Fotografia de natureza <br>• Ouvir podcasts sobre logística |
+
+
+|Andréia     | Informações:                       |                                        |
+|--------------------|------------------------------------|----------------------------------------|
+| ![Andreia](docs\img\Personas\Persona-Andreia.png) | **Idade:** 30 <br> **Cargo:** Analista de Dados em uma Empresa de Locação <br> **Uso do Cartão de Crédito:** Não utiliza cartão geralmente. <br> **Necessidade:** Coletar e analisar dados para tomar decisões estratégicas na locadora.  |**Aplicativos:**<br>• Tableau <br>• Slack<br>• Coursera |
+|**Motivações:**<br>● Análises precisas para tomada de decisões estratégicas. |**Frustrações:**<br>● Dificuldades em obter dados confiáveis, <br>falta de ferramentas de visualização. |**Hobbies:**<br>• Jogar xadrez online<br>• Aprender sobre aprendizado de máquina <br>• Cozinhar pratos étnicos |
+
+
+|Eduardo     | Informações:                       |                                        |
+|--------------------|------------------------------------|----------------------------------------|
+| ![Eduardo](docs\img\Personas\Persona-Eduardo.png) | **Idade:** 50 <br> **Cargo:** Diretor de Operações em Locadoras <br> **Uso do Cartão de Crédito:** Utiliza um cartão corporativo fornecido pela empresa. <br> **Necessidade:** Implementar melhorias operacionais na organização.  |**Aplicativos:**<br>• LinkedIn <br>• Microsoft Teams<br>• Evernote |
+|**Motivações:**<br>● Padronização de operações em várias filiais <br>● Eficiência. |**Frustrações:**<br>● Falta de cooperação entre as filiais <br>● Problemas constantes de qualidade. |**Hobbies:**<br>• Praticar Peteca<br>• Ler sobre inovações em gestão <br>• Assistir a documentários históricos |
+
 
 ## Histórias de Usuários
 
-Com base na análise das personas forma identificadas as seguintes histórias de usuários:
+A partir da análise das personas elaboradas, foram levantadas as histórias de usuários mostradas abaixo:
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
+|Lucas  | Alugar um carro rapidamente para viagem de negócios.  | Agilidade é essencial para cumprir compromissos profissionais. |
+|Sofia  | Alugar um carro conveniente para explorar uma nova cidade durante as férias.  | Deseja liberdade de locomoção e flexibilidade em sua viagem. |
+|Sofia  | Encontrar um veículo espaçoso para viagem com amigos, sem comprometer o orçamento.  | Busca conforto e economia ao viajar com companhia. |
+|André  | Alugar um carro para uma ocasião especial, como um encontro romântico, e impressionar sua parceira.  | Quer criar uma experiência memorável. |
+|Marina  | Alugar um veículo confortável e seguro para uma viagem em família ao campo.  | Deseja garantir a segurança e o conforto de sua família. |
+|Renata  | Alugar vários carros para uma conferência corporativa.  | Necessita de uma frota para atender às demandas do evento. |
+|Renata  | Encontrar soluções de locação flexíveis para a equipe que participará de uma conferência.  | Busca praticidade e conforto para seus colaboradores. |
+|Rodrigo  | Aprimorar eficiência operacional e experiência do cliente na locadora.  | Deseja otimizar processos e melhorar a satisfação do cliente para impulsionar os negócios. |
+|Rodrigo  | Implementar um sistema de cadastro mais preciso para evitar frustrações dos clientes e melhorar a reputação da locadora.  | Busca construir uma imagem positiva da empresa. |
+|Camila  | Manter controle eficiente da frota e monitorar a utilização dos veículos.  | Quer garantir que os veículos estejam sendo usados de maneira eficaz e bem cuidados. |
+|Andréia  | Criar painéis de visualização personalizados para analisar as tendências de locação, permitindo uma abordagem mais direcionada nas estratégias de marketing.  | Deseja melhorar a eficácia das campanhas promocionais. |
+|Eduardo  | Implementar melhorias operacionais na organização.  | Precisa padronizar processos e garantir alta qualidade em todas as operações da organização. |
 
 ## Modelagem do Processo de Negócio 
 

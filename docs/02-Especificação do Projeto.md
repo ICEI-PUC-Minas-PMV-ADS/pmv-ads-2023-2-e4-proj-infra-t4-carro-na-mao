@@ -10,23 +10,26 @@ A definição do problema e dos pontos mais relevantes relacionados ao projeto f
 |Lucas      | Informações:                       |                                        |
 |--------------------|------------------------------------|----------------------------------------|
 | ![Lucas](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao/blob/c9474e72744026157b339da5ab3e9af0d2d5ac06/docs/img/Personas/Persona-Lucas.png) | **Idade:** 32 <br> **Ocupação:** Executivo de Vendas <br> **Uso do Cartão de Credito:** Utiliza um cartão corporativo fornecido pela empresa. <br> **Opinião sobre Aplicação Financeira:** Lucas valoriza uma aplicação que possa ajudá-lo a monitorar os gastos de suas viagens de negócios, incluindo as despesas com locação de veículos.  |**Aplicativos:**<br>● Whatsapp <br>● Instagram<br>● Facebook  |
-|**Motivações:**<br>● Eficiência em viagens de negócios <br>●  Prestação de contas simplificada. |**Frustrações:**<br>● Atrasos em locações de carros  <br>● Processos de reembolso complicados. |**Hobbies:**<br>● Jogar Tênis<br>● Explorar novos restaurantes <br>● Ler |
+|**Motivações:**<br>● Eficiência em viagens de negócios <br>●  Prestação de contas simplificada |**Frustrações:**<br>● Atrasos em locações de carros  <br>● Processos de reembolso complicados |**Hobbies:**<br>● Jogar Tênis<br>● Explorar novos restaurantes <br>● Ler |
 
+\
+\
+\
 |Sofia      | Informações:                       |                                        |
 |--------------------|------------------------------------|----------------------------------------|
 | ![Sofia](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao/blob/07819e5d1ad62e63ceb52cbf567f15b52ee2a6f1/docs/img/Personas/Persona-Sofia.png)  | **Idade:** 28 <br> **Profissão:** Designer Gráfica <br> **Uso do Cartão de Crédito:** Utiliza seu cartão pessoal para transações. <br> **Opinião sobre Aplicação Financeira:** Sofia gosta da ideia de uma aplicação financeira que possa ajudá-la a rastrear os gastos de suas viagens, incluindo os custos de locação de carros.  |**Aplicativos:**<br>● Instagram <br>● Google Maps<br>● Airbnb  |
-|**Motivações:**<br>● Experiências autênticas em viagens <br>● Itinerários flexíveis. |**Frustrações:**<br>● Filas longas em locadoras <br>● Falta de orientação em destinos desconhecidos. |**Hobbies:**<br>● Fotografia<br>● Aulas de culinária <br>● Praticar ioga |
+|**Motivações:**<br>● Experiências autênticas em viagens <br>● Itinerários flexíveis |**Frustrações:**<br>● Filas longas em locadoras <br>● Falta de orientação em destinos desconhecidos |**Hobbies:**<br>● Fotografia<br>● Aulas de culinária <br>● Praticar Ioga |
 
 |André      | Informações:                       |                                        |
 |--------------------|------------------------------------|----------------------------------------|
 | ![André](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao/blob/07819e5d1ad62e63ceb52cbf567f15b52ee2a6f1/docs/img/Personas/Persona-Andre.png) | **Idade:** 40 <br> **Profissão:** Empresário <br> **Uso do Cartão de Crédito:** Utiliza seu cartão pessoal para transações. <br> **Opinião sobre Aplicação Financeira:** André vê valor em uma aplicação financeira que o ajude a acompanhar os gastos com locação de carros, além de outras despesas.  |**Aplicativos:**<br>● WhatsApp <br>● Waze<br>● IFood  |
-|**Motivações:**<br>● Acesso fácil a veículos temporários <br>● Conveniência. |**Frustrações:**<br>● Bloqueios indevidos em locações <br>● Custos inesperados |**Hobbies:**<br>● Correr<br>● Jardinagem <br>● Assistir a filmes de comédia |
+|**Motivações:**<br>● Acesso fácil a veículos temporários <br>● Conveniência |**Frustrações:**<br>● Bloqueios indevidos em locações <br>● Custos inesperados |**Hobbies:**<br>● Correr<br>● Jardinagem <br>● Assistir a filmes de comédia |
 
 
 |Marina      | Informações:                       |                                        |
 |--------------------|------------------------------------|----------------------------------------|
 | ![Marina](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao/blob/07819e5d1ad62e63ceb52cbf567f15b52ee2a6f1/docs/img/Personas/Persona-Marina.png) | **Idade:** 25 <br> **Profissão:** Aventureira e Blogueira de Viagens <br> **Uso do Cartão de Crédito:** Utiliza seu cartão pessoal para transações. <br> **Opinião sobre Aplicação Financeira:** Marina vê a aplicação financeira como uma ferramenta útil para monitorar seus gastos em suas aventuras, incluindo as locações de carros.  |**Aplicativos:**<br>● AllTrails <br>● Instagram<br>● Spotify  |
-|**Motivações:**<br>● Veículos adequados para aventuras <br>● Facilidade em planejar expedições |**Frustrações:**<br>● Falta de veículos 4x4 <br>● Dificuldade em encontrar trilhas seguras |**Hobbies:**<br>● Escalada, acampamento<br>● Fotografia de natureza |
+|**Motivações:**<br>● Veículos adequados para aventuras <br>● Facilidade em planejar expedições |**Frustrações:**<br>● Falta de veículos 4x4 <br>● Dificuldade em encontrar trilhas seguras |**Hobbies:**<br>● Escalada <br>● Acampamento<br>● Fotografia de natureza |
 
 |Renata      | Informações:                       |                                        |
 |--------------------|------------------------------------|----------------------------------------|

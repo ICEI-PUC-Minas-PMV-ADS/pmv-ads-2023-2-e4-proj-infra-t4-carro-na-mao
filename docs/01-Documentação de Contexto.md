@@ -34,9 +34,6 @@ Além desta reclamação de exemplo, temos vários pontos onde podemos notar uma
 
 Nestes conformes, este projeto busca ser uma aplicação ágil e transparente para seu cliente e com isto, ter uma ótima avaliação no mercado de locação de veículos. 
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
-
 ## Público-Alvo
 
 Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações

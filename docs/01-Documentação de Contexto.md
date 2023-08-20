@@ -26,9 +26,13 @@ A aplicação "Carro na Mão", tem como objetivo dar maior eficiência no proces
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+De acordo com o Reclame aqui, muitos usuários estão insatisfeitos por supostamente alugarem um veículo, mas ao chegar no momento da retirada do mesmo, ser informado que estava “bloqueado” e não conseguir retirar o veículo. 
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+>“Alugo carro com a LOCALIZA a anos, inclusive fiz uma viagem utilizando carro da mesma em maio de 2022. No mês de julho eu fiz uma reserva e me programei para fazer mais uma viagem, chegando lá a atendente me informou que eu estava bloqueada e que só em 180 dias para eu tentar novamente! Me causando um prejuízo absurdo, com chalé alugado e tudo mais. Na segunda feira eu liguei pra saber o que tinha acontecido, me foi informado que bloqueou porque acusou restrições, sem mais nenhuma explicação e nem porquê. Conferi tudo se eu tinha levado alguma multa e não tinha nada! A localiza era a única locadora que eu tinha locado até então, tinha quase 2.000 pontos. Fiquei extremamente decepcionada.” (Reclame Aqui). 
+
+Além desta reclamação de exemplo, temos vários pontos onde podemos notar uma altíssima insatisfação do cliente, o que não tem benefício para nenhuma das duas partes, cliente e locadora. 
+
+Nestes conformes, este projeto busca ser uma aplicação ágil e transparente para seu cliente e com isto, ter uma ótima avaliação no mercado de locação de veículos. 
 
 > **Links Úteis**:
 > - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)

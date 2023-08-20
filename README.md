@@ -1,5 +1,7 @@
 # CARRO NA MÃO
 
+![Logo](/docs/img/Logo.jpeg)
+
 `ANÁLISE E DESENVOLVIMENTO DE SISTEMAS`
 
 `Projeto: Desenvolvimento de uma Aplicação Distribuída`

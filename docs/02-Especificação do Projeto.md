@@ -160,6 +160,10 @@ O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utiliz
 
 ![Gráfico de Gantt](img/gerenciador%20do%20projeto%20.png)
 
+Para gerir o projeto de uma maneira eficaz, iremos utilizar a ferramenta trello. Pois a mesma nos permite criar alertas de quando tempo falta para terminar cada tarefa, quem será o responsável por executar a Task e categorizar as atividades. Abaixo a imagem de como está atualmente o trello da equipe. 
+
+![Trello equipe](img/trello%20proj.png)
+
 ## Gerenciamento de Equipe
 
 O gerenciamento adequado de tarefas contribuirá para que o projeto alcance altos níveis de produtividade. Por isso, é fundamental que ocorra a gestão de tarefas e de pessoas, de modo que os times envolvidos no projeto possam ser facilmente gerenciados. 

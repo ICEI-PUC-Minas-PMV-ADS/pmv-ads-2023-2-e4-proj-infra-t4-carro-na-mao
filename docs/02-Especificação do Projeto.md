@@ -9,7 +9,7 @@ A definição do problema e dos pontos mais relevantes relacionados ao projeto f
 
 |Lucas      | Informações:                       |                                        |
 |--------------------|------------------------------------|----------------------------------------|
-| ![Lucas](docs\img\Personas\Persona-Lucas.png) | **Idade:** 32 <br> **Ocupação:** Executivo de Vendas <br> **Uso do Cartão de Credito:** Utiliza um cartão corporativo fornecido pela empresa. <br> **Opinião sobre Aplicação Financeira:** Lucas valoriza uma aplicação que possa ajudá-lo a monitorar os gastos de suas viagens de negócios, incluindo as despesas com locação de veículos.  |**Aplicativos:**<br>● Whatsapp <br>● Instagram<br>● Facebook  |
+| ![Lucas](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao/blob/c9474e72744026157b339da5ab3e9af0d2d5ac06/docs/img/Personas/Persona-Lucas.png) | **Idade:** 32 <br> **Ocupação:** Executivo de Vendas <br> **Uso do Cartão de Credito:** Utiliza um cartão corporativo fornecido pela empresa. <br> **Opinião sobre Aplicação Financeira:** Lucas valoriza uma aplicação que possa ajudá-lo a monitorar os gastos de suas viagens de negócios, incluindo as despesas com locação de veículos.  |**Aplicativos:**<br>● Whatsapp <br>● Instagram<br>● Facebook  |
 |**Motivações:**<br>● Eficiência em viagens de negócios <br>●  Prestação de contas simplificada. |**Frustrações:**<br>● Atrasos em locações de carros  <br>● Processos de reembolso complicados. |**Hobbies:**<br>● Jogar Tênis<br>● Explorar novos restaurantes <br>● Ler |
 
 |Sofia      | Informações:                       |                                        |

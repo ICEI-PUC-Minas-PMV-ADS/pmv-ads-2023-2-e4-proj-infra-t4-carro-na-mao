@@ -8,7 +8,7 @@
 
 `Quarto semestre - Eixo 4`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+A aplicação "Carro na Mão" busca otimizar a locação de veículos, agilizando a validação dos locatários e garantindo transparência. Seus objetivos incluem eficiência, modernização, apresentação de bloqueios de usuários e uma experiência ágil para os clientes.
 
 ## Integrantes
 
@@ -16,7 +16,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 * Matheus Ferreira Pires
 * Matheus Lemos Sampaio
 * Maykon Edésio Rosa
-* Pedro Assis de Almeida
+* Pedro Assis Silva de Almeida
 * Roger Bastos Mendes
 * Vitor Hugo Silva Ribeiro
 

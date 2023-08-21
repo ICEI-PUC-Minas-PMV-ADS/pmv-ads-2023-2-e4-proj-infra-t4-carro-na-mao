@@ -223,9 +223,22 @@ Para gerir o projeto de uma maneira eficaz, iremos utilizar a ferramenta trello.
 
 ## Gerenciamento de Equipe
 
-O gerenciamento adequado de tarefas contribuirá para que o projeto alcance altos níveis de produtividade. Por isso, é fundamental que ocorra a gestão de tarefas e de pessoas, de modo que os times envolvidos no projeto possam ser facilmente gerenciados. 
+Assegurar uma gestão eficaz das tarefas é um fator determinante para impulsionar a produtividade do projeto a patamares elevados. Nesse sentido, a administração tanto das atividades quanto dos membros da equipe assume um papel crucial, resultando em uma colaboração mais eficiente e no aprimoramento do desempenho coletivo. 
 
-![Simple Project Timeline](img/02-project-timeline.png)
+A imagem abaixo demonstra como será gerenciada a equipe do projeto.  
+
+![Gerenciamento de Equipe](img/Ger.%20Equipe%20Carro%20na%20mão.png)
+
+Equipe Front-End 
+- Daniel de Souza Marcolino 
+- Maykon Edésio Rosa 
+- Roger Bastos Mendes 
+
+Equipe Back-End 
+- Matheus Ferreira Pires 
+- Matheus Lemos Sampaio 
+- Pedro Assis Silva de Almeida
+- Vitor Hugo Silva Ribeiro
 
 ## Gestão de Orçamento
 

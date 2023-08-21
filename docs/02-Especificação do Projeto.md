@@ -146,16 +146,35 @@ todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+|ID| Restrição                                                                                                                       |
+|--|---------------------------------------------------------------------------------------------------------------------------------|
+|RE-01| O projeto deverá ser entregue até o final do semestre                                                                        |
+|RE-02| Não pode ser desenvolvido um módulo de backend                                                                               |
+RE-3|	Aplicação terá como foco para dispositivos web e dispositivos moveis mobile.                                                   |
+RE-4|	Se pessoa física, deverá ter Carteira Nacional de Habilitação definitiva (ou válida).                                          |
+RE-5|	Caso não tenha um cartão de crédito com aprovação de limite para a locação não será possível seguir com o processo de locação. |
 
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
+## Mapeamento de Requisitos
 
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+O mapeamento de requisitos envolve a identificação, análise e documentação das necessidades e funcionalidades de um sistema ou projeto, visando garantir uma compreensão clara e completa para orientar o processo de desenvolvimento. Esse processo é crucial para alinhar as expectativas entre as partes interessadas e garantir a entrega bem-sucedida do produto final. Segue tabela com as relações dos requisitos funcionais e não-funcionais:
+
+| REQUISITOS FUNCIONAIS | PROCESSOS | TIPO DE USUÁRIO |
+|---|:---:|:---:|
+|RF-01: Os usuários devem poder se cadastrar no sistema, fornecendo informações pessoais, detalhes de contato e informações da habilitação.  | - Criar uma conta utilizando seus dados pessoais. | Usuário |
+| RF- 02: Os clientes devem poder pesquisar e selecionar veículos disponíveis com base em categorias, modelos, características e datas de aluguel desejadas.  |  - Fazer Login;<br> - Ir para Aba de “Veículos”. | Usuário |
+| RF-03: O sistema deve calcular automaticamente o preço total do aluguel com base na duração do aluguel, categoria do veículo e possíveis extras (seguro, quilometragem adicional, etc.). | - Fazer login; <br> - Ir para opção de “Finalizar Processo”. | Sistema |
+| RF-04: O sistema deve armazenar e gerenciar documentos relacionados ao aluguel, como contratos, termos e condições, comprovantes de pagamento e detalhes do seguro. | - Fazer login;<br> - Ir para Aba de “Locações”. | Usuário |
+| RF-05: O sistema disponibilizará um gráfico que mostre a evolução do processo da análise da documentação e confirmação da retirada do veículo na unidade escolhida. |  - Fazer login;<br> - Ir para Aba de “Locação”. | Usuário |
+| RF-06: O sistema deve enviar notificações e lembretes aos clientes sobre datas de aluguel, devolução e pagamentos pendentes. | - Fazer login;<br> - Ir para Aba de “Avaliações”. | Sistema |
+
+| REQUISITOS NÃO-FUNCIONAIS | PROCESSOS | BPMN |
+|:---:|:---:|:---:|
+| RNF-01: Aplicações deve ser compatível com os principais sistemas mobile e web. | - Todos | Ambas |
+| RNF-02: A interface do sistema deve ser intuitiva e fácil de usar, com navegação clara e instruções compreensíveis para os clientes. | - Todos | Cliente |
+| RNF-03: O sistema deve estar disponível 24/7, com uma baixa taxa de tempo de inatividade planejado para manutenção e atualizações. | - Todos | Cliente |
+| RNF-04: O sistema deve garantir um desempenho eficiente do banco de dados para acesso rápido às informações de veículos, reservas e histórico de aluguel. | - Todos | Cliente |
+| RNF-05: RNF-05: O sistema deve ser confiável, evitando falhas críticas que possam afetar as operações de aluguel e causar perda de dados. | - Todos | Cliente |
+
 
 ## Diagrama de Casos de Uso
 

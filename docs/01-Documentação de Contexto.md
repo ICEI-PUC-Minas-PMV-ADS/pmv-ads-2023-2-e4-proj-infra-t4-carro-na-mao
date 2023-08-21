@@ -36,13 +36,4 @@ Nestes conformes, este projeto busca ser uma aplicação ágil e transparente pa
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+O público-alvo de uma locadora de veículos é diversificado e abrange viajantes a lazer e a negócios, executivos, turistas, pessoas que necessitam de veículos temporários, clientes locais sem carro próprio, empresas em busca de soluções de transporte e entusiastas de aventuras. Essa variedade de perfis exige que a locadora ofereça opções de veículos, preços e serviços adaptados para atender às necessidades e preferências específicas de cada grupo.

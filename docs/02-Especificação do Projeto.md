@@ -117,15 +117,24 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| O sistema deve enviar notificações e lembretes aos clientes sobre datas de aluguel, devolução e pagamentos pendentes.  | MÉDIA | 
+|RF-002| O sistema deve permitir que os usuários se cadastrem na plataforma, fornecendo informações pessoais| ALTA |
+|RF-003| O sistema deve bloquear locações inválidas, reduzindo ocorrências de frustração do cliente. | ALTA |
+|RF-004| O sistem deve apresentar um paniel de controle sobre o status da locadora para o gerente  | MÉDIA |
+|RF-005| O sistema deve possibilitar aos usuarios avaliar o serviço da locadora  | MÉDIA |
+|RF-006| O sistema deve apresentar um mapa ao usuario indicando qual o local onde ele deve retirar seu veiculo alocado   | MÉDIA |
+|RF-007| O sistema deve possibilitar o usuario escolher qual carro alugar com base no preço, modelo, data e local de retirada | MÉDIA |
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-001| Proteger os dados sensíveis dos usuários, como informações de pagamento e documentos pessoais, por meio de criptografia e autenticação segura. | MÉDIA | 
+|RNF-002| A aplicação deve ser capaz de lidar com picos de tráfego e aumentar sua capacidade conforme a demanda cresce | ALTA | 
+|RNF-003| Garantir que o tempo de resposta da aplicação seja rápido, proporcionando uma experiência ágil para os usuários.  |  ALTA | 
+|RNF-004| Manter a disponibilidade da aplicação próxima de 24/7, minimizando tempo de inatividade e interrupções.  |  ALTA | 
+|RNF-005| Garantir que a aplicação seja compatível com diversos dispositivos, navegadores e sistemas operacionais.  |  MÉDIA | 
+|RNF-006| A arquitetura deve permitir a adição fácil de recursos e componentes para lidar com a carga variável da aplicação. |  MÉDIA | 
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 

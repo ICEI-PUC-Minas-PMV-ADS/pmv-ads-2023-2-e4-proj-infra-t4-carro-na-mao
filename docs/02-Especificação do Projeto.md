@@ -69,8 +69,8 @@ A partir da análise das personas elaboradas, foram levantadas as histórias de 
 ## Modelagem do Processo de Negócio 
 
 ### Análise da Situação Atual
-
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+A empresa Carro na mão tem o propósito de não deixar os clientes na mão, pois é muito frustrante vc fazer a reserva de um veículo específico e quando vc chega para fazer o check-in na locadora descobre que o mesmo não está disponível ou sua documentação está com algum impedimento não informado de maneira previa. 
+Quando o cliente fizer a reserva (data/hora), será verificado toda a documentação e disponibilidade do veículo, avisando assim previamente o cliente que está tudo certo ou se há pendencias .
 
 ### Descrição Geral da Proposta
 

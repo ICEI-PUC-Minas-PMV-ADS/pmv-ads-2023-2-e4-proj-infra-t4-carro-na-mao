@@ -17,13 +17,11 @@ A aplicação "Carro na Mão", tem como objetivo dar maior eficiência no proces
 
 ## Justificativa
 
-De acordo com o Reclame aqui, muitos usuários estão insatisfeitos por supostamente alugarem um veículo, mas ao chegar no momento da retirada do mesmo, ser informado que estava “bloqueado” e não conseguir retirar o veículo. 
+Ao analisar reclamações no site de registro de queixas Reclame Aqui, observou-se que uma parcela significativa de clientes enfrenta problemas ao tentar retirar veículos alugados após reservas, devido a procedimentos burocráticos, constituindo mais de 40% das queixas contra as principais empresas do setor.  
 
->“Alugo carro com a LOCALIZA a anos, inclusive fiz uma viagem utilizando carro da mesma em maio de 2022. No mês de julho eu fiz uma reserva e me programei para fazer mais uma viagem, chegando lá a atendente me informou que eu estava bloqueada e que só em 180 dias para eu tentar novamente! Me causando um prejuízo absurdo, com chalé alugado e tudo mais. Na segunda feira eu liguei pra saber o que tinha acontecido, me foi informado que bloqueou porque acusou restrições, sem mais nenhuma explicação e nem porquê. Conferi tudo se eu tinha levado alguma multa e não tinha nada! A localiza era a única locadora que eu tinha locado até então, tinha quase 2.000 pontos. Fiquei extremamente decepcionada.” (Reclame Aqui). 
+Para viabilizar o crescimento desse mercado, é essencial que as empresas adotem ferramentas eficazes de controle de informações dos clientes, oferecendo acesso digital à frota, preços, condições contratuais, reservas e suporte 24 horas.  
 
-Além desta reclamação de exemplo, temos vários pontos onde podemos notar uma altíssima insatisfação do cliente, o que não tem benefício para nenhuma das duas partes, cliente e locadora. 
-
-Nestes conformes, este projeto busca ser uma aplicação ágil e transparente para seu cliente e com isto, ter uma ótima avaliação no mercado de locação de veículos. 
+Esse projeto busca criar uma aplicação ágil e transparente para a locadora Carro na mão, visando otimizar a aquisição de clientes e a satisfação, com o objetivo de ampliar sua fatia de mercado. 
 
 ## Público-Alvo
 

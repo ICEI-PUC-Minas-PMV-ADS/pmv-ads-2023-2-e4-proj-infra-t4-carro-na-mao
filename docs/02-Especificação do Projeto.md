@@ -12,13 +12,7 @@ A definição do problema e dos pontos mais relevantes relacionados ao projeto f
 | ![Lucas](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao/blob/c9474e72744026157b339da5ab3e9af0d2d5ac06/docs/img/Personas/Persona-Lucas.png) | **Idade:** 32 <br> **Ocupação:** Executivo de Vendas <br> **Uso do Cartão de Credito:** Utiliza um cartão corporativo fornecido pela empresa. <br> **Opinião sobre Aplicação Financeira:** Lucas valoriza uma aplicação que possa ajudá-lo a monitorar os gastos de suas viagens de negócios, incluindo as despesas com locação de veículos.  |**Aplicativos:**<br>● Whatsapp <br>● Instagram<br>● Facebook  |
 |**Motivações:**<br>● Eficiência em viagens de negócios <br>●  Prestação de contas simplificada |**Frustrações:**<br>● Atrasos em locações de carros  <br>● Processos de reembolso complicados |**Hobbies:**<br>● Jogar Tênis<br>● Explorar novos restaurantes <br>● Ler |
 
-\
-\
-\
-|Sofia      | Informações:                       |                                        |
-|--------------------|------------------------------------|----------------------------------------|
-| ![Sofia](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao/blob/07819e5d1ad62e63ceb52cbf567f15b52ee2a6f1/docs/img/Personas/Persona-Sofia.png)  | **Idade:** 28 <br> **Profissão:** Designer Gráfica <br> **Uso do Cartão de Crédito:** Utiliza seu cartão pessoal para transações. <br> **Opinião sobre Aplicação Financeira:** Sofia gosta da ideia de uma aplicação financeira que possa ajudá-la a rastrear os gastos de suas viagens, incluindo os custos de locação de carros.  |**Aplicativos:**<br>● Instagram <br>● Google Maps<br>● Airbnb  |
-|**Motivações:**<br>● Experiências autênticas em viagens <br>● Itinerários flexíveis |**Frustrações:**<br>● Filas longas em locadoras <br>● Falta de orientação em destinos desconhecidos |**Hobbies:**<br>● Fotografia<br>● Aulas de culinária <br>● Praticar Ioga |
+
 
 |André      | Informações:                       |                                        |
 |--------------------|------------------------------------|----------------------------------------|
@@ -41,10 +35,7 @@ A definição do problema e dos pontos mais relevantes relacionados ao projeto f
 | ![Rodrigo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao/blob/07819e5d1ad62e63ceb52cbf567f15b52ee2a6f1/docs/img/Personas/Persona-Rodrigo.png) | **Idade:** 45 <br> **Cargo:** CEO de uma Empresa de Locação <br> **Uso do Cartão de Crédito:** Utiliza um cartão corporativo fornecido pela empresa. <br> **Necessidade:** Melhorar a eficiência operacional e a experiência do cliente em sua locadora.  |**Aplicativos:**<br>• Slack <br>• Trello<br>• Bloomberg |
 |**Motivações:**<br>● Melhorar eficiência operacional <br>● Aumentar a fidelidade do cliente |**Frustrações:**<br>● Processos manuais demorados <br>● Feedback negativo dos clientes |**Hobbies:**<br>• Golfe<br>• Ler sobre gestão <br>• Assistir a documentários de negócios |
 
-|Camila      | Informações:                       |                                        |
-|--------------------|------------------------------------|----------------------------------------|
-| ![Camila](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao/blob/07819e5d1ad62e63ceb52cbf567f15b52ee2a6f1/docs/img/Personas/Persona-Camila.png) | **Idade:** 38 <br> **Cargo:** Gerente de Frota de uma Locadora <br> **Uso do Cartão de Crédito:** Utiliza um cartão corporativo fornecido pela empresa. <br> **Necessidade:** Manter um controle eficiente da frota e monitorar a utilização dos veículos.  |**Aplicativos:**<br>• Asana <br>• Fleet Complete<br>• Spotify |
-|**Motivações:**<br>● Gestão eficaz da frota <br>● Manutenção preventiva |**Frustrações:**<br>● Falta de informações sobre uso dos veículos <br>● Manutenções não agendadas |**Hobbies:**<br>• Passeios de bicicleta<br>• Fotografia de natureza <br>• Ouvir podcasts sobre logística |
+
 
 
 |Andréia     | Informações:                       |                                        |
@@ -66,15 +57,12 @@ A partir da análise das personas elaboradas, foram levantadas as histórias de 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
 |Lucas  | Alugar um carro rapidamente para viagem de negócios.  | Agilidade é essencial para cumprir compromissos profissionais. |
-|Sofia  | Alugar um carro conveniente para explorar uma nova cidade durante as férias.  | Deseja liberdade de locomoção e flexibilidade em sua viagem. |
-|Sofia  | Encontrar um veículo espaçoso para viagem com amigos, sem comprometer o orçamento.  | Busca conforto e economia ao viajar com companhia. |
 |André  | Alugar um carro para uma ocasião especial, como um encontro romântico, e impressionar sua parceira.  | Quer criar uma experiência memorável. |
 |Marina  | Alugar um veículo confortável e seguro para uma viagem em família ao campo.  | Deseja garantir a segurança e o conforto de sua família. |
 |Renata  | Alugar vários carros para uma conferência corporativa.  | Necessita de uma frota para atender às demandas do evento. |
 |Renata  | Encontrar soluções de locação flexíveis para a equipe que participará de uma conferência.  | Busca praticidade e conforto para seus colaboradores. |
 |Rodrigo  | Aprimorar eficiência operacional e experiência do cliente na locadora.  | Deseja otimizar processos e melhorar a satisfação do cliente para impulsionar os negócios. |
 |Rodrigo  | Implementar um sistema de cadastro mais preciso para evitar frustrações dos clientes e melhorar a reputação da locadora.  | Busca construir uma imagem positiva da empresa. |
-|Camila  | Manter controle eficiente da frota e monitorar a utilização dos veículos.  | Quer garantir que os veículos estejam sendo usados de maneira eficaz e bem cuidados. |
 |Andréia  | Criar painéis de visualização personalizados para analisar as tendências de locação, permitindo uma abordagem mais direcionada nas estratégias de marketing.  | Deseja melhorar a eficácia das campanhas promocionais. |
 |Eduardo  | Implementar melhorias operacionais na organização.  | Precisa padronizar processos e garantir alta qualidade em todas as operações da organização. |
 

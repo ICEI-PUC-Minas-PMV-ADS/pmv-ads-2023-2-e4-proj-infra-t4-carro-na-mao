@@ -146,13 +146,13 @@ todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
-|ID| Restrição                                                                                                                        |
+|ID| Restrição                                                                                                                      |
 |---|:---:|:---:|
-|RE-001| O projeto deverá ser entregue até o final do semestre                                                                        |
-|RE-002| Não pode ser desenvolvido um módulo de backend                                                                               |
-|RE-003|	Aplicação terá como foco para dispositivos web e mobile por meio de uma Web API.                                            |
-|RE-004|	A execução desse projeto será em grupo, o que simula o dia a dia de um profissional de TI.                                  |
-|RE-005|	Esses conteúdos combinados com Banco de Dados NoSQL, Projeto de Software e Teste de Software.                               |
+|RE-01| O projeto deverá ser entregue até o final do semestre                                                                       |
+|RE-02| Não pode ser desenvolvido um módulo de backend                                                                              |
+|RE-03|	Aplicação terá como foco para dispositivos web e mobile por meio de uma Web API.                                            |
+|RE-04|	A execução desse projeto será em grupo, o que simula o dia a dia de um profissional de TI.                                  |
+|RE-05|	Esses conteúdos combinados com Banco de Dados NoSQL, Projeto de Software e Teste de Software.                               |
 
 ## Mapeamento de Requisitos
 
@@ -160,20 +160,20 @@ O mapeamento de requisitos envolve a identificação, análise e documentação 
 
 | REQUISITOS FUNCIONAIS | PROCESSOS | TIPO DE USUÁRIO |
 |---|:---:|:---:|
-|RF-001: Os usuários devem poder se cadastrar no sistema, fornecendo informações pessoais, detalhes de contato e informações da habilitação.  | - Criar uma conta utilizando seus dados pessoais. | Usuário |
-| RF- 002: Os clientes devem poder pesquisar e selecionar veículos disponíveis com base em categorias, modelos, características e datas de aluguel desejadas.  |  - Fazer Login;<br> - Ir para Aba de “Veículos”. | Usuário |
-| RF-003: O sistema deve calcular automaticamente o preço total do aluguel com base na duração do aluguel, categoria do veículo e possíveis extras (seguro, quilometragem adicional, etc.). | - Fazer login; <br> - Ir para opção de “Finalizar Processo”. | Sistema |
-| RF-004: O sistema deve armazenar e gerenciar documentos relacionados ao aluguel, como contratos, termos e condições, comprovantes de pagamento e detalhes do seguro. | - Fazer login;<br> - Ir para Aba de “Locações”. | Usuário |
-| RF-005: O sistema disponibilizará um gráfico que mostre a evolução do processo da análise da documentação e confirmação da retirada do veículo na unidade escolhida. |  - Fazer login;<br> - Ir para Aba de “Locação”. | Usuário |
-| RF-006: O sistema deve enviar notificações e lembretes aos clientes sobre datas de aluguel, devolução e pagamentos pendentes. | - Fazer login;<br> - Ir para Aba de “Avaliações”. | Sistema |
+| RF-01: Os usuários devem poder se cadastrar no sistema, fornecendo informações pessoais, detalhes de contato e informações da habilitação.  | - Criar uma conta utilizando seus dados pessoais. | Usuário |
+| RF- 02: Os clientes devem poder pesquisar e selecionar veículos disponíveis com base em categorias, modelos, características e datas de aluguel desejadas.  |  - Fazer Login;<br> - Ir para Aba de “Veículos”. | Usuário |
+| RF-03: O sistema deve calcular automaticamente o preço total do aluguel com base na duração do aluguel, categoria do veículo e possíveis extras (seguro, quilometragem adicional, etc.). | - Fazer login; <br> - Ir para opção de “Finalizar Processo”. | Sistema |
+| RF-04: O sistema deve armazenar e gerenciar documentos relacionados ao aluguel, como contratos, termos e condições, comprovantes de pagamento e detalhes do seguro. | - Fazer login;<br> - Ir para Aba de “Locações”. | Usuário |
+| RF-05: O sistema disponibilizará um gráfico que mostre a evolução do processo da análise da documentação e confirmação da retirada do veículo na unidade escolhida. |  - Fazer login;<br> - Ir para Aba de “Locação”. | Usuário |
+| RF-06: O sistema deve enviar notificações e lembretes aos clientes sobre datas de aluguel, devolução e pagamentos pendentes. | - Fazer login;<br> - Ir para Aba de “Avaliações”. | Sistema |
 
 | REQUISITOS NÃO-FUNCIONAIS | PROCESSOS | BPMN |
-|:---:|:---:|:---:|
-|RNF-001: Aplicações deve ser compatível com os principais sistemas mobile e web. | - Todos | Ambas |
-|RNF-002: A interface do sistema deve ser intuitiva e fácil de usar, com navegação clara e instruções compreensíveis para os clientes. |  Todos | Cliente |
-|RNF-003: O sistema deve estar disponível 24/7, com uma baixa taxa de tempo de inatividade planejado para manutenção e atualizações. | Todos | Cliente |
-|RNF-004: O sistema deve garantir um desempenho eficiente do banco de dados para acesso rápido às informações de veículos, reservas e histórico de aluguel. | Todos | Cliente |
-|RNF-005: RNF-005: O sistema deve ser confiável, evitando falhas críticas que possam afetar as operações de aluguel e causar perda de dados. | Todos | Cliente |
+|---|:---:|:---:|
+|RNF-01: Aplicações deve ser compatível com os principais sistemas mobile e web. | Todos | Ambas |
+|RNF- 02: A interface do sistema deve ser intuitiva e fácil de usar, com navegação clara e instruções compreensíveis para os clientes. | Todos | Ambas |
+|RNF-03: NF-003: O sistema deve estar disponível 24/7, com uma baixa taxa de tempo de inatividade planejado para manutenção e atualizações. | Todos | Ambas |
+|RNF-04: O sistema deve garantir um desempenho eficiente do banco de dados para acesso rápido às informações de veículos, reservas e histórico de aluguel. | Todos | Ambas |
+|RNF-05: O sistema deve ser confiável, evitando falhas críticas que possam afetar as operações de aluguel e causar perda de dados. | Todos | Ambas |
 
 
 ## Diagrama de Casos de Uso

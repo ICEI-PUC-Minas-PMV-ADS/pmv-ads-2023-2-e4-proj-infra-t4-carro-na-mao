@@ -42,3 +42,7 @@ Esse projeto busca criar uma aplicação ágil e transparente para a locadora Ca
 ## Público-Alvo
 
 O público-alvo de uma locadora de veículos é diversificado e abrange viajantes a lazer e a negócios, executivos, turistas, pessoas que necessitam de veículos temporários, clientes locais sem carro próprio, empresas em busca de soluções de transporte e entusiastas de aventuras. Essa variedade de perfis exige que a locadora ofereça opções de veículos, preços e serviços adaptados para atender às necessidades e preferências específicas de cada grupo.
+
+## Referências
+
+>[Link direto para listagem completa de Referências](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao/blob/main/docs/13-Refer%C3%AAncias.md)

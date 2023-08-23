@@ -45,4 +45,4 @@ O público-alvo de uma locadora de veículos é diversificado e abrange viajante
 
 ## Referências
 
->[Link direto para listagem completa de Referências](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao/blob/main/docs/13-Refer%C3%AAncias.md)
+>[Link direto para listagem completa de referências](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao/blob/main/docs/13-Refer%C3%AAncias.md)

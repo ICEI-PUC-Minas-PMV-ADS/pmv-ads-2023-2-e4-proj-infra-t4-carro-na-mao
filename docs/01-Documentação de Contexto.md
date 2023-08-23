@@ -45,4 +45,4 @@ O público-alvo de uma locadora de veículos é diversificado e abrange viajante
 
 ## Referências
 
->[Link direto para listagem completa de referências](docs/13-Referências.md)
+>[Link direto para listagem completa de referências](/docs/13-Referências.md)

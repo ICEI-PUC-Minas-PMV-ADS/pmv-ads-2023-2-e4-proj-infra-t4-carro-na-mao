@@ -3,7 +3,7 @@
 Ser proprietário de um veículo no Brasil se mostra uma tarefa cada vez mais proibitiva para grande parte da população. De acordo com um estudo (“Preço do carro novo no Brasil aumentou 90% em cinco anos”, 2023) levantado pela consultoria Jato Dynamics e publicada em 2023, o valor médio do carro novo aumentou cerca de 90% nos últimos cinco anos. No primeiro trimestre deste ano, o preço médio do carro já acumula alta de 7%.
 
  <img src="img/grafico1.png"><br>
-- (Jato Dynamics/Divulgação/Divulgação)
+- (Jato Dynamics/Divulgação)
 
 No mundo pós pandemia do COVID-19 novos desafios foram lançados. A mobilidade passou por um processo de mudança onde muitas pessoas se viram na necessidade de abandonar o transporte coletivo e diversas empresas tiveram de terceirizar as suas frotas veiculares. Além disso, somado ao aumento do custo da cadeia produtiva, desvalorização da moeda brasileira e inflação em alta o mercado de locação veiculares despontou como uma oportunidade de negócios (“Aumento das locações de veículos no Brasil”, 2023).
 
@@ -45,4 +45,4 @@ O público-alvo de uma locadora de veículos é diversificado e abrange viajante
 
 ## Referências
 
->[Link direto para listagem completa de referências](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao/blob/main/docs/13-Refer%C3%AAncias.md)
+>[Link direto para listagem completa de referências](docs/13-Referências.md)

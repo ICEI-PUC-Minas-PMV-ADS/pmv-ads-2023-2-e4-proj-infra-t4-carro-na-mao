@@ -8,7 +8,7 @@
 
 `Quarto semestre - Eixo 4`
 
-A aplicação "Carro na Mão" busca otimizar a locação de veículos, agilizando a validação dos locatários e garantindo transparência. Seus objetivos incluem eficiência, modernização, apresentação de bloqueios de usuários e uma experiência ágil para os clientes.
+O Carro na Mão é um aplicativo inovador que foi projetado para simplificar e agilizar o processo de locação de veículos. Com uma interface intuitiva e facilitada, o aplicativo oferece uma experiência agradável e conveniente para locatários e locadoras, tornando a locação e reserva de veículos mais simples, e descomplicada.
 
 ## Integrantes
 

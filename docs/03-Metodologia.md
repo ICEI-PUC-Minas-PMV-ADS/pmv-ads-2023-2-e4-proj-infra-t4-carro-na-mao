@@ -42,9 +42,9 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 
 A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento. A equipe está organizada da seguinte maneira:
 
- - Scrum Master: Vitor Hugo
+ - Scrum Master:Roger Bastos
  - Product Owner: Pedro Assi
- - Equipe de Desenvolvimento: Matheus Sampaio, Matheus Ferreira,  Maykon Edésio, Roger Bastos, Daniel de Souza 
+ - Equipe de Desenvolvimento: Matheus Sampaio, Matheus Ferreira, Daniel de Souza, ,Maykon Edésio, Roger Bastos, Vitor Hugo 
 
 Para organização e distribuição de tarefas do projeto, utilizaremos o Trello estruturado da seguinte forma:
  - Backlog: Parte onde está todas as tarefas que será desenvolvidas no projeto. Caso apareça nova atividades será redirecionada nessa parte.

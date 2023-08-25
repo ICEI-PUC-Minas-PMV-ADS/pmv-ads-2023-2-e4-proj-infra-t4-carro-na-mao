@@ -29,7 +29,9 @@ A aplicação "Carro na Mão", tem como objetivo dar maior eficiência no proces
 
 > -Transparência, agilidade e modernidade; 
 
-> -Apresentação do bloqueio de cada usuário; 
+> -Permitir visualizar o bloqueio do usuário anteriormente a locação; 
+
+> -Permitir locação segura que não gere problemas futuros para usuário com relação aos seus dados. 
 
 ## Justificativa
 

@@ -106,17 +106,19 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | ID     | Descrição do Requisito                                                                                      | Prioridade |
 |--------|-------------------------------------------------------------------------------------------------------------|------------|
 | RF-001 | O sistema deve enviar notificações e lembretes aos clientes sobre datas de aluguel, devolução e pagamentos pendentes. | MÉDIA      |
-| RF-002 | O sistema deve permitir que os usuários se cadastrem na plataforma, fornecendo informações pessoais               | ALTA       |
-| RF-003 | O sistema deve bloquear locações inválidas, reduzindo ocorrências de frustração do cliente.                      | ALTA       |
-| RF-004 | O sistema deve apresentar um painel de controle sobre o status da locadora para o gerente                        | MÉDIA      |
-| RF-005 | O sistema deve possibilitar aos usuários avaliar o serviço da locadora                                        | MÉDIA      |
-| RF-006 | O sistema deve apresentar um mapa ao usuário indicando qual o local onde ele deve retirar seu veículo alocado   | MÉDIA      |
-| RF-007 | O sistema deve possibilitar o usuário escolher qual carro alugar com base no preço, modelo, data e local de retirada | MÉDIA      |
-| RF-008 | O sistema deve permitir aos administradores o gerenciamento do estoque de veículos, categorias, valores da diária, dentre outras informações administrativas | ALTA       |
-| RF-009 | O sistema deve fornecer ao usuário página com histórico das solicitações já realizadas pelo cliente, sejam elas em andamento ou encerradas | ALTA       |
-| RF-010 | O sistema deve exibir dados estratégicos referentes ao desempenho da organização com dashboards e painéis atualizados em tempo real (BI) | BAIXA      |
-| RF-011 | O sistema deve possibilitar a emissão de relatórios nas telas que exibam dados que sejam passíveis de emissão de documentos (reservas, dashboards, gestão) | ALTA       |
-| RF-012 | O sistema deve permitir o cadastro de veículos e possibilitar o registro de todas as manutenções e Quilometragens do veículo durante o seu tempo ativo na frota | MÉDIA      |
+| RF-002 | O sistema deve permitir que os usuários se cadastrem na plataforma, fornecendo informações pessoais.               | ALTA       |
+| RF-003 | O sistema deve validar se há bloqueios na conta do cliente no cadastro interno e não permitir locações em caso de impedimentos.                     | ALTA       |
+| RF-004 | O sistema deve possibilitar aos usuários avaliar o serviço da locadora.                                        | MÉDIA      |
+| RF-005 | O sistema deve apresentar um mapa ao usuário indicando qual o local onde ele deve retirar seu veículo locado.   | BAIXA      |
+| RF-006 | O sistema deve possibilitar o cliente escolher qual carro alugar, com base no preço, modelo, data, local de retirada, cálculo de custos adicionais da locação, edição e cancelamento de reservas. | ALTA     |
+| RF-007 | O sistema deve permitir aos administradores o cadastro e edição dos parâmetros do estoque de veículos, categorias e valores da diária. | ALTA       |
+| RF-008 | O sistema deve fornecer ao cliente página com histórico das solicitações já realizadas, sejam elas em andamento ou encerradas. | MÉDIA       |
+| RF-009 | O sistema deve exibir dados estratégicos referentes ao desempenho da organização com dashboards e painéis atualizados em tempo real. | MÉDIA      |
+| RF-010 | O sistema deve possibilitar o registro de todas as manutenções e quilometragens do veículo durante o seu tempo ativo na frota. | BAIXA      |
+| RF-011 | O sistema deve possibilitar o registro de infrações de trânsito para identificação do condutor infrator. | BAIXA    |
+| RF-012 | O sistema deve possibilitar o registro das vistorias na retirada e entrega dos veículos. | BAIXA      |
+
+
 
 
 ### Requisitos não Funcionais

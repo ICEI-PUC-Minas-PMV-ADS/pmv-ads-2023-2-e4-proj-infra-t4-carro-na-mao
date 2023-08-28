@@ -46,9 +46,13 @@ A definição do problema e dos pontos mais relevantes relacionados ao projeto f
 
 |Eduardo     | Informações:                       |                                        |
 |--------------------|------------------------------------|----------------------------------------|
-| ![Eduardo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao/blob/07819e5d1ad62e63ceb52cbf567f15b52ee2a6f1/docs/img/Personas/Persona-Eduardo.png) | **Idade:** 50 <br> **Cargo:** Diretor de Operações em Locadoras <br> **Uso do Cartão de Crédito:** Utiliza um cartão corporativo fornecido pela empresa. <br> **Necessidade:** Implementar melhorias operacionais na organização.  |**Aplicativos:**<br>• LinkedIn <br>• Microsoft Teams<br>• Evernote |
+| ![Eduardo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao/blob/07819e5d1ad62e63ceb52cbf567f15b52ee2a6f1/docs/img/Personas/Persona-Eduardo.png) | **Idade:** 50 <br> **Cargo:** Lider de Operações em Locadoras <br> **Uso do Cartão de Crédito:** Utiliza um cartão corporativo fornecido pela empresa. <br> **Necessidade:** Implementar melhorias operacionais na organização.  |**Aplicativos:**<br>• LinkedIn <br>• Microsoft Teams<br>• Evernote |
 |**Motivações:**<br>● Padronização de operações em várias filiais <br>● Eficiência. |**Frustrações:**<br>● Falta de cooperação entre as filiais <br>● Problemas constantes de qualidade. |**Hobbies:**<br>• Praticar Peteca<br>• Ler sobre inovações em gestão <br>• Assistir a documentários históricos |
 
+|Gustavo    | Informações:                       |                                        |
+|--------------------|------------------------------------|----------------------------------------|
+| ![Eduardo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao/blob/07819e5d1ad62e63ceb52cbf567f15b52ee2a6f1/docs/img/Personas/Persona-Gustavo.png) | **Idade:** 35 <br> **Cargo:** Assistente Administrativo em uma locadora <br> **Uso do Cartão de Crédito:** Utiliza seu cartão pessoal para transações.<br> **Necessidade:** Implementar melhorias operacionais na organização.  |**Aplicativos:**<br>• Waze <br>• Linkedin<br>• Trello |
+|**Motivações:**<br>● Gerenciamento eficiente de gastos profissionais <br>● Registro simplificado de despesas <br>● Eficiência. |**Frustrações:**<br>●  Esquecimento de despesas  <br>● Falta de categorização dos gastos |**Hobbies:**<br>• Andar de bicicleta<br>• Assistir a documentários <br>• Culinária |
 
 ## Histórias de Usuários
 
@@ -56,15 +60,20 @@ A partir da análise das personas elaboradas, foram levantadas as histórias de 
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Lucas  | Alugar um carro rapidamente para viagem de negócios.  | Agilidade é essencial para cumprir compromissos profissionais. |
+|Lucas  | Avaliar o serviço da locadora após a viagem.  | Compartilhar sua experiência e contribuir para a melhoria contínua dos serviços. |
+|Lucas  | Escolher um carro para alugar com base em preço, modelo, data e local de retirada. | Encontrar a opção mais adequada para suas necessidades de viagem. |
 |André  | Alugar um carro para uma ocasião especial, como um encontro romântico, e impressionar sua parceira.  | Quer criar uma experiência memorável. |
-|Marina  | Alugar um veículo confortável e seguro para uma viagem em família ao campo.  | Deseja garantir a segurança e o conforto de sua família. |
-|Renata  | Alugar vários carros para uma conferência corporativa.  | Necessita de uma frota para atender às demandas do evento. |
+|Marina  | Visualizar o histórico de locações realizadas e agendadas.  | Deseja garantir a segurança e controle das locações realizadas, bem como gastos empenhados em locações |
+|Marina  | Visualizar um mapa indicando o local onde devo retirar meu veículo locado. | Encontrar o local de retirada de forma conveniente. |
+|Renata  | Receber notificações sobre datas de aluguel e pagamentos pendentes.  | Manter-se informada e evitar atrasos em pagamentos. |
 |Renata  | Encontrar soluções de locação flexíveis para a equipe que participará de uma conferência.  | Busca praticidade e conforto para seus colaboradores. |
-|Rodrigo  | Aprimorar eficiência operacional e experiência do cliente na locadora.  | Deseja otimizar processos e melhorar a satisfação do cliente para impulsionar os negócios. |
 |Rodrigo  | Implementar um sistema de cadastro mais preciso para evitar frustrações dos clientes e melhorar a reputação da locadora.  | Busca construir uma imagem positiva da empresa. |
 |Andréia  | Criar painéis de visualização personalizados para analisar as tendências de locação, permitindo uma abordagem mais direcionada nas estratégias de marketing.  | Deseja melhorar a eficácia das campanhas promocionais. |
-|Eduardo  | Implementar melhorias operacionais na organização.  | Precisa padronizar processos e garantir alta qualidade em todas as operações da organização. |
+|Eduardo  | Cadastrar os veiculos, categorias e valores das diarias  | Precisa padronizar processos e informações para garantir alta qualidade em todas as operações da organização. |
+|Andreia| Validar se há bloqueios na conta do cliente no cadastro interno e não permitir locações em caso de impedimentos. | Garantir a segurança e a conformidade das locações. |
+|Gustavo| Registrar infrações de trânsito para identificação do condutor infrator. | Cumprir com responsabilidades legais e identificar responsáveis por infrações. |
+|Gustavo| Registrar manutenções e quilometragens do veículo durante o tempo ativo na frota. | Manter o histórico de manutenções e controlar a quilometragem para manter os veículos em bom estado. |
+|Gustavo|Documentar vistorias na retirada e entrega dos veículos aos clientes |Garantir registros precisos das condições dos veículos para evitar disputas futuras. |
 
 ## Modelagem do Processo de Negócio 
 

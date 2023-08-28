@@ -51,7 +51,7 @@ A definição do problema e dos pontos mais relevantes relacionados ao projeto f
 
 |Gustavo    | Informações:                       |                                        |
 |--------------------|------------------------------------|----------------------------------------|
-| ![Eduardo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao/blob/07819e5d1ad62e63ceb52cbf567f15b52ee2a6f1/docs/img/Personas/Persona-Gustavo.png) | **Idade:** 35 <br> **Cargo:** Assistente Administrativo em uma locadora <br> **Uso do Cartão de Crédito:** Utiliza seu cartão pessoal para transações.<br> **Necessidade:** Implementar melhorias operacionais na organização.  |**Aplicativos:**<br>• Waze <br>• Linkedin<br>• Trello |
+| ![Gustavo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao/blob/9c72041f3547f7ee7afa6ee2f4ed22f072339d91/docs/img/Personas/Persona-Gustavo.png) | **Idade:** 35 <br> **Cargo:** Assistente Administrativo em uma locadora <br> **Uso do Cartão de Crédito:** Utiliza seu cartão pessoal para transações.<br> **Necessidade:** Implementar melhorias operacionais na organização.  |**Aplicativos:**<br>• Waze <br>• Linkedin<br>• Trello |
 |**Motivações:**<br>● Gerenciamento eficiente de gastos profissionais <br>● Registro simplificado de despesas <br>● Eficiência. |**Frustrações:**<br>●  Esquecimento de despesas  <br>● Falta de categorização dos gastos |**Hobbies:**<br>• Andar de bicicleta<br>• Assistir a documentários <br>• Culinária |
 
 ## Histórias de Usuários

@@ -78,24 +78,52 @@ A partir da análise das personas elaboradas, foram levantadas as histórias de 
 ## Modelagem do Processo de Negócio 
 
 ### Análise da Situação Atual
-A empresa Carro na mão tem o propósito de não deixar os clientes na mão, pois é muito frustrante vc fazer a reserva de um veículo específico e quando vc chega para fazer o check-in na locadora descobre que o mesmo não está disponível ou sua documentação está com algum impedimento não informado de maneira previa. 
-Quando o cliente fizer a reserva (data/hora), será verificado toda a documentação e disponibilidade do veículo, avisando assim previamente o cliente que está tudo certo ou se há pendencias .
+Na atualidade, os procedimentos relativos à locação de veículos englobam a interação do cliente com o site da locadora ou por intermédio do aplicativo correspondente, através dos quais é conferida a possibilidade de selecionar a categoria desejada do veículo. Uma vez dentro do ambiente virtual, é possível examinar a lista dos veículos disponíveis nessa categoria, procedendo, posteriormente, à fixação da data e horário desejados para a retirada do automóvel.
+
+Não obstante, constata-se uma ampliação apreciável no volume de reclamações reportadas pelos clientes que, ao se apresentarem no horário preestabelecido para a retirada do veículo, se deparam, no momento da efetivação, com contratempos pendentes. Estes impedem a liberação do veículo previamente reservado.
+
+Tais pendências, de maneira recorrente, têm sua origem na demora no processo de verificação documental do locatário e na insuficiência da disponibilidade de veículos, além de outros fatores afins. Este cenário não apenas culmina em ônus adicionais suportados pelos clientes, que se veem compelidos a se deslocarem até a base da locadora, mas também suscita a possibilidade de prejudicar os planos e cronogramas tanto das empresas envolvidas quanto dos clientes individuais que fundamentavam suas expectativas na locação do veículo.
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+
+Apresentamos uma abordagem centrada no cliente, visando aprimorar a interação tanto na plataforma web quanto no aplicativo. Nossa proposta inclui:
+
+Disponibilizar uma ampla gama de categorias de veículos para atender diversas necessidades dos clientes.
+
+Reduzir possíveis atrasos na locação através da verificação prévia de disponibilidade e pendências.
+
+Oferecer a opção de contato direto com um atendente, garantindo assistência imediata conforme necessário.
+
+Minimizar bloqueios indevidos em locações e evitar custos inesperados.
+
+Facilitar o processo de pagamento ao gerar cálculos precisos das diárias.
+
+Incorporar um atalho de navegação para o local de retirada ou devolução do veículo, simplificando o percurso.
+
+Para as locadoras, nossa proposta envolve:
+
+Realizar a validação dos documentos durante o cadastro, reforçando essa validação no momento da reserva.
+
+Promover feedback por meio das avaliações dos usuários, permitindo aprimoramentos contínuos em nossos serviços.
+
+Estabelecer um controle otimizado para localização de veículos em filiais e matrizes.
+
+Implementar checklists tanto no check-in quanto no check-out, garantindo maior rigor na inspeção dos veículos e suas condições.
+
+Estamos comprometidos em proporcionar uma experiência mais eficaz e confiável para nossos clientes, ao mesmo tempo em que otimizamos nossos processos internos para melhor atender às demandas das locadoras. Seu conforto e satisfação são nossa prioridade, e continuaremos a buscar maneiras de aprimorar nossos serviços.
 
 ### Processo 1 – NOME DO PROCESSO
 
 Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
 
-![Processo 1](![Alt text](<img/fluxograma carro na mão.png>))
+(<img/fluxograma carro na mão.png>)
 
 ### Processo 2 – NOME DO PROCESSO
 
 Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
 
-![Processo 2](![Alt text](img/carro2.png))
+(img/carro2.png)
 
 ## Indicadores de Desempenho
 

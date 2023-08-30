@@ -117,13 +117,13 @@ Estamos comprometidos em proporcionar uma experiência mais eficaz e confiável 
 
 Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
 
-(<img/fluxograma carro na mão.png>)
+![Processo 1](![Alt text](<img/carro na mão01.png>))
 
 ### Processo 2 – NOME DO PROCESSO
 
 Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
 
-(img/carro2.png)
+![Processo 2](![Alt text]())(img/carro2.png)
 
 ## Indicadores de Desempenho
 

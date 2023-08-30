@@ -80,10 +80,9 @@ A partir da análise das personas elaboradas, foram levantadas as histórias de 
 ### Análise da Situação Atual
 Na atualidade, os procedimentos relativos à locação de veículos englobam a interação do cliente com o site da locadora ou por intermédio do aplicativo correspondente, através dos quais é conferida a possibilidade de selecionar a categoria desejada do veículo. Uma vez dentro do ambiente virtual, é possível examinar a lista dos veículos disponíveis nessa categoria, procedendo, posteriormente, à fixação da data e horário desejados para a retirada do automóvel.
 
-Não obstante, constata-se uma ampliação apreciável no volume de reclamações reportadas pelos clientes que, ao se apresentarem no horário preestabelecido para a retirada do veículo, se deparam, no momento da efetivação, com contratempos pendentes. Estes impedem a liberação do veículo previamente reservado.
+"No entanto, conforme exposto em nossa introdução e em pesquisas de satisfação disponibilizadas em portais da internet, foi observado..."
 
-Tais pendências, de maneira recorrente, têm sua origem na demora no processo de verificação documental do locatário e na insuficiência da disponibilidade de veículos, além de outros fatores afins. Este cenário não apenas culmina em ônus adicionais suportados pelos clientes, que se veem compelidos a se deslocarem até a base da locadora, mas também suscita a possibilidade de prejudicar os planos e cronogramas tanto das empresas envolvidas quanto dos clientes individuais que fundamentavam suas expectativas na locação do veículo.
-
+Essas pendências, de acordo com os estudos publicados, são causadas em sua maioria por ordem burocrática, entre as quais: demora na verificação de documentos do Cliente (Locatário), reservas em duplicidade e cobranças indevidas.
 ### Descrição Geral da Proposta
 
 

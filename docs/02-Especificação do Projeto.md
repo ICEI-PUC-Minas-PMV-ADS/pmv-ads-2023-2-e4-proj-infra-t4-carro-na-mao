@@ -217,8 +217,7 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de
 # Matriz de Rastreabilidade
 Depois de monitorar os critérios do sistema, desenvolvemos uma matriz de rastreamento a seguir para simplificar a detecção das interconexões entre os requisitos. 
 
-![Exemplo de matriz de rastreabilidade](img/MatrizRastreabilidade.png)
-
+![Exemplo de matriz de rastreabilidade](img/MatrizRast02.png)
 > **Links Úteis**:
 > - [Artigo Engenharia de Software 13 - Rastreabilidade](https://www.devmedia.com.br/artigo-engenharia-de-software-13-rastreabilidade/12822/)
 > - [Verificação da rastreabilidade de requisitos usando a integração do IBM Rational RequisitePro e do IBM ClearQuest Test Manager](https://developer.ibm.com/br/tutorials/requirementstraceabilityverificationusingrrpandcctm/)

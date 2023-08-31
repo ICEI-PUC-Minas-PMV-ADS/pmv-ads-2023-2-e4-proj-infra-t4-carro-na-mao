@@ -45,7 +45,7 @@ Esse projeto busca criar uma aplicação ágil e transparente para a locadora Ca
 
 O público-alvo de uma locadora de veículos é diversificado e abrange viajantes a lazer e a negócios, executivos, turistas, pessoas que necessitam de veículos temporários, clientes locais sem carro próprio, empresas em busca de soluções de transporte e entusiastas de aventuras. Essa variedade de perfis exige que a locadora ofereça opções de veículos, preços e serviços adaptados para atender às necessidades e preferências específicas de cada grupo.
 
-Teste
+Teste2
 
 ## Referências
 

@@ -217,8 +217,7 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de
 # Matriz de Rastreabilidade
 Depois de monitorar os critérios do sistema, desenvolvemos uma matriz de rastreamento a seguir para simplificar a detecção das interconexões entre os requisitos. 
 
-![Exemplo de matriz de rastreabilidade](img/MatrizRastreabilidade.png)
-
+![Exemplo de matriz de rastreabilidade](img/MatrizRast02.png)
 > **Links Úteis**:
 > - [Artigo Engenharia de Software 13 - Rastreabilidade](https://www.devmedia.com.br/artigo-engenharia-de-software-13-rastreabilidade/12822/)
 > - [Verificação da rastreabilidade de requisitos usando a integração do IBM Rational RequisitePro e do IBM ClearQuest Test Manager](https://developer.ibm.com/br/tutorials/requirementstraceabilityverificationusingrrpandcctm/)
@@ -245,22 +244,21 @@ Para gerir o projeto de uma maneira eficaz, iremos utilizar a ferramenta trello.
 
 ## Gerenciamento de Equipe
 
-Assegurar uma gestão eficaz das tarefas é um fator determinante para impulsionar a produtividade do projeto a patamares elevados. Nesse sentido, a administração tanto das atividades quanto dos membros da equipe assume um papel crucial, resultando em uma colaboração mais eficiente e no aprimoramento do desempenho coletivo. 
+ Assegurar uma gestão eficaz das tarefas é um fator determinante para impulsionar a produtividade do projeto a patamares elevados. Nesse sentido, a administração tanto das atividades quanto dos membros da equipe assume um papel crucial, resultando em uma colaboração mais eficiente e no aprimoramento do desempenho coletivo. 
 
-A imagem abaixo demonstra como será gerenciada a equipe do projeto.  
+Toda a equipe irá desenvolver Back-End, Front-End e Mobile, dividido o papel de cada um por requisitos, sendo:
 
-![Gerenciamento de Equipe](img/Ger.%20Equipe%20Carro%20na%20mão.png)
+- Daniel de Souza Marcolino: RF-10 e RF-12 
+- Maykon Edésio Rosa: RF-08 e RF-11 
+- Matheus Ferreira Pires: RF-06 
+- Matheus Lemos Sampaio: RF-07 e RF-05 
+- Pedro Assis Silva de Almeida: RF-04 
+- Vitor Hugo Silva Ribeiro: RF-09 e RF-02 
+- Roger Bastos Mendes: RF-01 e RF-03 
 
-Equipe Front-End 
-- Daniel de Souza Marcolino 
-- Maykon Edésio Rosa 
-- Roger Bastos Mendes 
+A imagem abaixo demonstra como será gerenciada as datas e planejamento do projeto. 
 
-Equipe Back-End 
-- Matheus Ferreira Pires 
-- Matheus Lemos Sampaio 
-- Pedro Assis Silva de Almeida
-- Vitor Hugo Silva Ribeiro
+![Gerenciamento de Equipe](img/Gerenc.%20Equipe.png)
 
 ## Gestão de Orçamento
 

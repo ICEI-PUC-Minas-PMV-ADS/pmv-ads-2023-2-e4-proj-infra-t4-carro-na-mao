@@ -141,21 +141,18 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 | ID     | Descrição do Requisito                                                                                      | Prioridade |
 |--------|-------------------------------------------------------------------------------------------------------------|------------|
-| RF-001 | O sistema deve enviar notificações e lembretes aos clientes sobre datas de aluguel, devolução e pagamentos pendentes. | MÉDIA      |
-| RF-002 | O sistema deve permitir que os usuários se cadastrem na plataforma, fornecendo informações pessoais.               | ALTA       |
-| RF-003 | O sistema deve validar se há bloqueios na conta do cliente no cadastro interno e não permitir locações em caso de impedimentos.                     | ALTA       |
-| RF-004 | O sistema deve possibilitar aos usuários avaliar o serviço da locadora.                                        | MÉDIA      |
+| RF-001 | O sistema deve permitir que os usuários se cadastrem na plataforma, fornecendo informações pessoais.               | ALTA       |
+| RF-002 | O sistema deve validar se há bloqueios na conta do cliente no cadastro interno e não permitir locações em caso de impedimentos.      | ALTA       |
+| RF-003 | O sistema deve possibilitar o registro de infrações de trânsito para identificação do condutor infrator. | BAIXA    |
+| RF-004 | O sistema deve possibilitar o cliente escolher qual carro alugar, com base no preço, modelo, data, local de retirada, cálculo de custos adicionais da locação, edição e cancelamento de reservas. | ALTA     |
 | RF-005 | O sistema deve apresentar um mapa ao usuário indicando qual o local onde ele deve retirar seu veículo locado.   | BAIXA      |
 | RF-006 | O sistema deve possibilitar o cliente escolher qual carro alugar, com base no preço, modelo, data, local de retirada, cálculo de custos adicionais da locação, edição e cancelamento de reservas. | ALTA     |
 | RF-007 | O sistema deve permitir aos administradores o cadastro e edição dos parâmetros do estoque de veículos, categorias e valores da diária. | ALTA       |
 | RF-008 | O sistema deve fornecer ao cliente página com histórico das solicitações já realizadas, sejam elas em andamento ou encerradas. | MÉDIA       |
 | RF-009 | O sistema deve exibir dados estratégicos referentes ao desempenho da organização com dashboards e painéis atualizados em tempo real. | MÉDIA      |
 | RF-010 | O sistema deve possibilitar o registro de todas as manutenções e quilometragens do veículo durante o seu tempo ativo na frota. | BAIXA      |
-| RF-011 | O sistema deve possibilitar o registro de infrações de trânsito para identificação do condutor infrator. | BAIXA    |
-| RF-012 | O sistema deve possibilitar o registro das vistorias na retirada e entrega dos veículos. | BAIXA      |
-
-
-
+| RF-011 | O sistema deve exibir dados estratégicos referentes ao desempenho da organização com dashboards e painéis atualizados em tempo real. | MÉDIA      |
+| RF-012 | O sistema deve possibilitar aos usuários avaliar o serviço da locadora.                                        | MÉDIA     |
 
 ### Requisitos não Funcionais
 
@@ -168,20 +165,6 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-005| Garantir que a aplicação seja compatível com diversos dispositivos, navegadores e sistemas operacionais.  |  MÉDIA | 
 |RNF-006| A arquitetura deve permitir a adição fácil de recursos e componentes para lidar com a carga variável da aplicação. |  MÉDIA | 
 
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 ## Restrições
 

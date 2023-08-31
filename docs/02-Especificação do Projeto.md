@@ -155,8 +155,6 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | RF-012 | O sistema deve possibilitar o registro das vistorias na retirada e entrega dos veículos. | BAIXA      |
 
 
-
-
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
@@ -168,20 +166,6 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-005| Garantir que a aplicação seja compatível com diversos dispositivos, navegadores e sistemas operacionais.  |  MÉDIA | 
 |RNF-006| A arquitetura deve permitir a adição fácil de recursos e componentes para lidar com a carga variável da aplicação. |  MÉDIA | 
 
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 ## Restrições
 
@@ -233,8 +217,7 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de
 # Matriz de Rastreabilidade
 Depois de monitorar os critérios do sistema, desenvolvemos uma matriz de rastreamento a seguir para simplificar a detecção das interconexões entre os requisitos. 
 
-![Exemplo de matriz de rastreabilidade](img/MatrizRastreabilidade.png)
-
+![Exemplo de matriz de rastreabilidade](img/MatrizRast02.png)
 > **Links Úteis**:
 > - [Artigo Engenharia de Software 13 - Rastreabilidade](https://www.devmedia.com.br/artigo-engenharia-de-software-13-rastreabilidade/12822/)
 > - [Verificação da rastreabilidade de requisitos usando a integração do IBM Rational RequisitePro e do IBM ClearQuest Test Manager](https://developer.ibm.com/br/tutorials/requirementstraceabilityverificationusingrrpandcctm/)
@@ -261,22 +244,21 @@ Para gerir o projeto de uma maneira eficaz, iremos utilizar a ferramenta trello.
 
 ## Gerenciamento de Equipe
 
-Assegurar uma gestão eficaz das tarefas é um fator determinante para impulsionar a produtividade do projeto a patamares elevados. Nesse sentido, a administração tanto das atividades quanto dos membros da equipe assume um papel crucial, resultando em uma colaboração mais eficiente e no aprimoramento do desempenho coletivo. 
+ Assegurar uma gestão eficaz das tarefas é um fator determinante para impulsionar a produtividade do projeto a patamares elevados. Nesse sentido, a administração tanto das atividades quanto dos membros da equipe assume um papel crucial, resultando em uma colaboração mais eficiente e no aprimoramento do desempenho coletivo. 
 
-A imagem abaixo demonstra como será gerenciada a equipe do projeto.  
+Toda a equipe irá desenvolver Back-End, Front-End e Mobile, dividido o papel de cada um por requisitos, sendo:
 
-![Gerenciamento de Equipe](img/Ger.%20Equipe%20Carro%20na%20mão.png)
+- Daniel de Souza Marcolino: RF-10 e RF-12 
+- Maykon Edésio Rosa: RF-08 e RF-11 
+- Matheus Ferreira Pires: RF-06 
+- Matheus Lemos Sampaio: RF-07 e RF-05 
+- Pedro Assis Silva de Almeida: RF-04 
+- Vitor Hugo Silva Ribeiro: RF-09 e RF-02 
+- Roger Bastos Mendes: RF-01 e RF-03 
 
-Equipe Front-End 
-- Daniel de Souza Marcolino 
-- Maykon Edésio Rosa 
-- Roger Bastos Mendes 
+A imagem abaixo demonstra como será gerenciada as datas e planejamento do projeto. 
 
-Equipe Back-End 
-- Matheus Ferreira Pires 
-- Matheus Lemos Sampaio 
-- Pedro Assis Silva de Almeida
-- Vitor Hugo Silva Ribeiro
+![Gerenciamento de Equipe](img/Gerenc.%20Equipe.png)
 
 ## Gestão de Orçamento
 

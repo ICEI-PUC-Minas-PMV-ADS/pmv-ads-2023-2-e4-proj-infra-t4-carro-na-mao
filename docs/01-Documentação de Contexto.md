@@ -31,7 +31,7 @@ A aplicação "Carro na Mão", tem como objetivo dar maior eficiência no proces
 
 > -Permitir visualizar o bloqueio do usuário anteriormente a locação; 
 
-> -Permitir locação segura que não gere problemas futuros para usuário com relação aos seus dados. 
+> -Permitir locação segura que não gere problemas futuros para usuário com relação aos seus dados em nossa aplicação. 
 
 ## Justificativa
 
@@ -44,6 +44,8 @@ Esse projeto busca criar uma aplicação ágil e transparente para a locadora Ca
 ## Público-Alvo
 
 O público-alvo de uma locadora de veículos é diversificado e abrange viajantes a lazer e a negócios, executivos, turistas, pessoas que necessitam de veículos temporários, clientes locais sem carro próprio, empresas em busca de soluções de transporte e entusiastas de aventuras. Essa variedade de perfis exige que a locadora ofereça opções de veículos, preços e serviços adaptados para atender às necessidades e preferências específicas de cada grupo.
+
+Teste2
 
 ## Referências
 

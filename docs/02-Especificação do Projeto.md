@@ -46,13 +46,9 @@ A definição do problema e dos pontos mais relevantes relacionados ao projeto f
 
 |Eduardo     | Informações:                       |                                        |
 |--------------------|------------------------------------|----------------------------------------|
-| ![Eduardo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao/blob/07819e5d1ad62e63ceb52cbf567f15b52ee2a6f1/docs/img/Personas/Persona-Eduardo.png) | **Idade:** 50 <br> **Cargo:** Lider de Operações em Locadoras <br> **Uso do Cartão de Crédito:** Utiliza um cartão corporativo fornecido pela empresa. <br> **Necessidade:** Implementar melhorias operacionais na organização.  |**Aplicativos:**<br>• LinkedIn <br>• Microsoft Teams<br>• Evernote |
+| ![Eduardo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao/blob/07819e5d1ad62e63ceb52cbf567f15b52ee2a6f1/docs/img/Personas/Persona-Eduardo.png) | **Idade:** 50 <br> **Cargo:** Diretor de Operações em Locadoras <br> **Uso do Cartão de Crédito:** Utiliza um cartão corporativo fornecido pela empresa. <br> **Necessidade:** Implementar melhorias operacionais na organização.  |**Aplicativos:**<br>• LinkedIn <br>• Microsoft Teams<br>• Evernote |
 |**Motivações:**<br>● Padronização de operações em várias filiais <br>● Eficiência. |**Frustrações:**<br>● Falta de cooperação entre as filiais <br>● Problemas constantes de qualidade. |**Hobbies:**<br>• Praticar Peteca<br>• Ler sobre inovações em gestão <br>• Assistir a documentários históricos |
 
-|Gustavo    | Informações:                       |                                        |
-|--------------------|------------------------------------|----------------------------------------|
-| ![Gustavo](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao/blob/9c72041f3547f7ee7afa6ee2f4ed22f072339d91/docs/img/Personas/Persona-Gustavo.png) | **Idade:** 35 <br> **Cargo:** Assistente Administrativo em uma locadora <br> **Uso do Cartão de Crédito:** Utiliza seu cartão pessoal para transações.<br> **Necessidade:** Implementar melhorias operacionais na organização.  |**Aplicativos:**<br>• Waze <br>• Linkedin<br>• Trello |
-|**Motivações:**<br>● Gerenciamento eficiente de gastos profissionais <br>● Registro simplificado de despesas <br>● Eficiência. |**Frustrações:**<br>●  Esquecimento de despesas  <br>● Falta de categorização dos gastos |**Hobbies:**<br>• Andar de bicicleta<br>• Assistir a documentários <br>• Culinária |
 
 ## Histórias de Usuários
 
@@ -60,69 +56,37 @@ A partir da análise das personas elaboradas, foram levantadas as histórias de 
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Lucas  | Avaliar o serviço da locadora após a viagem.  | Compartilhar sua experiência e contribuir para a melhoria contínua dos serviços. |
-|Lucas  | Escolher um carro para alugar com base em preço, modelo, data e local de retirada. | Encontrar a opção mais adequada para suas necessidades de viagem. |
+|Lucas  | Alugar um carro rapidamente para viagem de negócios.  | Agilidade é essencial para cumprir compromissos profissionais. |
 |André  | Alugar um carro para uma ocasião especial, como um encontro romântico, e impressionar sua parceira.  | Quer criar uma experiência memorável. |
-|Marina  | Visualizar o histórico de locações realizadas e agendadas.  | Deseja garantir a segurança e controle das locações realizadas, bem como gastos empenhados em locações |
-|Marina  | Visualizar um mapa indicando o local onde devo retirar meu veículo locado. | Encontrar o local de retirada de forma conveniente. |
-|Renata  | Receber notificações sobre datas de aluguel e pagamentos pendentes.  | Manter-se informada e evitar atrasos em pagamentos. |
+|Marina  | Alugar um veículo confortável e seguro para uma viagem em família ao campo.  | Deseja garantir a segurança e o conforto de sua família. |
+|Renata  | Alugar vários carros para uma conferência corporativa.  | Necessita de uma frota para atender às demandas do evento. |
 |Renata  | Encontrar soluções de locação flexíveis para a equipe que participará de uma conferência.  | Busca praticidade e conforto para seus colaboradores. |
+|Rodrigo  | Aprimorar eficiência operacional e experiência do cliente na locadora.  | Deseja otimizar processos e melhorar a satisfação do cliente para impulsionar os negócios. |
 |Rodrigo  | Implementar um sistema de cadastro mais preciso para evitar frustrações dos clientes e melhorar a reputação da locadora.  | Busca construir uma imagem positiva da empresa. |
 |Andréia  | Criar painéis de visualização personalizados para analisar as tendências de locação, permitindo uma abordagem mais direcionada nas estratégias de marketing.  | Deseja melhorar a eficácia das campanhas promocionais. |
-|Eduardo  | Cadastrar os veiculos, categorias e valores das diarias  | Precisa padronizar processos e informações para garantir alta qualidade em todas as operações da organização. |
-|Andreia| Validar se há bloqueios na conta do cliente no cadastro interno e não permitir locações em caso de impedimentos. | Garantir a segurança e a conformidade das locações. |
-|Gustavo| Registrar infrações de trânsito para identificação do condutor infrator. | Cumprir com responsabilidades legais e identificar responsáveis por infrações. |
-|Gustavo| Registrar manutenções e quilometragens do veículo durante o tempo ativo na frota. | Manter o histórico de manutenções e controlar a quilometragem para manter os veículos em bom estado. |
-|Gustavo|Documentar vistorias na retirada e entrega dos veículos aos clientes |Garantir registros precisos das condições dos veículos para evitar disputas futuras. |
+|Eduardo  | Implementar melhorias operacionais na organização.  | Precisa padronizar processos e garantir alta qualidade em todas as operações da organização. |
 
 ## Modelagem do Processo de Negócio 
 
 ### Análise da Situação Atual
-Na atualidade, os procedimentos relativos à locação de veículos englobam a interação do cliente com o site da locadora ou por intermédio do aplicativo correspondente, através dos quais é conferida a possibilidade de selecionar a categoria desejada do veículo. Uma vez dentro do ambiente virtual, é possível examinar a lista dos veículos disponíveis nessa categoria, procedendo, posteriormente, à fixação da data e horário desejados para a retirada do automóvel.
+A empresa Carro na mão tem o propósito de não deixar os clientes na mão, pois é muito frustrante vc fazer a reserva de um veículo específico e quando vc chega para fazer o check-in na locadora descobre que o mesmo não está disponível ou sua documentação está com algum impedimento não informado de maneira previa. 
+Quando o cliente fizer a reserva (data/hora), será verificado toda a documentação e disponibilidade do veículo, avisando assim previamente o cliente que está tudo certo ou se há pendencias .
 
-"No entanto, conforme exposto em nossa introdução e em pesquisas de satisfação disponibilizadas em portais da internet, foi observado..."
-
-Essas pendências, de acordo com os estudos publicados, são causadas em sua maioria por ordem burocrática, entre as quais: demora na verificação de documentos do Cliente (Locatário), reservas em duplicidade e cobranças indevidas.
 ### Descrição Geral da Proposta
 
-
-Apresentamos uma abordagem centrada no cliente, visando aprimorar a interação tanto na plataforma web quanto no aplicativo. Nossa proposta inclui:
-
-Disponibilizar uma ampla gama de categorias de veículos para atender diversas necessidades dos clientes.
-
-Reduzir possíveis atrasos na locação através da verificação prévia de disponibilidade e pendências.
-
-Oferecer a opção de contato direto com um atendente, garantindo assistência imediata conforme necessário.
-
-Minimizar bloqueios indevidos em locações e evitar custos inesperados.
-
-Facilitar o processo de pagamento ao gerar cálculos precisos das diárias.
-
-Incorporar um atalho de navegação para o local de retirada ou devolução do veículo, simplificando o percurso.
-
-Para as locadoras, nossa proposta envolve:
-
-Realizar a validação dos documentos durante o cadastro, reforçando essa validação no momento da reserva.
-
-Promover feedback por meio das avaliações dos usuários, permitindo aprimoramentos contínuos em nossos serviços.
-
-Estabelecer um controle otimizado para localização de veículos em filiais e matrizes.
-
-Implementar checklists tanto no check-in quanto no check-out, garantindo maior rigor na inspeção dos veículos e suas condições.
-
-Estamos comprometidos em proporcionar uma experiência mais eficaz e confiável para nossos clientes, ao mesmo tempo em que otimizamos nossos processos internos para melhor atender às demandas das locadoras. Seu conforto e satisfação são nossa prioridade, e continuaremos a buscar maneiras de aprimorar nossos serviços.
+Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
 
 ### Processo 1 – NOME DO PROCESSO
 
 Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
 
-![Processo 1](![Alt text](<img/carro na mão01.png>))
+![Processo 1](img/02-bpmn-proc1.png)
 
 ### Processo 2 – NOME DO PROCESSO
 
 Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
 
-![Processo 2](![Alt text]())(img/carro2.png)
+![Processo 2](img/02-bpmn-proc2.png)
 
 ## Indicadores de Desempenho
 
@@ -130,7 +94,7 @@ Apresente aqui os principais indicadores de desempenho e algumas metas para o pr
 
 Usar o seguinte modelo: 
 
-![Indicadores de Desempenho](img/02-indic-desemp.png)
+![Indicadores de Desempenho](![Alt text](<img/Diagrama de caso de uso.png>))
 Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posteriori. 
 
 ## Requisitos
@@ -139,21 +103,15 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Requisitos Funcionais
 
-| ID     | Descrição do Requisito                                                                                      | Prioridade |
-|--------|-------------------------------------------------------------------------------------------------------------|------------|
-| RF-001 | O sistema deve enviar notificações e lembretes aos clientes sobre datas de aluguel, devolução e pagamentos pendentes. | MÉDIA      |
-| RF-002 | O sistema deve permitir que os usuários se cadastrem na plataforma, fornecendo informações pessoais.               | ALTA       |
-| RF-003 | O sistema deve validar se há bloqueios na conta do cliente no cadastro interno e não permitir locações em caso de impedimentos.                     | ALTA       |
-| RF-004 | O sistema deve possibilitar aos usuários avaliar o serviço da locadora.                                        | MÉDIA      |
-| RF-005 | O sistema deve apresentar um mapa ao usuário indicando qual o local onde ele deve retirar seu veículo locado.   | BAIXA      |
-| RF-006 | O sistema deve possibilitar o cliente escolher qual carro alugar, com base no preço, modelo, data, local de retirada, cálculo de custos adicionais da locação, edição e cancelamento de reservas. | ALTA     |
-| RF-007 | O sistema deve permitir aos administradores o cadastro e edição dos parâmetros do estoque de veículos, categorias e valores da diária. | ALTA       |
-| RF-008 | O sistema deve fornecer ao cliente página com histórico das solicitações já realizadas, sejam elas em andamento ou encerradas. | MÉDIA       |
-| RF-009 | O sistema deve exibir dados estratégicos referentes ao desempenho da organização com dashboards e painéis atualizados em tempo real. | MÉDIA      |
-| RF-010 | O sistema deve possibilitar o registro de todas as manutenções e quilometragens do veículo durante o seu tempo ativo na frota. | BAIXA      |
-| RF-011 | O sistema deve possibilitar o registro de infrações de trânsito para identificação do condutor infrator. | BAIXA    |
-| RF-012 | O sistema deve possibilitar o registro das vistorias na retirada e entrega dos veículos. | BAIXA      |
-
+|ID    | Descrição do Requisito  | Prioridade |
+|------|-----------------------------------------|----|
+|RF-001| O sistema deve enviar notificações e lembretes aos clientes sobre datas de aluguel, devolução e pagamentos pendentes.  | MÉDIA | 
+|RF-002| O sistema deve permitir que os usuários se cadastrem na plataforma, fornecendo informações pessoais| ALTA |
+|RF-003| O sistema deve bloquear locações inválidas, reduzindo ocorrências de frustração do cliente. | ALTA |
+|RF-004| O sistem deve apresentar um paniel de controle sobre o status da locadora para o gerente  | MÉDIA |
+|RF-005| O sistema deve possibilitar aos usuarios avaliar o serviço da locadora  | MÉDIA |
+|RF-006| O sistema deve apresentar um mapa ao usuario indicando qual o local onde ele deve retirar seu veiculo alocado   | MÉDIA |
+|RF-007| O sistema deve possibilitar o usuario escolher qual carro alugar com base no preço, modelo, data e local de retirada | MÉDIA |
 
 ### Requisitos não Funcionais
 
@@ -166,6 +124,20 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-005| Garantir que a aplicação seja compatível com diversos dispositivos, navegadores e sistemas operacionais.  |  MÉDIA | 
 |RNF-006| A arquitetura deve permitir a adição fácil de recursos e componentes para lidar com a carga variável da aplicação. |  MÉDIA | 
 
+Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
+
+- [Requisitos Funcionais
+ (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
+ correspondem a uma funcionalidade que deve estar presente na
+  plataforma (ex: cadastro de usuário).
+- [Requisitos Não Funcionais
+  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
+  correspondem a uma característica técnica, seja de usabilidade,
+  desempenho, confiabilidade, segurança ou outro (ex: suporte a
+  dispositivos iOS e Android).
+Lembre-se que cada requisito deve corresponder à uma e somente uma
+característica alvo da sua solução. Além disso, certifique-se de que
+todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 ## Restrições
 
@@ -205,12 +177,16 @@ O mapeamento de requisitos envolve a identificação, análise e documentação 
 
 O diagrama de casos de uso é o próximo passo após a elicitação de requisitos, que utiliza um modelo gráfico e uma tabela com as descrições sucintas dos casos de uso e dos atores. Ele contempla a fronteira do sistema e o detalhamento dos requisitos funcionais com a indicação dos atores, casos de uso e seus relacionamentos. 
 
-
-
+![diagrama](![Alt text](<img/Diagrama de caso de uso (1).png>))
 # Matriz de Rastreabilidade
 Depois de monitorar os critérios do sistema, desenvolvemos uma matriz de rastreamento a seguir para simplificar a detecção das interconexões entre os requisitos. 
 
-![Exemplo de matriz de rastreabilidade](img/MatrizRast02.png)
+![Exemplo de matriz de rastreabilidade](img/MatrizRastreabilidade.png)
+
+> **Links Úteis**:
+> - [Artigo Engenharia de Software 13 - Rastreabilidade](https://www.devmedia.com.br/artigo-engenharia-de-software-13-rastreabilidade/12822/)
+> - [Verificação da rastreabilidade de requisitos usando a integração do IBM Rational RequisitePro e do IBM ClearQuest Test Manager](https://developer.ibm.com/br/tutorials/requirementstraceabilityverificationusingrrpandcctm/)
+> - [IBM Engineering Lifecycle Optimization – Publishing](https://www.ibm.com/br-pt/products/engineering-lifecycle-optimization/publishing/)
 
 
 # Gerenciamento de Projeto
@@ -218,6 +194,10 @@ Depois de monitorar os critérios do sistema, desenvolvemos uma matriz de rastre
 De acordo com o PMBoK v6 as dez áreas que constituem os pilares para gerenciar projetos, e que caracterizam a multidisciplinaridade envolvida, são: Integração, Escopo, Cronograma (Tempo), Custos, Qualidade, Recursos, Comunicações, Riscos, Aquisições, Partes Interessadas. Para desenvolver projetos um profissional deve se preocupar em gerenciar todas essas dez áreas. Elas se complementam e se relacionam, de tal forma que não se deve apenas examinar uma área de forma estanque. É preciso considerar, por exemplo, que as áreas de Escopo, Cronograma e Custos estão muito relacionadas. Assim, se eu amplio o escopo de um projeto eu posso afetar seu cronograma e seus custos.
 
 ## Gerenciamento de Tempo
+
+Com diagramas bem organizados que permitem gerenciar o tempo nos projetos, o gerente de projetos agenda e coordena tarefas dentro de um projeto para estimar o tempo necessário de conclusão.
+
+![Diagrama de rede simplificado notação francesa (método francês)](img/02-diagrama-rede-simplificado.png)
 
 O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utilizada para controlar e gerenciar o cronograma de atividades de um projeto. Com ele, é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las. A imagem a seguir e uma representação de como  ficara dividido as etapas do nosso projeto nesse semestre 
 
@@ -229,21 +209,22 @@ Para gerir o projeto de uma maneira eficaz, iremos utilizar a ferramenta trello.
 
 ## Gerenciamento de Equipe
 
- Assegurar uma gestão eficaz das tarefas é um fator determinante para impulsionar a produtividade do projeto a patamares elevados. Nesse sentido, a administração tanto das atividades quanto dos membros da equipe assume um papel crucial, resultando em uma colaboração mais eficiente e no aprimoramento do desempenho coletivo. 
+Assegurar uma gestão eficaz das tarefas é um fator determinante para impulsionar a produtividade do projeto a patamares elevados. Nesse sentido, a administração tanto das atividades quanto dos membros da equipe assume um papel crucial, resultando em uma colaboração mais eficiente e no aprimoramento do desempenho coletivo. 
 
-Toda a equipe irá desenvolver Back-End, Front-End e Mobile, dividido o papel de cada um por requisitos, sendo:
+A imagem abaixo demonstra como será gerenciada a equipe do projeto.  
 
-- Daniel de Souza Marcolino: RF-10 e RF-12 
-- Maykon Edésio Rosa: RF-08 e RF-11 
-- Matheus Ferreira Pires: RF-06 
-- Matheus Lemos Sampaio: RF-07 e RF-05 
-- Pedro Assis Silva de Almeida: RF-04 
-- Vitor Hugo Silva Ribeiro: RF-09 e RF-02 
-- Roger Bastos Mendes: RF-01 e RF-03 
+![Gerenciamento de Equipe](img/Ger.%20Equipe%20Carro%20na%20mão.png)
 
-A imagem abaixo demonstra como será gerenciada as datas e planejamento do projeto. 
+Equipe Front-End 
+- Daniel de Souza Marcolino 
+- Maykon Edésio Rosa 
+- Roger Bastos Mendes 
 
-![Gerenciamento de Equipe](img/Gerenc.%20Equipe.png)
+Equipe Back-End 
+- Matheus Ferreira Pires 
+- Matheus Lemos Sampaio 
+- Pedro Assis Silva de Almeida
+- Vitor Hugo Silva Ribeiro
 
 ## Gestão de Orçamento
 

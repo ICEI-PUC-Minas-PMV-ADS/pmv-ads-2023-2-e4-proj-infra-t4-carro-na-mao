@@ -2,11 +2,11 @@
 
 <span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>
 
-O software será desenvolvido baseado no modelo de arquitetura de sistermas distribuídos.
+O software será desenvolvido baseado no modelo de arquitetura de sistemas distribuídos.
 
 Em (COLOURIS, 2013) um sistema distribuído é definido “como aquele no qual os componentes de hardware ou software, localizados em computadores interligados em rede, comunicam-se e coordenam suas ações apenas enviando mensagens entre si”. 
 
-Esses computadores poderam estar em qualquer distância, separados ou não geograficamente (na "nuvem"), representados pela Figura 1 abaixo.
+Esses computadores podem estar em qualquer distância, separados ou não geograficamente (na "nuvem"), representados pela Figura 1 abaixo.
 
 ![Arquitetura da Solução](img/arquitetura.png)
 Figura 1 - Arquitetura de Software Distribuído

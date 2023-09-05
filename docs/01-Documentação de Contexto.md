@@ -38,7 +38,7 @@ A aplicação "Carro na Mão", tem como objetivo dar maior eficiência no proces
 
 ## Justificativa
 
-Devido ao aumento expressivo de competidores, para se estabelecer e usurfruir do crescimento desse mercado, é essencial que se adotem ferramentas ágeis e eficazes para rápido acesso à contratação do serviços de locação de veículos automotores, habilitando o cadastro do maior número de clientes, oferecendo: Acesso digital à frota disponível, preços, condições contratuais, reservas e suporte 24 horas.  
+Devido ao aumento expressivo de competidores, para se estabelecer e usufruir do crescimento desse mercado, é essencial que se adotem ferramentas ágeis e eficazes para rápido acesso à contratação dos serviços de locação de veículos automotores, habilitando o cadastro do maior número de clientes, oferecendo: Acesso digital à frota disponível, preços, condições contratuais, reservas e suporte 24 horas.  
 
 ## Público-Alvo
 

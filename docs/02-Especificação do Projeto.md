@@ -170,11 +170,10 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrições                                             |
 |--|-------------------------------------------------------|
-|RE-01| O projeto deverá ser entregue até o final do semestre.|
-|RE-02| O sistema deverá consumir informações de API.|
-|RE-03| Aplicação terá como foco para dispositivos web e mobile por meio de uma Web API.|
-|RE-04| A execução desse projeto será em grupo, o que simula o dia a dia de um profissional de TI.|
-|RE-05| O sistema deverá ter solução em Banco de Dados NoSQL.|
+|RE-01| O projeto deverá ser entregue até 10/12/2023.|
+|RE-02| Aplicação terá como foco para dispositivos web e mobile por meio de uma Web API.|
+|RE-03| A execução desse projeto será em grupo, o que simula o dia a dia de um profissional de TI.|
+|RE-04| O sistema deverá ter solução em Banco de Dados NoSQL.|
 
 
 ## Mapeamento de Requisitos

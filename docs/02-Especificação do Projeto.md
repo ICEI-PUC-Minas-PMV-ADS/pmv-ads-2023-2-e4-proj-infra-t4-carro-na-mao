@@ -9,7 +9,7 @@ A definição do problema e dos pontos mais relevantes relacionados ao projeto f
 
 |Lucas      | Informações:                       |                                        |
 |--------------------|------------------------------------|----------------------------------------|
-| ![Lucas](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao/blob/c9474e72744026157b339da5ab3e9af0d2d5ac06/docs/img/Personas/Persona-Lucas.png) | **Idade:** 32 <br> **Ocupação:** Executivo de Vendas <br> **Uso do Cartão de Credito:** Utiliza um cartão corporativo fornecido pela empresa. <br> **Opinião sobre Aplicação Financeira:** Lucas valoriza uma aplicação que possa ajudá-lo a monitorar os gastos de suas viagens de negócios, incluindo as despesas com locação de veículos.  |**Aplicativos:**<br>● Whatsapp <br>● Instagram<br>● Facebook  |
+| ![Lucas](img/Personas/Persona-Lucas.png) | **Idade:** 32 <br> **Ocupação:** Executivo de Vendas <br> **Uso do Cartão de Credito:** Utiliza um cartão corporativo fornecido pela empresa. <br> **Opinião sobre Aplicação Financeira:** Lucas valoriza uma aplicação que possa ajudá-lo a monitorar os gastos de suas viagens de negócios, incluindo as despesas com locação de veículos.  |**Aplicativos:**<br>● Whatsapp <br>● Instagram<br>● Facebook  |
 |**Motivações:**<br>● Eficiência em viagens de negócios <br>●  Prestação de contas simplificada |**Frustrações:**<br>● Atrasos em locações de carros  <br>● Processos de reembolso complicados |**Hobbies:**<br>● Jogar Tênis<br>● Explorar novos restaurantes <br>● Ler |
 
 
@@ -112,26 +112,23 @@ Implementar checklists tanto no check-in quanto no check-out, garantindo maior r
 
 Estamos comprometidos em proporcionar uma experiência mais eficaz e confiável para nossos clientes, ao mesmo tempo em que otimizamos nossos processos internos para melhor atender às demandas das locadoras. Seu conforto e satisfação são nossa prioridade, e continuaremos a buscar maneiras de aprimorar nossos serviços.
 
-### Processo 1 – NOME DO PROCESSO
+### Processo 1 – AS-IS
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
+Esse processo tem como característica apresentar o modelo atual de agendamento e reserva veicular na aplicação, onde o cliente recebe o código da reserva, mas sem a garantia da retirada do veículo.
 
-![Processo 1](![Alt text](<img/carro na mão01.png>))
+![Processo 1](<img/processo_as-is.jpg>)
 
-### Processo 2 – NOME DO PROCESSO
+### Processo 2 – PROCESSO TO-BE
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+Esse processo tem como característica apresentar o modelo futuro de agendamento e reserva veicular, sendo que a confirmação (ou não) da reserva é imediatamente disponiblizada ao cliente após a conclusão do processo, de maneira online, possibilitando o envio de alertas através da aplicação desenvolvida.
 
-![Processo 2](![Alt text]())(img/carro2.png)
+![Processo 2](<img/diagrama_bpm_v1.png>)
 
 ## Indicadores de Desempenho
 
-Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
+> Em desenvolvimento.<br>
 
-Usar o seguinte modelo: 
-
-![Indicadores de Desempenho](img/02-indic-desemp.png)
-Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posteriori. 
+![Work in Progress](<img/trabalhando.png>)
 
 ## Requisitos
 
@@ -203,8 +200,7 @@ O mapeamento de requisitos envolve a identificação, análise e documentação 
 
 ## Diagrama de Casos de Uso
 
-O diagrama de casos de uso é o próximo passo após a elicitação de requisitos, que utiliza um modelo gráfico e uma tabela com as descrições sucintas dos casos de uso e dos atores. Ele contempla a fronteira do sistema e o detalhamento dos requisitos funcionais com a indicação dos atores, casos de uso e seus relacionamentos. 
-
+![Caso de Uso](<img/diagrama_caso_v1.png>)
 
 
 # Matriz de Rastreabilidade

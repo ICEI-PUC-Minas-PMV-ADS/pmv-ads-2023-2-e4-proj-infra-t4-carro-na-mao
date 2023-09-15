@@ -8,7 +8,7 @@ Em (COLOURIS, 2013) um sistema distribuído é definido “como aquele no qual o
 
 Esses computadores podem estar em qualquer distância, separados ou não geograficamente (na "nuvem"), representados pela Figura 1 abaixo.
 
-![Arquitetura da Solução](img/arquitetura.png)
+![Arquitetura da Solução](img/arquitetura_v1.png)
 Figura 1 - Arquitetura de Software Distribuído
 
 ## Diagrama de Classes

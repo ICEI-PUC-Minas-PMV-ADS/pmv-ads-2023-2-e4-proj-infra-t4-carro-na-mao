@@ -1,10 +1,12 @@
 using carronamao_api_login.Models;
+using carronamao_api_login.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.Configure<CadastroDataBase>
     (builder.Configuration.GetSection("DevNetStoreDatabase"));
+builder.Services.AddSingleton<CadastroService> ();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

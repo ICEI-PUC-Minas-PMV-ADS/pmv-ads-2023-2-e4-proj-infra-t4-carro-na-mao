@@ -24,5 +24,17 @@ namespace carronamao_api_login.Controllers
             await _cadastroService.CreateAsync(cadastro);
         
         }
+        [HttpDelete]
+        public async Task DeleteCdastro(string id)
+        {
+             await _cadastroService.RemoveAsync(id);
+        }
+        [HttpPut]
+
+        public async Task updateCadastor(string id, Cadastro cadastro)
+        {
+            await _cadastroService.updateAsync(id, cadastro);
+        }
     }
 }
+

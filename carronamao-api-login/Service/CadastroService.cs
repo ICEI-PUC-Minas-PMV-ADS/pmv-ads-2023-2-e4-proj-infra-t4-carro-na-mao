@@ -14,13 +14,20 @@ namespace carronamao_api_login.Service
 
             _cadastroCollection = mongoDatabase.GetCollection<Cadastro>(cadastroService.Value.CadastroCollectionName);
         }
-        //Metodo para listar todas as tabelas dentro do banco
-        public async Task<List<Cadastro>>GetAsync() => await _cadastroCollection.Find(x=>true).ToListAsync();
+     
+        public async Task<List<Cadastro>>GetAsync() => 
+            await _cadastroCollection.Find(x=>true).ToListAsync();
 
-        //Meto para colocar dados no banco
+        public async Task CreateAsync(Cadastro cadastro) => 
+            await _cadastroCollection.InsertOneAsync(cadastro);
 
-        public async Task CreateAsync(Cadastro cadastro) => await _cadastroCollection.InsertOneAsync(cadastro);
+        public async Task updateAsync(string id, Cadastro cadastro) => 
+            await _cadastroCollection.ReplaceOneAsync(x => x.Id == id, cadastro);
 
 
+        public async Task RemoveAsync(string id) =>
+            await _cadastroCollection.DeleteOneAsync(x => x.Id == id);
+
+    
     }
 }

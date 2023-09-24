@@ -1,3 +1,5 @@
+using carronamao_api_login.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

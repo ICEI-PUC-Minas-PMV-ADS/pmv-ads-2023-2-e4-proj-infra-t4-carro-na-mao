@@ -25,8 +25,11 @@ namespace carronamao_api.Service
         public async Task CreateAsync (Categoria categoria) =>
             await _categoriaCollection.InsertOneAsync(categoria);
 
-        public async Task UpdateAsync(string id, Categoria categoria) =>
-            await _categoriaCollection.ReplaceOneAsync(x => x.id_categoria == id , categoria);
+        public async Task UpdateAsync(string id, Categoria categoria) {
+            categoria.id_categoria = id;
+            await _categoriaCollection.ReplaceOneAsync(x => x.id_categoria == id, categoria);
+        }
+            
 
         public async Task DeleteAsync(string id) =>
             await _categoriaCollection.DeleteOneAsync(x => x.id_categoria == id);

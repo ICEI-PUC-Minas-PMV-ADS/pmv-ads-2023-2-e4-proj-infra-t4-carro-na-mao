@@ -34,7 +34,7 @@ namespace carronamao_api.Controllers
         }
 
         [HttpPut]
-        public async Task<Estoque> UpdateEstoque(int id, Estoque estoque)
+        public async Task<Estoque> UpdateEstoque(string id, Estoque estoque)
         {
             await _estoqueService.UpdateAsync(id, estoque);
 

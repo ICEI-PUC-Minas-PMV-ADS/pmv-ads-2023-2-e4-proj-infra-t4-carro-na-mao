@@ -7,7 +7,7 @@ namespace carronamao_api.Models
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string id_estoque { get; set; }
+        public string? id_estoque { get; set; }
 
         [BsonElement("id_veiculo")]
         public int id_veiculo { get; set; }

@@ -20,13 +20,13 @@ namespace carronamao_api.Service
             await _estoqueCollection.Find(x => true).ToListAsync();
 
         public async Task<Estoque> getAsyncId(int id) =>
-            await _estoqueCollection.Find(x => x.id_estoque == id).SingleOrDefaultAsync();
+            await _estoqueCollection.Find(x => x.id_veiculo == id).SingleOrDefaultAsync();
 
         public async Task CreateAsync (Estoque estoque) =>
             await _estoqueCollection.InsertOneAsync(estoque);
 
         public async Task UpdateAsync(int id, Estoque estoque) =>
-            await _estoqueCollection.ReplaceOneAsync(x => x.id_estoque == id, estoque);
+            await _estoqueCollection.ReplaceOneAsync(x => x.id_veiculo == id, estoque);
 
         public async Task DeleteAsync(int id) =>
             await _estoqueCollection.DeleteOneAsync(x => x.id_veiculo == id);

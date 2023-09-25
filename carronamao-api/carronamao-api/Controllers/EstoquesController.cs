@@ -20,9 +20,10 @@ namespace carronamao_api.Controllers
         public async Task<List<Estoque>> FindAll()
             => await _estoqueService.getAsync();
 
-        [HttpGet]
+        
+        [HttpGet("{id}")]
         public async Task<Estoque> FindById(int id)
-            => await _estoqueService.getAsyncId(id);
+             => await _estoqueService.getAsyncId(id);
 
         [HttpPost]
         public async Task<Estoque> CreateEstoque(Estoque estoque)

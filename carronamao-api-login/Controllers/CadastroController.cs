@@ -33,7 +33,9 @@ namespace carronamao_api_login.Controllers
 
         public async Task updateCadastor(string id, Cadastro cadastro)
         {
+  
             await _cadastroService.updateAsync(id, cadastro);
+            
         }
     }
 }

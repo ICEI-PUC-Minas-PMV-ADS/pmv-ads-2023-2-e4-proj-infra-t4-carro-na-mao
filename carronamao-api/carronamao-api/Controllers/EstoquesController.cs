@@ -21,7 +21,7 @@ namespace carronamao_api.Controllers
             => await _estoqueService.getAsync();
 
 
-        [HttpGet("/findByVeiculo")]
+        [HttpGet("/find-by-veiculo")]
         public async Task<Estoque> FindById(int id_veiculo)
              => await _estoqueService.getAsyncId(id_veiculo);
 

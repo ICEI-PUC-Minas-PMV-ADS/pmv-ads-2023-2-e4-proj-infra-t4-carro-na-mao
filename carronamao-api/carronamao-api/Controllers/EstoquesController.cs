@@ -32,5 +32,18 @@ namespace carronamao_api.Controllers
             return estoque;
         }
 
+        [HttpPut]
+        public async Task<Estoque> UpdateEstoque(int id, Estoque estoque)
+        {
+            await _estoqueService.UpdateAsync(id, estoque);
+
+            return estoque;
+        }
+
+        [HttpDelete]
+        public async Task DeleteEstoque (int id)
+        {
+            await _estoqueService.DeleteAsync(id);
+        }
     }
 }

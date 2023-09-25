@@ -9,6 +9,11 @@ builder.Services.Configure<EstoqueDatabaseSettings>
 
 builder.Services.AddSingleton<EstoqueService>();
 
+builder.Services.Configure<CategoriaDatabaseSettings>
+    (builder.Configuration.GetSection("DevNetStoreDatabase"));
+
+builder.Services.AddSingleton<CategoriaService>();
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

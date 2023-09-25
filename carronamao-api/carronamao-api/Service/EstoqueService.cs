@@ -25,8 +25,10 @@ namespace carronamao_api.Service
         public async Task CreateAsync (Estoque estoque) =>
             await _estoqueCollection.InsertOneAsync(estoque);
 
-        public async Task UpdateAsync(int id, Estoque estoque) =>
-            await _estoqueCollection.ReplaceOneAsync(x => x.id_veiculo == id, estoque);
+        public async Task UpdateAsync(string id, Estoque estoque) {
+            estoque.id_estoque = id;
+            await _estoqueCollection.ReplaceOneAsync(x => x.id_estoque == id, estoque);
+        }
 
         public async Task DeleteAsync(int id) =>
             await _estoqueCollection.DeleteOneAsync(x => x.id_veiculo == id);

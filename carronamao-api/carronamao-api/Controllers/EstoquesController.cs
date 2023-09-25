@@ -11,7 +11,7 @@ namespace carronamao_api.Controllers
     {
         private readonly EstoqueService _estoqueService;
 
-        public EstoquesController(EstoqueService estoqueService) 
+        public EstoquesController(EstoqueService estoqueService)
         {
             _estoqueService = estoqueService;
         }
@@ -20,10 +20,10 @@ namespace carronamao_api.Controllers
         public async Task<List<Estoque>> FindAll()
             => await _estoqueService.getAsync();
 
-        
-        [HttpGet("{id}")]
-        public async Task<Estoque> FindById(int id)
-             => await _estoqueService.getAsyncId(id);
+
+        [HttpGet("/findByVeiculo")]
+        public async Task<Estoque> FindById(int id_veiculo)
+             => await _estoqueService.getAsyncId(id_veiculo);
 
         [HttpPost]
         public async Task<Estoque> CreateEstoque(Estoque estoque)
@@ -42,9 +42,9 @@ namespace carronamao_api.Controllers
         }
 
         [HttpDelete]
-        public async Task DeleteEstoque (int id)
+        public async Task DeleteEstoque (int id_veiculo)
         {
-            await _estoqueService.DeleteAsync(id);
+            await _estoqueService.DeleteAsync(id_veiculo);
         }
     }
 }

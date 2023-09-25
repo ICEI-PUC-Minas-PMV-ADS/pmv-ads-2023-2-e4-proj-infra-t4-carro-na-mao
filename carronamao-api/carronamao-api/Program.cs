@@ -14,6 +14,11 @@ builder.Services.Configure<CategoriaDatabaseSettings>
 
 builder.Services.AddSingleton<CategoriaService>();
 
+builder.Services.Configure<RetiradaDatabaseSettings>
+    (builder.Configuration.GetSection("DevNetStoreDatabase"));
+
+builder.Services.AddSingleton<RetiradaService>();
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

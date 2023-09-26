@@ -9,7 +9,7 @@ A definição do problema e dos pontos mais relevantes relacionados ao projeto f
 
 |Lucas      | Informações:                       |                                        |
 |--------------------|------------------------------------|----------------------------------------|
-| ![Lucas](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao/blob/c9474e72744026157b339da5ab3e9af0d2d5ac06/docs/img/Personas/Persona-Lucas.png) | **Idade:** 32 <br> **Ocupação:** Executivo de Vendas <br> **Uso do Cartão de Credito:** Utiliza um cartão corporativo fornecido pela empresa. <br> **Opinião sobre Aplicação Financeira:** Lucas valoriza uma aplicação que possa ajudá-lo a monitorar os gastos de suas viagens de negócios, incluindo as despesas com locação de veículos.  |**Aplicativos:**<br>● Whatsapp <br>● Instagram<br>● Facebook  |
+| ![Lucas](img/Personas/Persona-Lucas.png) | **Idade:** 32 <br> **Ocupação:** Executivo de Vendas <br> **Uso do Cartão de Credito:** Utiliza um cartão corporativo fornecido pela empresa. <br> **Opinião sobre Aplicação Financeira:** Lucas valoriza uma aplicação que possa ajudá-lo a monitorar os gastos de suas viagens de negócios, incluindo as despesas com locação de veículos.  |**Aplicativos:**<br>● Whatsapp <br>● Instagram<br>● Facebook  |
 |**Motivações:**<br>● Eficiência em viagens de negócios <br>●  Prestação de contas simplificada |**Frustrações:**<br>● Atrasos em locações de carros  <br>● Processos de reembolso complicados |**Hobbies:**<br>● Jogar Tênis<br>● Explorar novos restaurantes <br>● Ler |
 
 
@@ -112,28 +112,25 @@ Implementar checklists tanto no check-in quanto no check-out, garantindo maior r
 
 Estamos comprometidos em proporcionar uma experiência mais eficaz e confiável para nossos clientes, ao mesmo tempo em que otimizamos nossos processos internos para melhor atender às demandas das locadoras. Seu conforto e satisfação são nossa prioridade, e continuaremos a buscar maneiras de aprimorar nossos serviços.
 
-### Processo 1 – NOME DO PROCESSO
+### Processo 1 – AS-IS
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
+Esse processo tem como característica apresentar o modelo atual de agendamento e reserva veicular na aplicação, onde o cliente recebe o código da reserva, mas sem a garantia da retirada do veículo.
 
-![Processo 1](![Alt text](<img/carro na mão01.png>))
+![Processo 1](<img/processo_as-is.jpg>)
 
-### Processo 2 – NOME DO PROCESSO
+### Processo 2 – PROCESSO TO-BE
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+Esse processo tem como característica apresentar o modelo futuro de agendamento e reserva veicular, sendo que a confirmação (ou não) da reserva é imediatamente disponiblizada ao cliente após a conclusão do processo, de maneira online, possibilitando o envio de alertas através da aplicação desenvolvida.
 
-![Processo 2](![Alt text]())(img/carro2.png)
+![Processo 2](<img/diagrama_bpm_v1.png>)
 
 ## Indicadores de Desempenho
 
-Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
+> Em desenvolvimento.<br>
 
-Usar o seguinte modelo: 
+![Work in Progress](<img/trabalhando.png>)
 
-![Indicadores de Desempenho](img/02-indic-desemp.png)
-Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posteriori. 
-
-## Requisitos
+## Mapeamento de Requisitos
 
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
 
@@ -143,7 +140,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |--------|-------------------------------------------------------------------------------------------------------------|------------|
 | RF-001 | O sistema deve enviar notificações e lembretes aos clientes sobre datas de aluguel, devolução e pagamentos pendentes. | MÉDIA      |
 | RF-002 | O sistema deve permitir que os usuários se cadastrem na plataforma, fornecendo informações pessoais.               | ALTA       |
-| RF-003 | O sistema deve validar se há bloqueios na conta do cliente no cadastro interno e não permitir locações em caso de impedimentos.                     | ALTA       |
+| RF-003 | A aplicação deve o oferecer a opção de bloqueio de clientes para o usuário administrador, impedindo assim a reserva de veículos.                     | ALTA       |
 | RF-004 | O sistema deve possibilitar aos usuários avaliar o serviço da locadora.                                        | MÉDIA      |
 | RF-005 | O sistema deve apresentar um mapa ao usuário indicando qual o local onde ele deve retirar seu veículo locado.   | BAIXA      |
 | RF-006 | O sistema deve possibilitar o cliente escolher qual carro alugar, com base no preço, modelo, data, local de retirada, cálculo de custos adicionais da locação, edição e cancelamento de reservas. | ALTA     |
@@ -153,8 +150,6 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 | RF-010 | O sistema deve possibilitar o registro de todas as manutenções e quilometragens do veículo durante o seu tempo ativo na frota. | BAIXA      |
 | RF-011 | O sistema deve possibilitar o registro de infrações de trânsito para identificação do condutor infrator. | BAIXA    |
 | RF-012 | O sistema deve possibilitar o registro das vistorias na retirada e entrega dos veículos. | BAIXA      |
-
-
 
 
 ### Requisitos não Funcionais
@@ -168,20 +163,6 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-005| Garantir que a aplicação seja compatível com diversos dispositivos, navegadores e sistemas operacionais.  |  MÉDIA | 
 |RNF-006| A arquitetura deve permitir a adição fácil de recursos e componentes para lidar com a carga variável da aplicação. |  MÉDIA | 
 
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 ## Restrições
 
@@ -189,56 +170,20 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrições                                             |
 |--|-------------------------------------------------------|
-|RE-01| O projeto deverá ser entregue até o final do semestre.|
-|RE-02| O sistema deverá consumir informações de API.|
-|RE-03| Aplicação terá como foco para dispositivos web e mobile por meio de uma Web API.|
-|RE-04| A execução desse projeto será em grupo, o que simula o dia a dia de um profissional de TI.|
-|RE-05| O sistema deverá ter solução em Banco de Dados NoSQL.|
-
-
-## Mapeamento de Requisitos
-
-O mapeamento de requisitos envolve a identificação, análise e documentação das necessidades e funcionalidades de um sistema ou projeto, visando garantir uma compreensão clara e completa para orientar o processo de desenvolvimento. Esse processo é crucial para alinhar as expectativas entre as partes interessadas e garantir a entrega bem-sucedida do produto final. Segue tabela com as relações dos requisitos funcionais e não-funcionais:
-
-| REQUISITOS FUNCIONAIS | PROCESSOS | TIPOS DE USUÁRIOS |
-|---|:---:|:---:|
-| RF-01: Os usuários devem poder se cadastrar no sistema, fornecendo informações pessoais, detalhes de contato e informações da habilitação.  | - Criar uma conta utilizando seus dados pessoais. | Usuário |
-| RF- 02: Os clientes devem poder pesquisar e selecionar veículos disponíveis com base em categorias, modelos, características e datas de aluguel desejadas.  |  - Fazer Login;<br> - Ir para Aba de “Veículos”. | Usuário |
-| RF-03: O sistema deve calcular automaticamente o preço total do aluguel com base na duração do aluguel, categoria do veículo e possíveis extras (seguro, quilometragem adicional, etc.). | - Fazer login; <br> - Ir para opção de “Finalizar Processo”. | Sistema |
-| RF-04: O sistema deve armazenar e gerenciar documentos relacionados ao aluguel, como contratos, termos e condições, comprovantes de pagamento e detalhes do seguro. | - Fazer login;<br> - Ir para Aba de “Locações”. | Usuário |
-| RF-05: O sistema disponibilizará um gráfico que mostre a evolução do processo da análise da documentação e confirmação da retirada do veículo na unidade escolhida. |  - Fazer login;<br> - Ir para Aba de “Locação”. | Usuário |
-| RF-06: O sistema deve enviar notificações e lembretes aos clientes sobre datas de aluguel, devolução e pagamentos pendentes. | - Fazer login;<br> - Ir para Aba de “Avaliações”. | Sistema |
-
-| REQUISITOS NÃO-FUNCIONAIS | PROCESSOS | BPMN |
-|---|:---:|:---:|
-|RNF-01: Aplicações deve ser compatível com os principais sistemas mobile e web. | Todos | Ambas |
-|RNF- 02: A interface do sistema deve ser intuitiva e fácil de usar, com navegação clara e instruções compreensíveis para os clientes. | Todos | Ambas |
-|RNF-03: O sistema deve estar disponível 24/7, com uma baixa taxa de tempo de inatividade planejado para manutenção e atualizações. | Todos | Ambas |
-|RNF-04: O sistema deve garantir um desempenho eficiente do banco de dados para acesso rápido às informações de veículos, reservas e histórico de aluguel. | Todos | Ambas |
-|RNF-05: O sistema deve ser confiável, evitando falhas críticas que possam afetar as operações de aluguel e causar perda de dados. | Todos | Ambas |
+|RE-01| O projeto deverá ser entregue até 10/12/2023.|
+|RE-02| Aplicação terá como foco para dispositivos web e mobile por meio de uma Web API.|
+|RE-03| A execução desse projeto será em grupo, o que simula o dia a dia de um profissional de TI.|
+|RE-04| O sistema deverá ter solução em Banco de Dados NoSQL.|
 
 ## Diagrama de Casos de Uso
 
-O diagrama de casos de uso é o próximo passo após a elicitação de requisitos, que utiliza um modelo gráfico e uma tabela com as descrições sucintas dos casos de uso e dos atores. Ele contempla a fronteira do sistema e o detalhamento dos requisitos funcionais com a indicação dos atores, casos de uso e seus relacionamentos. 
+![Caso de Uso](<img/diagrama_caso_v1.png>)
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Casos de Uso”.
-
-> **Links Úteis**:
-> - [Criando Casos de Uso](https://www.ibm.com/docs/pt-br/elm/6.0?topic=requirements-creating-use-cases)
-> - [Como Criar Diagrama de Caso de Uso: Tutorial Passo a Passo](https://gitmind.com/pt/fazer-diagrama-de-caso-uso.html/)
-> - [Lucidchart](https://www.lucidchart.com/)
-> - [Astah](https://astah.net/)
-> - [Diagrams](https://app.diagrams.net/)
 
 # Matriz de Rastreabilidade
 Depois de monitorar os critérios do sistema, desenvolvemos uma matriz de rastreamento a seguir para simplificar a detecção das interconexões entre os requisitos. 
 
-![Exemplo de matriz de rastreabilidade](img/MatrizRastreabilidade.png)
-
-> **Links Úteis**:
-> - [Artigo Engenharia de Software 13 - Rastreabilidade](https://www.devmedia.com.br/artigo-engenharia-de-software-13-rastreabilidade/12822/)
-> - [Verificação da rastreabilidade de requisitos usando a integração do IBM Rational RequisitePro e do IBM ClearQuest Test Manager](https://developer.ibm.com/br/tutorials/requirementstraceabilityverificationusingrrpandcctm/)
-> - [IBM Engineering Lifecycle Optimization – Publishing](https://www.ibm.com/br-pt/products/engineering-lifecycle-optimization/publishing/)
+![Exemplo de matriz de rastreabilidade](img/MatrizRast02.png)
 
 
 # Gerenciamento de Projeto
@@ -246,10 +191,6 @@ Depois de monitorar os critérios do sistema, desenvolvemos uma matriz de rastre
 De acordo com o PMBoK v6 as dez áreas que constituem os pilares para gerenciar projetos, e que caracterizam a multidisciplinaridade envolvida, são: Integração, Escopo, Cronograma (Tempo), Custos, Qualidade, Recursos, Comunicações, Riscos, Aquisições, Partes Interessadas. Para desenvolver projetos um profissional deve se preocupar em gerenciar todas essas dez áreas. Elas se complementam e se relacionam, de tal forma que não se deve apenas examinar uma área de forma estanque. É preciso considerar, por exemplo, que as áreas de Escopo, Cronograma e Custos estão muito relacionadas. Assim, se eu amplio o escopo de um projeto eu posso afetar seu cronograma e seus custos.
 
 ## Gerenciamento de Tempo
-
-Com diagramas bem organizados que permitem gerenciar o tempo nos projetos, o gerente de projetos agenda e coordena tarefas dentro de um projeto para estimar o tempo necessário de conclusão.
-
-![Diagrama de rede simplificado notação francesa (método francês)](img/02-diagrama-rede-simplificado.png)
 
 O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utilizada para controlar e gerenciar o cronograma de atividades de um projeto. Com ele, é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las. A imagem a seguir e uma representação de como  ficara dividido as etapas do nosso projeto nesse semestre 
 
@@ -261,22 +202,21 @@ Para gerir o projeto de uma maneira eficaz, iremos utilizar a ferramenta trello.
 
 ## Gerenciamento de Equipe
 
-Assegurar uma gestão eficaz das tarefas é um fator determinante para impulsionar a produtividade do projeto a patamares elevados. Nesse sentido, a administração tanto das atividades quanto dos membros da equipe assume um papel crucial, resultando em uma colaboração mais eficiente e no aprimoramento do desempenho coletivo. 
+ Assegurar uma gestão eficaz das tarefas é um fator determinante para impulsionar a produtividade do projeto a patamares elevados. Nesse sentido, a administração tanto das atividades quanto dos membros da equipe assume um papel crucial, resultando em uma colaboração mais eficiente e no aprimoramento do desempenho coletivo. 
 
-A imagem abaixo demonstra como será gerenciada a equipe do projeto.  
+Toda a equipe irá desenvolver Back-End, Front-End e Mobile, dividido o papel de cada um por requisitos, sendo:
 
-![Gerenciamento de Equipe](img/Ger.%20Equipe%20Carro%20na%20mão.png)
+- Daniel de Souza Marcolino: RF-10 e RF-12 
+- Maykon Edésio Rosa: RF-08 e RF-11 
+- Matheus Ferreira Pires: RF-06 
+- Matheus Lemos Sampaio: RF-07 e RF-05 
+- Pedro Assis Silva de Almeida: RF-04 
+- Vitor Hugo Silva Ribeiro: RF-09 e RF-02 
+- Roger Bastos Mendes: RF-01 e RF-03 
 
-Equipe Front-End 
-- Daniel de Souza Marcolino 
-- Maykon Edésio Rosa 
-- Roger Bastos Mendes 
+A imagem abaixo demonstra como será gerenciada as datas e planejamento do projeto. 
 
-Equipe Back-End 
-- Matheus Ferreira Pires 
-- Matheus Lemos Sampaio 
-- Pedro Assis Silva de Almeida
-- Vitor Hugo Silva Ribeiro
+![Gerenciamento de Equipe](img/Gerenc.%20Equipe.png)
 
 ## Gestão de Orçamento
 

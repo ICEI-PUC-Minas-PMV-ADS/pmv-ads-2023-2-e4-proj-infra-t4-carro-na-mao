@@ -21,9 +21,10 @@ foi utilizado para hospedagem do repositório.
 O projeto segue a seguinte convenção para o nome de branches:
 
 - `main`: versão estável já testada do software
-- `unstable`: versão já testada do software, porém instável
-- `testing`: versão em testes do software
 - `dev`: versão de desenvolvimento do software
+- `feat/(requisito) -> branch de cada requisito individual`:crianção de novas funcionalidades 
+- `fix/(bug) -> branch de cada bug fix individual` : correções de bugs
+
 
 Quanto à gerência de issues, o projeto adota a seguinte convenção para
 etiquetas:

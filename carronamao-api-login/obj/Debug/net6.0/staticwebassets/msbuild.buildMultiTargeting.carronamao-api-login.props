@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\carronamao-api-login.props" />
+</Project>

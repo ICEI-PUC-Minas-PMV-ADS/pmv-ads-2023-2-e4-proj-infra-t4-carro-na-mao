@@ -31,10 +31,12 @@ namespace carronamao_api_login.Controllers
         }
         [HttpPut]
 
-        public async Task updateCadastor(string id, Cadastro cadastro)
+        public async Task<Cadastro> updateCadastor(string id, Cadastro cadastro)
         {
-  
+           
             await _cadastroService.updateAsync(id, cadastro);
+
+            return cadastro;
             
         }
     }

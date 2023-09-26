@@ -21,8 +21,11 @@ namespace carronamao_api_login.Service
         public async Task CreateAsync(Cadastro cadastro) => 
             await _cadastroCollection.InsertOneAsync(cadastro);
 
-        public async Task updateAsync(string id, Cadastro cadastro) => 
+        public async Task updateAsync(string id, Cadastro cadastro)
+        {
+            cadastro.Id = id;
             await _cadastroCollection.ReplaceOneAsync(x => x.Id == id, cadastro);
+        }
 
 
         public async Task RemoveAsync(string id) =>

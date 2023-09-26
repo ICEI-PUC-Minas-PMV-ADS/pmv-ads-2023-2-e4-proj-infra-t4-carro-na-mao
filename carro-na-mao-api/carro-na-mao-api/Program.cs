@@ -1,3 +1,4 @@
+using carro_na_mao_api.Models.Cadastro;
 using carro_na_mao_api.Models.Categoria;
 using carro_na_mao_api.Models.Estoque;
 using carro_na_mao_api.Models.Retirada;
@@ -20,6 +21,10 @@ builder.Services.Configure<RetiradaDatabaseSettings>
     (builder.Configuration.GetSection("DevNetStoreDatabase"));
 
 builder.Services.AddSingleton<RetiradaService>();
+
+builder.Services.Configure<CadastroDataBase>
+    (builder.Configuration.GetSection("DevNetStoreDatabase"));
+builder.Services.AddSingleton<CadastroService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

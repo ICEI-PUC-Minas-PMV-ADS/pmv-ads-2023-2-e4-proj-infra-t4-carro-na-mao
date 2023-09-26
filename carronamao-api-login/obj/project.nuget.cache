@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hYeU8hT4QMcs7wJ9ca1lo5ovl9DQBnC6xMmAjnCs3iNllqm/1HM2pfPUeQUZhGLYRQnf3Zx+UQJCB0utbMapUQ==",
+  "dgSpecHash": "gMHSH0GQ5Oc9PKXde+/xsW7ZZnCJapvKQ9DE2oGTloW3voKvy2YQyu92ZkW5BOCxWmo+W97mJ5ac0R7QGDXQUg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vitor\\Documents\\projeto eixo 4\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carronamao-api-login\\carronamao-api-login.csproj",
+  "projectFilePath": "C:\\Users\\vitor\\Documents\\projeto eixo 4\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carronamao-api-login\\carronamao-api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vitor\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\vitor\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

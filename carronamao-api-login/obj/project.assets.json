@@ -1002,9 +1002,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vitor\\Documents\\projeto eixo 4\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carronamao-api-login\\carronamao-api-login.csproj",
-      "projectName": "carronamao-api-login",
-      "projectPath": "C:\\Users\\vitor\\Documents\\projeto eixo 4\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carronamao-api-login\\carronamao-api-login.csproj",
+      "projectUniqueName": "C:\\Users\\vitor\\Documents\\projeto eixo 4\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carronamao-api-login\\carronamao-api.csproj",
+      "projectName": "carronamao-api",
+      "projectPath": "C:\\Users\\vitor\\Documents\\projeto eixo 4\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carronamao-api-login\\carronamao-api.csproj",
       "packagesPath": "C:\\Users\\vitor\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\vitor\\Documents\\projeto eixo 4\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carronamao-api-login\\obj\\",
       "projectStyle": "PackageReference",

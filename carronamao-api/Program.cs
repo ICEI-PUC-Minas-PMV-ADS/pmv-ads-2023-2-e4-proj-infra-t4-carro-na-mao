@@ -1,12 +1,23 @@
-using carronamao_api_login.Models;
-using carronamao_api_login.Service;
+using carronamao_api.Models;
+using carronamao_api.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.Configure<CadastroDataBase>
+builder.Services.Configure<EstoqueDatabaseSettings>
     (builder.Configuration.GetSection("DevNetStoreDatabase"));
-builder.Services.AddSingleton<CadastroService> ();
+
+builder.Services.AddSingleton<EstoqueService>();
+
+builder.Services.Configure<CategoriaDatabaseSettings>
+    (builder.Configuration.GetSection("DevNetStoreDatabase"));
+
+builder.Services.AddSingleton<CategoriaService>();
+
+builder.Services.Configure<RetiradaDatabaseSettings>
+    (builder.Configuration.GetSection("DevNetStoreDatabase"));
+
+builder.Services.AddSingleton<RetiradaService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

@@ -3,3 +3,5 @@
 ################################################################################
 
 /carro-na-mao-api/.vs/carro-na-mao-api
+/.vs
+/carro-na-mao-api/carro-na-mao-api/obj/Release/net6.0

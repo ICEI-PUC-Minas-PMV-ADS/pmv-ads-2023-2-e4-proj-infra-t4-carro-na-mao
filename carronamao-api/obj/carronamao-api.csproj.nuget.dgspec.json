@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vitor\\Documents\\projeto eixo 4\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carronamao-api-login\\carronamao-api.csproj": {}
+    "C:\\Users\\vitor\\Documents\\projeto eixo 4\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carronamao-api\\carronamao-api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vitor\\Documents\\projeto eixo 4\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carronamao-api-login\\carronamao-api.csproj": {
+    "C:\\Users\\vitor\\Documents\\projeto eixo 4\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carronamao-api\\carronamao-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vitor\\Documents\\projeto eixo 4\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carronamao-api-login\\carronamao-api.csproj",
+        "projectUniqueName": "C:\\Users\\vitor\\Documents\\projeto eixo 4\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carronamao-api\\carronamao-api.csproj",
         "projectName": "carronamao-api",
-        "projectPath": "C:\\Users\\vitor\\Documents\\projeto eixo 4\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carronamao-api-login\\carronamao-api.csproj",
+        "projectPath": "C:\\Users\\vitor\\Documents\\projeto eixo 4\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carronamao-api\\carronamao-api.csproj",
         "packagesPath": "C:\\Users\\vitor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vitor\\Documents\\projeto eixo 4\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carronamao-api-login\\obj\\",
+        "outputPath": "C:\\Users\\vitor\\Documents\\projeto eixo 4\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carronamao-api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\vitor\\AppData\\Roaming\\NuGet\\NuGet.Config",

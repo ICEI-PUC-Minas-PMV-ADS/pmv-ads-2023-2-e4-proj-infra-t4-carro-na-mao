@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vitor\\Documents\\projeto eixo 4\\projeto configurado\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj": {}
+    "D:\\Documentos\\GitHub\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vitor\\Documents\\projeto eixo 4\\projeto configurado\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj": {
+    "D:\\Documentos\\GitHub\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vitor\\Documents\\projeto eixo 4\\projeto configurado\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj",
+        "projectUniqueName": "D:\\Documentos\\GitHub\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj",
         "projectName": "carro-na-mao-api",
-        "projectPath": "C:\\Users\\vitor\\Documents\\projeto eixo 4\\projeto configurado\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj",
-        "packagesPath": "C:\\Users\\vitor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vitor\\Documents\\projeto eixo 4\\projeto configurado\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\obj\\",
+        "projectPath": "D:\\Documentos\\GitHub\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj",
+        "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
+        "outputPath": "D:\\Documentos\\GitHub\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\vitor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -47,7 +46,7 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.2.3, )"
+              "version": "[6.5.0, )"
             }
           },
           "imports": [
@@ -69,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

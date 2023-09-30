@@ -1215,11 +1215,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< Updated upstream:carro-na-mao-api/carro-na-mao-api/obj/project.assets.json
       "projectUniqueName": "D:\\Documentos\\GitHub\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj",
       "projectName": "carro-na-mao-api",
       "projectPath": "D:\\Documentos\\GitHub\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj",
       "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
       "outputPath": "D:\\Documentos\\GitHub\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\obj\\",
+=======
+      "projectUniqueName": "D:\\Documentos\\GitHub\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carronamao-api\\carronamao-api\\carronamao-api.csproj",
+      "projectName": "carronamao-api",
+      "projectPath": "D:\\Documentos\\GitHub\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carronamao-api\\carronamao-api\\carronamao-api.csproj",
+      "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
+      "outputPath": "D:\\Documentos\\GitHub\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carronamao-api\\carronamao-api\\obj\\",
+>>>>>>> Stashed changes:carronamao-api/carronamao-api/obj/project.assets.json
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",

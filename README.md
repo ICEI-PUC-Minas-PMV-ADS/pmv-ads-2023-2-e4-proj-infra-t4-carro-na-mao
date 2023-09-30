@@ -26,7 +26,7 @@ O Carro na Mão é um aplicativo inovador que foi projetado para simplificar e a
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+Abaixo, segue instruções para rodar o projeto localmente. Assim que a primeira versão do sistema estiver disponível, será incluso as instruções para executar o projeto completo.
 
 ### Rodar localmente
 Para rodar localmente, vamos seguir os seguintes passos:

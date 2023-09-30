@@ -15,21 +15,21 @@ namespace carro_na_mao_api.Controllers
         {
             _cadastroService = cadastroService;
         }
-        [HttpGet]
+        [HttpGet("Cadastro")]
         public async Task<List<Cadastro>> GetCadastros() => await _cadastroService.GetAsync();
 
-        [HttpPost]
+        [HttpPost("ListarUsuarios")]
         public async Task PostCadastro(Cadastro cadastro)
         {
             await _cadastroService.CreateAsync(cadastro);
 
         }
-        [HttpDelete]
+        [HttpDelete("ExcluirCadastro")]
         public async Task DeleteCdastro(string id)
         {
             await _cadastroService.RemoveAsync(id);
         }
-        [HttpPut]
+        [HttpPut("EditarUsuario")]
 
         public async Task<Cadastro> updateCadastor(string id, Cadastro cadastro)
         {

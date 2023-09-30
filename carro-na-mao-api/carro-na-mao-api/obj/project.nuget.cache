@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Govftitby7p8i5yTNI6mUXoj5q1wlKTcs62DZe/fs9mGqORZt7OAsM3xSVgPZ6xfJJreHWADz7YX1VmUB1gpRw==",
+  "dgSpecHash": "uEvd5QH9aY22jQGsm6YDKCEZDnsy0+KHTjlBH5MKpcLYPsuBX2GJXxJTapL1PpHbyZlONQWGacGrae+BY6OYSQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vitor\\Documents\\projeto eixo 4\\projeto configurado\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj",
+  "projectFilePath": "C:\\Users\\vitor\\Documents\\projeto eixo 4\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vitor\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\vitor\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

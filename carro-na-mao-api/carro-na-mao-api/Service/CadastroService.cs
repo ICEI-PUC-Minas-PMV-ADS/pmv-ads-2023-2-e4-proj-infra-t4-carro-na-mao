@@ -4,11 +4,11 @@ using MongoDB.Driver;
 
 namespace carro_na_mao_api.Service
 {
-    public class CadastroService
+    public class AvaliacaoService
     {
         private readonly IMongoCollection<Cadastro> _cadastroCollection;
 
-        public CadastroService(IOptions<CadastroDataBase> cadastroService)
+        public AvaliacaoService(IOptions<CadastroDataBase> cadastroService)
         {
             var mongoClient = new MongoClient(cadastroService.Value.ConnectionString);
             var mongoDatabase = mongoClient.GetDatabase(cadastroService.Value.DatabaseName);
@@ -22,7 +22,7 @@ namespace carro_na_mao_api.Service
         public async Task CreateAsync(Cadastro cadastro) =>
             await _cadastroCollection.InsertOneAsync(cadastro);
 
-        public async Task updateAsync(string id, Cadastro cadastro)
+        public async Task UpdateAsync(string id, Cadastro cadastro)
         {
             cadastro.Id = id;
             await _cadastroCollection.ReplaceOneAsync(x => x.Id == id, cadastro);

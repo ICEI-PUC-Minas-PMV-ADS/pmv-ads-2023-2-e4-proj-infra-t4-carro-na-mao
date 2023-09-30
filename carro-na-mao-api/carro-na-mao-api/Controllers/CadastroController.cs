@@ -9,9 +9,9 @@ namespace carro_na_mao_api.Controllers
     [ApiController]
     public class CadastroController : ControllerBase
     {
-        private readonly CadastroService _cadastroService;
+        private readonly AvaliacaoService _cadastroService;
 
-        public CadastroController(CadastroService cadastroService)
+        public CadastroController(AvaliacaoService cadastroService)
         {
             _cadastroService = cadastroService;
         }
@@ -31,10 +31,10 @@ namespace carro_na_mao_api.Controllers
         }
         [HttpPut]
 
-        public async Task<Cadastro> updateCadastor(string id, Cadastro cadastro)
+        public async Task<Cadastro> UpdateCadastor(string id, Cadastro cadastro)
         {
 
-            await _cadastroService.updateAsync(id, cadastro);
+            await _cadastroService.UpdateAsync(id, cadastro);
 
             return cadastro;
 

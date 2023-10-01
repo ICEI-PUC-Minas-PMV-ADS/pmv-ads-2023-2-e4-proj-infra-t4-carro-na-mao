@@ -26,7 +26,21 @@ O Carro na Mão é um aplicativo inovador que foi projetado para simplificar e a
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+Abaixo, segue instruções para rodar o projeto localmente. Assim que a primeira versão do sistema estiver disponível, será incluso as instruções para executar o projeto completo.
+
+### Rodar localmente
+Para rodar localmente, vamos seguir os seguintes passos:
+
+ - Caso não tenha o Visual Studio Commuity 2022 instalado, realize o download e instalação do mesmo.
+ - Fazer o download do arquivo do projeto (ZIP) ou clone do projeto no GitHub;
+ - Abrir o arquivo "carro-na-mao-api.sln" no Visual Studio (O mesmo está presente na pasta carro-na-ma-api);
+ - Execute o código no Visual Studio, assim irá abrir uma janela em seu browser no endereço https://localhost:7112/swagger/index.html, o qual será exibido a interface do Swagger;
+ - Vá em Cadastro, e selecione a opção POST da rota "api/Cadastro/authenticate", assim como mostra a imagem abaixo:
+ ![autenticacao](/docs/img/swagger-autenticacao.png)
+ - Ao acessar o campo informado, clique no botão "Try it out" e no campo "nome" e "senha", insira adm e 123 respectivamente e clique no botão "Execute";
+ - No **Response Body**, copie o código que está em frente ao "jwtToken";
+ - Agora clique no ícone do cadeado em frente as rotas da API ou no botão verde "Authorize" e inseira o código salvo anteriormente no campo apresentado;
+ - Clique em "Authorize" e assim será possível realizar consultas nas rotas da API.
 
 # Documentação
 

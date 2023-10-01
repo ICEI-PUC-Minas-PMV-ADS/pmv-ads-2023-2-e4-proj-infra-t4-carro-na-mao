@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\solda\\OneDrive\\Documentos\\Pessoal\\Faculdade\\PUC\\Eixo 4\\Projeto\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj": {}
+    "D:\\Documentos\\GitHub\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\solda\\OneDrive\\Documentos\\Pessoal\\Faculdade\\PUC\\Eixo 4\\Projeto\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj": {
+    "D:\\Documentos\\GitHub\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\solda\\OneDrive\\Documentos\\Pessoal\\Faculdade\\PUC\\Eixo 4\\Projeto\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj",
+        "projectUniqueName": "D:\\Documentos\\GitHub\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj",
         "projectName": "carro-na-mao-api",
-        "projectPath": "C:\\Users\\solda\\OneDrive\\Documentos\\Pessoal\\Faculdade\\PUC\\Eixo 4\\Projeto\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj",
-        "packagesPath": "C:\\Users\\solda\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\solda\\OneDrive\\Documentos\\Pessoal\\Faculdade\\PUC\\Eixo 4\\Projeto\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\obj\\",
+        "projectPath": "D:\\Documentos\\GitHub\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj",
+        "packagesPath": "C:\\Users\\mathe\\.nuget\\packages\\",
+        "outputPath": "D:\\Documentos\\GitHub\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\solda\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -50,7 +50,7 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.2.3, )"
+              "version": "[6.5.0, )"
             }
           },
           "imports": [
@@ -72,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,6 +1,7 @@
 using carro_na_mao_api.Models.Cadastro;
 using carro_na_mao_api.Models.Categoria;
 using carro_na_mao_api.Models.Estoque;
+using carro_na_mao_api.Models.Locacoes;
 using carro_na_mao_api.Models.Retirada;
 using carro_na_mao_api.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -31,6 +32,10 @@ builder.Services.AddSingleton<RetiradaService>();
 builder.Services.Configure<CadastroDataBase>
     (builder.Configuration.GetSection("DevNetStoreDatabase"));
 builder.Services.AddSingleton<CadastroService>();
+
+builder.Services.Configure<LocacaoDatabaseSettings>
+    (builder.Configuration.GetSection("DevNetStoreDatabase"));
+builder.Services.AddSingleton<LocacaoService>();
 
 builder.Services.AddControllers();
 

@@ -1,4 +1,5 @@
 ﻿using carro_na_mao_api.Models.Cadastro;
+using carro_na_mao_api.Models.Retirada;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
@@ -32,6 +33,8 @@ namespace carro_na_mao_api.Service
         public async Task RemoveAsync(string id) =>
             await _cadastroCollection.DeleteOneAsync(x => x.Id == id);
 
+        public async Task<Cadastro> findByUser(string id) =>
+            await _cadastroCollection.Find(x => x.Nome == id).SingleOrDefaultAsync();
 
     }
 }

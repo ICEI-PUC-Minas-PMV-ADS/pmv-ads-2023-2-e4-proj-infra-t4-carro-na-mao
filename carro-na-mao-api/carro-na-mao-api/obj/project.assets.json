@@ -1401,16 +1401,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\Pedro Almeida\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\solda\\.nuget\\packages\\": {}
->>>>>>> dev
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "D:\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj",
       "projectName": "carro-na-mao-api",
       "projectPath": "D:\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj",
@@ -1419,16 +1414,6 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Pedro Almeida\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "C:\\Users\\solda\\OneDrive\\Documentos\\Pessoal\\Faculdade\\PUC\\Eixo 4\\Projeto\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj",
-      "projectName": "carro-na-mao-api",
-      "projectPath": "C:\\Users\\solda\\OneDrive\\Documentos\\Pessoal\\Faculdade\\PUC\\Eixo 4\\Projeto\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj",
-      "packagesPath": "C:\\Users\\solda\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\solda\\OneDrive\\Documentos\\Pessoal\\Faculdade\\PUC\\Eixo 4\\Projeto\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\solda\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> dev
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1486,12 +1471,16 @@
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
->>>>>>> dev
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema ao ler o arquivo de cache D:\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

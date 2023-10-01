@@ -61,13 +61,30 @@
  - Passos: Acessaer o swagger, acessar o try out do metodo delete e passar um id com parametro.
  - Critério de sucesso: Retorno do cóidigo 200.
 
-**3.3 - Update**
- 
- - Objetivo do Teste: Verificar se o metodo update da API consegue atualizar os dados da retirada com sucesso.
- - Passos: Passar o Id do registro de retirada e mudar os campois necessarios.
+**3.3 - Get**
+ - Objetivo do Teste: Verificar se o metodo get da API retorna todos os registro de retiradas que está presente em nosso banco de dados.
+ - Passos: Acessar o swagger e executar o try out.
+ - Critério de sucessp: Retorno do código 200.
+
+ ### 4- Categoria
+**4.1 - Create**
+
+ - Objetivo do Teste: Verificar se o metodo create da API está funcionando de forma correta.
+ - Passos: Acessaer o swagger, acessar o try out e preencher os campos solicitados
  - Critério de sucesso: Retorno do código 200.
 
-**3.4 - Get**
- - Objetivo do Teste: Verificar se o metodo get da API retorna todos os registro de retiradas que está presente em nosso banco de dados.
+**4.2 - Delete**
+ - Objetivo do Teste: Verificar se o metodo delete da API consegue excluir de maneira correta a registor das categorias passadas como parametro.
+ - Passos: Acessaer o swagger, acessar o try out do metodo delete e passar um id com parametro.
+ - Critério de sucesso: Retorno do cóidigo 200.
+
+ **4.3 - Update**
+
+ - Objetivo do Teste: Verificar se o metodo update da aplicação consergue atualizar de forma correta as informação de categoria passado como parametro 
+ - Passos: Acessar o swagger, passar um id como parametro e os campos que devem ser modificados. 
+ - Critério de sucesso: Retorno do código 200.
+
+**4.4 - Get**
+ - Objetivo do Teste: Verificar se o metodo get da API retorna todos os registro de categorias que está presente em nosso banco de dados.
  - Passos: Acessar o swagger e executar o try out.
  - Critério de sucessp: Retorno do código 200.

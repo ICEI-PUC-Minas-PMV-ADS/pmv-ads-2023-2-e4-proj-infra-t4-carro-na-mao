@@ -8,7 +8,7 @@ Em (COLOURIS, 2013) um sistema distribuído é definido “como aquele no qual o
 
 Esses computadores podem estar em qualquer distância, separados ou não geograficamente (na "nuvem"), representados pela Figura 1 abaixo.
 
-![Arquitetura da Solução](img/arquitetura_v1.png)
+![Arquitetura da Solução](img/arquitetura_v2.png)
 Figura 1 - Arquitetura de Software Distribuído
 
 ## Diagrama de Classes
@@ -42,11 +42,40 @@ A![Projeto de Base de Dados](img/baseDeDados.png)
 
 ## Tecnologias Utilizadas
 
+<<<<<<< HEAD
 Para o desenvolvimento do sistema utilizaremos a linguagem C# com o Enty Framework, para a manipulação do banco de dados usaremos o MongoDB. Usaremos o visual studio 2022 para desenvolvimento da aplicação, já para o gerenciamento de código usamos o github.
 
 ## Hospedagem
 
 O local de hospedagem ainda está sendo descudida pela equipe, breve disponibilizaremos o link para acesso do Software.
+=======
+Todas teconologias foram pensadas de forma a facilitar a expansão da aplicação à medida em que ela cresce, permitindo que as equipes de desenvolvimento trabalhem de forma mais eficiente e concomitante.
+
+**Principais Tecnologias**
+
+**MongoDB**
+
+MongoDB é um banco NoSQL baseado em documento sem transações e sem joins. De fácil instalação com consultas de sintaxe simples, permite ainda excelente escalabilidade.
+
+**C Sharp**
+
+O "C#", como é conhecido, é uma linguagem multiplataforma. Podendo ser utilizada para desenvolver para plataformas web, dispositivos móveis e aplicações desktop. Além de maior praticidade, tem excelente aderência com a teconologia de servidor em nuvem Mircrosoft Azure.
+
+**React**
+
+Os componentes podem ser compartilhados e reutilizados nas diferentes partes da aplicação, além de ser fácil de manutenção.
+
+**Microsoft Azure**
+
+O Microsoft Azure tem backup automatizado de dados e permite o armazenamento remoto de dados.
+Além disso, faz conexão de programas, podendo ser locais ou em nuvem, dando flexibildiade ao projeto.
+
+
+
+## Hospedagem
+
+Explique como a hospedagem e o lançamento da plataforma foi feita.
+>>>>>>> dev
 
 ## Qualidade de Software
 
@@ -56,9 +85,3 @@ No contexto de desenvolvimento de software, qualidade pode ser entendida como um
 
 A norma internacional ISO/IEC 25010, que é uma atualização da ISO/IEC 9126, define oito características e 30 subcaracterísticas de qualidade para produtos de software.
 Com base nessas características e nas respectivas sub-características, identifique as sub-características que sua equipe utilizará como base para nortear o desenvolvimento do projeto de software considerando-se alguns aspectos simples de qualidade. Justifique as subcaracterísticas escolhidas pelo time e elenque as métricas que permitirão a equipe avaliar os objetos de interesse.
-
-> **Links Úteis**:
->
-> - [ISO/IEC 25010:2011 - Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models](https://www.iso.org/standard/35733.html/)
-> - [Análise sobre a ISO 9126 – NBR 13596](https://www.tiespecialistas.com.br/analise-sobre-iso-9126-nbr-13596/)
-> - [Qualidade de Software - Engenharia de Software 29](https://www.devmedia.com.br/qualidade-de-software-engenharia-de-software-29/18209/)

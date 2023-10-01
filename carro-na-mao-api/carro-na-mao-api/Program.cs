@@ -1,3 +1,4 @@
+using carro_na_mao_api.Models.Avaliacao;
 using carro_na_mao_api.Models.Cadastro;
 using carro_na_mao_api.Models.Categoria;
 using carro_na_mao_api.Models.Estoque;
@@ -31,13 +32,17 @@ builder.Services.AddSingleton<RetiradaService>();
 
 builder.Services.Configure<CadastroDataBase>
     (builder.Configuration.GetSection("DevNetStoreDatabase"));
-builder.Services.AddSingleton<CadastroService>();
+builder.Services.AddSingleton<AvaliacaoService>();
 
 builder.Services.Configure<LocacaoDatabaseSettings>
     (builder.Configuration.GetSection("DevNetStoreDatabase"));
 builder.Services.AddSingleton<LocacaoService>();
 
 builder.Services.AddControllers();
+
+builder.Services.Configure<AvaliacaoDatabaseSettings>
+    (builder.Configuration.GetSection("DevNetStoreDatabase"));
+builder.Services.AddSingleton<AvaliacaoService>();
 
 builder.Services.AddAuthentication(options =>
 {

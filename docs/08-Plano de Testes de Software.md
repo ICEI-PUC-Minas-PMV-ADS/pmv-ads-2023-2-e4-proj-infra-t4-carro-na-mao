@@ -1,19 +1,90 @@
 # Plano de Testes de Software
+## API
+### 1- Cadastro 
+ **1.1 - Create**
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>
+ - Objetivo do Teste: Verificar se o metodo create da API está funcionando de forma correta
+ - Passos:Acessaer o swagger, acessar o try out e preencher os campos solicitados 
+ - Critério de sucesso: Retorno do código 200
 
-Apresente os cenários de testes utilizados na realização dos testes da sua aplicação. Escolha cenários de testes que demonstrem os requisitos sendo satisfeitos.
+ **1.2 - Delete**
 
-Enumere quais cenários de testes foram selecionados para teste. Neste tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo de usuários que foi escolhido para participar do teste e as ferramentas utilizadas.
+ - Objetivo do Teste: Verificar se o metodo delete da API consegue excluir de maneira correta a registor de usuarios passado como parametro.
+ - Passos: Acessaer o swagger, acessar o try out do metodo delete e passar um id com parametro.
+ - Critério de sucesso:Retorno do código 200
+
+**1.3 - Update**
  
-## Ferramentas de Testes (Opcional)
+ - Objetivo do Teste: Verificar se o metodo update da aplicação consergue atualizar de forma correta as informação de usuarios passado como parametro 
+ - Passos: Acessar o swagger, passar um id como parametro e os campos que devem ser modificados. 
+ - Critério de sucesso: Retorno do código 200.
 
-Comente sobre as ferramentas de testes utilizadas.
+**1.4 - Get**
+ - Objetivo do Teste: Verificar se o metodo get e consegue puxar informações de usuarios registradas no banco de dados. 
+ - Passos: Acessar o swagger e executar o try out.
+ - Critério: Retorno do código 200.
+
+#### 2 - Estoque
+**2.1 - Create**
+
+ - Objetivo do Teste: Verificar se o metodo create da API está funcionando de forma correta.
+ - Passos:Acessaer o swagger, acessar o try out e preencher os campos solicitados .
+ - Critério de sucesso: Retorno do código 200.
+
+
+**2.2 - Delete**
  
-> **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
-> - [Criação e Geração de Planos de Teste de Software](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
+ - Objetivo do Teste: Verificar se o metodo delete da API consegue excluir de maneira correta a registor de estoque passado como parametro.
+ - Passos: Acessaer o swagger, acessar o try out do metodo delete e passar um id com parametro.
+ - Critério de sucesso:Retorno do código 200.
+
+**2.3 - Update**
+
+ - Objetivo do Teste: Verificar se o metodo update da aplicação consergue atualizar de forma correta as informação de estoque passado como parametro 
+ - Passos: Acessar o swagger, passar um id como parametro e os campos que devem ser modificados. 
+ - Critério de sucesso: Retorno do código 200.
+
+**2.4 - Get**
+ - Objetivo do Teste: Verificar se o metodo get da API está retornando todos os registro de estoque do banco de dados.
+ - Passos: Acessar o swagger e executar o try out.
+ - Critério de sucesso:Retorno do código 200.
+
+### 3- Retirada
+**3.1 - Create**
+
+ - Objetivo do Teste: Verificar se o metodo create da API está funcionando de forma correta.
+ - Passos: Acessaer o swagger, acessar o try out e preencher os campos solicitados
+ - Critério de sucesso: Retorno do código 200.
+
+**3.2 - Delete**
+ - Objetivo do Teste: Verificar se o metodo delete da API consegue excluir de maneira correta a registor de retirada passado como parametro.
+ - Passos: Acessaer o swagger, acessar o try out do metodo delete e passar um id com parametro.
+ - Critério de sucesso: Retorno do cóidigo 200.
+
+**3.3 - Get**
+ - Objetivo do Teste: Verificar se o metodo get da API retorna todos os registro de retiradas que está presente em nosso banco de dados.
+ - Passos: Acessar o swagger e executar o try out.
+ - Critério de sucessp: Retorno do código 200.
+
+ ### 4- Categoria
+**4.1 - Create**
+
+ - Objetivo do Teste: Verificar se o metodo create da API está funcionando de forma correta.
+ - Passos: Acessaer o swagger, acessar o try out e preencher os campos solicitados
+ - Critério de sucesso: Retorno do código 200.
+
+**4.2 - Delete**
+ - Objetivo do Teste: Verificar se o metodo delete da API consegue excluir de maneira correta a registor das categorias passadas como parametro.
+ - Passos: Acessaer o swagger, acessar o try out do metodo delete e passar um id com parametro.
+ - Critério de sucesso: Retorno do cóidigo 200.
+
+ **4.3 - Update**
+
+ - Objetivo do Teste: Verificar se o metodo update da aplicação consergue atualizar de forma correta as informação de categoria passado como parametro 
+ - Passos: Acessar o swagger, passar um id como parametro e os campos que devem ser modificados. 
+ - Critério de sucesso: Retorno do código 200.
+
+**4.4 - Get**
+ - Objetivo do Teste: Verificar se o metodo get da API retorna todos os registro de categorias que está presente em nosso banco de dados.
+ - Passos: Acessar o swagger e executar o try out.
+ - Critério de sucessp: Retorno do código 200.

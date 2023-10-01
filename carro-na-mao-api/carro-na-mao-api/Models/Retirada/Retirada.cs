@@ -7,7 +7,7 @@ namespace carro_na_mao_api.Models.Retirada
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string id_retirada { get; set; }
+        public string? id_retirada { get; set; }
 
         [BsonElement("id_locacao")]
         public string id_locacao { get; set; }

@@ -64,3 +64,13 @@
 **4.4 - Get**
 
 ![](img/get-api-categoria.png)
+
+ ### 5- Avaliação
+
+**5.1 - Get**
+
+![](img/Get_Avaliacao.jpg)
+
+**5.2 - Post**
+
+![](img/post_Avaliacao.jpg)

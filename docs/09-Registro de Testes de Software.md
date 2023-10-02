@@ -74,3 +74,20 @@
 **5.2 - Post**
 
 ![](img/post_Avaliacao.jpg)
+
+ ### 6- Locação
+
+**6.1 - Get**
+
+![](img/Get%20Loc.png)
+
+**6.2 - Post**
+
+![](img/Post_LOC1.png)
+![](img/Post_LOC2.png)
+
+
+**6.3 - Delete**
+
+![](img/Delete%20LOC.png)
+![](img/Delete%20LOC2.png)

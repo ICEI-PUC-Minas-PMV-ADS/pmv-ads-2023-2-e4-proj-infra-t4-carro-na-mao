@@ -1,12 +1,93 @@
 # Registro de Testes de Software
+## API
+### 1- Cadastro 
+ **1.1 - Post**
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>, <a href="8-Plano de Testes de Software.md"> Plano de Testes de Software</a>
+  ![](img/post-api-cadastro.png)
 
-Relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado em um plano de testes pré-definido.
+ **1.2 - Delete**
+  
+  ![](img/delete-api-cadastro-junto.png)
+ 
+**1.3 - Update**
+ 
+  ![](img/update-api%20cadastro.png)
+ 
+**1.4 - Get**
 
-## Avaliação
+ ![](img/get-api-cadastro.png)
 
-Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
+#### 2 - Estoque
+**2.1 - Create**
 
-> **Links Úteis**:
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
+ ![](img/post-api-estoque.png)
+
+**2.2 - Delete**
+ 
+  ![](img/delete-api-estoque.png)
+
+**2.3 - Update**
+
+ ![](img/update-api-estoque.png)
+
+**2.4 - Get**
+
+  ![](img/get-api-estoque.png)
+
+### 3- Retirada
+**3.1 - Create**
+
+  ![](img/post-api-retirada.png)
+
+**3.2 - Delete**
+ 
+ ![](img/delete-api-retirada.png)
+
+**3.3 - Get**
+
+ ![](img/get-api-retirada.png)
+
+  ### 4- Categoria
+**4.1 - Create**
+
+ ![](img/get-api-categoria.png)
+
+
+**4.2 - Delete**
+
+ ![](img/delete-api-categoria.png)
+
+ **4.3 - Update**
+
+![](img/update-api-categoria.png)
+
+**4.4 - Get**
+
+![](img/get-api-categoria.png)
+
+ ### 5- Avaliação
+
+**5.1 - Get**
+
+![](img/Get_Avaliacao.jpg)
+
+**5.2 - Post**
+
+![](img/post_Avaliacao.jpg)
+
+ ### 6- Locação
+
+**6.1 - Get**
+
+![](img/Get%20Loc.png)
+
+**6.2 - Post**
+
+![](img/Post_LOC1.png)
+![](img/Post_LOC2.png)
+
+
+**6.3 - Delete**
+
+![](img/Delete%20LOC.png)
+![](img/Delete%20LOC2.png)

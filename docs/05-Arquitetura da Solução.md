@@ -42,7 +42,6 @@ A![Projeto de Base de Dados](img/baseDeDados.png)
 
 ## Tecnologias Utilizadas
 
-<<<<<<< HEAD
 Para o desenvolvimento do sistema utilizaremos a linguagem C# com o Enty Framework, para a manipulação do banco de dados usaremos o MongoDB. Usaremos o visual studio 2022 para desenvolvimento da aplicação, já para o gerenciamento de código usamos o github.
 
 ## Hospedagem
@@ -71,11 +70,10 @@ O Microsoft Azure tem backup automatizado de dados e permite o armazenamento rem
 Além disso, faz conexão de programas, podendo ser locais ou em nuvem, dando flexibildiade ao projeto.
 
 
-
 ## Hospedagem
 
-Explique como a hospedagem e o lançamento da plataforma foi feita.
->>>>>>> dev
+Modo de hospedagem não definada até o momento pelo grupo.
+
 
 ## Qualidade de Software
 

@@ -89,7 +89,6 @@ C:\Users\vitor\Documents\projeto eixo 4\projeto configurado\pmv-ads-2023-2-e4-pr
 C:\Users\vitor\Documents\projeto eixo 4\projeto configurado\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\carro-na-mao-api\carro-na-mao-api\obj\Debug\net6.0\carro-na-mao-api.genruntimeconfig.cache
 C:\Users\vitor\Documents\projeto eixo 4\projeto configurado\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\carro-na-mao-api\carro-na-mao-api\obj\Debug\net6.0\ref\carro-na-mao-api.dll
 <<<<<<< HEAD
-<<<<<<< HEAD
 D:\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\appsettings.Development.json
 D:\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\appsettings.json
 D:\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\carro-na-mao-api.exe
@@ -189,7 +188,6 @@ C:\Users\solda\OneDrive\Documentos\Pessoal\Faculdade\PUC\Eixo 4\Projeto\pmv-ads-
 C:\Users\solda\OneDrive\Documentos\Pessoal\Faculdade\PUC\Eixo 4\Projeto\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\solda\OneDrive\Documentos\Pessoal\Faculdade\PUC\Eixo 4\Projeto\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
 >>>>>>> dev
-=======
 D:\Documentos\GitHub\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\appsettings.Development.json
 D:\Documentos\GitHub\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\appsettings.json
 D:\Documentos\GitHub\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\carro-na-mao-api.exe
@@ -235,4 +233,55 @@ D:\Documentos\GitHub\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\carro-na-mao-a
 D:\Documentos\GitHub\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\carro-na-mao-api\carro-na-mao-api\obj\Debug\net6.0\carro-na-mao-api.pdb
 D:\Documentos\GitHub\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\carro-na-mao-api\carro-na-mao-api\obj\Debug\net6.0\carro-na-mao-api.genruntimeconfig.cache
 D:\Documentos\GitHub\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\carro-na-mao-api\carro-na-mao-api\obj\Debug\net6.0\ref\carro-na-mao-api.dll
->>>>>>> dev
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\appsettings.Development.json
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\appsettings.json
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\carro-na-mao-api.exe
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\carro-na-mao-api.deps.json
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\carro-na-mao-api.runtimeconfig.json
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\carro-na-mao-api.dll
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\carro-na-mao-api.pdb
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\AWSSDK.Core.dll
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\AWSSDK.SecurityToken.dll
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\DnsClient.dll
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\MongoDB.Bson.dll
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\MongoDB.Driver.dll
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\MongoDB.Driver.Core.dll
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\MongoDB.Libmongocrypt.dll
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\SharpCompress.dll
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\Snappier.dll
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\ZstdSharp.dll
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\runtimes\linux\native\libmongocrypt.so
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\runtimes\osx\native\libmongocrypt.dylib
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\bin\Debug\net6.0\runtimes\win\native\mongocrypt.dll
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\obj\Debug\net6.0\carro-na-mao-api.csproj.AssemblyReference.cache
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\obj\Debug\net6.0\carro-na-mao-api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\obj\Debug\net6.0\carro-na-mao-api.AssemblyInfoInputs.cache
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\obj\Debug\net6.0\carro-na-mao-api.AssemblyInfo.cs
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\obj\Debug\net6.0\carro-na-mao-api.csproj.CoreCompileInputs.cache
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\obj\Debug\net6.0\carro-na-mao-api.MvcApplicationPartsAssemblyInfo.cs
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\obj\Debug\net6.0\carro-na-mao-api.MvcApplicationPartsAssemblyInfo.cache
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\obj\Debug\net6.0\staticwebassets\msbuild.carro-na-mao-api.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\obj\Debug\net6.0\staticwebassets\msbuild.build.carro-na-mao-api.props
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.carro-na-mao-api.props
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.carro-na-mao-api.props
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\obj\Debug\net6.0\staticwebassets.build.json
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\obj\Debug\net6.0\staticwebassets.development.json
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\obj\Debug\net6.0\scopedcss\bundle\carro-na-mao-api.styles.css
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\obj\Debug\net6.0\carro-na-mao-api.csproj.CopyComplete
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\obj\Debug\net6.0\carro-na-mao-api.dll
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\obj\Debug\net6.0\refint\carro-na-mao-api.dll
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\obj\Debug\net6.0\carro-na-mao-api.pdb
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\obj\Debug\net6.0\carro-na-mao-api.genruntimeconfig.cache
+C:\Projetos\CARRO NA MAO_011023\carro-na-mao-api\carro-na-mao-api\obj\Debug\net6.0\ref\carro-na-mao-api.dll

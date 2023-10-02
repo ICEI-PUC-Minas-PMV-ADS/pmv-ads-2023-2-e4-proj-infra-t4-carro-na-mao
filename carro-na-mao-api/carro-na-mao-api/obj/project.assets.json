@@ -997,19 +997,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Pedro Almeida\\.nuget\\packages\\": {}
+    "C:\\Users\\Suporte\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj",
+      "projectUniqueName": "C:\\Users\\Suporte\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj",
       "projectName": "carro-na-mao-api",
-      "projectPath": "D:\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj",
-      "packagesPath": "C:\\Users\\Pedro Almeida\\.nuget\\packages\\",
-      "outputPath": "D:\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\obj\\",
+      "projectPath": "C:\\Users\\Suporte\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj",
+      "packagesPath": "C:\\Users\\Suporte\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Suporte\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Pedro Almeida\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Suporte\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1063,7 +1063,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

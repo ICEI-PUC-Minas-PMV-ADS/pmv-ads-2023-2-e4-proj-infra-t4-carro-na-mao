@@ -88,3 +88,17 @@
  - Objetivo do Teste: Verificar se o metodo get da API retorna todos os registro de categorias que está presente em nosso banco de dados.
  - Passos: Acessar o swagger e executar o try out.
  - Critério de sucessp: Retorno do código 200.
+
+ ### 5- Avaliação
+
+ **5.1 - Get**
+ - Objetivo do Teste: Verificar se o metodo get e consegue puxar informações de usuarios registradas no banco de dados. 
+ - Passos: Acessar o swagger e executar o try out.
+ - Critério: Retorno do código 200.
+
+**5.2 - Create**
+
+ - Objetivo do Teste: Verificar se o metodo create da API está funcionando de forma correta.
+ - Passos: Acessaer o swagger, acessar o try out e preencher os campos solicitados
+ - Critério de sucesso: Retorno do código 200.
+ 

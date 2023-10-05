@@ -21,7 +21,7 @@ namespace carro_na_mao_api.Service
 
         public async Task<List<Notificacao>> getAsync() =>
            await _notificacaoCollection.Find(x => true).ToListAsync();
-        public async Task<Notificacao> getAsyncId(string id) =>
+        public async Task<Notificacao> GetAsyncId(string id) =>
             await _notificacaoCollection.Find(x => x.Id_notificacao == id).SingleOrDefaultAsync();
         public async Task CreateAsync(Notificacao notificacao) =>
            await _notificacaoCollection.InsertOneAsync(notificacao);

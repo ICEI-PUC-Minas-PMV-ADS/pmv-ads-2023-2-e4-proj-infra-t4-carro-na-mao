@@ -7,13 +7,13 @@ namespace carro_na_mao_api.Models.Vistoria
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string? id_vistoria { get; set; }
+        public string? id_vistoria { get; set; } = null;
 
         [BsonElement("id_veiculo")]
         public int id_veiculo { get; set; }
 
         [BsonElement("data")]
-        public string? data { get; set; } = null;
+        public DateTime? data { get; set; } = null;
 
         [BsonElement("tipo")]
         public int tipo { get; set; }
@@ -25,6 +25,6 @@ namespace carro_na_mao_api.Models.Vistoria
         public int observacoes { get; set; }
 
         [BsonElement("cria_ordem_manut")]
-        public int cria_ordem_manut { get; set; }
+        public bool cria_ordem_manut { get; set; }
     }
 }

@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\carro-na-mao-api.props" />
-</Project>

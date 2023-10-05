@@ -1614,19 +1614,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\solda\\.nuget\\packages\\": {}
+    "C:\\Users\\roger\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\solda\\OneDrive\\Documentos\\Pessoal\\Faculdade\\PUC\\Eixo 4\\Projeto\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj",
+      "projectUniqueName": "C:\\Users\\roger\\OneDrive\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj",
       "projectName": "carro-na-mao-api",
-      "projectPath": "C:\\Users\\solda\\OneDrive\\Documentos\\Pessoal\\Faculdade\\PUC\\Eixo 4\\Projeto\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj",
-      "packagesPath": "C:\\Users\\solda\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\solda\\OneDrive\\Documentos\\Pessoal\\Faculdade\\PUC\\Eixo 4\\Projeto\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\obj\\",
+      "projectPath": "C:\\Users\\roger\\OneDrive\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\carro-na-mao-api.csproj",
+      "packagesPath": "C:\\Users\\roger\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\roger\\OneDrive\\Documents\\GitHub\\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\\carro-na-mao-api\\carro-na-mao-api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\solda\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\roger\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1684,7 +1684,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

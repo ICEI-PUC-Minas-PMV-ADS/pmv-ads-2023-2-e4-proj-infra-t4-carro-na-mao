@@ -4,6 +4,7 @@ using carro_na_mao_api.Models.Categoria;
 using carro_na_mao_api.Models.Estoque;
 using carro_na_mao_api.Models.Locacoes;
 using carro_na_mao_api.Models.Retirada;
+using carro_na_mao_api.Models.Vistoria;
 using carro_na_mao_api.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -19,6 +20,11 @@ builder.Services.Configure<EstoqueDatabaseSettings>
     (builder.Configuration.GetSection("DevNetStoreDatabase"));
 
 builder.Services.AddSingleton<EstoqueService>();
+
+builder.Services.Configure<VistoriaDatabaseSettings>
+    (builder.Configuration.GetSection("DevNetStoreDatabase"));
+
+builder.Services.AddSingleton<VistoriaService>();
 
 builder.Services.Configure<CategoriaDatabaseSettings>
     (builder.Configuration.GetSection("DevNetStoreDatabase"));

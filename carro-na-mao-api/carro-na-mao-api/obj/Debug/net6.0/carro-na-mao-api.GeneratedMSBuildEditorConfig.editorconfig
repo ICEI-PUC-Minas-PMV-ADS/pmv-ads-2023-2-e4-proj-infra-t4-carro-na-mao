@@ -8,9 +8,17 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = carro_na_mao_api
 build_property.RootNamespace = carro_na_mao_api
+<<<<<<< Updated upstream
 build_property.ProjectDir = C:\Users\mayko\OneDrive\Área de Trabalho\carro-na02-10-23\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\carro-na-mao-api\carro-na-mao-api\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\Users\mayko\OneDrive\Área de Trabalho\carro-na02-10-23\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\carro-na-mao-api\carro-na-mao-api
+=======
+build_property.ProjectDir = C:\Users\Suporte\Documents\GitHub\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\carro-na-mao-api\carro-na-mao-api\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Suporte\Documents\GitHub\pmv-ads-2023-2-e4-proj-infra-t4-carro-na-mao\carro-na-mao-api\carro-na-mao-api
+>>>>>>> Stashed changes
 build_property._RazorSourceGeneratorDebug = 

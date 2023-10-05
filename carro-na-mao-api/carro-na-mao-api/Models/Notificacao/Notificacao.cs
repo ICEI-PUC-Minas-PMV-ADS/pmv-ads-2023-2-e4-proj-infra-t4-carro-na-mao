@@ -5,6 +5,7 @@ namespace carro_na_mao_api.Models.Notificacao
 {
     public class Notificacao
     {
+<<<<<<< Updated upstream
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string? Id_notificacao { get; set; }
@@ -20,3 +21,20 @@ namespace carro_na_mao_api.Models.Notificacao
 
     }
 }
+=======
+        [BsonId]        
+        public string? id_notificacao { get; set; } = null;
+
+        [BsonElement("Data")]
+        public DateTime Data { get; set; } 
+
+        [BsonElement("Assunto")]
+        public string? Assunto { get; set; }
+
+        [BsonElement("Corpo Mensagem")]
+        public string? Corpomensagem { get; set; }
+
+    }
+}
+
+>>>>>>> Stashed changes

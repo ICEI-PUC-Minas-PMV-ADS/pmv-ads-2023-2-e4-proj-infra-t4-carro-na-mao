@@ -16,18 +16,28 @@ namespace carro_na_mao_api.Controllers
             _notificacaoService = notificacaoService;
         }
 
+<<<<<<< Updated upstream
         [HttpGet]
         public async Task<List<Notificacao>> GetNotificacao()
             => await _notificacaoService.getAsync();
         
         [HttpPost]
         public async Task<Notificacao> PostNotificacao(Notificacao notificacao) 
+=======
+        [HttpGet("Listar Notificacoes")]
+        public async Task<List<Notificacao>> GetNotificacao()
+            => await _notificacaoService.getAsync();
+
+        [HttpPost("Enviar Notificacao")]
+        public async Task<Notificacao> PostNotificacao(Notificacao notificacao)
+>>>>>>> Stashed changes
         {
             await _notificacaoService.CreateAsync(notificacao);
 
             return notificacao;
         }
 
+<<<<<<< Updated upstream
         [HttpDelete]
         public async Task DeleteNotificacao(string Id_Notificacao) 
         {
@@ -35,3 +45,12 @@ namespace carro_na_mao_api.Controllers
         }
     }
 }
+=======
+        [HttpDelete("Deletar Notificacao")]
+        public async Task DeleteNotificacao(string id_Notificacao)
+        {
+            await _notificacaoService.DeleteAsync(id_Notificacao);
+        }
+    }
+}
+>>>>>>> Stashed changes

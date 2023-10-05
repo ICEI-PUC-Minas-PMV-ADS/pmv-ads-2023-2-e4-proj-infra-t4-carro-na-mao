@@ -21,6 +21,7 @@ namespace carro_na_mao_api.Service
 
         public async Task<List<Notificacao>> getAsync() =>
            await _notificacaoCollection.Find(x => true).ToListAsync();
+<<<<<<< Updated upstream
         public async Task<Notificacao> GetAsyncId(string id) =>
             await _notificacaoCollection.Find(x => x.Id_notificacao == id).SingleOrDefaultAsync();
         public async Task CreateAsync(Notificacao notificacao) =>
@@ -34,7 +35,26 @@ namespace carro_na_mao_api.Service
        /// internal Task<Notificacao> findByValue(int vl_notificacao)
        /// {
           ///  throw new NotImplementedException();
+=======
+        public async Task<Notificacao> getAsyncId(string id) =>
+            await _notificacaoCollection.Find(x => x.id_notificacao == id).SingleOrDefaultAsync();
+        public async Task CreateAsync(Notificacao notificacao) =>
+           await _notificacaoCollection.InsertOneAsync(notificacao);
+        public async Task UpdateAsync(string id, Notificacao notificacao) =>
+           await _notificacaoCollection.ReplaceOneAsync(x => x.id_notificacao == id, notificacao);
+        public async Task DeleteAsync(string id) =>
+           await _notificacaoCollection.DeleteOneAsync(x => x.id_notificacao == id);
+
+
+        /// internal Task<Notificacao> findByValue(int vl_notificacao)
+        /// {
+        ///  throw new NotImplementedException();
+>>>>>>> Stashed changes
         ///} 
 
     }
 }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes

@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\carro-na-mao-api",
+    "\\carro-na-mao-api\\carro-na-mao-api"
   ],
-  "SelectedNode": "\\carronamao-api.sln",
+  "SelectedNode": "\\carro-na-mao-api\\carro-na-mao-api.sln",
   "PreviewInSolutionExplorer": false
 }

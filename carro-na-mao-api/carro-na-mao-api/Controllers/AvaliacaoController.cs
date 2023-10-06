@@ -20,7 +20,7 @@ namespace carro_na_mao_api.Controllers
         public async Task<List<Avaliacao>> GetAvaliacao()       
           => await _avaliacaoServices.GetAsync();
 
-        [HttpGet]
+        [HttpPost]
         public async Task<Avaliacao> PostAvaliacao(Avaliacao avaliacao)
         {
             await _avaliacaoServices.createAsync(avaliacao);

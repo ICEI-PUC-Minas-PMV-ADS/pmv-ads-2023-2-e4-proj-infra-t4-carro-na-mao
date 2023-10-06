@@ -8,6 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Models\Cadastro\Multa\**" />
+    <Compile Remove="Models\Multa\NovaPasta\**" />
+    <Content Remove="Models\Cadastro\Multa\**" />
+    <Content Remove="Models\Multa\NovaPasta\**" />
+    <EmbeddedResource Remove="Models\Cadastro\Multa\**" />
+    <EmbeddedResource Remove="Models\Multa\NovaPasta\**" />
+    <None Remove="Models\Cadastro\Multa\**" />
+    <None Remove="Models\Multa\NovaPasta\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.0" />
     <PackageReference Include="MongoDB.Driver" Version="2.21.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />

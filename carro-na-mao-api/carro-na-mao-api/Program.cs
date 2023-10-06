@@ -5,6 +5,7 @@ using carro_na_mao_api.Models.Estoque;
 using carro_na_mao_api.Models.Locacoes;
 using carro_na_mao_api.Models.Retirada;
 using carro_na_mao_api.Models.Historico;
+using carro_na_mao_api.Models.Multa;
 using carro_na_mao_api.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -42,6 +43,10 @@ builder.Services.AddSingleton<LocacaoService>();
 builder.Services.Configure<HistoricoDatabaseSettings>
     (builder.Configuration.GetSection("DevNetStoreDatabase"));
 builder.Services.AddSingleton<HistoricoService>();
+
+builder.Services.Configure<MultaDatabaseSettings>
+    (builder.Configuration.GetSection("DevNetStoreDatabase"));
+builder.Services.AddSingleton<MultaServices>();
 
 
 builder.Services.AddControllers();

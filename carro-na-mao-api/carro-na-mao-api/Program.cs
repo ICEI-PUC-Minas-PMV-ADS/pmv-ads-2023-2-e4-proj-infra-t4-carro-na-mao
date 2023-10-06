@@ -3,8 +3,10 @@ using carro_na_mao_api.Models.Cadastro;
 using carro_na_mao_api.Models.Categoria;
 using carro_na_mao_api.Models.Estoque;
 using carro_na_mao_api.Models.Locacoes;
+using carro_na_mao_api.Models.Manutencao;
+using carro_na_mao_api.Models.Notificacao;
 using carro_na_mao_api.Models.Retirada;
-using carro_na_mao_api.Models.Historico;
+using carro_na_mao_api.Models.Vistoria;
 using carro_na_mao_api.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -21,6 +23,16 @@ builder.Services.Configure<EstoqueDatabaseSettings>
 
 builder.Services.AddSingleton<EstoqueService>();
 
+builder.Services.Configure<VistoriaDatabaseSettings>
+    (builder.Configuration.GetSection("DevNetStoreDatabase"));
+
+builder.Services.AddSingleton<VistoriaService>();
+
+builder.Services.Configure<ManutencaoDatabaseSettings>
+    (builder.Configuration.GetSection("DevNetStoreDatabase"));
+
+builder.Services.AddSingleton<ManutencaoService>();
+
 builder.Services.Configure<CategoriaDatabaseSettings>
     (builder.Configuration.GetSection("DevNetStoreDatabase"));
 
@@ -35,14 +47,14 @@ builder.Services.Configure<CadastroDataBase>
     (builder.Configuration.GetSection("DevNetStoreDatabase"));
 builder.Services.AddSingleton<AvaliacaoService>();
 
+builder.Services.Configure<NotificacaoDatabaseSettings>
+    (builder.Configuration.GetSection("DevNetStoreDatabase"));
+
+builder.Services.AddSingleton<NotificacaoService>();
+
 builder.Services.Configure<LocacaoDatabaseSettings>
     (builder.Configuration.GetSection("DevNetStoreDatabase"));
 builder.Services.AddSingleton<LocacaoService>();
-
-builder.Services.Configure<HistoricoDatabaseSettings>
-    (builder.Configuration.GetSection("DevNetStoreDatabase"));
-builder.Services.AddSingleton<HistoricoService>();
-
 
 builder.Services.AddControllers();
 

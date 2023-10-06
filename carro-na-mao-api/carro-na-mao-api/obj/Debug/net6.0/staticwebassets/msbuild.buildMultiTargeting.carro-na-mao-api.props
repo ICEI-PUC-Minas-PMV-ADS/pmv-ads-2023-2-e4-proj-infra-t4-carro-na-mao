@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\carro-na-mao-api.props" />
-</Project>

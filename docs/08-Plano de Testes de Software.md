@@ -164,3 +164,22 @@
  - Objetivo do Teste: Verificar se o metodo get da API retorna todos os registro de manutenções que está presente em nosso banco de dados.
  - Passos: Acessar o swagger e executar o try out.
  - Critério de sucessp: Retorno do código 200.
+
+  ### 9- Notificação
+
+ **9.1 - Get**
+ - Objetivo do Teste: Verificar se o metodo get e consegue puxar informações das notificações enviadas no banco de dados. 
+ - Passos: Acessar o swagger e executar o try out.
+ - Critério: Retorno do código 200.
+
+**9.2 - Create**
+
+ - Objetivo do Teste: Verificar se o metodo create da API está funcionando de forma correta.
+ - Passos: Acessar o swagger, acessar o try out e preencher os campos solicitados
+ - Critério de sucesso: Retorno do código 200.
+
+**9.3 - Delete**
+
+  - Objetivo do Teste: Verificar se o metodo delete da API consegue excluir de maneira correta o registro das notificacões existentes;
+ - Passos: Acessar o swagger, acessar o try out do metodo delete e passar um id com parametro.
+ - Critério de sucesso: Retorno do código 200.

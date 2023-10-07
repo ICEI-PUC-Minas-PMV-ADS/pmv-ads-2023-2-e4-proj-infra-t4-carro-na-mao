@@ -1,10 +1,12 @@
 ﻿using carro_na_mao_api.Models.Avaliacao;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using WebApiMongoDB.Services;
+using carro_na_mao_api.Service;
 
 namespace carro_na_mao_api.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class AvaliacaoController : ControllerBase

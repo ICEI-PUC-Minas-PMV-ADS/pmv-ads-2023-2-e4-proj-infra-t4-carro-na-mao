@@ -1,6 +1,5 @@
 ﻿using carro_na_mao_api.Models.Authenticate;
 using carro_na_mao_api.Models.Cadastro;
-using carro_na_mao_api.Models.Categoria;
 using carro_na_mao_api.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -17,9 +16,9 @@ namespace carro_na_mao_api.Controllers
     [ApiController]
     public class CadastroController : ControllerBase
     {
-        private readonly AvaliacaoService _cadastroService;
+        private readonly CadastroService _cadastroService;
 
-        public CadastroController(AvaliacaoService cadastroService)
+        public CadastroController(CadastroService cadastroService)
         {
             _cadastroService = cadastroService;
         }

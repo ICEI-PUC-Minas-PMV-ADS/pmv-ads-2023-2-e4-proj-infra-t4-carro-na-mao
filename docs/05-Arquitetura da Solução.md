@@ -18,7 +18,7 @@ O diagrama de classes ilustra graficamente como será a estrutura do software, e
 As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Classes”.
 
 
-![Diagrama de Classes](img/diagramaDeClasses.jpg)
+![Diagrama de Classes](img/classe_2.png)
 
 ## Modelo ER (Projeto Conceitual)
 
@@ -38,7 +38,7 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Rel
 
 O projeto de base de dados corresponde à representação das entidades e relacionamentos identificados no Modelo ER, sem formato de tabelas, com colunas e chaves primárias/estranhas permitidas para representar corretamente as restrições de integridade.
 
-A![Projeto de Base de Dados](img/baseDeDados.png)
+![Projeto de Base de Dados](img/relacional_2.png)
 
 ## Tecnologias Utilizadas
 

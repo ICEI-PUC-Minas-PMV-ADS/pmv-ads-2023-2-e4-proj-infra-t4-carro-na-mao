@@ -91,3 +91,53 @@
 
 ![](img/Delete%20LOC.png)
 ![](img/Delete%20LOC2.png)
+
+  ### 7- Vistorias
+**7.1 - Create**
+
+ ![](img/post-api-vistoria.png)
+
+
+**7.2 - Delete**
+
+ ![](img/delete-api-vistoria.png)
+
+ **7.3 - Update**
+
+![](img/update-api-vistoria.png)
+
+**7.4 - Get**
+
+![](img/get-api-vistoria.png)
+
+  ### 8- Manutenções
+**8.1 - Create**
+
+ ![](img/post-api-manutencao.png)
+
+
+**8.2 - Delete**
+
+ ![](img/delete-api-manutencao.png)
+
+ **8.3 - Update**
+
+![](img/put-api-manutencao.png)
+
+**8.4 - Get**
+
+![](img/get-api-manutencao.png)
+
+  ### 9- Notificação
+**9.1 - Get**
+
+ ![](img/notification_get.jpg)
+
+
+**9.2 - Create**
+
+ ![](img/notification_post.jpg)
+
+ **9.3 - Delete**
+
+ ![](img/notification_delete.jpg)

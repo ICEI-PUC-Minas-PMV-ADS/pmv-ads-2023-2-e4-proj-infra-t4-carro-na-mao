@@ -1,5 +1,6 @@
 ﻿using carro_na_mao_api.Models.Authenticate;
 using carro_na_mao_api.Models.Cadastro;
+using carro_na_mao_api.Models.Categoria;
 using carro_na_mao_api.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -25,17 +26,25 @@ namespace carro_na_mao_api.Controllers
         [HttpGet]
         public async Task<List<Cadastro>> GetCadastros() => await _cadastroService.GetAsync();
 
-        [HttpPost("listar-usuarios")]
+        [HttpPost]
         public async Task PostCadastro(Cadastro cadastro)
         {
             await _cadastroService.CreateAsync(cadastro);
 
         }
+
+        [HttpGet("find-by-email")]
+        public async Task<Cadastro> GetAsyncEmail(string email)
+        {
+            return await _cadastroService.GetAsyncEmail(email);
+        }
+
         [HttpDelete]
         public async Task DeleteCdastro(string id)
         {
             await _cadastroService.RemoveAsync(id);
         }
+
         [HttpPut("editar-usuario")]
 
         public async Task<Cadastro> UpdateCadastor(string id, Cadastro cadastro)

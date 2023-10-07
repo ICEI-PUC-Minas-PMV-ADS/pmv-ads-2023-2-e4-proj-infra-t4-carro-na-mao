@@ -25,7 +25,7 @@ namespace carro_na_mao_api.Controllers
         [HttpPost]
         public async Task<Avaliacao> PostAvaliacao(Avaliacao avaliacao)
         {
-            await _avaliacaoServices.createAsync(avaliacao);
+            await _avaliacaoServices.CreateAsync(avaliacao);
             return avaliacao;
         }
 

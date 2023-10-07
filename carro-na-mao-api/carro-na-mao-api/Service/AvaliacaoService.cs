@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
-namespace WebApiMongoDB.Services
+namespace carro_na_mao_api.Service
 {
     public class AvaliacaoServices
     {

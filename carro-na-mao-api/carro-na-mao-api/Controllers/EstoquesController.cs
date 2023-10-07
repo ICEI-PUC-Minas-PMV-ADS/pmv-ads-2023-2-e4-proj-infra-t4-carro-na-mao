@@ -19,7 +19,7 @@ namespace carro_na_mao_api.Controllers
         }
 
         [HttpGet]
-        public async Task<List<Estoque>> findAll()
+        public async Task<List<Estoque>> getAsync()
             => await _estoqueService.getAsync();
 
 

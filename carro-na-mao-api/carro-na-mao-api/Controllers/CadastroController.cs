@@ -16,26 +16,34 @@ namespace carro_na_mao_api.Controllers
     [ApiController]
     public class CadastroController : ControllerBase
     {
-        private readonly AvaliacaoService _cadastroService;
+        private readonly CadastroService _cadastroService;
 
-        public CadastroController(AvaliacaoService cadastroService)
+        public CadastroController(CadastroService cadastroService)
         {
             _cadastroService = cadastroService;
         }
         [HttpGet]
         public async Task<List<Cadastro>> GetCadastros() => await _cadastroService.GetAsync();
 
-        [HttpPost("listar-usuarios")]
+        [HttpPost]
         public async Task PostCadastro(Cadastro cadastro)
         {
             await _cadastroService.CreateAsync(cadastro);
 
         }
+
+        [HttpGet("find-by-email")]
+        public async Task<Cadastro> GetAsyncEmail(string email)
+        {
+            return await _cadastroService.GetAsyncEmail(email);
+        }
+
         [HttpDelete]
         public async Task DeleteCdastro(string id)
         {
             await _cadastroService.RemoveAsync(id);
         }
+
         [HttpPut("editar-usuario")]
 
         public async Task<Cadastro> UpdateCadastor(string id, Cadastro cadastro)

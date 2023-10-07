@@ -5,11 +5,11 @@ using MongoDB.Driver;
 
 namespace carro_na_mao_api.Service
 {
-    public class AvaliacaoService
+    public class CadastroService
     {
         private readonly IMongoCollection<Cadastro> _cadastroCollection;
 
-        public AvaliacaoService(IOptions<CadastroDataBase> cadastroService)
+        public CadastroService(IOptions<CadastroDataBase> cadastroService)
         {
             var mongoClient = new MongoClient(cadastroService.Value.ConnectionString);
             var mongoDatabase = mongoClient.GetDatabase(cadastroService.Value.DatabaseName);
@@ -19,6 +19,9 @@ namespace carro_na_mao_api.Service
 
         public async Task<List<Cadastro>> GetAsync() =>
             await _cadastroCollection.Find(x => true).ToListAsync();
+
+        public async Task<Cadastro> GetAsyncEmail(string email) =>
+            await _cadastroCollection.Find(x => x.email == email).SingleOrDefaultAsync();
 
         public async Task CreateAsync(Cadastro cadastro) =>
             await _cadastroCollection.InsertOneAsync(cadastro);

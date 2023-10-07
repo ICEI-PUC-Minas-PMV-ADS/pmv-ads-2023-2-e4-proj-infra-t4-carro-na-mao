@@ -69,11 +69,19 @@
 
 **5.1 - Get**
 
-![](img/Get_Avaliacao.jpg)
+![](img/get-api-avaliacao.jpg)
 
 **5.2 - Post**
 
-![](img/post_Avaliacao.jpg)
+![](img/post_avaliacao.jpg)
+
+**5.3 - Delete**
+
+![](img/delete-api-avaliacao.jpg)
+
+ **5.4 - Update**
+
+![](img/put-api-avaliacao.jpg)
 
  ### 6- Locação
 

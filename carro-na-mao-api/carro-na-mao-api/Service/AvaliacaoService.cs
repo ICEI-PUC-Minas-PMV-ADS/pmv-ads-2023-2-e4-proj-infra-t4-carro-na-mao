@@ -33,5 +33,15 @@ namespace carro_na_mao_api.Service
         {
             throw new NotImplementedException();
         }
+
+        internal Task DeleteAsync(int id_veiculo)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal Task UpdateAsync(string id, object avaliacao)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

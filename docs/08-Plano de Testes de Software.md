@@ -102,6 +102,17 @@
  - Passos: Acessar o swagger, acessar o try out e preencher os campos solicitados
  - Critério de sucesso: Retorno do código 200.
 
+**5.3 - Delete**
+ - Objetivo do Teste: Verificar se o metodo delete da API consegue excluir de maneira correta o registro das categorias passadas como parametro.
+ - Passos: Acessar o swagger, acessar o try out do metodo delete e passar um id com parametro.
+ - Critério de sucesso: Retorno do código 200.
+
+ **5.4 - Update**
+
+ - Objetivo do Teste: Verificar se o metodo update da aplicação consergue atualizar de forma correta as informação de categoria passado como parametro 
+ - Passos: Acessar o swagger, passar um id como parametro e os campos que devem ser modificados. 
+ - Critério de sucesso: Retorno do código 200.
+   
  ### 6- Locação
 **6.1 - Create**
 

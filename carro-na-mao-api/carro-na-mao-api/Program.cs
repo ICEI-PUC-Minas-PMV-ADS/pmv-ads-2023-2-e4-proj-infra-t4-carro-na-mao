@@ -2,6 +2,7 @@ using carro_na_mao_api.Models.Avaliacao;
 using carro_na_mao_api.Models.Cadastro;
 using carro_na_mao_api.Models.Categoria;
 using carro_na_mao_api.Models.Estoque;
+using carro_na_mao_api.Models.Historico;
 using carro_na_mao_api.Models.Locacoes;
 using carro_na_mao_api.Models.Manutencao;
 using carro_na_mao_api.Models.Notificacao;
@@ -61,6 +62,11 @@ builder.Services.AddControllers();
 builder.Services.Configure<AvaliacaoDatabaseSettings>
     (builder.Configuration.GetSection("DevNetStoreDatabase"));
 builder.Services.AddSingleton<AvaliacaoService>();
+
+builder.Services.Configure<HistoricoDatabaseSettings>
+    (builder.Configuration.GetSection("DevNetStoreDatabase"));
+
+builder.Services.AddSingleton<HistoricoService>();
 
 builder.Services.AddAuthentication(options =>
 {

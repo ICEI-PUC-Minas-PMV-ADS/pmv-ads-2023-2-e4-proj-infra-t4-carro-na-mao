@@ -5,11 +5,11 @@ using MongoDB.Driver;
 
 namespace carro_na_mao_api.Service
 {
-    public class AvaliacaoService
+    public class CadastroService
     {
         private readonly IMongoCollection<Cadastro> _cadastroCollection;
 
-        public AvaliacaoService(IOptions<CadastroDataBase> cadastroService)
+        public CadastroService(IOptions<CadastroDataBase> cadastroService)
         {
             var mongoClient = new MongoClient(cadastroService.Value.ConnectionString);
             var mongoDatabase = mongoClient.GetDatabase(cadastroService.Value.DatabaseName);

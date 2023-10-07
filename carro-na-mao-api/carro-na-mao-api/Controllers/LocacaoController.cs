@@ -20,7 +20,7 @@ namespace carro_na_mao_api.Controllers
         }
 
         [HttpGet]
-        public async Task<List<Locacao>> findAll()
+        public async Task<List<Locacao>> getAsync()
             => await _locacaoService.getAsync();
 
 

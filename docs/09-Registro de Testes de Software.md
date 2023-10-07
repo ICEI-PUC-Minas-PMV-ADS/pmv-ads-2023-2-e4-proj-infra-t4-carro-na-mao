@@ -73,7 +73,7 @@
 
 **5.2 - Post**
 
-![](img/post_avaliacao.jpg)
+![](img/post-api-avaliacao.jpg)
 
 **5.3 - Delete**
 

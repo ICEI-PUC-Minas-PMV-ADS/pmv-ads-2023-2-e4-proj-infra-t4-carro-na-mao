@@ -130,7 +130,7 @@
  - Passos: Acessar o swagger e executar o try out.
  - Critério de sucessp: Retorno do código 200.
 
-  ### 7- Vistoria
+ ### 7- Vistoria
 **7.1 - Create**
 
  - Objetivo do Teste: Verificar se o metodo create da API está funcionando de forma correta.
@@ -153,7 +153,7 @@
  - Passos: Acessar o swagger e executar o try out.
  - Critério de sucessp: Retorno do código 200.
 
-   ### 8- Manutenção
+ ### 8- Manutenção
 **8.1 - Create**
 
  - Objetivo do Teste: Verificar se o metodo create da API está funcionando de forma correta.

@@ -46,7 +46,7 @@ builder.Services.AddSingleton<RetiradaService>();
 
 builder.Services.Configure<CadastroDataBase>
     (builder.Configuration.GetSection("DevNetStoreDatabase"));
-builder.Services.AddSingleton<AvaliacaoService>();
+builder.Services.AddSingleton<CadastroService>();
 
 builder.Services.Configure<NotificacaoDatabaseSettings>
     (builder.Configuration.GetSection("DevNetStoreDatabase"));
@@ -57,17 +57,17 @@ builder.Services.Configure<LocacaoDatabaseSettings>
     (builder.Configuration.GetSection("DevNetStoreDatabase"));
 builder.Services.AddSingleton<LocacaoService>();
 
-builder.Services.AddControllers();
 
 builder.Services.Configure<AvaliacaoDatabaseSettings>
     (builder.Configuration.GetSection("DevNetStoreDatabase"));
-builder.Services.AddSingleton<AvaliacaoService>();
+builder.Services.AddSingleton<AvaliacaoServices>();
 
 builder.Services.Configure<HistoricoDatabaseSettings>
     (builder.Configuration.GetSection("DevNetStoreDatabase"));
 
 builder.Services.AddSingleton<HistoricoService>();
 
+builder.Services.AddControllers();
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

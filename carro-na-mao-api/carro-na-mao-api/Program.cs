@@ -68,13 +68,10 @@ builder.Services.Configure<HistoricoDatabaseSettings>
 
 builder.Services.AddSingleton<HistoricoService>();
 
-
 builder.Services.Configure<MultaDataBaseSettings>
     (builder.Configuration.GetSection("DevNetStoreDatabase"));
 
 builder.Services.AddSingleton<MultaDataBaseSettings>();
-
-
 
 builder.Services.AddControllers();
 builder.Services.AddAuthentication(options =>

@@ -27,21 +27,21 @@ namespace carro_na_mao_api.Controllers
         [HttpPost]
         public async Task<Avaliacao> PostAvaliacao(Avaliacao avaliacao)
         {
-            await _avaliacaoServices.createAsync(avaliacao);
+            await _avaliacaoServices.CreateAsync(avaliacao);
             return avaliacao;
         }
 
         [HttpDelete]
-        public async Task DeleteAvaliacao(int id_veiculo)
+        public async Task DeleteAvaliacao(string id_veiculo)
         {
-            await _avaliacaoServices.DeleteAsync(id_veiculo);
+            await _avaliacaoServices.RemoveAsync(id_veiculo);
 
         }
 
         [HttpPut]
-        public async Task<Avaliacao> UpdateAvaliacao(string id, Estoque estoque)
+        public async Task<Avaliacao> UpdateAvaliacao(string id, Avaliacao avaliacao)
         {
-            await _avaliacaoServices.UpdateAsync(id, avaliacao);
+            await _avaliacaoServices.UpdateAsyn(id, avaliacao);
 
             return (Avaliacao)avaliacao;
         }

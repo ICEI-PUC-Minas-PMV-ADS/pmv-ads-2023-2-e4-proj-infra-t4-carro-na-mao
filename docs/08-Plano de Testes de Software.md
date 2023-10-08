@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 # Plano de Testes de Software
 ## API
 ### 1- Cadastro 
@@ -341,4 +340,3 @@
  - Objetivo do Teste: Verificar se o metodo get e consegue puxar informações de usuarios registradas no banco de dados. 
  - Passos: Acessar o swagger e executar o try out.
  - Critério: Retorno do código 200.
->>>>>>> Stashed changes

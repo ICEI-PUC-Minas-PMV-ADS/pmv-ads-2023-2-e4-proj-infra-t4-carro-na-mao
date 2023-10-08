@@ -33,9 +33,9 @@ namespace carro_na_mao_api.Controllers
         }
 
         [HttpGet("find-by-email")]
-        public async Task<Cadastro> GetAsyncEmail(string email)
+        public async Task<Cadastro> GetAsyncEmail(string email, string senha)
         {
-            return await _cadastroService.GetAsyncEmail(email);
+            return await _cadastroService.GetAsyncEmail(email,senha);
         }
 
         [HttpDelete]

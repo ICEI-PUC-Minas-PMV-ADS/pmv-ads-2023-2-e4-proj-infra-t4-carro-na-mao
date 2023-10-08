@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 # Plano de Testes de Software
 ## API
 ### 1- Cadastro 

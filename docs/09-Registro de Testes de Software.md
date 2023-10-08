@@ -149,3 +149,24 @@
  **9.3 - Delete**
 
  ![](img/notification_delete.jpg)
+
+   ### 10- Historico
+**10.1 - Get**
+
+ ![](img/)
+
+
+**10.2 - Create**
+
+ ![](img/)
+
+   ### 11-Multa
+**11.1 - Get**
+
+ ![](img/)
+
+
+**11.2 - Create**
+
+ ![](img/)
+

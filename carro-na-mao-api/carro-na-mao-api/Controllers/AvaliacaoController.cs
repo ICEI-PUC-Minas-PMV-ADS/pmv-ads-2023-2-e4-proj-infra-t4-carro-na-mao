@@ -1,4 +1,4 @@
-﻿using carro_na_mao_api.Models.Avaliacao;
+using carro_na_mao_api.Models.Avaliacao;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

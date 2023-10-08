@@ -1,4 +1,4 @@
-﻿using carro_na_mao_api.Models.Avaliacao;
+using carro_na_mao_api.Models.Avaliacao;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 

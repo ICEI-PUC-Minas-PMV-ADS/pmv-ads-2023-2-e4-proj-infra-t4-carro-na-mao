@@ -8,6 +8,7 @@ using carro_na_mao_api.Models.Manutencao;
 using carro_na_mao_api.Models.Notificacao;
 using carro_na_mao_api.Models.Retirada;
 using carro_na_mao_api.Models.Vistoria;
+using carro_na_mao_api.Models.Multa;
 using carro_na_mao_api.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -66,6 +67,11 @@ builder.Services.Configure<HistoricoDatabaseSettings>
     (builder.Configuration.GetSection("DevNetStoreDatabase"));
 
 builder.Services.AddSingleton<HistoricoService>();
+
+builder.Services.Configure<MultaDataBaseSettings>
+    (builder.Configuration.GetSection("DevNetStoreDatabase"));
+
+builder.Services.AddSingleton<MultaDataBaseSettings>();
 
 builder.Services.AddControllers();
 builder.Services.AddAuthentication(options =>

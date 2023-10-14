@@ -3,6 +3,7 @@ import axios from 'axios';
 import './App.css';
 import { useEffect, useState } from 'react';
 import {RecuperaToken} from './autenticação/chave_de_acesso'
+
 function App() {
 const [token,setToken]=useState(null)
 useEffect(() => {
@@ -18,19 +19,25 @@ useEffect(() => {
 }, []);
 
 const validarUsuario =()=>{
-  const data = {
-    'email': document.querySelector('input[type="email"]').value,
-    'senha' : document.querySelector('input[type="password"]').value
-  }
-  const headers ={
-    "content-type":"application/json",
-    "Authorization":"Beare "+token
-  }
-  
-console.log(data)
-console.log(headers)
- const result = axios.post('https://api-carronamao.azurewebsites.net/api/Cadastro/find-by-email',data,{headers})
- console.log(result)
+ 
+    const email= document.querySelector('input[type="email"]').value
+    const senha = document.querySelector('input[type="password"]').value
+    const headers ={
+      "Content-Type":"application/json",
+      "Authorization": 'Bearer ' + token
+    } 
+  axios.get('https://api-carronamao.azurewebsites.net/api/Cadastro/find-by-email/?email='+email+'&senha='+senha+'',{headers})
+    .then(response =>{
+        console.log(response.status)
+        if(response.status===200){
+          alert('ok')
+        }
+        //console.log(response.data)
+        }
+    ).catch(error => {
+        alert(error.status)
+    })
+
  
 }
   return (

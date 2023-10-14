@@ -8,8 +8,8 @@ export function RecuperaToken (){
   }
   
   const data={
-      "nome":"torugo",
-      "senha":"123"
+      "nome":"master",
+      "senha":"master123"
   }
    return axios.post('https://api-carronamao.azurewebsites.net/api/Cadastro/authenticate',data,{headers}).
     then(response=>{

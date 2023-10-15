@@ -7,10 +7,10 @@ namespace carro_na_mao_api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class HitoricoController : ControllerBase
+    public class HistoricoController : ControllerBase
     {
         private readonly HistoricoService _historicoService;
-        public HitoricoController(HistoricoService historicoService)
+        public HistoricoController(HistoricoService historicoService)
         {
             _historicoService = historicoService;
         }

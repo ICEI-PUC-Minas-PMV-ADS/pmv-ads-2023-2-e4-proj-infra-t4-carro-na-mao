@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+#campos {
+  display: flex;
+  flex-direction: column;
+  padding: 10em;
+  margin-left: 32em;
+  margin-right: 32em;
+
+}
+
+#email{
+  position: relative;
+  top: 1em;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+#senha{
+  position: relative;
+  top: 2em;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+#campos > button{
+  position: relative;
+  top: 3em;
+  
+}

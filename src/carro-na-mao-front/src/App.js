@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import {RecuperaToken} from './autenticação/chave_de_acesso'
 
 function App() {
+  //const history = useHistory()
 const [token,setToken]=useState(null)
 useEffect(() => {
   async function fetchData() {
@@ -15,11 +16,10 @@ useEffect(() => {
       console.error('Erro ao recuperar token:', error);
     }
   }
-  fetchData();
+  fetchData()
 }, []);
 
 const validarUsuario =()=>{
- 
     const email= document.querySelector('input[type="email"]').value
     const senha = document.querySelector('input[type="password"]').value
     const headers ={
@@ -32,9 +32,8 @@ const validarUsuario =()=>{
         if(response.status===200){
           alert('ok')
         }
-        //console.log(response.data)
-        }
-    ).catch(error => {
+      }
+      ).catch(error => {
         alert(error.status)
     })
 
@@ -42,10 +41,11 @@ const validarUsuario =()=>{
 }
   return (
         <>
-        <section>
-        <input id = "email"type='email'></input>
-        <input type='password'></input>
-        <button onClick={validarUsuario}>Login</button>
+        <section id="campos">
+          <h3>Faça o seu login !</h3>
+          <input id = "email"type='email' placeholder='Email'></input>
+          <input id="senha"type='password' placeholder='Senha'></input>
+          <button onClick={validarUsuario}>Entrar</button>
         </section>
 
       </>

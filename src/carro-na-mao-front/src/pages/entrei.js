@@ -6,7 +6,7 @@ function Cadastro(){
 
     return(
         <>
-        <h1>ola</h1>
+        <h1>ENTREIIIII</h1>
         </>
     );
 }

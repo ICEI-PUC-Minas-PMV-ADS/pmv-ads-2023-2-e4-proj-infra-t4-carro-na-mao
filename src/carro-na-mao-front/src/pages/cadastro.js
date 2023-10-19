@@ -50,7 +50,7 @@ function Cadastro(){
         .then(response =>{
             console.log(response.status)
             if(response.status===200){
-                alert('oi')
+
                return navigate("/")
             }
           }

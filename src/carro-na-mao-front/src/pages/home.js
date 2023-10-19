@@ -8,19 +8,19 @@ import { useNavigate,Link } from 'react-router-dom'
 
 function Home() {
   const navigate = useNavigate()
-  //const history = useHistory()
+ 
 const [token,setToken]=useState(null)
-useEffect(() => {
-  async function fetchData() {
-    try {
-      const jwtToken = await RecuperaToken();
-      setToken(jwtToken);
-    } catch (error) {
-      console.error('Erro ao recuperar token:', error);
-    }
-  }
-  fetchData()
-}, []);
+    useEffect(() => {
+      async function fetchData() {
+        try {
+          const jwtToken = await RecuperaToken();
+          setToken(jwtToken);
+        } catch (error) {
+          console.error('Erro ao recuperar token:', error);
+        }
+      }
+      fetchData()
+    }, []);
 
 const validarUsuario =()=>{
     const email= document.querySelector('input[type="email"]').value

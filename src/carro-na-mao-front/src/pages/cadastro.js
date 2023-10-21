@@ -1,10 +1,16 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { RecuperaToken } from '../autenticação/chave_de_acesso';
-import { useNavigate,Link } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
+import Alert from '@mui/material/Alert';
+import Stack from '@mui/material/Stack';
+import  '../estilos/Cadastro.css'
 
 function Cadastro(){
     const navigate = useNavigate()
+    const [loading, setLoading] = useState(false)
     const [token,setToken]=useState(null)
     useEffect(() => {
     async function fetchData() {
@@ -13,10 +19,10 @@ function Cadastro(){
         setToken(jwtToken);
         } catch (error) {
         console.error('Erro ao recuperar token:', error);
-        }
-    }
-    fetchData()
-    }, []);
+         }
+       }
+        fetchData()
+        }, []);
 
     const cadastrar =()=>{
         const email= document.querySelector('#emailCadastro').value
@@ -50,7 +56,7 @@ function Cadastro(){
         .then(response =>{
             console.log(response.status)
             if(response.status===200){
-
+                setLoading(false)
                return navigate("/")
             }
           }
@@ -62,7 +68,13 @@ function Cadastro(){
     }
     return(
         <>
-        <section>
+         {loading ? (
+          <Box id="carregamento" sx={{ display: 'flex' }}>
+            <CircularProgress sx={{color:'black'}} />
+          </Box>
+            ) : (
+        <>
+        <section id="cmp">
             <h3>Faça seu Cadastro</h3>
              <h5>Dados Pessoias</h5>
             <div>
@@ -79,7 +91,7 @@ function Cadastro(){
 
             <div id='camposParaLogin'>
                 <input type="email" id='emailCadastro' placeholder='Digite seu email...'></input>
-                <input type="password'"placeholder='Digite sua senha...'></input>
+                <input type="password"placeholder='Digite sua senha...'></input>
                 <input type="password" id="senhaCadastro" placeholder='Repita sua senha'></input>
             </div>
 
@@ -88,6 +100,8 @@ function Cadastro(){
             </div>
         </section>
         </>
+        )}
+    </>
     );
 }
 

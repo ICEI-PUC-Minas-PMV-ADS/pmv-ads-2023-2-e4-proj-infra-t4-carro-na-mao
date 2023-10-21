@@ -1,0 +1,17 @@
+#cmp{
+    width: 82%;
+    position: relative;
+    left: 15%;
+    top: 7em;
+   /* display: flex;*/
+}
+
+#cmp >input{
+    position: relative;
+    left: 10px;
+}
+
+#camposParaLogin{
+    margin-bottom: 10px; 
+
+}

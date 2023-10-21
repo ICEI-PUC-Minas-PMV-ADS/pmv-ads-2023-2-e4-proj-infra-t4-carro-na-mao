@@ -39,12 +39,21 @@
 #campos {
   display: flex;
   flex-direction: column;
-  padding: 10em;
-  margin-left: 32em;
-  margin-right: 32em;
+  width: 10em;
+  position: relative;
+  left: 45%;
+  top: 10em;
 
 }
+#carregamento {
+  display: flex;
+  flex-direction: column;
+  width: 10em;
+  position: relative;
+  left: 50%;
+  top: 20em;
 
+}
 #email{
   position: relative;
   top: 1em;
@@ -67,5 +76,8 @@
 #link{
   position: relative;
   top: 3em;
-  left: 4em;
+  left: 6em;
+}
+.camposLogin{
+  width: 20em;
 }

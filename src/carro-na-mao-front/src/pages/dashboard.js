@@ -1,5 +1,4 @@
 import axios from 'axios';
-import ApexCharts from 'apexcharts'
 import { useEffect, useState } from 'react';
 import{Menu} from './menu';
 

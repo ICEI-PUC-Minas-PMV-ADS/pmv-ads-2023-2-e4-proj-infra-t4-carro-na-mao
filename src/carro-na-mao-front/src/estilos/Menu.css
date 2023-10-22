@@ -1,0 +1,19 @@
+#menu{
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    border-bottom: 1px solid black;
+    background-color: #adadad78;
+}
+
+#menu > a{
+    
+    flex: 1;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+
+#menu>a:hover{
+    color: white;
+}

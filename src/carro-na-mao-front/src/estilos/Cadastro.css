@@ -1,17 +1,79 @@
+input{
+    position: relative;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+hr{
+    position: relative;
+    top: 1em;
+}
+#btnCadastrar{
+    position: relative;
+    left: 40%;
+    top: 4em;
+    color:white;
+    padding: 20px;
+    border-radius: 2em;
+    background-color: black;
+}
+#btnCadastrar:hover{
+    color:black;
+    background-color: white;
+}
 #cmp{
     width: 82%;
     position: relative;
-    left: 15%;
+    left: 10%;
     top: 7em;
-   /* display: flex;*/
 }
-
-#cmp >input{
-    position: relative;
-    left: 10px;
-}
-
 #camposParaLogin{
     margin-bottom: 10px; 
+    
+}
+#nomeCadastro{
+    position: relative;
+    left: 1em;
+} 
+#dataNasc{
+    position: relative;
+    left: 2em;
+}
+#cpf{
+    position: relative;
+    left: 3em;
+}
+#telefone{
+    position: relative;
+    left: 4em;
+} 
+#endereco{
+    position: relative;
+    left: 5em;
+}
+#categoria{
+    position: relative;
+    left: 6em;
+} 
 
+#camposParaLoginParteUm{
+    position: relative;
+    padding: 40px;
+    left: 2em;
+}
+#camposParaLoginParteDois{
+    position: relative;
+    padding: 40px;
+    left: 2em;
+}
+#emailCadastro{
+    position: relative;
+}
+#senhaCadastroConfirma{
+    position: relative;
+    left: 1em;
+}
+#senhaCadastro{
+    position: relative;
+    left: 2em;
 }

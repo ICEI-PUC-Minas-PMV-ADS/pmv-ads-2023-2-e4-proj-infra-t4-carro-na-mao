@@ -3,14 +3,14 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import{Menu} from './menu';
 
-function Cadastro(){
+function Dashboard(){
 
     return(
         <>
         <Menu/>
-        <h1>ENTREIIIII</h1>
+        <h1>Dashboard</h1>
         </>
     );
 }
 
-export default Cadastro;
+export default Dashboard;

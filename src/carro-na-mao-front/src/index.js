@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import Cadastro from './pages/cadastro';
 import Home from './pages/home';
-import Entrei from './pages/entrei';
+import Dashboard from './pages/dashboard';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 
@@ -18,8 +18,8 @@ const router = createBrowserRouter([
       element:<Cadastro/>
     },
     {
-      path:'entrei',
-      element:<Entrei/>
+      path:'dashboard',
+      element:<Dashboard/>
     }
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));

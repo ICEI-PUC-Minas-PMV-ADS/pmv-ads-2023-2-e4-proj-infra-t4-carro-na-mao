@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { useEffect, useState } from 'react';
 import { RecuperaToken } from '../autenticação/chave_de_acesso';
 import { useNavigate, Link } from 'react-router-dom';
-import '../pages/vistoria.css';
+import '../estilos/vistoria.css';
 
 function Vistoria() {
   const navigate = useNavigate()

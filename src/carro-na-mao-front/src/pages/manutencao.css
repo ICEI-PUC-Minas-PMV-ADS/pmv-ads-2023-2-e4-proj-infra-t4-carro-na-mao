@@ -1,0 +1,152 @@
+/* Estilização do contêiner da tela de manutenção */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Estilização dos campos de entrada */
+  input[type="number"],
+  input[type="date"],
+  input[type="text"] {
+    width: 50%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  /* Estilização dos campos de checkbox */
+  input[type="checkbox"] {
+    margin: 5px 0;
+  }
+  
+  /* Estilização do botão de salvar */
+  button {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Estilização do título */
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+   }
+   
+  
+  
+  .container2 {
+    display: flex;
+    justify-content: space-between;
+    
+    background-color: rgb(180, 180, 180);
+  }
+  .container3 {
+    display: flex;
+    flex-basis: 50px; 
+    justify-content: center;
+    justify-content: space-between;
+    vertical-align: text-top;
+  }
+  .container4 {
+    display: flex;
+    justify-content: space-between;
+    height: 110px;
+    width: 60%;
+   
+    
+   
+    
+    }
+  .container5 {
+    display: flex;
+    flex-basis: 30px; 
+    justify-content: space-between;  
+    align-content: center;
+    height: 80px;
+    vertical-align: text-top;
+    
+    
+  }
+  
+  .container > div {
+    margin-right: 5px;  
+    
+  }
+  
+   
+   
+   header {
+    background-color: #282c34;
+    padding: 30px 0;
+    color: white;
+    text-align: center;
+   }
+   
+   header h1 {
+    margin: 0;
+    font-size: 32px;
+   }
+   
+   main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+   }
+   
+   main aside {
+    background-color: #e4e4e4;
+    width: 30%;
+    padding: 20px;
+    box-sizing: border-box;
+   }
+   
+   main aside h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+   }
+   
+   main aside p {
+    line-height: 1.6;
+   }
+   
+   main .content {
+    width: 70%;
+    padding: 20px;
+    box-sizing: border-box;
+   }
+   
+   main .content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+   }
+   
+   main .content p {
+    line-height: 1.6;
+   }
+   
+   footer {
+    background-color: #282c34;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+   }
+   
+   footer p {
+    margin: 0;
+   }
+  

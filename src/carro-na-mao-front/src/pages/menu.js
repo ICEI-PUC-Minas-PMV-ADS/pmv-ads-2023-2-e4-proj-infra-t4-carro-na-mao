@@ -9,6 +9,9 @@ export function Menu (){
         <Link to="/Dashboard">Dashboard</Link>
         <Link to="/Vistoria">Vistoria</Link>
         <Link to="/Arruma">ManutencaoTeste</Link>
+        <Link to="/Estoque">Estoque</Link>
+        <Link to="/Categoria">Categoria</Link>
+        <Link to="/Localizacao">Localizacao</Link>
         <Link to="/">Sair</Link>
         </div>
        </>

@@ -8,8 +8,11 @@ import Dashboard from './pages/dashboard';
 import Vistoria from './pages/vistoria';
 import Manutencao from './pages/manutencao';
 import Arruma from './pages/manut';
+import Estoque from './pages/estoque';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
+import Categoria from './pages/categoria';
+import Localizacao from './pages/localizacao';
 
 const router = createBrowserRouter([
     {
@@ -35,6 +38,18 @@ const router = createBrowserRouter([
     {
       path:'arruma',
       element:<Arruma/>
+    },
+    {
+      path:'estoque',
+      element:<Estoque/>
+    },
+    {
+      path:'categoria',
+      element:<Categoria/>
+    },
+    {
+      path:'localizacao',
+      element:<Localizacao/>
     }
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));

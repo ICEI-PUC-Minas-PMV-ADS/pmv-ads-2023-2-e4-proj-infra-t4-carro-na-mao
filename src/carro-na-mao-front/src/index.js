@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import Cadastro from './pages/cadastro';
 import Home from './pages/home';
+import Dashboard from './pages/dashboard';
 import Vistoria from './pages/vistoria';
 import Manutencao from './pages/manutencao';
 import Arruma from './pages/manut';
@@ -21,6 +22,9 @@ const router = createBrowserRouter([
       element:<Cadastro/>
     },
     {
+      path:'dashboard',
+      element:<Dashboard/>
+    },{
       path:'entrei',
       element:<Entrei/>
     },

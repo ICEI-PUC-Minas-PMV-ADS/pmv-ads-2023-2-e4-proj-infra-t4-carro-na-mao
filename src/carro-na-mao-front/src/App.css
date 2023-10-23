@@ -39,33 +39,54 @@
 #campos {
   display: flex;
   flex-direction: column;
-  padding: 10em;
-  margin-left: 32em;
-  margin-right: 32em;
+  width: 10em;
+  position: relative;
+  left: 45%;
+  top: 10em;
 
 }
-
-#email{
+#carregamento {
+  display: flex;
+  flex-direction: column;
+  width: 10em;
   position: relative;
+  left: 50%;
+  top: 20em;
+
+}
+#email{
   top: 1em;
-  border-left: none;
-  border-right: none;
-  border-top: none;
 }
 #senha{
-  position: relative;
+
   top: 2em;
-  border-left: none;
-  border-right: none;
-  border-top: none;
 }
 #campos > button{
   position: relative;
   top: 3em;
   
 }
+#campos > input{
+  position: relative;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
 #link{
   position: relative;
   top: 3em;
-  left: 4em;
+  left: 6em;
+}
+.camposLogin{
+  width: 20em;
+}
+#btnEntrar{
+  color:white;
+  padding: 2px;
+  border-radius: 2em;
+  background-color: black
+}
+#btnEntrar:hover{
+  color:black;
+  background-color: white;
 }

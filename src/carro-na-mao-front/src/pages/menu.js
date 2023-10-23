@@ -6,8 +6,7 @@ export function Menu (){
 
       <>
         <div id="menu">
-        <Link to="/Home">Home</Link>
-        <Link to="/Cadastro">Cadastro</Link>
+        <Link to="/Dashboard">Dashboard</Link>
         <Link to="/Vistoria">Vistoria</Link>
         <Link to="/Arruma">ManutencaoTeste</Link>
         <Link to="/">Sair</Link>

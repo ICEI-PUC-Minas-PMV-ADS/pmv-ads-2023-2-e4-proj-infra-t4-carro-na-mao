@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { useEffect, useState } from 'react';
 import { RecuperaToken } from '../autenticação/chave_de_acesso';
 import { useNavigate, Link } from 'react-router-dom';
+import{Menu} from './menu';
 import '../estilos/vistoria.css';
 
 function Vistoria() {
@@ -62,7 +63,8 @@ function Vistoria() {
 
   return (
     <>
-      <section>
+    <Menu/>      
+    <section>
         <h3>Tela de realização de Vistoria de Veiculos</h3>
         <h5>Dados da Reserva e Vistoria:</h5>
 

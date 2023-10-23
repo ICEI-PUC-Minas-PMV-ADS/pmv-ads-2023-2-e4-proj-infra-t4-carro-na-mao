@@ -68,9 +68,10 @@
 }
 #campos > input{
   position: relative;
-  border-left: none;
-  border-right: none;
-  border-top: none;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
 }
 #link{
   position: relative;

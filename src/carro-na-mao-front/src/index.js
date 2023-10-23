@@ -8,7 +8,6 @@ import Dashboard from './pages/dashboard';
 import Vistoria from './pages/vistoria';
 import Manutencao from './pages/manutencao';
 import Arruma from './pages/manut';
-import Entrei from './pages/entrei';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 
@@ -24,9 +23,6 @@ const router = createBrowserRouter([
     {
       path:'dashboard',
       element:<Dashboard/>
-    },{
-      path:'entrei',
-      element:<Entrei/>
     },
     {
       path:'vistoria',

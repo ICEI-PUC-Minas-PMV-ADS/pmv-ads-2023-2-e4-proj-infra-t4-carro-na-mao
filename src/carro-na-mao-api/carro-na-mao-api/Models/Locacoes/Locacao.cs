@@ -18,11 +18,8 @@ namespace carro_na_mao_api.Models.Reservas
         [BsonElement("modelo_veiculo")]
         public string modelo_veiculo { get; set; }
 
-        [BsonElement("hora_retirada")]
-        public string hora_retirada { get; set; }
-
-        [BsonElement("hora_entrega")]
-        public string hora_entrega { get; set;}
+        [BsonElement("cor_veiculo")]
+        public string cor_veiculo { get; set; }
 
         [BsonElement("vl_categoria")]
         public int vl_categoria { get; set; }

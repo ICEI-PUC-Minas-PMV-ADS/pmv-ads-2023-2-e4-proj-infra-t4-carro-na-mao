@@ -19,8 +19,8 @@ namespace carro_na_mao_api.Service
         public async Task<List<Estoque>> getAsync() =>
             await _estoqueCollection.Find(x => true).ToListAsync();
 
-        public async Task<Estoque> getAsyncId(int id) =>
-            await _estoqueCollection.Find(x => x.id_veiculo == id).SingleOrDefaultAsync();
+        public async Task<Estoque> getAsyncId(string id) =>
+            await _estoqueCollection.Find(x => x.modelo_veiculo == id).SingleOrDefaultAsync();
 
         public async Task CreateAsync(Estoque estoque) =>
             await _estoqueCollection.InsertOneAsync(estoque);
@@ -31,7 +31,7 @@ namespace carro_na_mao_api.Service
             await _estoqueCollection.ReplaceOneAsync(x => x.id_estoque == id, estoque);
         }
 
-        public async Task DeleteAsync(int id) =>
-            await _estoqueCollection.DeleteOneAsync(x => x.id_veiculo == id);
+        public async Task DeleteAsync(string id) =>
+            await _estoqueCollection.DeleteOneAsync(x => x.id_estoque == id);
     }
 }

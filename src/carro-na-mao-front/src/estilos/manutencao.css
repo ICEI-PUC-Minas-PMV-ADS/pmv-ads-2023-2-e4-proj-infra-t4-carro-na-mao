@@ -1,0 +1,42 @@
+/* Estilização do contêiner da tela de manutenção */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Estilização dos campos de entrada */
+  input[type="number"],
+  input[type="date"],
+  input[type="text"] {
+    width: 50%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  /* Estilização dos campos de checkbox */
+  input[type="checkbox"] {
+    margin: 5px 0;
+  }
+  
+  /* Estilização do botão de salvar */
+  button {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Estilização do título */
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  

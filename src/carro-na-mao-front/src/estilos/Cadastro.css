@@ -1,0 +1,109 @@
+
+hr{
+    position: relative;
+    top: 1em;
+}
+#btnCadastrar{
+    position: relative;
+    left: 40%;
+    top: 4em;
+    color:white;
+    padding: 20px;
+    border-radius: 2em;
+    background-color: black;
+}
+#btnCadastrar:hover{
+    color:black;
+    background-color: white;
+}
+#cmp{
+    width: 82%;
+    position: relative;
+    left: 10%;
+    top: 7em;
+}
+#camposParaLogin{
+    margin-bottom: 10px; 
+    
+}
+#nomeCadastro{
+    position: relative;
+    left: 1em;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+} 
+#dataNasc{
+    position: relative;
+    left: 2em;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+#cpf{
+    position: relative;
+    left: 3em;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+#telefone{
+    position: relative;
+    left: 4em;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+} 
+#endereco{
+    position: relative;
+    left: 5em;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+#categoria{
+    position: relative;
+    left: 6em;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+} 
+
+#camposParaLoginParteUm{
+    position: relative;
+    padding: 40px;
+    left: -3em;
+    display: flex;
+}
+#camposParaLoginParteDois{
+    position: relative;
+    padding: 40px;
+    left: -2em;
+    display: flex;
+}
+#emailCadastro{
+    position: relative;
+    width: 50%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+#senhaCadastroConfirma{
+    position: relative;
+    left: 1em;
+    width: 50%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+#senhaCadastro{
+    position: relative;
+    left: 2em;
+    width: 50%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}

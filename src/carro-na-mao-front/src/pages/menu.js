@@ -1,25 +1,18 @@
 
 import { Link } from "react-router-dom";
+import '../estilos/Menu.css'
 export function Menu (){
      return (
-        <>
-         <div class="container">
-        <div>
-          <div>
-            <div>
-              <div><a href="/Home2">Home</a></div>
-              <div><a href="/Cadastro">Cadastro</a></div>
-              <div><a href="/Vistoria">Vistoria</a></div>
-              <div><a href="/Manutencao">Manutencao</a></div>
-            </div>
-            <div>
-              <div><a href="/">Sair</a></div>
-            </div>
-          </div>
+
+      <>
+        <div id="menu">
+        <Link to="/Dashboard">Dashboard</Link>
+        <Link to="/Vistoria">Vistoria</Link>
+        <Link to="/Manutencao">Manutencao</Link>
+        <Link to="/">Sair</Link>
         </div>
-      </div> 
-        
-        </>
+       </>
+
      );
 }
 

@@ -24,8 +24,8 @@ namespace carro_na_mao_api.Controllers
 
 
         [HttpGet("/find-by-veiculo")]
-        public async Task<Estoque> findById(int id_veiculo)
-             => await _estoqueService.getAsyncId(id_veiculo);
+        public async Task<Estoque> findById(string modelo_veiculo)
+             => await _estoqueService.getAsyncId(modelo_veiculo);
 
         [HttpPost]
         public async Task<Estoque> CreateEstoque(Estoque estoque)
@@ -44,9 +44,9 @@ namespace carro_na_mao_api.Controllers
         }
 
         [HttpDelete]
-        public async Task DeleteEstoque(int id_veiculo)
+        public async Task DeleteEstoque(string id_estoque)
         {
-            await _estoqueService.DeleteAsync(id_veiculo);
+            await _estoqueService.DeleteAsync(id_estoque);
         }
     }
 }

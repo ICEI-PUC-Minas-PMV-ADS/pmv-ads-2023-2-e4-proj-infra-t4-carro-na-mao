@@ -1,10 +1,9 @@
-
 import axios from 'axios';
 import React, { Component } from 'react';
 import { useEffect, useState } from 'react';
 import { RecuperaToken } from '../autenticação/chave_de_acesso';
 import { useNavigate, Link } from 'react-router-dom';
-import './manutencao.css';
+import '../estilos/manutencao.css';
 
 function Manutencao() {
   const navigate = useNavigate()

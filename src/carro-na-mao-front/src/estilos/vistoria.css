@@ -6,10 +6,52 @@ body {
  }
  
  .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
- }
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(180, 180, 180);
+  vertical-align: text-top;
+  }
+
+.container2 {
+  display: flex;
+  justify-content: space-between;
+  
+  background-color: rgb(180, 180, 180);
+}
+.container3 {
+  display: flex;
+  flex-basis: 50px; 
+  justify-content: center;
+  justify-content: space-between;
+  vertical-align: text-top;
+}
+.container4 {
+  display: flex;
+  justify-content: space-between;
+  height: 110px;
+  width: 60%;
+ 
+  
+ 
+  
+  }
+.container5 {
+  display: flex;
+  flex-basis: 50px; 
+  justify-content: space-between;  
+  align-content: center;
+  height: 100px;
+  vertical-align: text-top;
+  
+  
+}
+
+.container > div {
+  margin-right: 5px;  
+  
+}
+
+ 
  
  header {
   background-color: #282c34;

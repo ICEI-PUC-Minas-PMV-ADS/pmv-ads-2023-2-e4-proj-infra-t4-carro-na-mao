@@ -1,17 +1,11 @@
-
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { RecuperaToken } from '../autenticação/chave_de_acesso';
 import { useNavigate, Link } from 'react-router-dom'
-import CircularProgress from '@mui/material/CircularProgress';
-import axios from 'axios';
-import Box from '@mui/material/Box';
-import  '../estilos/Cadastro.css'
 
-function Cadastro(){
+function Cadastro() {
     const navigate = useNavigate()
-    const [loading, setLoading] = useState(false)
-    const [token,setToken]=useState(null)
+    const [token, setToken] = useState(null)
     useEffect(() => {
         async function fetchData() {
             try {
@@ -22,10 +16,10 @@ function Cadastro(){
             }
         }
         fetchData()
-
     }, []);
-    const cadastrar =()=>{
-        const email= document.querySelector('#emailCadastro').value
+
+    const cadastrar = () => {
+        const email = document.querySelector('#emailCadastro').value
         const senha = document.querySelector('#senhaCadastro').value
         const nome = document.querySelector('#nomeCadastro').value
         const dataNasc = document.querySelector("#dataNasc").value
@@ -33,6 +27,7 @@ function Cadastro(){
         const telefone = document.querySelector("#telefone").value
         const endereco = document.querySelector("#endereco").value
         const categoria = document.querySelector("#categoria").value
+
         const data = {
             "nome": nome,
             "dataNacimento": dataNasc,

@@ -11,27 +11,24 @@ import Arruma from './pages/manut';
 import Entrei from './pages/home2';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
-import Dashboard from './pages/dashboard';
-import Arruma from './pages/manut';
+
+
 const router = createBrowserRouter([
     {
       path:"/",
       element:<Home/>
-
     },   
     {
       path:"home2",
       element:<Home2/>
     }, 
-
-    
     {
       path:"cadastro",
       element:<Cadastro/>
     },
     {
-      path:'dashboard',
-      element:<Dashboard/>
+      path:'entrei',
+      element:<Entrei/>
     },
     {
       path:'vistoria',
@@ -40,12 +37,8 @@ const router = createBrowserRouter([
     {
       path:'manutencao',
       element:<Manutencao/>
-
-    },
-    {
-      path:'arruma',
-      element:<Arruma/>
     }
+    
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

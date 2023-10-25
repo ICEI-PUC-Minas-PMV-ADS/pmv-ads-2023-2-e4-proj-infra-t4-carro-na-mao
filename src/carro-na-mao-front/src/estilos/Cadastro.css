@@ -74,12 +74,32 @@ hr{
     padding: 40px;
     left: -3em;
     display: flex;
+    width: 1000px;
+    
+}
+#camposParaLoginParteUmVistoria{
+    position: flex;
+    padding: 40px;
+    left: -3em;
+    display: flex;
+    width: 1000px;
+    
 }
 #camposParaLoginParteDois{
     position: relative;
     padding: 40px;
     left: -2em;
     display: flex;
+    
+    
+}
+#camposParaLoginParteTres{
+    position: relative;
+    padding: 40px;
+    left: -2em;
+    display: flex;
+    height: 110px;
+    
 }
 #emailCadastro{
     position: relative;

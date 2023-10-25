@@ -12,6 +12,7 @@ function Categoria() {
     const [token, setToken] = useState(null)
     const [categorias, setCategorias] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [selectedCategoria, setSelectedCategoria] = useState(null);
 
     useEffect(() => {
         async function fetchData() {
@@ -98,6 +99,15 @@ function Categoria() {
         document.querySelector("#promocao").value = ""
     }
 
+    const handleCategoriaClick = (categoria) => {
+        setSelectedCategoria(categoria);
+        // Preencha os campos de entrada com os valores correspondentes
+        document.querySelector("#categoria").value = categoria.id_categoria;
+        document.querySelector("#valor").value = categoria.vl_categoria;
+        document.querySelector("#descricao").value = categoria.desc_categoria;
+        document.querySelector("#promocao").value = categoria.ind_promocao;
+    }
+
     return(
         <>
         <Menu/>
@@ -111,7 +121,8 @@ function Categoria() {
                             <div id="divListagem">
                                 <ul>
                                     {categorias.map(categoria => (
-                                        <li key={categoria.id_categoria}>{categoria.desc_categoria}</li>
+                                        <li key={categoria.id_categoria} onClick={() => handleCategoriaClick(categoria)}
+                                        >{categoria.desc_categoria}</li>
                                     ))}
                                 </ul>
                             </div>
@@ -122,7 +133,7 @@ function Categoria() {
                                 <br />
                                 <div>
                                     <label>Código Categoria</label>
-                                    <input className="input" type="text" id="categoria" placeholder="Código do Categoria" />
+                                    <input className="input" type="text" id="categoria" placeholder="Código do Categoria" readOnly />
                                 </div>
                                 <br />
                                 <div>

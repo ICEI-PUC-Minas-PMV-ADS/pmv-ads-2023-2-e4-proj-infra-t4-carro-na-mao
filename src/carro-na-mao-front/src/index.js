@@ -8,17 +8,13 @@ import Home2 from './pages/home2';
 import Dashboard from './pages/dashboard';
 import Vistoria from './pages/vistoria';
 import Manutencao from './pages/manutencao';
-<<<<<<< HEAD
-import Arruma from './pages/manut';
 import Estoque from './pages/estoque';
-=======
 import Historico from './pages/historico';
 import Infracoes from './pages/infracoes';
 import Reservas from './pages/reservas';
 import Avaliacoes from './pages/avaliacoes';
 import Notificacoes from './pages/notificacoes';
 
->>>>>>> dev
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 import Categoria from './pages/categoria';
@@ -50,11 +46,6 @@ const router = createBrowserRouter([
       element:<Manutencao/>
     },
     {
-<<<<<<< HEAD
-      path:'arruma',
-      element:<Arruma/>
-    },
-    {
       path:'estoque',
       element:<Estoque/>
     },
@@ -65,10 +56,6 @@ const router = createBrowserRouter([
     {
       path:'localizacao',
       element:<Localizacao/>
-    }
-=======
-      path:'historico',
-      element:<Historico/>
     },
     {
       path:'infracoes',
@@ -87,7 +74,6 @@ const router = createBrowserRouter([
       element:<Notificacoes/>
     },
     
->>>>>>> dev
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

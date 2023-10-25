@@ -11,6 +11,7 @@ function Categoria() {
     const navigate = useNavigate()
     const [token, setToken] = useState(null)
     const [categorias, setCategorias] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         async function fetchData() {
@@ -24,7 +25,7 @@ function Categoria() {
                     }
                 });
                 setCategorias(response.data)
-
+                setIsLoading(false);
             } catch (error) {
                 console.error('Erro ao recuperar token:', error);
             }
@@ -101,52 +102,57 @@ function Categoria() {
         <>
         <Menu/>
         <section id="categoriaStyle">
-            <div style={{ width: '25%', float: 'left'}}>
-                <div id="divListagem">
-                    {/* Renderizar a lista de categorias aqui */}
-                    <ul>
-                        {categorias.map(categoria => (
-                            <li key={categoria.id_categoria}>{categoria.desc_categoria}</li>
-                        ))}
-                    </ul>
+            {isLoading ? (
+                <div className="loading-container">
+                    <div className="loading"></div>
                 </div>
-            </div>
-            <div style={{ width: '75%', float: 'right' }}>
-                <div>
-                    <button id="btnRegistro" onClick={limparCampos}>Novo Registro</button>
-                </div>
-                <br/>
-                <div>
-                    <label>Código Categoria</label>
-                    <input className="input" type="text" id="categoria" placeholder="Código do Categoria"/>
-                </div>
-                <br/>
-                <div>
-                    <label>Valor da Categoria</label>
-                    <input className="input" type="text" id="valor" placeholder="R$50/dia"/>
-                </div>
-                <br/>
-                <div>
-                    <label>Descrição Categoria</label>
-                    <input className="input" type="text" id="descricao" placeholder="Insira a descrição"/>
-                </div>
-                <br/>
-                <div>
-                    <label>Indica Promoção</label>
-                    <input type="checkbox" id="promocao"/>
-                </div>
-                <br/>
-                <br/>
-                <div>
-                    <label>Deseja excluir o estoque deste veículo?</label>
-                    <button id="btnExcluir" onClick={excluir}>Excluir</button>
-                </div>
-                <br/>
-                <br/>
-                <div>
-                    <button id="btnGravar" onClick={categoria}>Gravar</button>
-                </div>
-            </div>
+            ) : (
+                 <><div style={{ width: '25%', float: 'left' }}>
+                            <div id="divListagem">
+                                <ul>
+                                    {categorias.map(categoria => (
+                                        <li key={categoria.id_categoria}>{categoria.desc_categoria}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div><div style={{ width: '75%', float: 'right' }}>
+                                <div>
+                                    <button id="btnRegistro" onClick={limparCampos}>Novo Registro</button>
+                                </div>
+                                <br />
+                                <div>
+                                    <label>Código Categoria</label>
+                                    <input className="input" type="text" id="categoria" placeholder="Código do Categoria" />
+                                </div>
+                                <br />
+                                <div>
+                                    <label>Valor da Categoria</label>
+                                    <input className="input" type="text" id="valor" placeholder="R$50/dia" />
+                                </div>
+                                <br />
+                                <div>
+                                    <label>Descrição Categoria</label>
+                                    <input className="input" type="text" id="descricao" placeholder="Insira a descrição" />
+                                </div>
+                                <br />
+                                <div>
+                                    <label>Indica Promoção</label>
+                                    <input type="checkbox" id="promocao" />
+                                </div>
+                                <br />
+                                <br />
+                                <div>
+                                    <label>Deseja excluir o estoque deste veículo?</label>
+                                    <button id="btnExcluir" onClick={excluir}>Excluir</button>
+                                </div>
+                                <br />
+                                <br />
+                                <div>
+                                    <button id="btnGravar" onClick={categoria}>Gravar</button>
+                                </div>
+                            </div></>
+            )}
+           
         </section>
         </>
     )

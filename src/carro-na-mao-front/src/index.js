@@ -11,7 +11,6 @@ import Manutencao from './pages/manutencao';
 import Arruma from './pages/manut';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
-import Locacao from './pages/locacao';
 
 const router = createBrowserRouter([
     {

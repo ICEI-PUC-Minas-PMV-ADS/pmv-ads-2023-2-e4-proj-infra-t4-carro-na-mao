@@ -54,7 +54,7 @@ function Locacao() {
                   console.log(response.status)
                   if(response.status===200){
                       alert('Reserva Cadastrada com sucesso')
-                     return navigate("/Locacao")
+                     return navigate("Locacao")
                   }
                 }
                 ).catch(error => {

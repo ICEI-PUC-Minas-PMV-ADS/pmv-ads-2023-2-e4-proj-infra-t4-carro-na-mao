@@ -26,7 +26,7 @@ function Locacao() {
         const categoria = document.querySelector('#categoriaRetirada').value
         const modelo = document.querySelector('#modeloRetirada').value
         const horaRetirada = document.querySelector("#horaRetirada").value
-        const horaEntrega = document.querySelector('#horaEntrega')
+        const horaEntrega = document.querySelector('#horaEntrega').value
         const valor = document.querySelector("#valorCategoria").value
         const custosAd = document.querySelector("#custosAd").value
         const dataRetirada = document.querySelector("#dataRetirada").value

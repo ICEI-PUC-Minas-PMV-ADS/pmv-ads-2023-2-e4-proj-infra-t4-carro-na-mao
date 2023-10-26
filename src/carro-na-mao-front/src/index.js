@@ -8,6 +8,7 @@ import Home2 from './pages/home2';
 import Dashboard from './pages/dashboard';
 import Vistoria from './pages/vistoria';
 import Manutencao from './pages/manutencao';
+import Estoque from './pages/estoque';
 import Historico from './pages/historico';
 import Infracoes from './pages/infracoes';
 import Reservas from './pages/reservas';
@@ -16,6 +17,8 @@ import Notificacoes from './pages/notificacoes';
 
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
+import Categoria from './pages/categoria';
+import Localizacao from './pages/localizacao';
 
 const router = createBrowserRouter([
     
@@ -43,8 +46,16 @@ const router = createBrowserRouter([
       element:<Manutencao/>
     },
     {
-      path:'historico',
-      element:<Historico/>
+      path:'estoque',
+      element:<Estoque/>
+    },
+    {
+      path:'categoria',
+      element:<Categoria/>
+    },
+    {
+      path:'localizacao',
+      element:<Localizacao/>
     },
     {
       path:'infracoes',

@@ -1,0 +1,24 @@
+#btnGravar{
+    background-color: #8f959b; 
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+#btnGravar:hover{
+    background-color: #00cc00; 
+    color: #fff;
+}
+
+#btnRegistro{
+    background-color: #8f959b; 
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+#btnRegistro:hover{
+    background-color: #1e72f0; 
+    color: #fff;
+}

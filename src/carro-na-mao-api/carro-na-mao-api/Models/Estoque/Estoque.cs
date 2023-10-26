@@ -12,7 +12,7 @@ namespace carro_na_mao_api.Models.Estoque
         [BsonElement("modelo_veiculo")]
         public string? modelo_veiculo { get; set; }
 
-        [BsonElement("modelo_veiculo")]
+        [BsonElement("marca_veiculo")]
         public string? marca_veiculo { get; set; }
 
         [BsonElement("cor_veiculo")]

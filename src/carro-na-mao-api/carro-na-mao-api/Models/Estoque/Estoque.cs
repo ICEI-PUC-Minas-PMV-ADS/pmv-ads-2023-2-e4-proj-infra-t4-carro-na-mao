@@ -7,7 +7,7 @@ namespace carro_na_mao_api.Models.Estoque
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
-        public string id_estoque { get; set; }
+        public string? id_estoque { get; set; }
 
         [BsonElement("modelo_veiculo")]
         public string? modelo_veiculo { get; set; }

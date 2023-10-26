@@ -15,3 +15,23 @@
 #menu>a:hover{
     color: white;
 }
+
+select {
+    font-size: 16px; 
+    border: 1px solid #d0d0d0; 
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #d0d0d0;
+  }
+
+  select:focus {
+    outline: none;
+    border: 1px solid #007bff; 
+  }  
+
+  option {
+    padding: 10px; 
+    font-size: 16px; 
+    margin: 5px;
+  }
+

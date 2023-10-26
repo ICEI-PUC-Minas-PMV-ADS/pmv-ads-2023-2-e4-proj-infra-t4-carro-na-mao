@@ -76,8 +76,17 @@ function Estoque() {
         }
     }
 
+    const limparCampos = () => {
+        document.querySelector("#estoque").value = "";
+        document.querySelector("#modelo").value = "";
+        document.querySelector("#marca").value = "";
+        document.querySelector("#cor").value = "";
+        document.querySelector("#quantidade").value = "";
+    }
+
     const handleEstoqueClick = (estoque) => {
         setSelectedEstoque(estoque);
+        document.querySelector("#estoque").value = estoque.id_estoque;
         document.querySelector("#modelo").value = estoque.modelo_veiculo;
         document.querySelector("#marca").value = estoque.marca_veiculo;
         document.querySelector("#cor").value = estoque.cor_veiculo;
@@ -99,19 +108,18 @@ function Estoque() {
                         <ul>
                         {estoques.map(estoque => (
                                         <li key={estoque.id_estoque} onClick={() => handleEstoqueClick(estoque)}
-                                        >{estoque.marca_veiculo}</li>
+                                        >{estoque.modelo_veiculo} - {estoque.cor_veiculo}</li>
                                     ))}
                         </ul>
                     </div>
                 </div>
                 <div style={{ width: '75%', float: 'right' }}>
                     <div>
-                        <button id="btnRegistro">Novo Registro</button>
-                        <button id="btnGravar" onClick={estoque}>Gravar</button>
+                        <button id="btnRegistro" onClick={limparCampos}>Novo Registro</button>
                     </div>
                     <div>
                         <label>Código Estoque</label>
-                        <input type="text" id="estoque" placeholder="Código do Estoque"/>
+                        <input type="text" id="estoque" placeholder="Código do Estoque" readOnly/>
                     </div>
                     <div>
                         <label>Modelo</label>
@@ -132,6 +140,11 @@ function Estoque() {
                     <div>
                         <label>Deseja excluir o estoque deste veículo?</label>
                         <button id="btnExcluir">Excluir</button>
+                    </div>
+                    <br />
+                    <br />
+                    <div>
+                    <button id="btnGravar" onClick={estoque}>Gravar</button>
                     </div>
                 </div>
                 </>

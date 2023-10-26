@@ -136,7 +136,8 @@ function Categoria() {
                                     ))}
                                 </ul>
                             </div>
-                        </div><div style={{ width: '75%', float: 'right' }}>
+                    </div>
+                        <div style={{ width: '75%', float: 'right' }}>
                                 <div>
                                     <button id="btnRegistro" onClick={limparCampos}>Novo Registro</button>
                                 </div>

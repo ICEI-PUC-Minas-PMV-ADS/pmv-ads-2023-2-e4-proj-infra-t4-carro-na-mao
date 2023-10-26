@@ -37,7 +37,7 @@ function Estoque() {
         const modelo = document.querySelector("#modelo").value;
         const marca = document.querySelector("#marca").value;
         const cor = document.querySelector("#cor").value;
-        const quantidade = document.querySelector("#quantidade").value;
+        const quantidade = parseInt(document.querySelector("#quantidade").value,10);
 
         const data = {
             "modelo_veiculo": modelo,

@@ -12,6 +12,7 @@ export function Menu (){
         <Link to="/Historico">Histórico</Link>
         <Link to="/Avaliacoes">Avaliações</Link>        
         <Link to="/Dashboard">Dashboard</Link>
+        <Link to="/Locacao">Locacao</Link>
         <Link to="/Vistoria">Vistoria</Link>
         <Link to="/Arruma">ManutencaoTeste</Link>
         <Link to="/Estoque">Estoque</Link>

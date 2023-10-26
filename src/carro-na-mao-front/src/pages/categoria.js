@@ -35,10 +35,9 @@ function Categoria() {
     }, []);
 
     const categoria = () => {
-
-        const valor = document.querySelector("#valor").value
-        const descricao = document.querySelector("#descricao").value
-        const promocao = document.querySelector("#promocao").value  == true;
+        const valor = document.querySelector("#valor").value;
+        const descricao = document.querySelector("#descricao").value;
+        const promocao = document.querySelector("#promocao").checked;
 
         const data = {
             "desc_categoria": descricao,
@@ -51,18 +50,29 @@ function Categoria() {
             "Authorization": 'Bearer ' + token
         }
 
-        axios.post('https://api-carronamao.azurewebsites.net/api/Categorias', data, {headers})
-        .then(response => {
-            console.log(response.status)
-            if(response.status == 200){
-                return navigate("/Categoria")
-            }
+        if (selectedCategoria && selectedCategoria.id_categoria) {
+            axios.put(`https://api-carronamao.azurewebsites.net/api/Categorias?id=${selectedCategoria.id_categoria}`, data, { headers })
+                .then(response => {
+                    console.log(response.status);
+                    if (response.status === 200) {
+                        return navigate("/Categoria");
+                    }
+                })
+                .catch(error => {
+                    alert(error.status);
+                });
+        } else {
+            axios.post('https://api-carronamao.azurewebsites.net/api/Categorias', data, { headers })
+                .then(response => {
+                    console.log(response.status);
+                    if (response.status === 200) {
+                        return navigate("/Categoria");
+                    }
+                })
+                .catch(error => {
+                    alert(error.status);
+                });
         }
-        ).catch(error => {
-            alert(error.status)
-        
-        })
-
     }
 
     const excluir = () => {
@@ -78,17 +88,18 @@ function Categoria() {
             "Authorization": 'Bearer ' + token
         }
 
-        axios.delete('https://api-carronamao.azurewebsites.net/api/Categorias', data, {headers})
-        .then(response => {
-            console.log(response.status)
-            if(response.status == 200){
-                return navigate("/Categoria")
+        if (selectedCategoria && selectedCategoria.id_categoria) {
+            axios.delete(`https://api-carronamao.azurewebsites.net/api/Categorias?id=${selectedCategoria.id_categoria}`, data, {headers})
+            .then(response => {
+                console.log(response.status)
+                if(response.status == 200){
+                    return navigate("/Categoria")
+                }
             }
+            ).catch(error => {
+                alert(error.status)
+            })
         }
-        ).catch(error => {
-            alert(error.status)
-        
-        })
         
     }
 
@@ -101,7 +112,6 @@ function Categoria() {
 
     const handleCategoriaClick = (categoria) => {
         setSelectedCategoria(categoria);
-        // Preencha os campos de entrada com os valores correspondentes
         document.querySelector("#categoria").value = categoria.id_categoria;
         document.querySelector("#valor").value = categoria.vl_categoria;
         document.querySelector("#descricao").value = categoria.desc_categoria;

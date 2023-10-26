@@ -36,22 +36,27 @@ function Estoque() {
                 </div>
                 <div>
                     <label>Código Estoque</label>
-                    <input type="text" placeholder="Código do Estoque"/>
+                    <input type="text" id="estoque" placeholder="Código do Estoque"/>
                 </div>
                 <div>
-                    <label>Código Veículo</label>
-                    <input type="text" placeholder="Modelo Veículo"/>
+                    <label>Modelo</label>
+                    <input type="text" id="modelo" placeholder="Modelo Veículo"/>
+                </div>
+                <div>
+                    <label>Marca</label>
+                    <input type="text" id="marca" placeholder="Marca Veículo"/>
                 </div>
                 <div>
                     <label>Placa Veículo</label>
-                    <input type="text" placeholder="AAA-0000"/>
+                    <input type="text" id="placa "placeholder="AAA-0000"/>
                 </div>
                 <div>
                     <label>Cor Veículo</label>
-                    <input type="text" placeholder="Cor do veículo"/>
+                    <input type="text" id="cor" placeholder="Cor do veículo"/>
                 </div>
                 <div>
                     <label>Deseja excluir o estoque deste veículo?</label>
+                    <button id="btnExcluir">Excluir</button>
                 </div>
             </div>
         </section>

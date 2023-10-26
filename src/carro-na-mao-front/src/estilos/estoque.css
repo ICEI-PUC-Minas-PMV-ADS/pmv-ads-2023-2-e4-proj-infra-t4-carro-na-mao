@@ -22,3 +22,15 @@
     background-color: #1e72f0; 
     color: #fff;
 }
+#btnExcluir{
+    background-color: #8f959b; 
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+#btnExcluir:hover{
+    background-color: #dd0606; 
+    color: #fff;
+}

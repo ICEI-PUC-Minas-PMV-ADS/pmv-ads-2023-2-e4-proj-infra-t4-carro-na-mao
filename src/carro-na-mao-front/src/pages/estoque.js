@@ -67,7 +67,7 @@ function Estoque() {
                 .then(response => {
                     console.log(response.status);
                     if (response.status === 200) {
-                        return navigate("/Estoque");
+                        return navigate("estoque");
                     }
                 })
                 .catch(error => {

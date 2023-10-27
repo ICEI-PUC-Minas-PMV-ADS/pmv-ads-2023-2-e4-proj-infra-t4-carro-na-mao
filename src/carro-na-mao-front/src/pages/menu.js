@@ -25,10 +25,10 @@ export function Menu (){
         <Link to="/Localizacao">Localização</Link>
         <Link to="/Manutencao">Manutencao</Link>
         <Link to="/Notificacoes">Notificações</Link>
-        <select value={selectedOption} onChange={handleOptionChange}>
-          <option value="Estoque">Estoque</option>
-          <option value="Categoria">Categoria</option>
-        </select>
+          <select value={selectedOption} onChange={handleOptionChange}>
+            <option value="Estoque">Estoque</option>
+            <option value="Categoria">Categoria</option>
+          </select>
         {selectedOption && (
           <Link to={`/${selectedOption}`}>{selectedOption}</Link>
         )}

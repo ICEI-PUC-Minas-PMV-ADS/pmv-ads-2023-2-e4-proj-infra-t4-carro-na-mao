@@ -1,0 +1,48 @@
+/* Estilização do contêiner da tela de avaliações */
+.container-1 {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.container-2 {
+    text-align: justify;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilização dos campos de entrada */
+input[type="number"],
+input[type="date"],
+input[type="text"] {
+    width: 50%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+
+/* Estilização dos campos de checkbox */
+input[type="checkbox"] {
+    margin: 5px 0;
+
+}
+
+/* Estilização do botão de salvar */
+button {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

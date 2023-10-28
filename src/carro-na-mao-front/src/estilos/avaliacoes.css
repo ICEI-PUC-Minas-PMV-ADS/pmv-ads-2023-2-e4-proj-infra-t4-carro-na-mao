@@ -3,12 +3,13 @@
     text-align: center;
     max-width: 900px;
     margin: 0 auto;
+    height: 25px;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #c5c5c5;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
+ 
 .container-2 {
     text-align: justify;
     max-width: 900px;
@@ -21,11 +22,55 @@
 
 /* Estilização dos campos de entrada */
 input[type="number"],
-input[type="date"],
 input[type="text"] {
-    width: 50%;
+    width: 98%;
     padding: 8px;
-    margin: 5px 0;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#nome{
+    width: 98%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+#sobrenome{
+    width: 98%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+#email{
+    width: 26%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+#fone{
+    width: 26%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+#date{
+    width: 26%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+/* Estilização do campos observações */
+textarea{
+    width: 93%;
+    padding: 30px;
+    margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 10px;
 }
@@ -38,11 +83,23 @@ input[type="checkbox"] {
 }
 
 /* Estilização do botão de salvar */
-button {
-    background-color: #000000;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+#btnCadastrar {
+    position: relative;
+    left: 55%;
+    top: 20px;
+    width: 20%;
+    padding: 8px;
+    color: white;
+    border-radius: 2em;
+    background-color: black;
+}
+#btnVoltar {
+     position: relative;
+    left: 4%;
+    top: 20px;
+    width: 20%;
+    padding: 8px;
+    color: white;
+    border-radius: 2em;
+    background-color: black;
 }

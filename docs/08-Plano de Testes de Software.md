@@ -1,8 +1,23 @@
 # Plano de Testes de Software 
- ## FRONT END
+ ## FRONT END: WEB
+ 
+
  ### 5- Avaliação
+ **5.1 - Registro das informações**
+ - Objetivo do Teste: Verificar se todas as informações do usuário registram no front end web. 
+ - Passos: Acessar o http://localhost:3000/Avaliacoes  e incerir os dados.
+ - Critério: Vizualizar todas as informações em todos os campos.
 
+**5.2 - Front End Web em Funcionamento**
 
+ - Objetivo do Teste: Verificar se as informações foram enviadas com sucesso, caso contrario o sistema apontará o que está faltando preencher.
+ - Passos: Acessar o http://localhost:3000/Avaliacoes , preencher os campos e enviar dados.
+ - Critério de sucesso: Retorno exeto de conclusão.
+
+**5.3 - Excluindo Informações Registradas**
+ - Objetivo do Teste: Verificar se o metodo delete consegue excluir de maneira correta o registro das informações inceridas nós campos.
+ - Passos: Acessar o http://localhost:3000/Avaliacoes , após preencher os campos e usar a tecla excluir.
+ - Critério de sucesso: Excluir todos os dados.
 
 
 
@@ -97,7 +112,6 @@
  - Critério de sucessp: Retorno do código 200.
 
  ### 5- Avaliação
-
  **5.1 - Get**
  - Objetivo do Teste: Verificar se o metodo get e consegue puxar informações de usuarios registradas no banco de dados. 
  - Passos: Acessar o swagger e executar o try out.

@@ -44,12 +44,12 @@ function Avaliacoes() {
         console.log(response.status)
         if (response.status === 200) {
 
-          alert("Agradecemos o seu feedback, sua avaliação foi Registrada com Sucesso!");
+          alert("Ops, encontramos um problema, campos incorretos, tente novamente!");
           return navigate("/Avaliacoes")
         }
       }
       ).catch(error => {
-        alert("Ops, encontramos um problema, algo está incorreto, tente novamente!");
+        alert("Ops, encontramos um problema, campos incorretos, tente novamente!");
       })
 
   }
@@ -61,56 +61,53 @@ function Avaliacoes() {
       <section>
         <div class="container-1">
           <div>
-            <h3 >Deseja saber sobre a sua locação? Acesse a aba Reservas.</h3>
+            <h3 >Deseja saber sobre a sua Locação? Acesse a aba Reservas.</h3>
           </div>
 
         </div >
-        <div class="container-1">
-          <h4>Envie sua mensagem:</h4>
-        </div>
 
         <div>
           <div class="container-2">
+            <h4>Envie sua mensagem, Reclamação ou Sugestão:</h4>
             <div>
               <label>Nome:</label>
-              <input class="imputt" type="text" id="nome" placeholder='insira seu nome...' ></input>
+              <input type="text" id="nome" placeholder='Insira seu nome...' ></input>
             </div>
 
             <div>
               <label>Sobrenome:</label>
-              <input class="imputt" type="text" id="nome" placeholder='insira seu sobrenome...' ></input>
+              <input type="text" id="sobrenome" placeholder='Insira seu sobrenome...' ></input>
             </div>
 
             <div>
               <label>E-mail:</label>
-              <input type="text" id="e-mail" placeholder='insira seu e-mail...' ></input>
-            </div>
+              <input type="text" id="email" placeholder='Insira seu e-mail...' ></input>
 
-            <div>
               <label>Fone:</label>
               <input type="text" id="fone" placeholder='insira seu telefone...' ></input>
+
+              <label>Data:</label>
+              <input type="date" id="date" placeholder=''></input>
             </div>
-
-            <br></br>
-
+            <br>
+            </br>
             <div>
               <label>Observações:</label><br></br>
-              <textarea class="msg" cols="100" rows="5"></textarea>
+              <textarea class="msg"></textarea>
+            </div>
+
+            <br>
+            </br>
+
+            <div>
+              <button id="btnCadastrar" onClick={avaliar}>Enviar Avaliação</button>
+
+              <button id='btnVoltar'> <a href="javascript:history.back()">Voltar</a> </button>
             </div>
 
           </div>
         </div>
 
-
-
-        <hr></hr>
-
-
-        <div >
-          <button id="btnCadastrar" onClick={avaliar}>Enviar Avaliação</button>
-        </div>
-        <br></br>
-        <a href="javascript:history.back()">Voltar</a>
 
       </section>
 

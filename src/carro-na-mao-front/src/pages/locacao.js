@@ -1,27 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import axios from 'axios';
-import { useEffect, useState } from 'react';
 import { RecuperaToken } from '../autenticação/chave_de_acesso';
-import { useNavigate,Link } from 'react-router-dom';
-import{Menu} from './menu';
-
+import { useNavigate } from 'react-router-dom';
+import { Menu } from './menu';
+import '../estilos/locacao.css';
 
 function Locacao() {
-    const navigate = useNavigate()
-    const [token,setToken]=useState(null)
-    useEffect(() => {
-    async function fetchData() {
-        try {
-        const jwtToken = await RecuperaToken();
-        setToken(jwtToken);
-        } catch (error) {
-        console.error('Erro ao recuperar token:', error);
-        }
-    }
-    fetchData()
-    }, []);
+    const navigate = useNavigate();
+    const [token, setToken] = useState(null);
+    const [diaria, setDiaria] = useState(0);
+    const [diffInDays, setDiffInDays] = useState(0);
 
-    const reservar =()=>{
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const jwtToken = await RecuperaToken();
+                setToken(jwtToken);
+            } catch (error) {
+                console.error('Erro ao recuperar token:', error);
+            }
+        }
+            fetchData();
+            }, []);
+
+    
+   
+const reservar = () => {
         const local = document.querySelector('#localRetirada').value
         const categoria = document.querySelector('#categoriaRetirada').value
         const modelo = document.querySelector('#modeloRetirada').value
@@ -47,14 +51,14 @@ function Locacao() {
              const headers ={
                 "Content-Type":"application/json",
                 "Authorization": 'Bearer ' + token
-               } 
+               }
 
                axios.post('https://api-carronamao.azurewebsites.net/api/Locacao',data,{headers})
               .then(response =>{
                   console.log(response.status)
                   if(response.status===200){
                       alert('Reserva Cadastrada com sucesso')
-                     return navigate("Locacao")
+                     return navigate("/Locacao")
                   }
                 }
                 ).catch(error => {
@@ -63,27 +67,54 @@ function Locacao() {
             }
 
 
-     return(
+    
+           
+const calculateDateDiff = () => {
+        const dataRetirada = new Date(document.querySelector("#dataRetirada").value);
+        const dataEntrega = new Date(document.querySelector("#dataEntrega").value);
+
+        const diffInTime = Math.abs(dataEntrega - dataRetirada);
+        const timeInOneDay = 1000 * 60 * 60 * 24;
+        const differenceInDays = diffInTime / timeInOneDay;
+        setDiffInDays(differenceInDays);
+        return differenceInDays;
+    };
+
+
+
+const calculateDiaria = () => {
+        const valorCategoria = parseFloat(document.querySelector("#valorCategoria").value);
+        const daysDifference = calculateDateDiff();
+        const calculatedDiaria = valorCategoria * daysDifference;
+        setDiaria(calculatedDiaria);
+    };
+
+    return (
+        
         <>
-        <Menu/>
-        <section>
-    <input type="text" id="localRetirada" placeholder='Escolha o Local'></input>
-    <input type="text" id="categoriaRetirada" placeholder='Escolha a Categoria' ></input>
-    <input type="text" id="modeloRetirada" placeholder='Escolha o Modelo'></input>
-    <input type="text" id="horaRetirada" placeholder='Selecione a hora da retirada'></input>
-    <input type="text" id="horaEntrega" placeholder='Selecione a hora da entrega'></input>
-    <input type="number" id="valorCategoria" placeholder='Valor'></input>
-    <input type="number" id="custosAd" placeholder='Adicionais'></input>
-    <input type="date" id="dataRetirada" placeholder='Selecione a data de retirada'></input>
-    <input type="date" id="dataEntrega" placeholder='Selecione a data de entrega'></input>
+            <Menu />
+            <section id="campos">
+            <input type="text" id="localRetirada" placeholder='Escolha o Local'></input>
+        <input type="text" id="categoriaRetirada" placeholder='Escolha a Categoria' ></input>
+        <input type="text" id="modeloRetirada" placeholder='Escolha o Modelo'></input>
+        <input type="time" id="horaRetirada" placeholder='Selecione a hora da retirada'></input>
+        <input type="time" id="horaEntrega" placeholder='Selecione a hora da entrega'></input>
+        <input type="number" id="valorCategoria" placeholder='Valor'></input>
+        <input type="number" id="custosAd" placeholder='Adicionais'></input>
+        <input type="date" id="dataRetirada" placeholder='Selecione a data de retirada'></input>
+        <input type="date" id="dataEntrega" placeholder='Selecione a data de entrega'></input>
+                <h1 id="vlTotal">R$ <span>{diaria}</span></h1>
 
-        <div>
-        <button onClick={reservar}>Reservar</button>                
-        </div>
-    </section>
-    </>
-    )
-}
+                <div>
+                    <button id="btnReservar" onClick={reservar}>Reservar</button>
+                </div>
 
+                <div>
+                    <button id="calc" onClick={calculateDiaria}>Calcular Total</button>
+                </div>
+            </section>
+        </>
+    );
 
+    }
 export default Locacao;

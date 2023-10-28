@@ -20,13 +20,13 @@ namespace carro_na_mao_api.Controllers
         }
 
         [HttpGet]
-        public async Task<List<Locacao>> getAsync()
+        public async Task<List<Locacao>> findAll()
             => await _locacaoService.getAsync();
 
 
-        [HttpGet("/find-by-categoria")]
-        public async Task<Locacao> findById(string id_categoria)
-             => await _locacaoService.getAsyncId(id_categoria);
+        [HttpGet("/find-by-locacao")]
+        public async Task<Locacao> findById(string id_locacao)
+             => await _locacaoService.getAsyncId(id_locacao);
 
         [HttpPost]
         public async Task<Locacao> CreateLocacao(Locacao locacao)
@@ -45,9 +45,9 @@ namespace carro_na_mao_api.Controllers
         }
 
         [HttpDelete]
-        public async Task DeleteLocacao(string id_categoria)
+        public async Task DeleteLocacao(string id_locacao)
         {
-            await _locacaoService.DeleteAsync(id_categoria);
+            await _locacaoService.DeleteAsync(id_locacao);
         }
     }
 }

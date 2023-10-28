@@ -1,0 +1,113 @@
+
+#campos{
+    width: 30%;
+    position: center;
+    left: 10%;
+    top: 5em;
+}
+#localRetirada{
+    position: relative;
+    left: 0em;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    top: 7.5em;
+} 
+#categoriaRetirada{
+    position: relative;
+    left: 0em;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    top: 7.5em;
+}
+#modeloRetirada{
+    position: relative;
+    left: 0em;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    top: 7.5em;
+}
+#horaRetirada{
+    position: relative;
+    width: 21.5%;
+    left: 70em;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    top: 55px;
+} 
+#horaEntrega{
+    position: relative;
+    width: 21.5%;
+    left: 80.5em;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    top: 3px;
+}
+#valorCategoria{
+    position: relative;
+    left: 70em;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+} 
+#custosAd{
+    position: relative;
+    left: 70em;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+} 
+#dataRetirada{
+    position: relative;
+    left: 70em;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    top: -18em;
+} 
+#dataEntrega{
+    position: relative;
+    left: 70em;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    top: -18em;
+} 
+
+#btnReservar{
+    position: relative;
+    left: 40em;
+    top: none;
+    color:white;
+    padding: none;
+    border-radius: 2em;
+    background-color: black;
+}
+#btnReservar:hover{
+    color:black;
+    background-color: white;
+}
+
+#calc{
+    position: relative;
+    left: 75em;
+    top: -14em;
+    color:white;
+    padding: none;
+    border-radius: 2em;
+    background-color: black;
+}
+#calc:hover{
+    color:black;
+    background-color: white;
+}
+#vlTotal{
+    position: relative;
+    top: -2em;
+    left: 43em;
+}
+

@@ -1,8 +1,10 @@
-
 import { Link } from "react-router-dom";
 import React, { useState } from 'react';
 import '../estilos/Menu.css'
 import { useNavigate } from 'react-router-dom';
+//imports da funcionalidade notificcacao
+import Apps from './Apps';
+
 export function Menu (){
 
   const [selectedOption, setSelectedOption] = useState('');
@@ -35,10 +37,10 @@ export function Menu (){
           <option value="Estoque">Estoque</option>
           <option value="Categoria">Categoria</option>
         </select>
+        <Apps />
         <Link to="/">Sair</Link>
         </div>
        </>
 
      );
 }
-

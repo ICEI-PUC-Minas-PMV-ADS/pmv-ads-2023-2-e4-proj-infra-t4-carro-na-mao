@@ -20,11 +20,11 @@ namespace carro_na_mao_api.Service
             _locacaoCollection = mongoDatabase.GetCollection<Locacao>(locacaoService.Value.LocacaoCollectionName);
         }
 
-        public async Task<List<Locacao>> GetAsync() =>
+        public async Task<List<Locacao>>getAsync() =>
             await _locacaoCollection.Find(x => true).ToListAsync();
 
         public async Task<Locacao> getAsyncId(string id) =>
-            await _locacaoCollection.Find(x => x.id_categoria == id).SingleOrDefaultAsync();
+            await _locacaoCollection.Find(x => x.id_locacao == id).SingleOrDefaultAsync();
 
         public async Task CreateAsync(Locacao locacao) =>
             await _locacaoCollection.InsertOneAsync(locacao);
@@ -38,9 +38,6 @@ namespace carro_na_mao_api.Service
         public async Task DeleteAsync(string id) =>
             await _locacaoCollection.DeleteOneAsync(x => x.id_locacao == id);
 
-        internal Task<List<Locacao>> getAsync()
-        {
-            throw new NotImplementedException();
-        }
+    
     }
 }

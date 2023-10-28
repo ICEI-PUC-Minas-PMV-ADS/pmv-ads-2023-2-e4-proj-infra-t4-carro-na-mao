@@ -3,7 +3,7 @@
  
 
  ### 5- Avaliação
- **5.1 - Registro das informações**
+ **5.1 - Registro das Informações**
  - Objetivo do Teste: Verificar se todas as informações do usuário registram no front end web. 
  - Passos: Acessar o http://localhost:3000/Avaliacoes  e incerir os dados.
  - Critério: Vizualizar todas as informações em todos os campos.

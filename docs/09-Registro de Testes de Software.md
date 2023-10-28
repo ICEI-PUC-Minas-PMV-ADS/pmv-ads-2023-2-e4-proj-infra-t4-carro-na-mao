@@ -3,25 +3,25 @@
  
 
  ### 5- Avaliação
- **5.1 - Registro das informações**
+ **5.1 - Registro das Informações**
 
- **5.1.1 - Teste sem informações**
+ **5.1.1 - Teste sem Informações**
 ![Registro sem Informações](img/registrofront-sem-inf-avaliacao.png)
  
- **5.1.1 - Teste com informações**
+ **5.1.2 - Teste com Informações**
 ![Registro com Informações](img/registrofront-com-inf-avaliacao.png)
 
 **5.2 - Front End Web em Funcionamento**
 
- **5.2.1 - Teste de exeto**
+ **5.2.1 - Teste de Exeto**
 ![Teste Front Funcionando](img/registrofront-funcionado-avaliacao.png)
 
- **5.2.1 - Teste de erro**
+ **5.2.2 - Teste de Erro**
 ![Teste Front com Erro](img/registrofront-erro-avaliacao.png)
 
 **5.3 - Excluindo Informações Registradas**
 
- **5.2.1 - Teste de exclusão**
+ **5.3.1 - Teste de Exclusão**
 ![Excluindo Informações](img/registrofront-sem-inf-avaliacao.png)
 
 

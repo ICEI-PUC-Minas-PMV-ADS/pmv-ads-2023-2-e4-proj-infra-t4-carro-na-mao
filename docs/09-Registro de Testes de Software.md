@@ -1,19 +1,27 @@
 # Registro de Testes de Software
  ## FRONT END: WEB
  
- 
+
  ### 5- Avaliação
  **5.1 - Registro das informações**
+
+ **5.1.1 - Teste sem informações**
 ![Registro sem Informações](img/registrofront-sem-inf-avaliacao.png)
+ 
+ **5.1.1 - Teste com informações**
 ![Registro com Informações](img/registrofront-com-inf-avaliacao.png)
 
 **5.2 - Front End Web em Funcionamento**
 
+ **5.2.1 - Teste de exeto**
 ![Teste Front Funcionando](img/registrofront-funcionado-avaliacao.png)
+
+ **5.2.1 - Teste de erro**
 ![Teste Front com Erro](img/registrofront-erro-avaliacao.png)
 
 **5.3 - Excluindo Informações Registradas**
 
+ **5.2.1 - Teste de exclusão**
 ![Excluindo Informações](img/registrofront-sem-inf-avaliacao.png)
 
 

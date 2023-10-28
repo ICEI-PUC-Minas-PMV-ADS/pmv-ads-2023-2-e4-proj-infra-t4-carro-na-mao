@@ -44,7 +44,7 @@ function Avaliacoes() {
         console.log(response.status)
         if (response.status === 200) {
 
-          alert("Ops, encontramos um problema, campos incorretos, tente novamente!");
+          alert("Agradecemos o seu feedback, sua avaliação foi Registrada com Sucesso!");
           return navigate("/Avaliacoes")
         }
       }

@@ -24,7 +24,21 @@
  **5.3.1 - Teste de Exclusão**
 ![Excluindo Informações](img/registrofront-sem-inf-avaliacao.png)
 
+  ### 9- Notificação
+**9.1 - Teste de envio de nova notificação**
+ ![Teste com êxito](img/not_test_002.jpg)
 
+ ![Teste com êxito e-mail](img/not_test_003.jpg)
+
+**9.2 - Teste de leitura de nova notificação**
+ ![Teste com êxito](img/not_test_004.jpg)
+ 
+ **9.3 - Teste de exclusão de notificação**
+ ![Teste com êxito menu](img/not_test_005.jpg)
+
+ ![Teste com êxito confirmação](img//not_test_006.jpg)
+
+##
 ## API
 ### 1- Cadastro 
  **1.1 - Post**

@@ -1,7 +1,6 @@
 # Plano de Testes de Software 
  ## FRONT END: WEB
  
-
  ### 5- Avaliação
  **5.1 - Registro das Informações**
  - Objetivo do Teste: Verificar se todas as informações do usuário registram no front end web. 
@@ -19,8 +18,35 @@
  - Passos: Acessar o http://localhost:3000/Avaliacoes , após preencher os campos e usar a tecla excluir.
  - Critério de sucesso: Excluir todos os dados.
 
+   ### 09 - Notificação
+   > Requisito Associado: RF-001 O sistema deve enviar notificações e lembretes aos clientes sobre datas de aluguel, devolução e pagamentos pendentes.
+
+ **9.1 - Recebimento de notificações**
+ - Objetivo do Teste: Verificar se a mensagem enviada pelo _front-end_ chegam ao destinatário. 
+ - Passos: 
+    1) Acessar a aplicação em modo desenvolvimento, no endereço local (http://localhost:3000/)
+    2) Fazer Login ou cadastrar um usuário e acessar a sessão _Notificações_
+    3) Digitar a mensagem e clicar em enviar
+ - Critério de Êxitos: Um alerta de nova mensagem, no ícone de notificação (_Bell Icon_).
+
+**9.2 - Leitura de notificações**
+ - Objetivo do Teste: Verificar se após a abertura da Notificação o alerta de nova mensagem irá "desligar".
+ - Passos:     
+    1) Acessar a aplicação em modo desenvolvimento, no endereço local (http://localhost:3000/)
+    2) Fazer Login ou cadastrar um usuário e acessar a sessão _Notificações_
+    3) Clicar no símbolo de notificação (_Bell Icon_), clicar na mensagem marcada como nova para fazer a leitura.
+ - Critério de sucesso: O ícone de alerta de nova mensagem, no _Bell Icon_ deverá alterar para "mensagem lida".
+
+**9.3 - Apagar as notificações**
+ - Objetivo do Teste: Verificar se as notificações serão apagadas após a utilização da opção "Remover Mensagem".
+ - Passos:     
+    1) Acessar a aplicação em modo desenvolvimento, no endereço local (http://localhost:3000/)
+    2) Fazer Login ou cadastrar um usuário e acessar a sessão _Notificações_
+    3) Clicar no símbolo de notificação (_Bell Icon_), clicar na mensagem, selecionar "Opções" através do menu contexto "..." e selecionar a opção "Remover Mensagem".
+ - Critério de sucesso: A mensagem deverá ser apagada e não ser mais listada dentro das Notificações. Caso todas as mensagem sejam apagadas, uma tela com a informação "Nenhuma mensagem nova" deverá ser exibida.
 
 
+##
 ## API
 ### 1- Cadastro 
  **1.1 - Create**

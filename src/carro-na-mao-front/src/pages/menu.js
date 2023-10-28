@@ -1,6 +1,8 @@
-
 import { Link } from "react-router-dom";
 import '../estilos/Menu.css'
+//imports da funcionalidade notificcacao
+import Apps from './Apps';
+
 export function Menu (){
      return (
 
@@ -20,10 +22,10 @@ export function Menu (){
         <Link to="/Localização">Localizacao</Link>
         <Link to="/Manutencao">Manutencao</Link>
         <Link to="/Notificacoes">Notificações</Link>
+        <Apps />
         <Link to="/">Sair</Link>
         </div>
        </>
 
      );
 }
-

@@ -1,4 +1,11 @@
-# Plano de Testes de Software
+# Plano de Testes de Software 
+ ## FRONT END
+ ### 5- Avaliação
+
+
+
+
+
 ## API
 ### 1- Cadastro 
  **1.1 - Create**
@@ -194,8 +201,4 @@
   - Objetivo do Teste: Verificar se o metodo delete da API consegue excluir de maneira correta o registro das notificacões existentes;
  - Passos: Acessar o swagger, acessar o try out do metodo delete e passar um id com parametro.
  - Critério de sucesso: Retorno do código 200.
- 
- ## FRONT END
-
- ### 5- Avaliação
 

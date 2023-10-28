@@ -24,7 +24,7 @@ namespace carro_na_mao_api.Service
             await _locacaoCollection.Find(x => true).ToListAsync();
 
         public async Task<Locacao> getAsyncId(string id) =>
-            await _locacaoCollection.Find(x => x.id_categoria == id).SingleOrDefaultAsync();
+            await _locacaoCollection.Find(x => x.id_locacao == id).SingleOrDefaultAsync();
 
         public async Task CreateAsync(Locacao locacao) =>
             await _locacaoCollection.InsertOneAsync(locacao);

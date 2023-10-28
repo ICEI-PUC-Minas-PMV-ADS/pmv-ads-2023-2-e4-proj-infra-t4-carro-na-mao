@@ -6,6 +6,7 @@ import Cadastro from './pages/cadastro';
 import Home from './pages/home';
 import Home2 from './pages/home2';
 import Dashboard from './pages/dashboard';
+import Locacao from './pages/locacao';
 import Vistoria from './pages/vistoria';
 import Manutencao from './pages/manutencao';
 import Estoque from './pages/estoque';
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
     {
       path:'dashboard',
       element:<Dashboard/>
+    },
+    {
+      path:'locacao',
+      element:<Locacao/>
     },
     {
       path:'vistoria',

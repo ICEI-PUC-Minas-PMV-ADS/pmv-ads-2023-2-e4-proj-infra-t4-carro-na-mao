@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { RecuperaToken } from '../autenticação/chave_de_acesso';
 import { useNavigate, Link } from 'react-router-dom';
 import { Menu } from './menu';
-import '../estilos/manutencao.css';
+import '../estilos/avaliacoes.css';
 
 function Avaliacoes() {
   const navigate = useNavigate()
@@ -30,7 +30,7 @@ function Avaliacoes() {
     const data = {
 
       "nome": nome,
-     
+
 
     }
 
@@ -44,12 +44,12 @@ function Avaliacoes() {
         console.log(response.status)
         if (response.status === 200) {
 
-          alert("Avaliação Registrada com Sucesso.");
+          alert("Agradecemos o seu feedback, sua avaliação foi Registrada com Sucesso!");
           return navigate("/Avaliacoes")
         }
       }
       ).catch(error => {
-        alert("Ops, encontramos um problema!");
+        alert("Ops, encontramos um problema, algo está incorreto, tente novamente!");
       })
 
   }
@@ -59,20 +59,43 @@ function Avaliacoes() {
       <Menu />
 
       <section>
-        <div class="container">
+        <div class="container-1">
           <div>
-            <h3 >Tela de lançamentos Modelo</h3>
+            <h3 >Deseja saber sobre a sua locação? Acesse a aba Reservas.</h3>
           </div>
+
         </div >
-        <div class="container">
-          <h5 >Dados da avaliação:</h5>
+        <div class="container-1">
+          <h4>Envie sua mensagem:</h4>
         </div>
 
         <div>
-          <div class="container">
+          <div class="container-2">
             <div>
-              <label>Nota:</label>
-              <input type="text" id="nome" placeholder='insira a nota' ></input>
+              <label>Nome:</label>
+              <input class="imputt" type="text" id="nome" placeholder='insira seu nome...' ></input>
+            </div>
+
+            <div>
+              <label>Sobrenome:</label>
+              <input class="imputt" type="text" id="nome" placeholder='insira seu sobrenome...' ></input>
+            </div>
+
+            <div>
+              <label>E-mail:</label>
+              <input type="text" id="e-mail" placeholder='insira seu e-mail...' ></input>
+            </div>
+
+            <div>
+              <label>Fone:</label>
+              <input type="text" id="fone" placeholder='insira seu telefone...' ></input>
+            </div>
+
+            <br></br>
+
+            <div>
+              <label>Observações:</label><br></br>
+              <textarea class="msg" cols="100" rows="5"></textarea>
             </div>
 
           </div>
@@ -82,13 +105,13 @@ function Avaliacoes() {
 
         <hr></hr>
 
-        
-          <div >
-            <button id="btnCadastrar" onClick={avaliar}>Avaliar</button>
-          </div>
-          <br></br>
-          <a href="javascript:history.back()">Voltar</a>
-        
+
+        <div >
+          <button id="btnCadastrar" onClick={avaliar}>Enviar Avaliação</button>
+        </div>
+        <br></br>
+        <a href="javascript:history.back()">Voltar</a>
+
       </section>
 
     </>

@@ -28,7 +28,7 @@ function Home2() {
 
                         Duvidas entre em contato com o suporte da Carro na Mão!
 
-                        31-99999-9999 ou suporte@carronamao.com.br
+                        31-99999-8888 ou suporte@carronamao.com.br
                     </p>
                 </div>
             </div>

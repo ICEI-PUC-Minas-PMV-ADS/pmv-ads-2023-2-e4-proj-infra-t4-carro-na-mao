@@ -40,7 +40,7 @@ const validarUsuario =()=>{
 
     if(email!='' && senha!=''){
       setLoading(false)
-            return navigate("vistoria")
+            return navigate("home2")
        axios.get('https://api-carronamao.azurewebsites.net/api/Cadastro/find-by-email/?email='+email+'&senha='+senha+'',{headers})
         .then(response =>{
           if(response.status===200){

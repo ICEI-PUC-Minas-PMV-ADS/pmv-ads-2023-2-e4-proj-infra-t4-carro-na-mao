@@ -1,10 +1,10 @@
 
 import axios from 'axios';
-import '../App.css';
+import '../estilos/home.css';
 import { useEffect, useState } from 'react';
 import { RecuperaToken } from '../autenticação/chave_de_acesso';
 import { useNavigate,Link } from 'react-router-dom'
-import{logCarroNaMao} from '../img/logo-carro-na-mao.png'
+import logo from'../img/logo.png'
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import Alert from '@mui/material/Alert';
@@ -39,6 +39,7 @@ const validarUsuario =()=>{
     } 
 
     if(email!='' && senha!=''){
+      setLoading(false)
        axios.get('https://api-carronamao.azurewebsites.net/api/Cadastro/find-by-email/?email='+email+'&senha='+senha+'',{headers})
         .then(response =>{
           if(response.status===200){
@@ -47,7 +48,8 @@ const validarUsuario =()=>{
           }
           else if(response.status===204){
             setLoading(false)
-            return <Alert severity="error">This is an error alert — check it out!</Alert>          
+            alert("Usurario não cadastrado")
+       
           }
         })
         .catch(error => {
@@ -68,13 +70,15 @@ const validarUsuario =()=>{
             </Box>
             ) : (
               <>
-              <img src="../img/logo-carro-na-mao"></img>
-              <section id="campos">
-                <h3>Faça o seu login !</h3>
-                <input className="camposLogin" id = "email"type='email' placeholder='Email'></input>
-                <input className="camposLogin" id="senha"type='password' placeholder='Senha'></input>
-                <button className="camposLogin" id="btnEntrar" onClick={validarUsuario}>Entrar</button>
+              <img id="logoHome"src={logo}></img>  
+              <section id="camposHome">
+              <h3 id="tituloHome">Faça o seu login !</h3>
+              <div id="elementosCampos">
+                <input  id = "emailHome"type='email' placeholder='Email'></input>
+                <input  id="senhaHome"type='password' placeholder='Senha'></input>
+                <button id="btnEntrar" onClick={validarUsuario}>Entrar</button>
                 <Link id="link"to="Cadastro">Cadastre-se</Link>
+              </div>
               </section>
             </>
             )}

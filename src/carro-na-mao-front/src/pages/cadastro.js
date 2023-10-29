@@ -29,9 +29,14 @@ function Cadastro(){
         const dataNasc = document.querySelector("#dataNasc").value
         const cpf = document.querySelector("#cpf").value
         const telefone = document.querySelector("#telefone").value
-        const endereco = document.querySelector("#endereco").value
+        const cidade = document.querySelector("#endereco").value/*cIDADE*/
         const categoria = document.querySelector("#categoria").value
-        
+        const municipio = document.querySelector("#Municipio").value
+        const rua = document.querySelector("#Rua").value
+        const bairro = document.querySelector("#bairro").value
+        const Numero = document.querySelector("#Numero").value
+        const endereco  = cidade+', '+municipio+', '+rua+', '+bairro+', Nº '+Numero
+        console.log(endereco)
         const data = {
                 "nome": nome,
                 "dataNacimento": dataNasc,
@@ -73,17 +78,22 @@ function Cadastro(){
             ) : (
                 <>
                 <section id="cmp">
-                    <h3>Faça seu Cadastro</h3>
-                    <h5>Dados Pessoias</h5>
+                    <h3 id="tituloCadastro">Faça seu Cadastro !</h3>
+                     <h5 id="tituloDadosPessoais">Dados Pessoias</h5>
                     <div id='camposParaLoginParteUm'>
+                    <hr id="linhaDadosPessoais"></hr>
                         <input type="text" id="nomeCadastro" placeholder='Name'></input>
                         <input type="date" id="dataNasc" placeholder='Data de nascimento'></input>
                         <input type="text" id="cpf" placeholder='CPF'></input>
                         <input type="text" id="telefone" placeholder='Telefone'></input>
-                        <input type="text" id="endereco" placeholder='Endereço'></input>
+                        <input type="text" id="endereco" placeholder='Cidade'></input>
+                        <input type="text" id="Municipio" placeholder='Municipio'></input>
+                        <input type="text" id="Rua" placeholder='Rua, Av, etc ...'></input>
+                        <input type="text" id="bairro" placeholder='bairro'></input>
+                        <input type="text" id="Numero" placeholder='Número'></input>
                         <input type="text" id="categoria" placeholder='Categoria Habilitação'></input>
+                        <hr id="linha"></hr>
                     </div>
-                    <hr></hr>
                     <h5>Dados para login</h5>
                     <div id='camposParaLoginParteDois'>
                         <input type="email" id='emailCadastro' placeholder='Digite seu email...'></input>
@@ -92,7 +102,7 @@ function Cadastro(){
                     </div>
 
                     <div>
-                        <button id="btnCadastrar"onClick={cadastrar}>Cadastre-se</button>                
+                        <button id="btnCadastrarUsuario"onClick={cadastrar}>Cadastre-se</button>                
                     </div>
                 </section>
               </>

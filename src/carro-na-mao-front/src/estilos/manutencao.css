@@ -9,7 +9,7 @@
   }
   
   /* Estilização dos campos de entrada */
-  input[type="number"],
+  /*input[type="number"],
   input[type="date"],
   input[type="text"] {
     width: 50%;
@@ -17,7 +17,7 @@
     margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 3px;
-  }
+  }/*
   
   /* Estilização dos campos de checkbox */
   input[type="checkbox"] {

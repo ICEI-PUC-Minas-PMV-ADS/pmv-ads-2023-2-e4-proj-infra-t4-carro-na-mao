@@ -5,9 +5,18 @@
 
 #campos{
     width: 30%;
-    position: center;
+    position: relative;
     left: 10%;
     top: 5em;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    max-width: 50vw;
+    padding: 22px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px rgb(231, 231, 231), 1em 1em 1.4em rgb(190, 187, 187);
 }
 #localRetirada{
     position: relative;
@@ -49,6 +58,8 @@
     position: relative;
     left: 70em;
     width: 60%;
+    width: 21.5%;
+    left: 82.5em;
     border-left: none;
     border-right: none;
     border-top: none;
@@ -96,8 +107,9 @@
     position: relative;
     left: 42em;
     top: -10em;
+    left: 20em;
+    top: -15em;
     color:white;
-    padding: none;
     border-radius: 2em;
     background-color: black;
 }

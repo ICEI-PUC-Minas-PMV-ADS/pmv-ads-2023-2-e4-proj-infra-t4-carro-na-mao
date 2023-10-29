@@ -18,6 +18,23 @@
  - Passos: Acessar o http://localhost:3000/Avaliacoes , após preencher os campos e usar a tecla excluir.
  - Critério de sucesso: Excluir todos os dados.
 
+ ### 6 - Locação
+ **6.1 - Registro da Reserva**
+  - Objetivo do Teste: Verificar se todas as informações do usuário registram no sistema.
+ - Passos: Acessar o http://localhost:3000/Locacao e inserir os dados.
+ - Critério: Preencher todos os dados necessários para a inclusão da reserva.
+
+**6.2 - Front End Web em Funcionamento**
+
+ - Objetivo do Teste: Verificar se as informações foram enviadas com sucesso, caso contrario o sistema retornará um erro para que todos os dados sejam inseridos corretamente.
+ - Passos: Acessar o http://localhost:3000/Locacao , preencher os campos e enviar dados.
+ - Critério de sucesso: Retorno de inclusão.
+
+ **5.3 - Excluindo Informações Registradas**
+ - Objetivo do Teste: Verificar se o metodo delete consegue excluir de maneira correta o registro das informações inseridas nos campos.
+ - Passos: Acessar o http://localhost:3000/Locacao , após preencher os campos e usar a tecla excluir.
+ - Critério de sucesso: Excluir todos os dados.
+
    ### 09 - Notificação
    > Requisito Associado: RF-001 O sistema deve enviar notificações e lembretes aos clientes sobre datas de aluguel, devolução e pagamentos pendentes.
 

@@ -1,6 +1,22 @@
 # Plano de Testes de Software 
  ## FRONT END: WEB
- 
+ ### 1 - Login/Cadastro
+
+ **1.1 - Verificar se o login barra campos em branco**
+    - Objetivo do Teste: Verificar se o sistema verifica os dados de login 
+    - Passos: Acessar a aplicação e tentar entrar com os campos em branco.
+    - Critério: Barramento da entrada na aplicação.
+
+ **1.2 - Verificar se o login barra usuarios não cadastrados**
+    - Objetivo do Teste: Verificar se o sistema só entra com pessoas autorizadas. 
+    - Passos: Entrar na aplicação e digitar um usuario aleatorio.
+    - Critério: Alert avisando que o usaurio não está cadastrado na plataforma.
+
+ **1.3- Verificar se o cadastro barra campos em branco**
+  - Objetivo do Teste: Verificar se todos os campos estão preenchidos. 
+  - Passos: Acessar o a aplicação e deixar algum campo em branco.
+  - Critério: Alert avisando o usuario para preencher todos os campos.
+
  ### 5- Avaliação
  **5.1 - Registro das Informações**
  - Objetivo do Teste: Verificar se todas as informações do usuário registram no front end web. 

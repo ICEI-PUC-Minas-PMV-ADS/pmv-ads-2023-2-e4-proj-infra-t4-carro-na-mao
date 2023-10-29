@@ -1,6 +1,16 @@
 # Registro de Testes de Software
  ## FRONT END: WEB
+  ### 1 - Login/Cadastro
+
+  **1.1 - Verificar se o login barra campos em branco**
  
+ ![branco](img/BARRAMENTOBRANCOFRONT.png)
+
+ **1.2 - Verificar se o login barra usuarios não cadastrados**
+ ![v](img/verificação-usuario-cadastrado.png)
+   
+ **1.3- Verificar se o cadastro barra campos em branco**
+ ![.](img/verificandocampos.png)
 
  ### 5- Avaliação
  **5.1 - Registro das Informações**

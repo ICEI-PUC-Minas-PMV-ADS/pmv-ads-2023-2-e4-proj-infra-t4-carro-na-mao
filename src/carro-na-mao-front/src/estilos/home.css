@@ -1,0 +1,93 @@
+#camposHome {
+    position: relative;
+    top: 50px;
+    left:1%;
+    text-align: justify;
+    max-width: 50vw;
+    height: 40vh;
+    margin: 0 auto;
+    padding: 22px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow:1px 1px 1px rgb(231, 231, 231), 1em 1em 1.4em rgb(190, 187, 187);
+}
+#logoHome{
+    width: 150px;
+    position: relative;
+    left: 50%;
+
+}
+#tituloHome{
+    position: relative;
+    bottom: 3.5em;
+}
+#elementosCampos{
+    position: relative;
+    left: 35%;
+    display: flex;
+    flex-direction: column;   
+    top: -23px;
+}
+#carregamento {
+    display: flex;
+    flex-direction: column;
+    width: 10em;
+    position: relative;
+    left: 50%;
+    top: 20em;
+  
+  }
+  #emailHome{
+    top: 1em;
+    width: 20em;
+    position: relative;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+  }
+  #senhaHome{  
+    top: 2em;
+    width: 20em;
+    position: relative;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+  }
+#link{
+    position: relative;
+    top: 3em;
+    left: 6em;
+    }
+#btnEntrar{
+    color:white;
+    padding: 2px;
+    border-radius: 2em;
+    background-color: black;
+    position: relative;
+    top:39px;
+    width: 20em;
+}
+#camposHome > input{
+    position: relative;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+#btnEntrar:hover{
+    color:black;
+    background-color: white;
+  }

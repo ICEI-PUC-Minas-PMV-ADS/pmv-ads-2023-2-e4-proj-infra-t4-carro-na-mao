@@ -48,6 +48,7 @@ const validarUsuario =()=>{
           }
           else if(response.status===204){
             setLoading(false)
+            alert("Usurario não cadastrado")
        
           }
         })

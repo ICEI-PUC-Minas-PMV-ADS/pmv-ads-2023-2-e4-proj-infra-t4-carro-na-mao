@@ -70,3 +70,26 @@ body {
  footer p {
   margin: 0;
  }
+
+ #btnCadastrarVistoria{
+  position: relative;
+  bottom: 10em;
+  left: 60em;
+ }
+ #veiculo {
+  border-bottom: none;
+  bottom: 1em;
+ }
+ #date{
+  border-bottom: none;
+  bottom: 1em;
+ }
+ #tipo{
+   bottom: 1em;
+   border-bottom: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  bottom: 1em;
+  position: relative;
+ }

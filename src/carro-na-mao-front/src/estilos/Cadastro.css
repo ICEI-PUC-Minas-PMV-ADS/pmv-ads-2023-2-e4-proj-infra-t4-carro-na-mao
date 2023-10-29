@@ -3,28 +3,43 @@ hr{
     position: relative;
     top: 1em;
 }
-#btnCadastrar{
+#btnCadastrarUsuario{
     position: relative;
-    left: 40%;
     top: 4em;
     color:white;
     padding: 20px;
-    border-radius: 2em;
+    left: 40em;
     background-color: black;
 }
-#btnCadastrar:hover{
+#btnCadastrarUsuario:hover{
     color:black;
     background-color: white;
 }
 #cmp{
-    width: 82%;
     position: relative;
     left: 10%;
     top: 7em;
+    position: relative;
+    top: 50px;
+    left: 1%;
+    text-align: justify;
+    max-width: 78vw;
+    height: 81vh;
+    margin: 0 auto;
+    padding: 22px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 1px rgb(231, 231, 231), 1em 1em 1.4em rgb(190, 187, 187);
+}
+#tituloCadastro{
+    position: relative;
+    bottom:3.5em;
 }
 #camposParaLogin{
     margin-bottom: 10px; 
-    
 }
 #nomeCadastro{
     position: relative;
@@ -32,42 +47,61 @@ hr{
     border-left: none;
     border-right: none;
     border-top: none;
+    border-bottom: none;
 } 
 #dataNasc{
     position: relative;
-    left: 2em;
+    left: 6em;
+    width: 100px;
     border-left: none;
     border-right: none;
     border-top: none;
+    border-bottom: none;
 }
 #cpf{
     position: relative;
-    left: 3em;
+    left: 12em;
     border-left: none;
     border-right: none;
     border-top: none;
+    border-bottom: none;
 }
 #telefone{
     position: relative;
-    left: 4em;
+    left: 14em;
     border-left: none;
     border-right: none;
     border-top: none;
+    border-bottom: none;
 } 
 #endereco{
     position: relative;
-    left: 5em;
+    left: 16em;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+}
+#categoria{
+    position: relative;
+    left: 20em;
+    width: 100em;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    
+} 
+input {
+    position: relative;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
     border-left: none;
     border-right: none;
     border-top: none;
 }
-#categoria{
-    position: relative;
-    left: 6em;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-} 
 
 #camposParaLoginParteUm{
     position: relative;
@@ -75,7 +109,12 @@ hr{
     left: -3em;
     display: flex;
     width: 1000px;
+    bottom: 4em;
     
+}
+#tituloDadosPessoais{
+    bottom: 5em;
+    position: relative;
 }
 #camposParaLoginParteUmVistoria{
     position: flex;
@@ -108,6 +147,10 @@ hr{
     margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 3px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;;
 }
 #senhaCadastroConfirma{
     position: relative;
@@ -117,6 +160,10 @@ hr{
     margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 3px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;;
 }
 #senhaCadastro{
     position: relative;
@@ -126,4 +173,8 @@ hr{
     margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 3px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;;
 }

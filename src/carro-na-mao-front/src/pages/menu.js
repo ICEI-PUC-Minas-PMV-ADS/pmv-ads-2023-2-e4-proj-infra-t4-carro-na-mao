@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import '../estilos/Menu.css'
-//imports da funcionalidade notificcacao
 import Apps from './Apps';
 
 export function Menu (){

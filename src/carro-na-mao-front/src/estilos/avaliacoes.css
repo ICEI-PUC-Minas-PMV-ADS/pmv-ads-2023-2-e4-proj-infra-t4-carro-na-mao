@@ -20,7 +20,7 @@
     border-radius: 5px;
 }
 
-/* Estilização dos campos de entrada */
+/* Estilização dos campos de entrada 
 input[type="number"],
 input[type="text"] {
     width: 98%;
@@ -29,7 +29,7 @@ input[type="text"] {
     border: 1px solid #ccc;
     border-radius: 10px;
 }
-
+*/
 #nome{
     width: 98%;
     padding: 8px;

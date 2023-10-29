@@ -73,8 +73,8 @@ function Cadastro(){
             ) : (
                 <>
                 <section id="cmp">
-                    <h3>Faça seu Cadastro</h3>
-                    <h5>Dados Pessoias</h5>
+                    <h3 id="tituloCadastro">Faça seu Cadastro !</h3>
+                     <h5 id="tituloDadosPessoais">Dados Pessoias</h5>
                     <div id='camposParaLoginParteUm'>
                         <input type="text" id="nomeCadastro" placeholder='Name'></input>
                         <input type="date" id="dataNasc" placeholder='Data de nascimento'></input>
@@ -92,7 +92,7 @@ function Cadastro(){
                     </div>
 
                     <div>
-                        <button id="btnCadastrar"onClick={cadastrar}>Cadastre-se</button>                
+                        <button id="btnCadastrarUsuario"onClick={cadastrar}>Cadastre-se</button>                
                     </div>
                 </section>
               </>

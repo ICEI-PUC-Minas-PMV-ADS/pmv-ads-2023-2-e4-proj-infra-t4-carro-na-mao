@@ -26,9 +26,11 @@
 }
 .main {
     font-size: 20px;
+    display: flex;
     color: blue;
     animation: flipti 4s;
-
+    align-items: center;
+flex-direction: row;
 }
 @keyframes flipti{
 from{
@@ -38,7 +40,7 @@ from{
     transform: rotateX(0deg)
 }}
 
-.button {
+.buttonSearch {
     background-color: transparent;
     border: 0;
     display: flex;
@@ -48,6 +50,15 @@ from{
     transition: transform 0.5s;
 
 }
-.button:hover{
+.buttonSearch:hover{
     transform: scaleX(1,4);
+}
+.main h2 {
+    margin: 16px 0;
+    font-size: 39px;
+
+}
+.main span {
+    margin-bottom: 16px;
+    font-weight: bold;
 }

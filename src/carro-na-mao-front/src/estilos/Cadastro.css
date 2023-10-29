@@ -48,6 +48,7 @@ hr{
     border-right: none;
     border-top: none;
     border-bottom: none;
+    width: 20em;
 } 
 #dataNasc{
     position: relative;
@@ -57,14 +58,16 @@ hr{
     border-right: none;
     border-top: none;
     border-bottom: none;
+    width: 20em;
 }
 #cpf{
     position: relative;
-    left: 12em;
+    left: 10em;
     border-left: none;
     border-right: none;
     border-top: none;
     border-bottom: none;
+    width: 20em;
 }
 #telefone{
     position: relative;
@@ -73,10 +76,55 @@ hr{
     border-right: none;
     border-top: none;
     border-bottom: none;
+    width: 20em;
 } 
 #endereco{
     position: relative;
-    left: 16em;
+    left: 1em;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    width: 20em;
+    top: 2em;
+
+}
+#Municipio{
+    position: relative;
+    left: 5.9em;
+    width: 20em;
+    top: 2em;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+}
+#Rua{
+    position: relative;
+    left: 9.9em;
+    width: 20em;
+    top: 2em;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+
+}
+#bairro{
+    position: relative;
+    left: 14em;
+    width: 20em;
+    top: 2em;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+}
+#Numero{
+    position: relative;
+    left: 1.2em;
+    top: 3em;
+    width: 20em;
     border-left: none;
     border-right: none;
     border-top: none;
@@ -84,8 +132,9 @@ hr{
 }
 #categoria{
     position: relative;
-    left: 20em;
-    width: 100em;
+    left: 6em;
+    top: 3em;
+    width: 20em;
     border-left: none;
     border-right: none;
     border-top: none;
@@ -107,8 +156,7 @@ input {
     position: relative;
     padding: 40px;
     left: -3em;
-    display: flex;
-    width: 1000px;
+    width: 70vw;
     bottom: 4em;
     
 }

@@ -9,7 +9,7 @@ import { FiSearch} from 'react-icons/fi';
 
 function Historico() {
   const navigate = useNavigate()
-  const [token, setToken] = useState(null)
+  const [token, setToken] = useState()
   useEffect(() => {
     async function fetchData() {
       try {
@@ -22,15 +22,31 @@ function Historico() {
     fetchData()
   }, []);
 
+
+  const reservar = () => {
+    const id = document.querySelector('#id_historico').value
+    const contrato= document.querySelector('#contrato').value
+    //const veiculo = document.querySelector('#veiculo').value
+    const valores = document.querySelector("#valores").value
+    //const Observação = document.querySelector('#observação').value
+   
+  const data = {
+    "id_historico": id,
+    "Contrato": contrato,
+    //'Veiculo": veiculo,
+    "valores": valores,
+    //"Observação": observação,
+    
+ }
   const Historico = () => {
 
-    const valores = document.querySelector("#valores").value
+    const Contrato = document.querySelector("#contrato").value
 
 
 
     const data = {
 
-      "valores": valores,
+      "contrato": Contrato,
      
 
     }
@@ -54,7 +70,10 @@ function Historico() {
       })
 
   }
-
+  }
+  const contrato = () => {
+    const contrato = parseFloat(document.querySelector("#contrato").value);
+};
   return (
     <>
       <Menu />
@@ -73,15 +92,18 @@ function Historico() {
           <div className="containerh3">
             <div>
               <label>Numero de contrato</label>
-              <input type="text" id_historico="Numenro do contrato"
-               placeholder='' >
+              <input type="text" 
+              id_historico="Numenro do contrato"
+              placeholder='Digite o numéro do contrato'
+            
+              
+               />
  
-               </input>
+               
             </div>
             <div >
-            <button className="buttonSearch">
-            <FiSearch size={25} color='#fff'/>
-             </button>
+            <button id="Contrato" onClick={contrato}>numero do contrato</button>
+             
           </div>
           </div>
         </div>

@@ -18,6 +18,7 @@
     background-color: #f4f4f4;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-shadow: 1px 1px 1px rgb(231, 231, 231), 1em 1em 1.4em rgb(190, 187, 187);
 }
 
 /* Estilização dos campos de entrada 
@@ -33,37 +34,29 @@ input[type="text"] {
 #nome{
     width: 98%;
     padding: 8px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    border-bottom: none;
 }
 #sobrenome{
     width: 98%;
     padding: 8px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    border-bottom: none;
+
 }
 #email{
     width: 26%;
     padding: 8px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    border-bottom: none;
+   
 }
 #fone{
     width: 26%;
     padding: 8px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    border-bottom: none;
 }
 #date{
     width: 26%;
     padding: 8px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    border-bottom: none;
 }
 
 /* Estilização do campos observações */
@@ -86,20 +79,44 @@ input[type="checkbox"] {
 #btnCadastrar {
     position: relative;
     left: 55%;
-    top: 20px;
+    top: 0px;
     width: 20%;
     padding: 8px;
     color: white;
     border-radius: 2em;
     background-color: black;
 }
+#btnCadastrar:hover{
+    color: black;
+    background-color: transparent;
+}
 #btnVoltar {
      position: relative;
     left: 4%;
-    top: 20px;
+    top: 0px;
     width: 20%;
     padding: 8px;
     color: white;
     border-radius: 2em;
     background-color: black;
+}
+#btnVoltar:hover{
+    color: black;
+    background-color: transparent;
+}
+#conteudoPagina{
+    position: relative;
+    top: 90px;
+}
+#tituloPagAvaliacao{
+    position: relative;
+    bottom: 13px;
+}
+a{
+    text-decoration:none;
+    color: #fff;
+}
+a:hover{
+    text-decoration:none;
+    color: black;
 }

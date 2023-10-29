@@ -58,10 +58,10 @@ function Avaliacoes() {
     <>
       <Menu />
 
-      <section>
+      <section id="conteudoPagina">
         <div class="container-1">
           <div>
-            <h3 >Deseja saber sobre a sua Locação? Acesse a aba Reservas.</h3>
+            <h3 id="tituloPagAvaliacao">Deseja saber sobre a sua Locação? Acesse a aba Reservas.</h3>
           </div>
 
         </div >

@@ -69,8 +69,9 @@ function Vistoria() {
       <section id="cmp">
         <h3>Tela de realização de Vistoria de Veiculos</h3>
         <h5>Dados da Reserva e Vistoria:</h5>
+       <hr></hr>
         <div id='camposParaLoginParteUmVistoria'>
-          <label >ID do Veiculo:</label>
+          <label >ID do Veiculo: </label>
           <input type="text" id="veiculo" placeholder='3111' ></input>
           <label>Data da Vistoria:</label>
           <input type="date" id="date" placeholder='Data da Vistoria'></input>
@@ -83,8 +84,8 @@ function Vistoria() {
           
 
         </div>
-        <hr></hr>
         <h5>Detalhamento da Vistoria:</h5>
+        <hr></hr>
         <div id='camposParaLoginParteTres'>
           <label >Descrição da Vistoria:</label>
           <input type="text" id="descricao" placeholder='Descrição da Vistoria'></input>
@@ -115,7 +116,7 @@ function Vistoria() {
 
         
           <div >
-            <button id="btnCadastrar" onClick={vistoriar}>Cadastrar Vistoria</button>           
+            <button id="btnCadastrarVistoria" onClick={vistoriar}>Cadastrar Vistoria</button>           
           </div>
           <br></br>
           <a href="javascript:history.back()">Voltar</a>

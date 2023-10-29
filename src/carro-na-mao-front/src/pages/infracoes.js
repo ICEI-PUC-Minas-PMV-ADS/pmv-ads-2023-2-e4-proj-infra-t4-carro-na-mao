@@ -1,14 +1,16 @@
 import axios from 'axios';
-import React, { Component } from 'react';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { RecuperaToken } from '../autenticação/chave_de_acesso';
 import { useNavigate, Link } from 'react-router-dom';
 import { Menu } from './menu';
-import '../estilos/manutencao.css';
+//import '../estilos/infracoes.css';
 
 function Infracoes() {
-  const navigate = useNavigate()
-  const [token, setToken] = useState(null)
+  const navigate = useNavigate();
+  const [token, setToken] = useState(null);
+  const [detalhe, setDetalhe] = useState('');
+  const [infração, setInfracao] = useState(null);
+
   useEffect(() => {
     async function fetchData() {
       try {
@@ -18,41 +20,24 @@ function Infracoes() {
         console.error('Erro ao recuperar token:', error);
       }
     }
-    fetchData()
+    fetchData();
   }, []);
 
-  const multas = () => {
-
-    const detalhe = document.querySelector("#detalhe").value
-
-
-
-    const data = {
-
-      "detalhe": detalhe,
-     
-
-    }
-
-    const headers = {
-      "Content-Type": "application/json",
-      "Authorization": 'Bearer ' + token
-    }
-
-    axios.post('https://api-carronamao.azurewebsites.net/api/Muta', data, { headers })
-      .then(response => {
-        console.log(response.status)
-        if (response.status === 200) {
-
-          alert("Infração Registrada com Sucesso.");
-          return navigate("/Infracoes")
+  const buscarInfracao = async () => {
+    try {
+      const response = await axios.get(`https://api-seu-backend.com/api/infracoes/${detalhe}`, {
+        headers: {
+          Authorization: 'Bearer ' + token
         }
-      }
-      ).catch(error => {
-        alert("Ops, encontramos um problema!");
-      })
+      });
 
-  }
+      if (response.status === 200) {
+        setInfracao(response.data);
+      }
+    } catch (error) {
+      console.error('Erro ao buscar infração:', error);
+    }
+  };
 
   return (
     <>
@@ -61,39 +46,49 @@ function Infracoes() {
       <section>
         <div class="container">
           <div>
-            <h3 >Tela de lançamentos Modelo</h3>
+            <h3 >Infrações de trânsito</h3>
           </div>
         </div >
         <div class="container">
-          <h5 >Dados do Veiculo e Infração:</h5>
+          <h5 >Dados do Veículo e Infração:</h5>
         </div>
 
         <div>
           <div class="container">
             <div>
-              <label>Valor:</label>
-              <input type="text" id="detalhe" placeholder='insira aqui' ></input>
+              <label>Digite o numero do seu contrato:</label>
+              <input
+                type="text"
+                id="detalhe"
+                placeholder='Número do contrato'
+                value={detalhe}
+                onChange={(e) => setDetalhe(e.target.value)}
+              />
             </div>
-
           </div>
         </div>
 
+        <hr />
 
+        <div >
+          <button id="btnCadastrar" onClick={buscarInfracao}>Buscar Infração</button>
+        </div>
 
-        <hr></hr>
-
-        
-          <div >
-            <button id="btnCadastrar" onClick={multas}>Cadastrar Multa</button>
+        {infração && (
+          <div>
+            <h2>Detalhes da Infração:</h2>
+            <p>Descrição: {infração.descricao}</p>
+            <p>Data da Infração: {infração.data}</p>
+            <p>Valor da Multa: R$ {infração.valor}</p>
+            <p>Local da Infração: {infração.local}</p>
           </div>
-          <br></br>
-          <a href="javascript:history.back()">Voltar</a>
-        
-      </section>
+        )}
 
+        <br />
+        <Link to="/">Voltar</Link>
+      </section>
     </>
   );
 }
-
 
 export default Infracoes;

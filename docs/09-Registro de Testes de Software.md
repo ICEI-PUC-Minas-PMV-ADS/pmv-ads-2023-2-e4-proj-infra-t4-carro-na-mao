@@ -34,6 +34,28 @@
  **5.3.1 - Teste de Exclusão**
 ![Excluindo Informações](img/registrofront-sem-inf-avaliacao.png)
 
+ ### 7- Vistoria
+ **7.1 - Registro da vistoria**
+
+ **7.1.1 - Teste sem Informações**
+![Registro sem Informações](img/Testes/FRONT-Vistoria-%20Erro-vazio.png)
+ 
+ **7.1.2 - Teste com Informações**
+![Registro com Informações](img/Testes/FRONT-Vistoria-cadastrada.png)
+
+**7.2 - Front End Web em Funcionamento**
+
+ **7.2.1 - Teste de Exito**
+![Teste Front Funcionando](img/Testes/FRONT-Vistoria-resgatada.png)
+
+ **7.2.2 - Teste de Erro**
+![Teste Front com Erro](img/Testes/FRONT-Vistoria-editada-erro.png)
+
+**7.3 - Excluindo Informações Registradas**
+
+ **7.3.1 - Teste de Exclusão**
+![Excluindo Informações](img/Testes/FRONT-Vistoria-erro-excluir.png)
+
   ### 9- Notificação
 **9.1 - Teste de envio de nova notificação**
  ![Teste com êxito](img/not_test_002.jpg)
@@ -219,4 +241,3 @@
 **11.2 - Create**
 
  ![](img/trabalhando.png)
-

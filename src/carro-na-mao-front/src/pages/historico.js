@@ -39,7 +39,7 @@ function Historico() {
       "Authorization": 'Bearer ' + token
     }
 
-    axios.post('https://api-carronamao.azurewebsites.net/api/Hitorico', data, { headers })
+    axios.post('https://api-carronamao.azurewebsites.net/api/Historico', data, { headers })
       .then(response => {
         console.log(response.status)
         if (response.status === 200) {

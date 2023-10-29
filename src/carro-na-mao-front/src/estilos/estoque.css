@@ -16,9 +16,39 @@
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    margin-right: 10px;
+    margin-bottom: 10px;
 }
 #btnRegistro:hover{
     background-color: #1e72f0; 
     color: #fff;
+}
+#btnExcluir{
+    background-color: #8f959b; 
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+#btnExcluir:hover{
+    background-color: #dd0606; 
+    color: #fff;
+}
+
+#estoqueStyle{
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+#divListagem{
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: auto;
+    width: 400px;
+    height: 500px;
+}
+
+li:hover {
+    color: #1e72f0;
+    cursor: pointer;
 }

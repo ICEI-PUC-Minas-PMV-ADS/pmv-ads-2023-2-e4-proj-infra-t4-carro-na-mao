@@ -8,18 +8,19 @@ import Home2 from './pages/home2';
 import Dashboard from './pages/dashboard';
 import Locacao from './pages/locacao';
 import Vistoria from './pages/vistoria';
+import Vistoria2 from './pages/vistoria2';
 import Manutencao from './pages/manutencao';
 import Estoque from './pages/estoque';
 import Historico from './pages/historico';
 import Infracoes from './pages/infracoes';
-import Reservas from './pages/reservas';
 import Avaliacoes from './pages/avaliacoes';
 import Notificacoes from './pages/notificacoes';
-
 import reportWebVitals from './reportWebVitals';
-import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 import Categoria from './pages/categoria';
 import Localizacao from './pages/localizacao';
+import { createBrowserRouter,RouterProvider } from 'react-router-dom';
+
+
 
 const router = createBrowserRouter([
     
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       element:<Vistoria/>
     },
     {
+      path:'vistoria2',
+      element:<Vistoria2/>
+    },
+    {
       path:'manutencao',
       element:<Manutencao/>
     },
@@ -57,19 +62,15 @@ const router = createBrowserRouter([
     {
       path:'categoria',
       element:<Categoria/>
-    },
-    {
-      path:'localizacao',
-      element:<Localizacao/>
-    },
+    },   
     {
       path:'infracoes',
       element:<Infracoes/>
     },
     {
-      path:'reservas',
-      element:<Reservas/>
-    },
+      path:'historico',
+      element:<Historico/>
+    },   
     {
       path:'avaliacoes',
       element:<Avaliacoes/>
@@ -77,6 +78,10 @@ const router = createBrowserRouter([
     {
       path:'notificacoes',
       element:<Notificacoes/>
+    },
+    {
+      path:'localizacao',
+      element:<Localizacao/>
     },
     
 ])

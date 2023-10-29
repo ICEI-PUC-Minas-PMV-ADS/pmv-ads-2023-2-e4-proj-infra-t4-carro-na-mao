@@ -44,7 +44,7 @@ const validarUsuario =()=>{
         .then(response =>{
           if(response.status===200){
             setLoading(false)
-            return navigate("vistoria")
+            return navigate("home2")
           }
           else if(response.status===204){
             setLoading(false)

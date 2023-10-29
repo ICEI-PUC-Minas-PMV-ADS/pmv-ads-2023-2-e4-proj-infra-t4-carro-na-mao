@@ -1,39 +1,24 @@
 import axios from 'axios';
 import React, { Component } from 'react';
 import { useEffect, useState } from 'react';
-
+import imagem from  '../img/logo.png'
 import { Menu } from './menu';
-import '../estilos/manutencao.css';
+import { useNavigate,Link } from 'react-router-dom'
+import '../estilos/home2.css'
 
 function Home2() {
   
   return (
     <>
-      <Menu />
-
-      <section>
-        <div class="container">
-          <div>
-            <h3 >Seja bem vindo!</h3>
-          </div>
-        </div >
-        <div class="container">
-          <h5 >Sistema ativo</h5>
-        </div>
-        <div class="container">
-                <div class="container2">
-                    <p>Olá, seja bem vindo ao sistema!
-
-                        Se está lendo esta mensagem, o seu login está ativo e sua sessão segura foi iniciada corretamente.
-
-                        Duvidas entre em contato com o suporte da Carro na Mão!
-
-                        31-99999-8888 ou suporte@carronamao.com.br
-                    </p>
-                </div>
-            </div>
-
-        
+      <Menu style="background-color: transparent;"/>
+      <section id="parteum">
+        <h1>Seja bem vindo ao Carro na <spam>mão</spam>!</h1>
+        <p>Sua plataforma rápida e descomplicada para voçê escolher o que mais te agrada. Como podemos te ajudar ?</p>
+        <Link className="botoesHome2"id="redirecinarAlocacao"to="/Locacao">Alugar</Link>
+        <Link className="botoesHome2"id="rediriecionarVistoria"to="/Vistoria2">Acopanhar Vistoria</Link>      
+      </section>
+      <section id="partedois">
+        <img src={imagem}></img>
       </section>
 
     </>

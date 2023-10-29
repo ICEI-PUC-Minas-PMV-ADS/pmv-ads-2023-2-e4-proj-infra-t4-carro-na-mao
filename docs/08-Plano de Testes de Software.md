@@ -46,7 +46,7 @@
  - Passos: Acessar o http://localhost:3000/Locacao , preencher os campos e enviar dados.
  - Critério de sucesso: Retorno de inclusão.
 
- **5.3 - Excluindo Informações Registradas**
+ **6.3 - Excluindo Informações Registradas**
  - Objetivo do Teste: Verificar se o metodo delete consegue excluir de maneira correta o registro das informações inseridas nos campos.
  - Passos: Acessar o http://localhost:3000/Locacao , após preencher os campos e usar a tecla excluir.
  - Critério de sucesso: Excluir todos os dados.

@@ -4,7 +4,8 @@ import { useEffect, useState } from 'react';
 import { RecuperaToken } from '../autenticação/chave_de_acesso';
 import { useNavigate, Link } from 'react-router-dom';
 import { Menu } from './menu';
-import '../estilos/manutencao.css';
+import '../estilos/historico.css';
+import { FiSearch} from 'react-icons/fi';
 
 function Historico() {
   const navigate = useNavigate()
@@ -21,7 +22,7 @@ function Historico() {
     fetchData()
   }, []);
 
-  const arrumar = () => {
+  const Historico = () => {
 
     const valores = document.querySelector("#valores").value
 
@@ -59,22 +60,29 @@ function Historico() {
       <Menu />
 
       <section>
-        <div class="container">
+        <div className="containerh1">
           <div>
-            <h3 >Tela de lançamentos Modelo</h3>
+            <h3 >Historico de suas locações</h3>
           </div>
         </div >
-        <div class="container">
+        <div className="containerh2">
           <h5 >Historico do Cliente:</h5>
         </div>
 
         <div>
-          <div class="container">
+          <div className="containerh3">
             <div>
-              <label>Valor:</label>
-              <input type="text" id="valores" placeholder='0,00' ></input>
+              <label>Numero de contrato</label>
+              <input type="text" id_historico="Numenro do contrato"
+               placeholder='' >
+ 
+               </input>
             </div>
-
+            <div >
+            <button className="buttonSearch">
+            <FiSearch size={25} color='#fff'/>
+             </button>
+          </div>
           </div>
         </div>
 
@@ -83,13 +91,23 @@ function Historico() {
         <hr></hr>
 
         
-          <div >
-            <button id="btnCadastrar" onClick={arrumar}>Ver Histórico</button>
-          </div>
+        
           <br></br>
+         
+          
+          <a href="javascript:history.back()">Voltar</a>
           <a href="javascript:history.back()">Voltar</a>
         
       </section>
+      <main className= "main">
+        <h2>Numero do contrato: 00005</h2>
+
+        <span>data devolução: 20/10/2023</span>
+        <span>Veículo: Etios</span>
+        <span>Valor da locação: R$1200,00</span>
+        <span>Observação:       </span>
+
+      </main>
 
     </>
   );

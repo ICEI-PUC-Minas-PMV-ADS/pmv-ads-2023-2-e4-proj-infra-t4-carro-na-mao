@@ -1,0 +1,53 @@
+.containerh1{
+    height: 100vg;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(#fa7676, #212121);
+}
+.containerh2{
+    font-size: 50px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#ffff, #fa7676);
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: auto;
+    margin: 34px 0;
+    border-radius: 8px;
+    box-shadow: #fa7676;
+}
+.containerh3{
+    font-size: 25px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#d62a2a, #242526);
+}
+.main {
+    font-size: 20px;
+    color: blue;
+    animation: flipti 4s;
+
+}
+@keyframes flipti{
+from{
+    transform: rotateX(90deg);
+    }
+    to{
+    transform: rotateX(0deg)
+}}
+
+.button {
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s;
+
+}
+.button:hover{
+    transform: scaleX(1,4);
+}

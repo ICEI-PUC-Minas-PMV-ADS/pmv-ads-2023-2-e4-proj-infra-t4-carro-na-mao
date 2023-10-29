@@ -51,6 +51,23 @@
  - Passos: Acessar o http://localhost:3000/Locacao , após preencher os campos e usar a tecla excluir.
  - Critério de sucesso: Excluir todos os dados.
 
+ ### 7- Vistoria
+ **7.1 - Registro da vistoria**
+ - Objetivo do Teste: Verificar se todas as informações da vistoria registram no front end web. 
+ - Passos: Acessar o http://localhost:3000/vistoria  e inserir os dados.
+ - Critério: Vizualizar todas as informações em todos os campos.
+
+**7.2 - Front End Web em Funcionamento**
+
+ - Objetivo do Teste: Verificar se as informações foram enviadas com sucesso, caso contrario o sistema apontará o que está faltando preencher.
+ - Passos: Acessar o http://localhost:3000/vistoria , preencher os campos e enviar dados.
+ - Critério de sucesso: Retorno exito de conclusão.
+
+**7.3 - Excluindo Informações Registradas**
+ - Objetivo do Teste: Verificar se o metodo delete consegue excluir de maneira correta o registro das informações inceridas nós campos.
+ - Passos: Acessar o http://localhost:3000/vistoria , após preencher os campos e usar a tecla excluir.
+ - Critério de sucesso: Excluir todos os dados.
+
    ### 09 - Notificação
    > Requisito Associado: RF-001 O sistema deve enviar notificações e lembretes aos clientes sobre datas de aluguel, devolução e pagamentos pendentes.
 

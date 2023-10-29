@@ -16,7 +16,7 @@
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    margin-right: 10px;
+    margin-bottom: 10px;
 }
 #btnRegistro:hover{
     background-color: #1e72f0; 
@@ -77,3 +77,8 @@
   background-color: rgba(0, 0, 0, 0.5); 
   z-index: 999;
   }
+
+  li:hover {
+    color: #1e72f0;
+    cursor: pointer;
+}

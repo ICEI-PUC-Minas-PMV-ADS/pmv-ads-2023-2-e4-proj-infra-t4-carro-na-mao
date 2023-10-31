@@ -31,6 +31,12 @@ namespace carro_na_mao_api.Service
             await _vistoriaCollection.ReplaceOneAsync(x => x.id_vistoria == id, vistoria);
 
         }
+        public async Task<List<Vistoria>> GetVistoriasByVeiculo(int idVeiculo)
+        {
+            var filter = Builders<Vistoria>.Filter.Eq(v => v.id_veiculo, idVeiculo);
+            var vistorias = await _vistoriaCollection.Find(filter).ToListAsync();
+            return vistorias;
+        }
         public async Task DeleteAsync(int id) =>
            await _vistoriaCollection.DeleteOneAsync(x => x.id_veiculo == id);
 

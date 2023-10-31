@@ -34,6 +34,28 @@
  **5.3.1 - Teste de Exclusão**
 ![Excluindo Informações](img/registrofront-sem-inf-avaliacao.png)
 
+ ### 6- Locação
+ **6.1 - Registro das Informações**
+
+ **6.1.1 - Teste sem Informações**
+![Registro sem Informações](img/DadosNaoPreenchLocacao.png)
+ 
+ **6.1.2 - Teste com Informações**
+![Registro com Informações](img/DadosPreenchLocacao.png)
+
+**6.2 - Front End Web em Funcionamento**
+
+ **6.2.1 - Teste de Êxito**
+![Teste Front Funcionando](img/SucessoLocacao.png)
+
+ **6.2.2 - Teste de Erro**
+![Teste Front com Erro](img/ErroLocacao.png)
+
+**6.3 - Excluindo Informações Registradas**
+
+ **6.3.1 - Teste de Exclusão**
+![Excluindo Informações](img/DadosNaoPreenchLocacao.png)
+
  ### 7- Vistoria
  **7.1 - Registro da vistoria**
 

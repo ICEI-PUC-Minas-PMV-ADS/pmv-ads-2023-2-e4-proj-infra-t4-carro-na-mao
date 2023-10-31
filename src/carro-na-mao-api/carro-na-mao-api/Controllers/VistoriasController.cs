@@ -27,6 +27,13 @@ namespace carro_na_mao_api.Controllers
         public async Task<Vistoria> findByValue(int vl_vistoria)
              => await _vistoriaService.findByValue(vl_vistoria);
 
+        [HttpGet("findByVeiculo/{idVeiculo}")]
+        public async Task<List<Vistoria>> FindByVeiculo(int idVeiculo)
+        {
+            var vistorias = await _vistoriaService.GetVistoriasByVeiculo(idVeiculo);
+            return vistorias;
+        }
+
         [HttpPost]
         public async Task<Vistoria> CreateVistoria(Vistoria vistoria)
         {

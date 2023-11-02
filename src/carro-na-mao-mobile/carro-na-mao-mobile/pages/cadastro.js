@@ -3,19 +3,19 @@ import React, {useState,useEffect} from "react";
 import { TextInput,View,Text,StyleSheet,Button } from "react-native";
 import { RecuperaToken } from "../Autenticação/autenticacao";
 import { useNavigation } from "@react-navigation/native";
-import {Input} from '../componentes/input'
 
 const Cadastro =()=>{
     
           const [nome,setNome] =useState()
           const [dataNasc,setNascimento]=useState()
           const [endereco,setEndereco]=useState()
-          const[cpf,setCpf]=useState()
-          const[telefone,setTelefone]=useState()
+          const [cpf,setCpf]=useState()
+          const [telefone,setTelefone]=useState()
           const [email,setEmail]=useState()
           const [senha,setSenha]=useState()
           const [categoriaHab,setCategoriaHab]=useState()
           const [token,setToken]=useState(null)
+          const navigation = useNavigation()
     
         useEffect(() => {
         async function fetchData() {
@@ -52,6 +52,7 @@ const enviar =()=>{
              .then(response =>{
                  if(response.status===200){
                      alert('cadastrado')
+                     navigation.navigate("login")
                     }
                 }
                 ).catch(error => {

@@ -1,9 +1,10 @@
 import {createNativeStackNavigator} from'@react-navigation/native-stack'
 import { NavigationContainer } from '@react-navigation/native'
-import login from '../login'
-import Avaliacao from '../avaliacao'
-import Cadastro from '../cadastro'
-
+import login from '../pages/login'
+import Avaliacao from '../pages/avaliacao'
+import Cadastro from '../pages/cadastro'
+import cadastrarAvaliacao from '../pages/cadastrarAvaliacao'
+//import Cadastro from '../pages/cadastro'
 const stack = createNativeStackNavigator()
 
 const Main= ()=>{
@@ -23,6 +24,10 @@ const Main= ()=>{
                 <stack.Screen
                     name='Avalicao'
                     component={Avaliacao}
+                />
+                 <stack.Screen
+                    name='cadastrarAvaliacao'
+                    component={cadastrarAvaliacao}
                 />
             </stack.Navigator>
         </NavigationContainer>

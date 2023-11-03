@@ -2,7 +2,8 @@ import axios from "axios";
 import React, {useState,useEffect} from "react";
 import { RecuperaToken } from "../Autenticação/autenticacao";
 import { useNavigation, Link } from "@react-navigation/native";
-import { TextInput,View,Text,StyleSheet,Button } from "react-native";
+import { TextInput,Button } from 'react-native-paper'
+import { View,Text,StyleSheet } from "react-native";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 const login = ()=> {
    
@@ -55,39 +56,69 @@ const login = ()=> {
 
     return (
 
-        <View style={style.div}>
-            <Text>Cadastre-se</Text>
+        <View>
+            <Text style={style.titulo}>Cadastre-se</Text>
+            <View style={style.div}>
                 <TextInput
+                    mode='outlined'
+                    label="Email"
                     placeholder="Digite seu email"
                     value={email}
-                    onChangeText={email=>setEmail(email)}
+                    onChangeText={email=>setEmail(email)} 
                     style={style.input}
-                />
+                    />
                 <TextInput
+                    mode='outlined'
+                    label="Senha"
                     placeholder="Digite sua senha"
                     value={senha}
                     onChangeText={senha => setSenha(senha)}
-                    style={style.input}
-                />
-                <Button onPress={()=>validarUsuario()} title="Entre"></Button>
-                <Link to='/Cadastro'>Cadastro</Link>
+                    style={style.inputemail}
+                    />
+                <Button style={style.botao} mode="contained" onPress={()=>validarUsuario()} title="Entre">Entre</Button>
+                <Link style={style.link} to='/Cadastro'>Cadastre-se</Link>
+            </View>
         </View>
     )
 }
 
 const style = StyleSheet.create({
+    titulo:{
+        position:'relative',
+        top:150,
+        fontSize:40,
+        left:10
+    },
     div:{
-        position:"relative",
-        top:90
+       position:'relative',
+       top:190,
+       padding:5
+
     },
     input: {
-        height: 40,
-        margin: 12,
-        borderWidth: 1,
-        padding: 10,
-      },
-  
-  })
+        position:'relative',
+        left:5,
+        width:370
+    },
+    inputemail:{
+            position:'relative',
+            top:10,
+            width:370,
+            left:5,
+    },
+    botao:{
+        width:200,
+        top:100,
+        left:90
+
+   },
+   link:{
+        position:'relative',
+        top:120,
+        left:160
+   }
+
+})
   
   
 

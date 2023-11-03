@@ -1,12 +1,14 @@
-import { View,Text, Button } from "react-native";
-import React, {useState,useEffect} from "react";
 import axios from "axios";
+import { View,Text, Button,StyleSheet,FlatList, TouchableOpacity} from "react-native";
+import React, {useState,useEffect} from "react";
+import { FAB } from 'react-native-paper';
 import { RecuperaToken } from "../Autenticação/autenticacao";
 import { useNavigation,useIsFocused } from '@react-navigation/native';
 
 
 const Avaliacao =()=>{
     const navigation = useNavigation()
+    const foco = useIsFocused()
     const [avaliacoes,setAvaliacao]= useState([]) 
     useEffect(() => {
         async function fetchData() {
@@ -19,7 +21,7 @@ const Avaliacao =()=>{
           }
 
             fetchData()
-        },[]);
+        },[foco]);
 
 
  function recuparandoAvaliacoes(jwtToken){
@@ -36,17 +38,46 @@ const Avaliacao =()=>{
           }
         ).catch(error => {}) 
   }
-
+  const Item = ({item}) => (
+    <TouchableOpacity >
+      <View style={styles.informacoe}>
+        <Text>{'Usuario: '+item.nomeUsaurio}</Text>
+        <Text>{'Avaliação do serviço: '+item.nota}</Text>
+        <Text>{'Descrição: '+item.observaceo}</Text>
+      </View>
+  </TouchableOpacity>
+);
 
     return(
         <View>
-            <Text>ola</Text>
-            <Button onPress={()=>navigation.navigate('cadastrarAvaliacao')} title="click"></Button>
+            <FlatList
+                style={styles.lista}
+                data={avaliacoes}
+                renderItem={Item}
+                keyExtractor={item => item.id}
+                />
+            <FAB
+                style={styles.fab}
+                icon="plus"
+                onPress={()=>navigation.navigate('cadastrarAvaliacao')}
+            />
         </View>
 
     )
-
-
 }
-
+const styles = StyleSheet.create({
+    fab: {
+      position: 'absolute',
+      margin: 16,
+      right: 0,
+      top: 550,
+    },
+    lista:{padding:3},
+    informacoe:{
+        padding:35,
+        width:370,
+        left:10,
+        position:'relative',
+    }
+  })
 export default Avaliacao

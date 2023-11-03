@@ -15,7 +15,7 @@ function Home2() {
         <h1>Seja bem vindo ao Carro na <spam>mão</spam>!</h1>
         <p>Sua plataforma rápida e descomplicada para voçê escolher o que mais te agrada. Como podemos te ajudar ?</p>
         <Link className="botoesHome2"id="redirecinarAlocacao"to="/Locacao">Alugar</Link>
-        <Link className="botoesHome2"id="rediriecionarVistoria"to="/Vistoria2">Acopanhar Vistoria</Link>      
+        <Link className="botoesHome2"id="rediriecionarVistoria"to="/Vistoria2">Acompanhar Vistoria</Link>      
       </section>
       <section id="partedois">
         <img src={imagem}></img>

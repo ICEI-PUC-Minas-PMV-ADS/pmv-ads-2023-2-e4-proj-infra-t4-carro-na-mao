@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { useEffect, useState } from 'react';
 import { RecuperaToken } from '../autenticação/chave_de_acesso';
 import { useNavigate, Link } from 'react-router-dom';
+import imagem from  '../img/logo3.png'
 import { Menu } from './menu';
 import '../estilos/vistoria.css';
 
@@ -65,11 +66,14 @@ function Vistoria() {
   return (
     <>
       <Menu />
-
+         
+      
       <section id="cmp">
+      
         <h3>Tela de realização de Vistoria de Veiculos</h3>
         <h5>Dados da Reserva e Vistoria:</h5>
        <hr></hr>
+       
         <div id='camposParaLoginParteUmVistoria'>
           <label >ID do Veiculo: </label>
           <input type="text" id="veiculo" placeholder='3111' ></input>
@@ -84,6 +88,7 @@ function Vistoria() {
           
 
         </div>
+        
         <h5>Detalhamento da Vistoria:</h5>
         <hr></hr>
         <div id='camposParaLoginParteTres'>
@@ -103,6 +108,7 @@ function Vistoria() {
         </div>
 
       </section>
+      
       <br></br>
       <br></br>
       <br></br>

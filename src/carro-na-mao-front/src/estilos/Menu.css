@@ -1,20 +1,21 @@
-:root{
-  --cor-fundo:#050505;
+:root {
+  --cor-fundo: #050505;
   --cor-rover: #860000;
   --cor-primaria: #fff;
 }
 
 .drop-menu {
-  padding: 0em;
-  width: 100%;
+  margin-top: -1.5em;
 }
 
 .drop-menu ul {
   background-color: var(--cor-fundo);
+  font-size: 120%;
+
 }
 
 .drop-menu ul li {
-  display: inline;
+  display: inline-block;
   padding: 1em;
   position: relative;
 }
@@ -31,35 +32,30 @@
   background-color: var(--cor-rover);
 }
 
-  /*sub-menu*/
-  .drop-menu ul ul {
-    display: none;
-    position: absolute;
-  }
-
-  .drop-menu ul li:hover ul{
-    display: block;
-  }
-
-  .drop-menu ul ul {
-    width: 170px;
-  }
-
-  .drop-menu ul ul li a {
-    display: block;
-  }
-
-#selectAdm{
-  height: 3em;
-  align-items: center;
-  border-radius: 0.5em;
-  background-color: var(--cor-fundo);
-  color: var(--cor-primaria);
-  border-color: #860000;
-  padding: 0.5em;
-  margin: 0.5em 0;
+/*sub-menu*/
+.drop-menu ul ul {
+  display: none;
+  position: absolute;
 }
 
-#sairButton{
-  left: 80em;
+.drop-menu ul li:hover ul {
+  display: block;
+}
+
+.drop-menu ul ul {
+  width: 170px;
+}
+
+.drop-menu ul ul li a {
+  display: block;
+}
+
+#selectAdm {
+  justify-content: right;
+  float: right;
+}
+
+#sairButton {
+  justify-content: right;
+  float: right; 
 }

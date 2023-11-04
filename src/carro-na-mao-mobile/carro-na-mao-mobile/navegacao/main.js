@@ -4,6 +4,8 @@ import login from '../pages/login'
 import Avaliacao from '../pages/avaliacao'
 import Cadastro from '../pages/cadastro'
 import cadastrarAvaliacao from '../pages/cadastrarAvaliacao'
+import Perfil from '../pages/perfil'
+import menu from '../pages/menu'
 //import Cadastro from '../pages/cadastro'
 const stack = createNativeStackNavigator()
 
@@ -29,6 +31,11 @@ const Main= ()=>{
                     name='cadastrarAvaliacao'
                     component={cadastrarAvaliacao}
                 />
+                 <stack.Screen
+                    name='Perfil'
+                    component={Perfil}
+                />
+
             </stack.Navigator>
         </NavigationContainer>
     )

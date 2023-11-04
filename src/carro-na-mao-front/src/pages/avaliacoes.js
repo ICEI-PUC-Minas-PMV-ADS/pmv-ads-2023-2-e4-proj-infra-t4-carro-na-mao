@@ -11,7 +11,6 @@ function Avaliacoes() {
   const navigate = useNavigate()
   const [token, setToken] = useState(null)
   const [dados_user,setDados] = useState([])
- 
   useEffect(() => {
     async function fetchData() {
       try {
@@ -25,36 +24,34 @@ function Avaliacoes() {
     fetchData()
   }, []);
 
-  const avaliar = () => {
-    const nome = document.querySelector("#nome").value
-    const nota = document.querySelector("#nota").value
+  async function recuperarDadosLocal(){
+    const dadosSalvos = localStorage.getItem('dados_user')
+    setDados(JSON.parse(dadosSalvos))
+}
 
-    const data = {
-      "observaceo": nome,
-      "nota": nota,
-      "nomeUsaurio":dados_user.nome,
-      "id_usuario": dados_user.id
-    }
 
-    const headers = {
-      "Content-Type": "application/json",
-      "Authorization": 'Bearer ' + token
-    }
-
-    axios.post('https://api-carronamao.azurewebsites.net/api/Avaliacao', data, { headers })
-      .then(response => {
-        console.log(response.status)
-        if (response.status === 200) {
-
-          alert("Agradecemos o seu feedback, sua avaliação foi Registrada com Sucesso!");
-          return navigate("/Avaliacoes")
-        }
-      }
-      ).catch(error => {
-        alert("Ops, encontramos um problema, campos incorretos, tente novamente!");
-      })
-
+function avaliar(){
+  const observaceo = document.querySelector("#nome").value
+  const nota = document.querySelector("#nota").value
+  console.log(dados_user)
+  const data= {
+    "observaceo": observaceo,
+    "nota": nota,
+    "nomeUsaurio":dados_user.nome,
+    "id_usuario": dados_user.id
   }
+  const headers={
+    "Content-Type":"application/json, text/plain, */*",
+    "Authorization": 'Bearer ' + token
+}
+  axios.post('https://api-carronamao.azurewebsites.net/api/Avaliacao',data,{headers}).then(response=>{
+    if(response.status==200){
+      alert('ok')
+    }
+  }).catch(erro=>{
+    alert(erro)
+  })
+}
 
  async function recuperarDadosLocal(){
     const dadosSalvos = await localStorage.getItem('dados_user')
@@ -68,29 +65,43 @@ function Avaliacoes() {
         <div class="container-1">
           <div>
             <h3 id="tituloPagAvaliacao">Deseja saber sobre a sua Locação? Acesse a aba Reservas.</h3>
-           </div>
-         </div >
-          <div>
-            <div class="container-2">
-              <h4>Envie sua mensagem, Reclamação ou Sugestão:</h4>
-              <div>
-                <label>Observação:</label>
-                <input type="text" id="nome" placeholder='Insira sua reclação...' ></input>
-              </div>
-              <div>
-                <label>=Nota:</label>
-                <input type="text" id="nota" placeholder='Insira sua nota de atendimento...' ></input>
-              </div>
-              <div>
-                <label>E-mail:</label>
-                <input type="text" id="email" placeholder='Insira seu e-mail...' ></input>
-                <label>Fone:</label>
-                <input type="text" id="fone" placeholder='insira seu telefone...' ></input>
-                <label>Data:</label>
-                <input type="date" id="date" placeholder=''></input>
-              </div>
-              <br/>
-            <br/>
+
+          </div>
+
+        </div >
+
+        <div>
+          <div class="container-2">
+            <h4>Envie sua mensagem, Reclamação ou Sugestão:</h4>
+            <div>
+              <label>Observação:</label>
+              <input type="text" id="nome" placeholder='Digite sua observação' ></input>
+            </div>
+
+            <div>
+              <label>Nota:</label>
+              <input type="text" id="nota" placeholder='Insira sua nota...' ></input>
+            </div>
+
+            <div>
+              <label>E-mail:</label>
+              <input type="text" id="email" placeholder='Insira seu e-mail...' ></input>
+
+              <label>Fone:</label>
+              <input type="text" id="fone" placeholder='insira seu telefone...' ></input>
+
+        
+            </div>
+            <br>
+            </br>
+            <div>
+              <label>Observações:</label><br></br>
+              <textarea class="msg"></textarea>
+            </div>
+
+            <br>
+            </br>
+o
             <div>
               <button id="btnCadastrar" onClick={avaliar}>Enviar Avaliação</button>
               <button id='btnVoltar'> <a href="javascript:history.back()">Voltar</a> </button>

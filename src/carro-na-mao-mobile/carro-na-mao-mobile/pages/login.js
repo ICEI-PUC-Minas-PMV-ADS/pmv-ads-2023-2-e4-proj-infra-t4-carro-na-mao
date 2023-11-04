@@ -40,7 +40,7 @@ const login = ()=> {
                 alert("Usurario não cadastrado")
             }
             }).catch(error => {
-                 alert("Usurario não cadastrado")
+                 alert("error")
         })
     }
 

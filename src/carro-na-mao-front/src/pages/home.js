@@ -9,6 +9,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
+import { json } from 'react-router-dom/dist';
 
 function Home() {
   
@@ -62,14 +63,17 @@ const validarUsuario =()=>{
       setLoading(false)
     }
   }
-  async function salvarDadosLocais(nome,id){
-    const dados = {
-      'nome':nome,
-      'id':id
-    }
-    localStorage.setItem('dados_user',JSON.stringify(dados))
+
+function salvarDadosLocais (nome,id) {
+  const dados_user ={
+    'nome':nome,
+    'id':id
   }
 
+  localStorage.setItem('dados_user',JSON.stringify(dados_user))
+
+
+}
   return (
         <>
          {loading ? (

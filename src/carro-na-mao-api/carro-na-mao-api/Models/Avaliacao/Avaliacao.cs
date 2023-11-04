@@ -19,7 +19,10 @@ namespace carro_na_mao_api.Models.Avaliacao
         public string? nomeUsaurio { get; set; } = null;
 
         [BsonElement("id_usuario")]
-        public string id_usuario { get; set; } = null;
+        public string? id_usuario { get; set; } = null;
+
+        [BsonElement("data_reclacao")]
+        public string? data { get; set; } = null;
 
 
     }

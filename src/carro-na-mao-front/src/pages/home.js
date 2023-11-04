@@ -44,6 +44,7 @@ const validarUsuario =()=>{
         .then(response =>{
           if(response.status===200){
             setLoading(false)
+            salvarDadosLocais(response.data.nome,response.data.id)
             return navigate("home2")
           }
           else if(response.status===204){
@@ -60,6 +61,13 @@ const validarUsuario =()=>{
       alert('Por favor preencher todos os campos')
       setLoading(false)
     }
+  }
+  async function salvarDadosLocais(nome,id){
+    const dados = {
+      'nome':nome,
+      'id':id
+    }
+    localStorage.setItem('dados_user',JSON.stringify(dados))
   }
 
   return (

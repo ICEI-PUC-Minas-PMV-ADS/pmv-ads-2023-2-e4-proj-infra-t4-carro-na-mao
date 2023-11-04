@@ -19,26 +19,32 @@ export function Menu (){
      return (
 
       <>
-        <div id="menu">
-          <Link to="/Home2">Home</Link>        
-          <Link to="/Avaliacoes">Avaliações</Link>        
-          <Link to="/Dashboard">Dashboard</Link>
-          <Link to="/Locacao">Alugar</Link>
-          <Link to="/Vistoria">Cadastrar Vistoria</Link>
-          <Link to="/Vistoria2">Consultar Vistorias</Link>     
-          <Link to="/Localizacao">Localização</Link>   
-          <Link to="/Manutencao">Manutencao</Link>
-          <Link to="/Infracoes">Infrações</Link>
-          <Link to="/Historico">Histórico</Link>
-          <Link to="/Notificacoes">Notificações</Link>
-          <select value={selectedOption} onChange={handleOptionChange}>
+        <nav class= "drop-menu">
+          <ul>
+          <li><a href="#">Menu</a>
+          <ul>
+          <li><Link to="/Home2">Home</Link></li>        
+          <li><Link to="/Dashboard">Dashboard</Link></li>
+          <li><Link to="/Locacao">Alugar</Link></li>
+          <li><Link to="/Vistoria">Cadastrar Vistoria</Link></li>
+          <li><Link to="/Vistoria2">Consultar Vistorias</Link></li>  
+          <li><Link to="/Localizacao">Localização</Link></li>   
+          <li><Link to="/Manutencao">Manutencao</Link></li>
+          <li><Link to="/Infracoes">Infrações</Link></li>
+          <li><Link to="/Historico">Histórico</Link></li>
+          <li><Link to="/Notificacoes">Notificações</Link></li>
+          </ul>
+          </li>
+          <li><select id="selectAdm" value={selectedOption} onChange={handleOptionChange}>
             <option>Adm</option>
             <option value="Estoque">Estoque</option>
             <option value="Categoria">Categoria</option>
           </select>
+          </li>
           <Apps />
-          <Link to="/">Sair</Link>
-        </div>
+          <li id="sairButton"><Link to="/">Sair</Link></li>
+          </ul>
+        </nav>
        </>
 
      );

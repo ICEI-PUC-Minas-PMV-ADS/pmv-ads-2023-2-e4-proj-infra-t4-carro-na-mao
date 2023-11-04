@@ -21,7 +21,7 @@ export function Menu (){
       <>
         <div id="menu">
           <Link to="/Home2">Home</Link>        
-          <Link to="/Avaliacoes">Avaliações</Link>        
+          <Link to="/visualizarAvaliacao">Avaliações</Link>        
           <Link to="/Dashboard">Dashboard</Link>
           <Link to="/Locacao">Alugar</Link>
           <Link to="/Vistoria">Cadastrar Vistoria</Link>

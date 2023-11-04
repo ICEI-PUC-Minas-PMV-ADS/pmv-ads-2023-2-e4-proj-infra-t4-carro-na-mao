@@ -18,6 +18,7 @@ import Notificacoes from './pages/notificacoes';
 import reportWebVitals from './reportWebVitals';
 import Categoria from './pages/categoria';
 import Localizacao from './pages/localizacao';
+import VisualizarAvaliacoes from './pages/visualizacaoAvaliacao';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 
 
@@ -74,6 +75,10 @@ const router = createBrowserRouter([
     {
       path:'avaliacoes',
       element:<Avaliacoes/>
+    },
+    {
+      path:'visualizarAvaliacao',
+      element:<VisualizarAvaliacoes/>
     },
     {
       path:'notificacoes',

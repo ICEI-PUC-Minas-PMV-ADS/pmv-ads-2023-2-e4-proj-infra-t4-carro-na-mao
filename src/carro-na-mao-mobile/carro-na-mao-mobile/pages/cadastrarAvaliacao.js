@@ -5,6 +5,7 @@ import { View,StyleSheet } from "react-native";
 import { useNavigation, Link } from "@react-navigation/native";
 import { TextInput,Button } from 'react-native-paper'
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { format } from 'date-fns';
 const cadastrarAvaliacao =()=> {
 
     const [token,setToken]=useState(null)
@@ -13,6 +14,7 @@ const cadastrarAvaliacao =()=> {
     const [observacao,setObservao]= useState()
     const [nota,setNotas] =useState()
     const [telefone,setTelefone] = useState()
+ 
     useEffect(() => {
         async function fetchData() {
             try {
@@ -30,13 +32,13 @@ const cadastrarAvaliacao =()=> {
           const dadosSalvos = await AsyncStorage.getItem('dados_user')
           setDados(JSON.parse(dadosSalvos))
       }
-
     function registrarAvaliacao(){
         const data = {
             "observaceo": observacao,
             "nota": nota,
             "nomeUsaurio":dados_user.nome,
-            "id_usuario": dados_user.id
+            "id_usuario": dados_user.id,
+            "data":format(new Date(),'dd/MM/yyyy')
         }
         const headers={
             "Content-Type":"application/json",

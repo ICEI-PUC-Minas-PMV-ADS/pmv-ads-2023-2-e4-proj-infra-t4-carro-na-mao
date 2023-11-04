@@ -9,55 +9,51 @@ import '../estilos/avaliacoes.css';
 function Avaliacoes() {
   const navigate = useNavigate()
   const [token, setToken] = useState(null)
+  const [dados_user,setDados] = useState([])
   useEffect(() => {
     async function fetchData() {
       try {
         const jwtToken = await RecuperaToken();
         setToken(jwtToken);
-      } catch (error) {
+        recuperarDadosLocal()
+       } catch (error) {
         console.error('Erro ao recuperar token:', error);
       }
     }
     fetchData()
   }, []);
 
-  const avaliar = () => {
+  async function recuperarDadosLocal(){
+    const dadosSalvos = localStorage.getItem('dados_user')
+    setDados(JSON.parse(dadosSalvos))
+}
 
-    const nome = document.querySelector("#nome").value
-
-
-
-    const data = {
-
-      "nome": nome,
-
-
-    }
-
-    const headers = {
-      "Content-Type": "application/json",
-      "Authorization": 'Bearer ' + token
-    }
-
-    axios.post('https://api-carronamao.azurewebsites.net/api/Avaliacao', data, { headers })
-      .then(response => {
-        console.log(response.status)
-        if (response.status === 200) {
-
-          alert("Agradecemos o seu feedback, sua avaliação foi Registrada com Sucesso!");
-          return navigate("/Avaliacoes")
-        }
-      }
-      ).catch(error => {
-        alert("Ops, encontramos um problema, campos incorretos, tente novamente!");
-      })
-
+function avaliar(){
+  const observaceo = document.querySelector("#nome").value
+  const nota = document.querySelector("#nota").value
+  console.log(dados_user)
+  const data= {
+    "observaceo": observaceo,
+    "nota": nota,
+    "nomeUsaurio":dados_user.nome,
+    "id_usuario": dados_user.id
   }
+  const headers={
+    "Content-Type":"application/json, text/plain, */*",
+    "Authorization": 'Bearer ' + token
+}
+  axios.post('https://api-carronamao.azurewebsites.net/api/Avaliacao',data,{headers}).then(response=>{
+    if(response.status==200){
+      alert('ok')
+    }
+  }).catch(erro=>{
+    alert(erro)
+  })
+}
 
   return (
     <>
       <Menu />
-
       <section id="conteudoPagina">
         <div class="container-1">
           <div>
@@ -70,13 +66,13 @@ function Avaliacoes() {
           <div class="container-2">
             <h4>Envie sua mensagem, Reclamação ou Sugestão:</h4>
             <div>
-              <label>Nome:</label>
-              <input type="text" id="nome" placeholder='Insira seu nome...' ></input>
+              <label>Observação:</label>
+              <input type="text" id="nome" placeholder='Digite sua observação' ></input>
             </div>
 
             <div>
-              <label>Sobrenome:</label>
-              <input type="text" id="sobrenome" placeholder='Insira seu sobrenome...' ></input>
+              <label>Nota:</label>
+              <input type="text" id="nota" placeholder='Insira sua nota...' ></input>
             </div>
 
             <div>
@@ -86,8 +82,7 @@ function Avaliacoes() {
               <label>Fone:</label>
               <input type="text" id="fone" placeholder='insira seu telefone...' ></input>
 
-              <label>Data:</label>
-              <input type="date" id="date" placeholder=''></input>
+        
             </div>
             <br>
             </br>
@@ -101,7 +96,6 @@ function Avaliacoes() {
 
             <div>
               <button id="btnCadastrar" onClick={avaliar}>Enviar Avaliação</button>
-
               <button id='btnVoltar'> <a href="javascript:history.back()">Voltar</a> </button>
             </div>
 

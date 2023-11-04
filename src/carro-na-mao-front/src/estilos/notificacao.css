@@ -15,13 +15,13 @@ code {
 .Apps {
   display: flex;
   float: right;
-  padding: 0%;
+  padding: 1%;
   right: 25px;
-  top: 0px;
-  justify-content: right;
-  align-items: right;
+  top: 30px;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   background-color: #ffffff00;
-  width: 40px;
+  width: 55px;
   border-radius: 8px;    
 }

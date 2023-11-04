@@ -99,9 +99,10 @@ const calculateTotal = () => {
     };
 
     return (
-        
+         
         <>
-            <Menu />
+        <Menu/>
+        <h1>Locacao</h1>
             <div id="tela">
             <section id="campos">
         <label id="labLocal">Selecione o local para retirada</label>

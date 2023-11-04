@@ -48,61 +48,61 @@
 #horaRetirada{
     position: relative;
     width: 21.5%;
-    left: 54em;
+    left: 0em;
     border-left: none;
     border-right: none;
     border-top: none;
-    top: -4.5em;
+    top: 0em;
 } 
 #horaEntrega{
     position: relative;
     width: 21.5%;
-    left: 54em;
+    left: 0em;
     border-left: none;
     border-right: none;
     border-top: none;
-    top: -4.5em;
+    top: 0em;
 }
 #valorCategoria{
     position: relative;
-    left: 54em;
+    left: 0em;
     border-left: none;
     border-right: none;
     border-top: none;
-    top: -4.8em;
+    top: 0em;
 } 
 #custosAd{
     position: relative;
-    left: 45em;
+    left: 0em;
     height: 3em;
     border-left: none;
     border-right: none;
     border-top: none;
-    top: -4em;
+    top: 0em;
 } 
 #dataRetirada{
     position: relative;
-    left: 54em;
+    left: 0em;
     width: 70%;
     border-left: none;
     border-right: none;
     border-top: none;
-    top: -33.5em;
+    top: 0em;
 } 
 #dataEntrega{
     position: relative;
-    left: 54em;
+    left: 0em;
     width: 70%;
     border-left: none;
     border-right: none;
     border-top: none;
-    top: -33.5em;
+    top: 0em;
 } 
 
 #btnReservar{
     position: relative;
-    left: 15em;
-    top: -33em;
+    left: 0em;
+    top: 0em;
     color:white;
     border-radius: 2em;
     background-color: black;
@@ -114,8 +114,8 @@
 
 #calc{
     position: relative;
-    left: 68em;
-    top: -20em;
+    left: 0em;
+    top: 0em;
     color:white;
     padding: none;
     border-radius: 2em;
@@ -127,56 +127,56 @@
 }
 #vlTotal{
     position: relative;
-    top: -7em;
-    left: 43em;
+    top: 0em;
+    left: 0em;
 }
 #labDtEntrega{
     position: relative;
-    left: 45em;
+    left: 0em;
     border-left: none;
     border-right: none;
     border-top: none;
-    top: -27.8em;
+    top: 0em;
 }
 #labDtRetirada{
     position: relative;
-    left: 45em;
+    left: 0em;
     border-left: none;
     border-right: none;
     border-top: none;
-    top: -27.8em;
+    top: 0em;
 }
 #labHrRetirada{
     position: relative;
-    left: 45em;
+    left: 0em;
     border-left: none;
     border-right: none;
     border-top: none;
-    top: -3.7em;
+    top: 0em;
 }
 #labHrEntrega{
     position: relative;
-    left: 45em;
+    left: 0em;
     border-left: none;
     border-right: none;
     border-top: none;
-    top: -4em;
+    top: 0em;
 }
 #labValor{
     position: relative;
-    left: 45em;
+    left: 0em;
     border-left: none;
     border-right: none;
     border-top: none;
-    top: -4em;
+    top: 0em;
 }
 #labCustos{
     position: relative;
-    left: 45em;
+    left: 0em;
     border-left: none;
     border-right: none;
     border-top: none;
-    top: -4.3em;
+    top: 0em;
 }
 
 

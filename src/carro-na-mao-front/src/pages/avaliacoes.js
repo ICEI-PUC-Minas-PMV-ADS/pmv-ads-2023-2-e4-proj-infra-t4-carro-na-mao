@@ -85,15 +85,16 @@ function avaliar(){
 
             <div>
               <label>E-mail:</label>
-              <input type="text" id="email" placeholder='Insira seu e-mail...' ></input>
+              <input type="text" id="email" placeholder='Insira seu e-mail...'></input>
 
               <label>Fone:</label>
-              <input type="text" id="fone" placeholder='insira seu telefone...' ></input>
+              <input type="text" id="fone" placeholder='insira seu telefone...'></input>
 
         
             </div>
-            <br>
-            </br>
+
+            <br></br>
+
             <div>
               <label>Observações:</label><br></br>
               <textarea class="msg"></textarea>

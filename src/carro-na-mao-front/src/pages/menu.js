@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 //imports da funcionalidade notificcacao
 import Apps from './Apps';
 
-export function Menu (){
+export function Menu() {
 
   const [selectedOption, setSelectedOption] = useState('');
   const navigate = useNavigate();
@@ -15,6 +15,7 @@ export function Menu (){
     setSelectedOption(value);
     navigate(`/${value}`); // Navegar para a página correspondente
   };
+
 
      return (
 
@@ -37,9 +38,21 @@ export function Menu (){
             <option value="Categoria">Categoria</option>
           </select>
           <Apps />
-          <Link to="/">Sair</Link>
-        </div>
-       </>
 
-     );
+          <li id="sairButton"><Link to="/">Sair</Link></li>
+
+          <li id="selectAdm">
+            <a href="#">Adm</a>
+            
+            <ul>
+              <li><Link to="/Estoque">Estoque</Link></li>
+              <li><Link to="/Categoria">Categoria</Link></li>
+            </ul>
+
+          </li>
+        </ul>
+      </nav>
+    </>
+
+  );
 }

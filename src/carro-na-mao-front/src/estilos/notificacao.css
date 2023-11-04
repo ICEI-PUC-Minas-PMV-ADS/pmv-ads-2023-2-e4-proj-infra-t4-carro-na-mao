@@ -15,7 +15,7 @@ code {
 .Apps {
   display: flex;
   float: right;
-  padding: 1.7%;
+  padding: 1%;
   right: 25px;
   top: 30px;
   justify-content: center;

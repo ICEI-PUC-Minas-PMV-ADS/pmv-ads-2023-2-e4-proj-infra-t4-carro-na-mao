@@ -57,6 +57,9 @@ input[type="text"] {
     width: 26%;
     padding: 8px;
     border-bottom: none;
+    top: 2px;
+    height: 17px;
+
 }
 
 /* Estilização do campos observações */

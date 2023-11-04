@@ -81,16 +81,17 @@ function Avaliacoes() {
 
             <div>
               <label>E-mail:</label>
-              <input type="text" id="email" placeholder='Insira seu e-mail...' ></input>
+              <input type="text" id="email" placeholder='Insira seu e-mail...'></input>
 
               <label>Fone:</label>
-              <input type="text" id="fone" placeholder='insira seu telefone...' ></input>
+              <input type="text" id="fone" placeholder='insira seu telefone...'></input>
 
               <label>Data:</label>
               <input type="date" id="date" placeholder=''></input>
             </div>
-            <br>
-            </br>
+
+            <br></br>
+
             <div>
               <label>Observações:</label><br></br>
               <textarea class="msg"></textarea>

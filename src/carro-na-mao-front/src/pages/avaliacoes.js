@@ -7,6 +7,7 @@ import { Menu } from './menu';
 import '../estilos/avaliacoes.css';
 
 function Avaliacoes() {
+ 
   const navigate = useNavigate()
   const [token, setToken] = useState(null)
   const [dados_user,setDados] = useState([])
@@ -16,7 +17,7 @@ function Avaliacoes() {
         const jwtToken = await RecuperaToken();
         setToken(jwtToken);
         recuperarDadosLocal()
-       } catch (error) {
+      } catch (error) {
         console.error('Erro ao recuperar token:', error);
       }
     }
@@ -27,6 +28,7 @@ function Avaliacoes() {
     const dadosSalvos = localStorage.getItem('dados_user')
     setDados(JSON.parse(dadosSalvos))
 }
+
 
 function avaliar(){
   const observaceo = document.querySelector("#nome").value
@@ -51,6 +53,11 @@ function avaliar(){
   })
 }
 
+ async function recuperarDadosLocal(){
+    const dadosSalvos = await localStorage.getItem('dados_user')
+    setDados(JSON.parse(dadosSalvos))
+  }
+
   return (
     <>
       <Menu />
@@ -58,6 +65,7 @@ function avaliar(){
         <div class="container-1">
           <div>
             <h3 id="tituloPagAvaliacao">Deseja saber sobre a sua Locação? Acesse a aba Reservas.</h3>
+
           </div>
 
         </div >
@@ -93,18 +101,14 @@ function avaliar(){
 
             <br>
             </br>
-
+o
             <div>
               <button id="btnCadastrar" onClick={avaliar}>Enviar Avaliação</button>
               <button id='btnVoltar'> <a href="javascript:history.back()">Voltar</a> </button>
             </div>
-
           </div>
         </div>
-
-
       </section>
-
     </>
   );
 }

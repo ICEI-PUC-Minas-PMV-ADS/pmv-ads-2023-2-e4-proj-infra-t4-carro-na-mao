@@ -63,6 +63,7 @@ const validarUsuario =()=>{
       setLoading(false)
     }
   }
+
 function salvarDadosLocais (nome,id) {
   const dados_user ={
     'nome':nome,

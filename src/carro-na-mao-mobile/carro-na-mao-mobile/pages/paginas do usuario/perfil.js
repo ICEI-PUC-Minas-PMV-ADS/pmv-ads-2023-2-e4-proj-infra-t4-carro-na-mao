@@ -1,8 +1,8 @@
-import{View,StyleSheet,Pressable,Alert, Modal} from "react-native"
+import{View,StyleSheet,Pressable,Alert, Modal,FlatList, TouchableOpacity} from "react-native"
 import axios from "axios";
 import React, {useState,useEffect} from "react";
 import { Button, FAB } from 'react-native-paper';
-import { RecuperaToken } from "../Autenticação/autenticacao";
+import { RecuperaToken } from "../../Autenticação/autenticacao";
 import { useNavigation,useIsFocused,Link } from '@react-navigation/native';
 import { Dialog, Portal, Text } from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -10,8 +10,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Perfil = ()=> {
 
-    const foco = useIsFocused()
-    const [minhasAvaliacoes,setMinhasAvaliacao]= useState([]) 
+    const foco = useIsFocused() 
     const [meusDados, setMeusDados] = useState([]) 
     const [dadosLocais,setDadosLocais]=useState([])
     const [jwt,setjwt] = useState()
@@ -21,18 +20,18 @@ const Perfil = ()=> {
         async function fetchData() {
             try {
                 const jwtToken = await RecuperaToken();
+                recuperandoDadosLocais()
                 setjwt(jwtToken)
-                await  recuperandoDadosLocais()
-                recuparandoInfromacoesUsuario(jwtToken,dadosLocais.id)
+                
             }catch (error) {
                 console.error('Erro ao recuperar token:', error);
             }
         }
         fetchData()
-        recuperandoDadosLocais()
-        recuparandoInfromacoesUsuario(jwt,dadosLocais.id)
+
     },[foco]);
-     
+
+
     async function recuperandoDadosLocais (){
         const dadosSalvos = await AsyncStorage.getItem('dados_user')
         setDadosLocais(JSON.parse(dadosSalvos))
@@ -44,7 +43,7 @@ const Perfil = ()=> {
         }
         axios.get('https://api-carronamao.azurewebsites.net/api/Cadastro/find-by-userid?id='+id_user+'',{headers}).then(response=>{
             if(response.status==200){
-                setMeusDados(response.data)
+                setMeusDados(response.data)               // console.log(meusDados)
             }
         }).catch(error=>(
             recuperandoDadosLocais(),
@@ -68,30 +67,29 @@ const Perfil = ()=> {
         })
     }
 
-
-
+    
+    
+    
     function confirmarExclusão(){
         Alert.alert('Excluir', 'Deseja realmente continuar com a exclusão ?', [
             {
-              text: 'Cancelar',
+                text: 'Cancelar',
               onPress: () => console.log('Cancel Pressed'),
               style: 'destructive',StyleSheet:{color:'#fff'}
             },
             {text: 'Confirmar', onPress: () => deletarConta()},
-          ]);
+        ]);
     }
-    recuparandoInfromacoesUsuario(jwt,dadosLocais.id)
-
-
+ 
+  
 
     return(
 
         <> 
             <Text>Bem vindo Sr(a)  { dadosLocais.nome}</Text>
-            <Text>Email: {meusDados.email}</Text>
-            <Text>Telefone: {meusDados.telefone}</Text>
-            <Text>endereco: {meusDados.endereco}</Text>
             <Button onPress={()=>confirmarExclusão()}>Deletar conta</Button>
+            <Button onPress={()=>navigation.navigate('avaliacaoUsaurios',{id:dadosLocais.id})}>Carregar minhas avaliacões</Button>
+    
         </>
 
 
@@ -100,6 +98,7 @@ const Perfil = ()=> {
 const styles = StyleSheet.create({
     title: {
       textAlign: 'center',
+      borderWidth:1
     },
   })
   

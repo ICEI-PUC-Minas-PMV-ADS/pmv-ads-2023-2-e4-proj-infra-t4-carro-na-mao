@@ -1,8 +1,8 @@
 import * as React from "react";
 import { BottomNavigation, Text } from 'react-native-paper';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import Avaliacao from "./avaliacao";
-import Perfil from "./perfil";
+import Avaliacao from "../pages/avaliacoes/avaliacao";
+import Perfil from "../pages/paginas do usuario/perfil";
 
 const menu =()=>{
     const [index, setIndex] = React.useState(0);

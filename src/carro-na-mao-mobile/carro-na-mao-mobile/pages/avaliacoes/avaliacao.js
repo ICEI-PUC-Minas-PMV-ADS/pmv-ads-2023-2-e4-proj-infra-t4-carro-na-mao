@@ -2,7 +2,7 @@ import axios from "axios";
 import { View,Text, Button,StyleSheet,FlatList, TouchableOpacity} from "react-native";
 import React, {useState,useEffect} from "react";
 import { FAB } from 'react-native-paper';
-import { RecuperaToken } from "../Autenticação/autenticacao";
+import { RecuperaToken } from "../../Autenticação/autenticacao";
 import { useNavigation,useIsFocused,Link } from '@react-navigation/native';
 
 

@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState,useEffect } from "react";
-import { RecuperaToken } from "../Autenticação/autenticacao";
+import { RecuperaToken } from "../../Autenticação/autenticacao";
 import { View,StyleSheet } from "react-native";
 import { useNavigation, Link } from "@react-navigation/native";
 import { TextInput,Button } from 'react-native-paper'

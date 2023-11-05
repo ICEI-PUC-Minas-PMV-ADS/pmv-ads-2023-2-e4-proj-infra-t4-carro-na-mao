@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import React, { useState } from 'react';
 import '../estilos/Menu.css'
 import { useNavigate } from 'react-router-dom';
-//imports da funcionalidade notificcacao
 import Apps from './Apps';
 
 export function Menu() {
@@ -50,8 +49,8 @@ export function Menu() {
             </ul>
 
           </li>
-        </ul>
-      </nav>
+        </div>
+      
     </>
 
   );

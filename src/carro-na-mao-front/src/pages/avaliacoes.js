@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { Component } from 'react';
+import React from 'react';
 import { useEffect, useState } from 'react';
 import { RecuperaToken } from '../autenticação/chave_de_acesso';
 import { useNavigate, Link } from 'react-router-dom';
@@ -30,31 +30,34 @@ function Avaliacoes() {
 }
 
 
-function avaliar(){
-  const observaceo = document.querySelector("#nome").value
+async function avaliar(){
+  const observaceo = document.querySelector("#obs").value
   const nota = document.querySelector("#nota").value
-  console.log(dados_user)
+  
   const data= {
     "observaceo": observaceo,
     "nota": nota,
     "nomeUsaurio":dados_user.nome,
-    "id_usuario": dados_user.id
+    "id_usuario": dados_user.id,
+    "data":new Date().toLocaleDateString('pt-BR')
   }
   const headers={
-    "Content-Type":"application/json, text/plain, */*",
+    "Content-Type":"application/json",
     "Authorization": 'Bearer ' + token
 }
   axios.post('https://api-carronamao.azurewebsites.net/api/Avaliacao',data,{headers}).then(response=>{
     if(response.status==200){
       alert('ok')
+      console.log(data)
     }
   }).catch(erro=>{
     alert(erro)
+    console.log(data)
   })
 }
 
  async function recuperarDadosLocal(){
-    const dadosSalvos = await localStorage.getItem('dados_user')
+    const dadosSalvos = localStorage.getItem('dados_user')
     setDados(JSON.parse(dadosSalvos))
   }
 
@@ -74,13 +77,13 @@ function avaliar(){
           <div class="container-2">
             <h4>Envie sua mensagem, Reclamação ou Sugestão:</h4>
             <div>
-              <label>Observação:</label>
-              <input type="text" id="nome" placeholder='Digite sua observação' ></input>
+              <label>Titulo:</label>
+              <input type="text" id="nome" placeholder='Digite seu titulo...' ></input>
             </div>
 
             <div>
               <label>Nota:</label>
-              <input type="text" id="nota" placeholder='Insira sua nota...' ></input>
+              <input type="number" id="nota" placeholder='Insira sua nota...' ></input>
             </div>
 
             <div>
@@ -90,14 +93,13 @@ function avaliar(){
               <label>Fone:</label>
               <input type="text" id="fone" placeholder='insira seu telefone...'></input>
 
-        
             </div>
 
             <br></br>
 
             <div>
               <label>Observações:</label><br></br>
-              <textarea class="msg"></textarea>
+              <textarea id="obs"class="msg"></textarea>
             </div>
 
             <br>

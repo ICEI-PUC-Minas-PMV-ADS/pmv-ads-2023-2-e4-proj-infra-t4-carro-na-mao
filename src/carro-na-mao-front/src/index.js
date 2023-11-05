@@ -88,6 +88,7 @@ const router = createBrowserRouter([
       path:'localizacao',
       element:<Localizacao/>
     },
+
     
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));

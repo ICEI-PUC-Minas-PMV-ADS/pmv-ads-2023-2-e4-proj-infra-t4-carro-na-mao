@@ -2,8 +2,8 @@ import axios from "axios";
 import { View,Text, Button,StyleSheet,FlatList, TouchableOpacity} from "react-native";
 import React, {useState,useEffect} from "react";
 import { FAB } from 'react-native-paper';
-import { RecuperaToken } from "../Autenticação/autenticacao";
-import { useNavigation,useIsFocused } from '@react-navigation/native';
+import { RecuperaToken } from "../../Autenticação/autenticacao";
+import { useNavigation,useIsFocused,Link } from '@react-navigation/native';
 
 
 const Avaliacao =()=>{
@@ -19,7 +19,6 @@ const Avaliacao =()=>{
                 console.error('Erro ao recuperar token:', error);
              }
           }
-
             fetchData()
         },[foco]);
 
@@ -44,6 +43,7 @@ const Avaliacao =()=>{
         <Text>{'Usuario: '+item.nomeUsaurio}</Text>
         <Text>{'Avaliação do serviço: '+item.nota}</Text>
         <Text>{'Descrição: '+item.observaceo}</Text>
+        <Text>{'Data da publicação: '+item.data}</Text>
       </View>
   </TouchableOpacity>
 );
@@ -61,6 +61,12 @@ const Avaliacao =()=>{
                 icon="plus"
                 onPress={()=>navigation.navigate('cadastrarAvaliacao')}
             />
+            <FAB
+                //style={styles.fab}
+                icon="plus"
+                onPress={()=>navigation.navigate('Perfil')}
+            />
+          
         </View>
 
     )

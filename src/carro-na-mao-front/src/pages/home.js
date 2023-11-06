@@ -9,6 +9,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import Alert from '@mui/material/Alert';
 import Stack from '@mui/material/Stack';
+import { json } from 'react-router-dom/dist';
 
 function Home() {
   
@@ -44,6 +45,7 @@ const validarUsuario =()=>{
         .then(response =>{
           if(response.status===200){
             setLoading(false)
+            salvarDadosLocais(response.data.nome,response.data.id)
             return navigate("home2")
           }
           else if(response.status===204){
@@ -62,6 +64,16 @@ const validarUsuario =()=>{
     }
   }
 
+function salvarDadosLocais (nome,id) {
+  const dados_user ={
+    'nome':nome,
+    'id':id
+  }
+
+  localStorage.setItem('dados_user',JSON.stringify(dados_user))
+
+
+}
   return (
         <>
          {loading ? (

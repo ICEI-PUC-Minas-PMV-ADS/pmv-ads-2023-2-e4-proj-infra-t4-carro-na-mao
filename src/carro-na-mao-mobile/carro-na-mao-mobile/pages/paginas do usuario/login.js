@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, {useState,useEffect} from "react";
-import { RecuperaToken } from "../Autenticação/autenticacao";
+import { RecuperaToken } from "../../Autenticação/autenticacao";
 import { useNavigation, Link } from "@react-navigation/native";
 import { TextInput,Button } from 'react-native-paper'
 import { View,Text,StyleSheet } from "react-native";
@@ -40,7 +40,7 @@ const login = ()=> {
                 alert("Usurario não cadastrado")
             }
             }).catch(error => {
-                 alert("Usurario não cadastrado")
+                 alert("error")
         })
     }
 

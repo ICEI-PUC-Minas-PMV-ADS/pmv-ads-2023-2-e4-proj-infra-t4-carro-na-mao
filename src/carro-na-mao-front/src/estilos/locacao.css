@@ -1,34 +1,52 @@
 
-#tela{
-    border-radius: 2%;
+#divLocacoes{
+    float: left;
+    text-align: center;
+    line-height: 2em;
+    width: 15%;
+    position: relative;
+    padding: 50px;
+    left: 5%;
+    padding: 22px;
+    color: #fff;
+    background-color: #000;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px rgb(231, 231, 231), 1em 1em 1.4em rgb(190, 187, 187);
 }
 
 #campos{
-    width: 30%;
+    width: 50%;
+    line-height: 2em;
+    color: #fff;
     position: relative;
     left: 10%;
-    top: 5em;
+    top: 0em;
     display: flex;
     flex-direction: column;
     text-align: justify;
-    max-width: 50vw;
-    padding: 22px;
-    background-color: #f4f4f4;
+    max-width: 80vw;
+    padding: 50px;
+    background-color: #000;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 1px 1px 1px rgb(231, 231, 231), 1em 1em 1.4em rgb(190, 187, 187);
 }
 #localRetirada{
     position: relative;
+    background-color: #696969;
+    color: #fff;
+    width: 25%;
     left: 0em;
     height: 3em;
-    border-left: none;
-    border-right: none;
-    border-top: none;
+    border-radius: 5px;
     top: 0em;
 } 
 #categoriaRetirada{
     position: relative;
+    background-color: #696969;
+    color: #fff;
+    width: 25%;
     left: 0em;
     height: 3em;
     border-left: none;
@@ -38,6 +56,9 @@
 }
 #modeloRetirada{
     position: relative;
+    background-color: #696969;
+    color: #fff;
+    width: 25%;
     left: 0em;
     height: 3em;
     border-left: none;
@@ -47,16 +68,19 @@
 }
 #horaRetirada{
     position: relative;
-    width: 21.5%;
-    left: 0em;
+    background-color: #696969;
+    color: #fff;
+    width: 10%;
     border-left: none;
     border-right: none;
     border-top: none;
-    top: 0em;
+    
 } 
 #horaEntrega{
     position: relative;
-    width: 21.5%;
+    background-color: #696969;
+    color: #fff;
+    width: 10%;
     left: 0em;
     border-left: none;
     border-right: none;
@@ -65,6 +89,9 @@
 }
 #valorCategoria{
     position: relative;
+    background-color: #696969;
+    color: #fff;
+    width: 25%;
     left: 0em;
     border-left: none;
     border-right: none;
@@ -73,6 +100,9 @@
 } 
 #custosAd{
     position: relative;
+    background-color: #696969;
+    color: #fff;
+    width: 25%;
     left: 0em;
     height: 3em;
     border-left: none;
@@ -82,8 +112,10 @@
 } 
 #dataRetirada{
     position: relative;
+    background-color: #696969;
+    color: #fff;
+    width: 25%;
     left: 0em;
-    width: 70%;
     border-left: none;
     border-right: none;
     border-top: none;
@@ -91,8 +123,10 @@
 } 
 #dataEntrega{
     position: relative;
+    background-color: #696969;
+    color: #fff;
+    width: 25%;
     left: 0em;
-    width: 70%;
     border-left: none;
     border-right: none;
     border-top: none;
@@ -101,11 +135,11 @@
 
 #btnReservar{
     position: relative;
-    left: 0em;
+    left: 43%;
     top: 0em;
     color:white;
     border-radius: 2em;
-    background-color: black;
+    background-color: #860000;
 }
 #btnReservar:hover{
     color:black;
@@ -114,12 +148,12 @@
 
 #calc{
     position: relative;
-    left: 0em;
+    left: 41.5%;
     top: 0em;
     color:white;
     padding: none;
     border-radius: 2em;
-    background-color: black;
+    background-color: #860000;
 }
 #calc:hover{
     color:black;
@@ -127,8 +161,7 @@
 }
 #vlTotal{
     position: relative;
-    top: 0em;
-    left: 0em;
+    left: 30%;
 }
 #labDtEntrega{
     position: relative;
@@ -177,6 +210,10 @@
     border-right: none;
     border-top: none;
     top: 0em;
+}
+#titulo{
+    position: relative;
+    left: 5%;
 }
 
 

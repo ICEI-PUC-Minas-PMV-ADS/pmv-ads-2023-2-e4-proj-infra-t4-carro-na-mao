@@ -2,6 +2,8 @@
 #divLocacoes{
     float: left;
     text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
     line-height: 2em;
     width: 15%;
     position: relative;
@@ -18,13 +20,15 @@
 #campos{
     width: 50%;
     line-height: 2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #fff;
     position: relative;
     left: 10%;
     top: 0em;
     display: flex;
     flex-direction: column;
-    text-align: justify;
+    text-align: center;
+    align-items: center;
     max-width: 80vw;
     padding: 50px;
     background-color: #000;
@@ -46,7 +50,7 @@
     position: relative;
     background-color: #696969;
     color: #fff;
-    width: 25%;
+    width: 50%;
     left: 0em;
     height: 3em;
     border-left: none;
@@ -58,7 +62,7 @@
     position: relative;
     background-color: #696969;
     color: #fff;
-    width: 25%;
+    width: 50%;
     left: 0em;
     height: 3em;
     border-left: none;
@@ -70,7 +74,7 @@
     position: relative;
     background-color: #696969;
     color: #fff;
-    width: 10%;
+    width: 15%;
     border-left: none;
     border-right: none;
     border-top: none;
@@ -80,7 +84,7 @@
     position: relative;
     background-color: #696969;
     color: #fff;
-    width: 10%;
+    width: 15%;
     left: 0em;
     border-left: none;
     border-right: none;
@@ -91,7 +95,7 @@
     position: relative;
     background-color: #696969;
     color: #fff;
-    width: 25%;
+    width: 45%;
     left: 0em;
     border-left: none;
     border-right: none;
@@ -102,7 +106,7 @@
     position: relative;
     background-color: #696969;
     color: #fff;
-    width: 25%;
+    width: 50%;
     left: 0em;
     height: 3em;
     border-left: none;
@@ -135,33 +139,30 @@
 
 #btnReservar{
     position: relative;
-    left: 43%;
     top: 0em;
-    color:white;
+    color:#fff;
     border-radius: 2em;
-    background-color: #860000;
+    background-color: #696969;
 }
 #btnReservar:hover{
     color:black;
-    background-color: white;
+    background-color: rgb(196, 0, 0);
 }
 
 #calc{
     position: relative;
-    left: 41.5%;
     top: 0em;
     color:white;
     padding: none;
     border-radius: 2em;
-    background-color: #860000;
+    background-color: #696969;
 }
 #calc:hover{
     color:black;
-    background-color: white;
+    background-color: rgb(196, 0, 0);
 }
 #vlTotal{
     position: relative;
-    left: 30%;
 }
 #labDtEntrega{
     position: relative;
@@ -214,6 +215,27 @@
 #titulo{
     position: relative;
     left: 5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-
+#btnRegistro{
+    position: relative;
+    top: 0em;
+    color:#fff;
+    border-radius: 2em;
+    background-color: #696969;
+}
+#btnRegistro:hover{
+    color:black;
+    background-color: rgb(196, 0, 0);
+}
+#btnExcluir{
+    position: relative;
+    top: 0em;
+    color:#fff;
+    border-radius: 2em;
+    background-color: #696969;
+}
+#btnExcluir:hover{
+    color:black;
+    background-color: rgb(196, 0, 0);
+}

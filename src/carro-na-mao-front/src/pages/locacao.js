@@ -193,6 +193,7 @@ function Locacao() {
                     <div className="loading"></div>
                 </div>
             ) : (
+
                 <>
                     <div id="divLocacoes">
                         <ul>
@@ -246,7 +247,7 @@ function Locacao() {
                 <label id="labHrEntrega">Selecione a hora da entrega</label>
                 <input type="time" id="horaEntrega"></input>
 
-                <label id="labValor">Valor/dia</label>
+                <label id="labValor">Valor/dia (Selecione um Modelo)</label>
                 <input type="number" id="valorCategoria"></input>
 
                 <label id="labCustos">Se preferir, contrate um adicional</label>

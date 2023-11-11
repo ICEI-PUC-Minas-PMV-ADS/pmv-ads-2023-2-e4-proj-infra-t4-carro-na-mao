@@ -57,11 +57,12 @@ const login = ()=> {
     return (
 
         <View>
-            <Text style={style.titulo}>Cadastre-se</Text>
+            <Text style={style.titulo}>Entre na sua conta !</Text>
             <View style={style.div}>
                 <TextInput
                     mode='outlined'
                     label="Email"
+                    keyboardType={'email-address'}
                     placeholder="Digite seu email"
                     value={email}
                     onChangeText={email=>setEmail(email)} 
@@ -74,6 +75,7 @@ const login = ()=> {
                     value={senha}
                     onChangeText={senha => setSenha(senha)}
                     style={style.inputemail}
+                    secureTextEntry={true}
                     />
                 <Button style={style.botao} mode="contained" onPress={()=>validarUsuario()} title="Entre">Entre</Button>
                 <Link style={style.link} to='/Cadastro'>Cadastre-se</Link>
@@ -86,8 +88,9 @@ const style = StyleSheet.create({
     titulo:{
         position:'relative',
         top:150,
-        fontSize:40,
-        left:10
+        fontSize:30,
+        left:15,
+        textAlign:'center'
     },
     div:{
        position:'relative',

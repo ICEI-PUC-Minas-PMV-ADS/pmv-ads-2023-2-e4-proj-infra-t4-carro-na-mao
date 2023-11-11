@@ -4,6 +4,7 @@ import { View,Text,StyleSheet } from "react-native";
 import { TextInput,Button } from 'react-native-paper'
 import { RecuperaToken } from "../../Autenticação/autenticacao";
 import { useNavigation } from "@react-navigation/native";
+import {TextInputMask} from'react-native-masked-text'
 
 const Cadastro =()=>{
     
@@ -76,7 +77,11 @@ const enviar =()=>{
                 onChangeText={nome=>setNome(nome)}
                 style={styles.input}
             />
-            <TextInput
+            <TextInputMask
+                type={'datetime'}
+                options={{
+                  format: 'DD/MM/YYYY'
+                }}
                 mode='outlined'
                 placeholder="Data de nascimento"
                 label="Data de nascimento"
@@ -86,13 +91,15 @@ const enviar =()=>{
             />
             <TextInput
                 mode='outlined'
+               
                 label="Endereco"
                 placeholder="Digite seu endereço completo. exp: Rua dos bobs,nº0"
                 value={endereco}
                 onChangeText={endereco=>setEndereco(endereco)}
                 style={styles.input}
             />
-            <TextInput
+            <TextInputMask
+                type={"cpf"}
                 mode='outlined'
                 placeholder="CPF"
                 label="CPF"
@@ -100,7 +107,13 @@ const enviar =()=>{
                 onChangeText={cpf=>setCpf(cpf)}
                 style={styles.input}
                 />
-            <TextInput
+            <TextInputMask
+                type={'cel-phone'}
+                options={{
+                    maskType:'BRL',
+                    withDDD:true,
+                    dddMask:'(99)'
+                    }}
                 mode='outlined'
                 placeholder="Telefone"
                 label="Telefone"
@@ -119,6 +132,7 @@ const enviar =()=>{
             <TextInput
                 mode='outlined'
                 placeholder="Email"
+                textContentType={'emailAddress'}
                 label="Email"
                 value={email}
                 onChangeText={email=>setEmail(email)}

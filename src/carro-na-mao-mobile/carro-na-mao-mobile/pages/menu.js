@@ -1,32 +1,33 @@
-import * as React from "react";
-import { BottomNavigation, Text } from 'react-native-paper';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-import Avaliacao from "../pages/avaliacoes/avaliacao";
-import Perfil from "../pages/paginas do usuario/perfil";
+import * as React from 'react';
+import { Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-const menu =()=>{
-    const [index, setIndex] = React.useState(0);
-    const [routes] = React.useState([
-      { key: 'A', title: '', focusedIcon: 'credit-card-outline',color:'' },
-      {key: 'P',title: 'Perfil', focusedIcon: 'credit-card-outline'}
-      
-    ]);
-  
-    const renderScene = BottomNavigation.SceneMap({
-      A:Avaliacao,
-      P:Perfil
-      
-    });
-  
-    return (
-      <SafeAreaProvider>
-      <BottomNavigation
-        color = "green"
-        navigationState={{ index, routes }}
-        onIndexChange={setIndex}
-         renderScene={renderScene}
-    />
-      </SafeAreaProvider>
-    );
-  };
-export default menu;
+function HomeScreen() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Home!</Text>
+    </View>
+  );
+}
+
+function SettingsScreen() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Settings!</Text>
+    </View>
+  );
+}
+
+const Tab = createBottomTabNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Settings" component={SettingsScreen} />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+}

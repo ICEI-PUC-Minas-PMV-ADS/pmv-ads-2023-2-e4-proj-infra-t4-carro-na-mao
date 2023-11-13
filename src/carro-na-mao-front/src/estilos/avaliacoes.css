@@ -1,0 +1,151 @@
+/* Estilização do contêiner da tela de avaliações */
+.container-1 {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    height: 25px;
+    padding: 20px;
+    background-color: #c5c5c5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+ 
+.container-2 {
+    text-align: justify;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px rgb(231, 231, 231), 1em 1em 1.4em rgb(190, 187, 187);
+}
+
+/* Estilização dos campos de entrada 
+input[type="number"],
+input[type="text"] {
+    width: 98%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+*/
+#nome{
+    width: 98%;
+    padding: 8px;
+    border-bottom: none;
+}
+#sobrenome{
+    width: 98%;
+    padding: 8px;
+    border-bottom: none;
+
+}
+#email{
+    width: 26%;
+    padding: 8px;
+    border-bottom: none;
+   
+}
+#fone{
+    width: 26%;
+    padding: 8px;
+    border-bottom: none;
+}
+#date{
+    width: 26%;
+    padding: 8px;
+    border-bottom: none;
+    top: 2px;
+    height: 17px;
+
+}
+
+/* Estilização do campos observações */
+textarea{
+    width: 93%;
+    padding: 30px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+
+/* Estilização dos campos de checkbox */
+input[type="checkbox"] {
+    margin: 5px 0;
+
+}
+
+/* Estilização do botão de salvar */
+#btnCadastrar {
+    position: relative;
+    left: 55%;
+    top: 0px;
+    width: 20%;
+    padding: 8px;
+    color: white;
+    border-radius: 2em;
+    background-color: black;
+}
+#btnCadastrar:hover{
+    color: black;
+    background-color: transparent;
+}
+#btnVoltar {
+     position: relative;
+    left: 4%;
+    top: 0px;
+    width: 20%;
+    padding: 8px;
+    color: white;
+    border-radius: 2em;
+    background-color: black;
+}
+#btnVoltar:hover{
+    color: black;
+    background-color: transparent;
+}
+#conteudoPagina{
+    position: relative;
+    top: 90px;
+}
+#tituloPagAvaliacao{
+    position: relative;
+    bottom: 13px;
+}
+a{
+    text-decoration:none;
+    color: #fff;
+}
+a:hover{
+    text-decoration:none;
+    color: black;
+}
+#cardAvaliacoes{
+    position: relative;
+    width: 40em;  
+    border-radius: 30px;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-top: 1px solid;
+    padding: 10px;
+}
+#adicionarNovaAvaliacao{
+    position: fixed;
+    top: 40em;
+    left: 100em;
+}
+#registroNota{
+    text-align: right;
+}
+#listaAvaliacao{
+    display: grid;
+    grid-template-columns: repeat(3, 4fr);
+    grid-gap: 10px;
+    position: relative;
+    top: 4em;
+    left: 2em;
+}

@@ -1,0 +1,64 @@
+.containerh1{
+    height: 100vg;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   background: #c2bdbd;
+}
+.containerh2{
+    font-size: 50px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+   
+   
+    padding: auto;
+    margin: 34px 0;
+    border-radius: 8px;
+    box-shadow: #fa7676;
+}
+.containerh3{
+    font-size: 25px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+   
+}
+.main {
+    font-size: 20px;
+    display: flex;
+    color: black;
+    animation: flipti 4s;
+    align-items: center;
+flex-direction: row;
+}
+@keyframes flipti{
+from{
+    transform: rotateX(90deg);
+    }
+    to{
+    transform: rotateX(0deg)
+}}
+
+.buttonSearch {
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s;
+
+}
+.buttonSearch:hover{
+    transform: scaleX(1,4);
+}
+.main h2 {
+    margin: 16px 0;
+    font-size: 39px;
+
+}
+.main span {
+    margin-bottom: 16px;
+    font-weight: bold;
+}

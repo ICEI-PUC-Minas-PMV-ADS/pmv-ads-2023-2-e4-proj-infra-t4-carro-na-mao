@@ -1,0 +1,59 @@
+:root {
+  --cor-fundo: #050505;
+  --cor-rover: #860000;
+  --cor-primaria: #fff;
+}
+
+.drop-menu {
+  margin-top: -1.5em;
+}
+
+.drop-menu ul {
+  background-color: var(--cor-fundo);
+}
+
+.drop-menu ul li {
+  display: inline-block;
+  padding: 0.5em;
+  position: relative;
+}
+
+.drop-menu ul li a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.7em;
+  transition: background .3s;
+}
+
+.drop-menu ul li a:hover {
+  background-color: var(--cor-rover);
+}
+
+/*sub-menu*/
+.drop-menu ul ul {
+  display: none;
+  position: absolute;
+}
+
+.drop-menu ul li:hover ul {
+  display: block;
+}
+
+.drop-menu ul ul {
+  width: 170px;
+}
+
+.drop-menu ul ul li a {
+  display: block;
+}
+
+#selectAdm {
+  justify-content: right;
+  float: right;
+}
+
+#sairButton {
+  justify-content: right;
+  float: right; 
+}

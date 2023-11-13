@@ -14,23 +14,81 @@ O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema 
 O diagrama de fluxo pode ser desenvolvido com “boxes” que possuem internamente a indicação dos principais elementos de interface - tais como menus e acessos - e funcionalidades, tais como editar, pesquisar, filtrar, configurar - e a conexão entre esses boxes a partir do processo de interação. Você pode ver mais explicações e exemplos https://www.lucidchart.com/blog/how-to-make-a-user-flow-diagram.
 
 ![Exemplo de Diagrama de Fluxo](img/diagramafluxo2.jpg)
+![Exemplo de Diagrama de Fluxo](img/Userflow2.png)
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas de Fluxo”.
-
-> **Links Úteis**:
-> - [Fluxograma online: seis sites para fazer gráfico sem instalar nada | Produtividade | TechTudo](https://www.techtudo.com.br/listas/2019/03/fluxograma-online-seis-sites-para-fazer-grafico-sem-instalar-nada.ghtml)
 
 ## Wireframes
 
-![Exemplo de Wireframe](img/wireframe-example.png)
+Telas propostas na concepção do projeto:
 
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
- 
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
+#### Tela de login front-end Mobile.
+![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-login.PNG)
+
+#### Tela de cadastro front-end Mobile.
+![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-cadastro.PNG)
+
+#### Tela de localização front-end Mobile.
+![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-localizacao.PNG)
+
+#### Tela de reservas front-end Mobile.
+![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-reserva.PNG)
+
+#### Tela das minhas reservas front-end Mobile.
+![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-minhaReserva.PNG)
+
+#### Tela de notificação front-end Mobile.
+![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-notificacao.PNG)
+
+#### Tela de vistoria front-end Mobile.
+![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-vistoria.PNG)
+
+#### Tela de avaliação front-end Mobile.
+![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-avaliacao.PNG)
+
+#### Tela de Registro de avaliação front-end Mobile.
+![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-registroAvaliacao.PNG)
+
+
+
+
+#### Tela de login front-end WEB.
+![Exemplo de Wireframe](img/Wireframes/Wireframe-login.jpg)
+
+#### Tela de cadastro front-end WEB.
+![Exemplo de Wireframe](img/Wireframes/wireframe-cadastro.jpg)
+
+#### Tela de estoque front-end WEB.
+![Exemplo de Wireframe](img/Wireframes/wireframe-estoque.jpg)
+
+#### Tela de categoria front-end WEB.
+![Exemplo de Wireframe](img/Wireframes/wireframe-categoria.jpg)
+
+#### Tela de localização front-end WEB.
+![Exemplo de Wireframe](img/Wireframes/wireframe-localizacao.jpg)
+
+#### Tela de Reservas front-end WEB.
+![Exemplo de Wireframe](img/Wireframes/Wireframe-Reserva.jpg)
+
+#### Tela de notificações front-end WEB.
+![Exemplo de Wireframe](img/Wireframes/wireframe-notificacao.jpg)
+
+#### Tela de infrações front-end WEB.
+![Exemplo de Wireframe](img/Wireframes/wireframe-infracoes.jpg)
+
+#### Tela de vistoria front-end WEB.
+![Exemplo de Wireframe](img/Wireframes/Wireframe-Vistoria.jpg)
+
+#### Tela de manutenção front-end WEB.
+![Exemplo de Wireframe](img/Wireframes/Wireframe-Manutencao.jpg)
+
+#### Tela de Avaliação front-end WEB.
+![Exemplo de Wireframe](img/Wireframes/wireframe-avaliacao.jpg)
+
+#### Tela de historico front-end WEB.
+![Exemplo de Wireframe](img/Wireframes/wireframe-historico.jpg)
+
+#### Tela de Dashboard front-end WEB.
+![Exemplo de Wireframe](img/Wireframes/wireframe-dashboard.jpg)
+
+
+OBS.: Etapa em desenvolvimento e constante atualização.

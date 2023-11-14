@@ -6,7 +6,7 @@ import { RecuperaToken } from "../../Autenticação/autenticacao";
 import { useNavigation,useIsFocused,Link } from '@react-navigation/native';
 import { Dialog, Portal, Text } from 'react-native-paper';
 
-const avaliacaoUsaurios =({route})=>{
+const AvaliacaoUsaurios =({route})=>{
     const [minhasAvaliacoes,setMinhasAvaliacao]= useState([])
     const foco = useIsFocused() 
     const {id} = route.params; 
@@ -27,37 +27,43 @@ const avaliacaoUsaurios =({route})=>{
 
 
     async function carregarAvaliacoesdoUsuaroi(token,id){
-
         const headers={
         "Content-Type":"application/json",
         "Authorization": 'Bearer ' + token
     }
     axios.get('https://api-carronamao.azurewebsites.net/api/Avaliacao/find-by-avaliacao?id_user='+id+'',{headers}).then(response=>{
-            if(response.status==200){
+            if(response.status===200){
+                alert(response.status)
                 setMinhasAvaliacao(response.data)
-               
             }
         }).catch(error=>{
-            carregarAvaliacoesdoUsuaroi(jwt)
+            
         })
     }      
+    //console.log(minhasAvaliacoes)
 
-    console.log(minhasAvaliacoes)
 
     const Item = ({item}) => (
-        <View>
-          <Text>{item.data}</Text>
-        </View>
-      );
+        <TouchableOpacity >
+      <View>
+      <Text>{'Nota: '+item.nota+'/5'}</Text>
+        <Text>{'Descrição: '+item.observaceo}</Text>
+      </View>
+  </TouchableOpacity>
+
+       )
     return(
-        <>
+
+        <View>
+            {console.log(minhasAvaliacoes)}
+            <Text>{minhasAvaliacoes.id}</Text>
         <FlatList
         data={minhasAvaliacoes}
         renderItem={Item}
-        keyExtractor={item => item.id}
+        keyExtractor={item => item.data}
       />
-        </>
+        </View>
     )
 }
 
-export default avaliacaoUsaurios
+export default AvaliacaoUsaurios

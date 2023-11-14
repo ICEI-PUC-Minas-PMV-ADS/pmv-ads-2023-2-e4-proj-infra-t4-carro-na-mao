@@ -40,10 +40,10 @@ const Avaliacao =()=>{
   const Item = ({item}) => (
     <TouchableOpacity >
       <View style={styles.informacoe}>
-        <Text>{'Usuario: '+item.nomeUsaurio}</Text>
-        <Text>{'Avaliação do serviço: '+item.nota}</Text>
+        <Text>{'Nota: '+item.nota+'/5'}</Text>
         <Text>{'Descrição: '+item.observaceo}</Text>
-        <Text>{'Data da publicação: '+item.data}</Text>
+        <Text style={styles.usuarioAvaliacao}>{item.nomeUsaurio}</Text>
+        <Text style={styles.dataAvaliacao}>{item.data}</Text>
       </View>
   </TouchableOpacity>
 );
@@ -55,6 +55,7 @@ const Avaliacao =()=>{
                 data={avaliacoes}
                 renderItem={Item}
                 keyExtractor={item => item.id}
+              
                 />
             <FAB
                 style={styles.fab}
@@ -62,7 +63,7 @@ const Avaliacao =()=>{
                 onPress={()=>navigation.navigate('cadastrarAvaliacao')}
             />
             <FAB
-                //style={styles.fab}
+                style={styles.fab2}
                 icon="plus"
                 onPress={()=>navigation.navigate('Perfil')}
             />
@@ -76,14 +77,27 @@ const styles = StyleSheet.create({
       position: 'absolute',
       margin: 16,
       right: 0,
-      top: 550,
+      top: 50,
     },
+    fab2:{position: 'absolute',
+    margin: 16,
+    right: 0,
+    top: 550,
+  },
     lista:{padding:3},
     informacoe:{
         padding:35,
         width:370,
         left:10,
         position:'relative',
+    },
+    dataAvaliacao:{
+        position:'relative',
+        left:200
+    },
+    usuarioAvaliacao:{
+        position:'relative',
+        top:15
     }
   })
 export default Avaliacao

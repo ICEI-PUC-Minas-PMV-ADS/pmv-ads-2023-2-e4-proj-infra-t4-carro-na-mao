@@ -5,6 +5,7 @@ import { useNavigation, Link } from "@react-navigation/native";
 import { TextInput,Button } from 'react-native-paper'
 import { View,Text,StyleSheet } from "react-native";
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import estiloLogin from "../../estilos/estiloLogin";
 const login = ()=> {
    
     const [email,setEmail] = useState()
@@ -56,9 +57,9 @@ const login = ()=> {
 
     return (
 
-        <View>
-            <Text style={style.titulo}>Entre na sua conta !</Text>
-            <View style={style.div}>
+        <View style={estiloLogin.body}>
+            <Text style={estiloLogin.titulo}>Entre na sua conta !</Text>
+            <View style={estiloLogin.div}>
                 <TextInput
                     mode='outlined'
                     label="Email"
@@ -66,7 +67,11 @@ const login = ()=> {
                     placeholder="Digite seu email"
                     value={email}
                     onChangeText={email=>setEmail(email)} 
-                    style={style.input}
+                    style={estiloLogin.input}
+                    activeOutlineColor="#fff"
+                    textColor="#fff"
+                    underlineColor="#fff"
+                    outlineColor="#fff"
                     />
                 <TextInput
                     mode='outlined'
@@ -74,55 +79,19 @@ const login = ()=> {
                     placeholder="Digite sua senha"
                     value={senha}
                     onChangeText={senha => setSenha(senha)}
-                    style={style.inputemail}
+                    style={estiloLogin.inputemail}
                     secureTextEntry={true}
+                    activeOutlineColor="#fff"
+                    textColor="#fff"
+                    underlineColor="#fff"
+                    outlineColor="#fff"
                     />
-                <Button style={style.botao} mode="contained" onPress={()=>validarUsuario()} title="Entre">Entre</Button>
-                <Link style={style.link} to='/Cadastro'>Cadastre-se</Link>
+                <Button style={estiloLogin.botao} mode="contained" onPress={()=>validarUsuario()} title="Entre">Entre</Button>
+                <Link style={estiloLogin.link} to='/Cadastro'>Cadastre-se</Link>
             </View>
         </View>
     )
 }
 
-const style = StyleSheet.create({
-    titulo:{
-        position:'relative',
-        top:150,
-        fontSize:30,
-        left:15,
-        textAlign:'center'
-    },
-    div:{
-       position:'relative',
-       top:190,
-       padding:5
-
-    },
-    input: {
-        position:'relative',
-        left:5,
-        width:370
-    },
-    inputemail:{
-            position:'relative',
-            top:10,
-            width:370,
-            left:5,
-    },
-    botao:{
-        width:200,
-        top:100,
-        left:90
-
-   },
-   link:{
-        position:'relative',
-        top:120,
-        left:160
-   }
-
-})
-  
-  
 
 export default login

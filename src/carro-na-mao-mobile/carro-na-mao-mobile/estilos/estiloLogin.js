@@ -3,7 +3,7 @@ import {StyleSheet } from "react-native";
 export default StyleSheet.create({
     titulo:{
         position:'relative',
-        top:150,
+        top:0,
         fontSize:30,
         left:15,
         textAlign:'center',
@@ -11,7 +11,7 @@ export default StyleSheet.create({
     },
     div:{
        position:'relative',
-       top:190,
+       top:80,
        padding:5
 
     },
@@ -45,6 +45,13 @@ export default StyleSheet.create({
    body:{
         flex:1,
         backgroundColor:'#1F2024'
+   },
+   logo:{
+    width: 350,
+    height: 200,
+    left:22,
+    position:'relative'
    }
+   
 
 })

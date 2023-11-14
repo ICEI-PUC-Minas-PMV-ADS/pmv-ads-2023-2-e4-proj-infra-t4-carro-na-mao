@@ -3,7 +3,7 @@ import React, {useState,useEffect} from "react";
 import { RecuperaToken } from "../../Autenticação/autenticacao";
 import { useNavigation, Link } from "@react-navigation/native";
 import { TextInput,Button } from 'react-native-paper'
-import { View,Text,StyleSheet } from "react-native";
+import { View,Text,Image } from "react-native";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import estiloLogin from "../../estilos/estiloLogin";
 const login = ()=> {
@@ -58,6 +58,10 @@ const login = ()=> {
     return (
 
         <View style={estiloLogin.body}>
+            <Image
+                source={require('../../img/logo.png')}
+                style={estiloLogin.logo}
+            />
             <Text style={estiloLogin.titulo}>Entre na sua conta !</Text>
             <View style={estiloLogin.div}>
                 <TextInput

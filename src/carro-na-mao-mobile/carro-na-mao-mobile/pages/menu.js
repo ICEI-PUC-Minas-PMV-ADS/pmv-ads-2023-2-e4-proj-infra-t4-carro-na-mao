@@ -2,6 +2,7 @@ import * as React from "react";
 import { BottomNavigation, Text } from 'react-native-paper';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import Avaliacao from "../pages/avaliacoes/avaliacao";
+import Vistorias from "../pages/vistorias/cadastrarVistoria";
 import Perfil from "../pages/paginas do usuario/perfil";
 
 const menu =()=>{

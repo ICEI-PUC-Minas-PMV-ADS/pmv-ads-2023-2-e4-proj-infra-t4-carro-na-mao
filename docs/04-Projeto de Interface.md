@@ -17,10 +17,38 @@ O diagrama de fluxo pode ser desenvolvido com “boxes” que possuem internamen
 ![Exemplo de Diagrama de Fluxo](img/Userflow2.png)
 
 
-
 ## Wireframes
 
 Telas propostas na concepção do projeto:
+
+#### Tela de login front-end Mobile.
+![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-login.PNG)
+
+#### Tela de cadastro front-end Mobile.
+![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-cadastro.PNG)
+
+#### Tela de localização front-end Mobile.
+![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-localizacao.PNG)
+
+#### Tela de reservas front-end Mobile.
+![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-reserva.PNG)
+
+#### Tela das minhas reservas front-end Mobile.
+![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-minhaReserva.PNG)
+
+#### Tela de notificação front-end Mobile.
+![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-notificacao.PNG)
+
+#### Tela de vistoria front-end Mobile.
+![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-vistoria.PNG)
+
+#### Tela de avaliação front-end Mobile.
+![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-avaliacao.PNG)
+
+#### Tela de Registro de avaliação front-end Mobile.
+![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-registroAvaliacao.PNG)
+
+
 
 
 #### Tela de login front-end WEB.

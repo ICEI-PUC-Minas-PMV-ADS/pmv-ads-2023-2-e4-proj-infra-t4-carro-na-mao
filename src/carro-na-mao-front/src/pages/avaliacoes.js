@@ -31,13 +31,13 @@ function Avaliacoes() {
 
 
 async function avaliar(){
-  const observaceo = document.querySelector("#obs").value
+  const observacao = document.querySelector("#obs").value
   const nota = document.querySelector("#nota").value
   
   const data= {
-    "observaceo": observaceo,
+    "observacao": observacao,
     "nota": nota,
-    "nomeUsaurio":dados_user.nome,
+    "nomeUsuario":dados_user.nome,
     "id_usuario": dados_user.id,
     "data":new Date().toLocaleDateString('pt-BR')
   }
@@ -104,7 +104,7 @@ async function avaliar(){
 
             <br>
             </br>
-o
+
             <div>
               <button id="btnCadastrar" onClick={avaliar}>Enviar Avaliação</button>
               <button id='btnVoltar'> <a href="javascript:history.back()">Voltar</a> </button>

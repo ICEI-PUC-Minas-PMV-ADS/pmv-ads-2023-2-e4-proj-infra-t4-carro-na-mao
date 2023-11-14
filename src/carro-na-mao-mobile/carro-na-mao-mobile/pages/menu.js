@@ -1,7 +1,14 @@
+
 import * as React from 'react';
 import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { BottomNavigation, Text } from 'react-native-paper';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import Avaliacao from "../pages/avaliacoes/avaliacao";
+import Vistorias from "../pages/vistorias/cadastrarVistoria";
+import Perfil from "../pages/paginas do usuario/perfil";
+
 
 function HomeScreen() {
   return (

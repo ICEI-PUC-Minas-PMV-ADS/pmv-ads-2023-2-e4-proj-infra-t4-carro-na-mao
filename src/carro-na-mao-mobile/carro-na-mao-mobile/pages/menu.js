@@ -1,8 +1,12 @@
+
 import * as React from 'react';
 import { BottomNavigation} from 'react-native-paper';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import perfil from '../pages/paginas do usuario/perfil'
 import Avaliacao from '../pages/avaliacoes/avaliacao';
+import { NavigationContainer } from '@react-navigation/native';
+import Vistorias from "../pages/vistorias/cadastrarVistoria";
+import Perfil from "../pages/paginas do usuario/perfil";
 
 const Menu =()=>{
 const [index, setIndex] = React.useState(0);

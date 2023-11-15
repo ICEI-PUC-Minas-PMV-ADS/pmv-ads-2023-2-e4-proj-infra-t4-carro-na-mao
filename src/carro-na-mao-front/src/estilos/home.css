@@ -1,36 +1,42 @@
 #camposHome {
     position: relative;
-    top: 50px;
-    left:1%;
+    top: 35px;
+    left: 1%;
     text-align: justify;
-    max-width: 50vw;
-    height: 40vh;
+    max-width: 45vw;
+    height: 85vh;
     margin: 0 auto;
     padding: 22px;
-    background-color: #f4f4f4;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    background-image: linear-gradient(45deg, rgb(75, 74, 74), rgb(240, 237, 237));
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    box-shadow:1px 1px 1px rgb(231, 231, 231), 1em 1em 1.4em rgb(190, 187, 187);
 }
-#logoHome{
-    width: 150px;
+
+#logoHome {
+    width: 320px;
     position: relative;
-    left: 50%;
+    left: 2%;
+    display: flex;
 
 }
-#tituloHome{
+
+#tituloHome {
     position: relative;
-    bottom: 3.5em;
+    left: 6%;
+    bottom: 3em;
+    font-size: 2em;
+
 }
-#elementosCampos{
+
+#elementosCampos {
     position: relative;
-    left: 35%;
+    left: 27%;
     display: flex;
-    flex-direction: column;   
-    top: -23px;
+    flex-direction: column;
+    top: -100px;
 }
+
 #carregamento {
     display: flex;
     flex-direction: column;
@@ -38,57 +44,79 @@
     position: relative;
     left: 50%;
     top: 20em;
-  
-  }
-  #emailHome{
-    top: 1em;
-    width: 20em;
+
+}
+
+#emailHome {
+    top: -7em;
+    width: 25em;
     position: relative;
-    padding: 10px;
+    padding: 15px;
     margin: 5px 0;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 7px;
     border-left: none;
     border-right: none;
     border-top: none;
     border-bottom: none;
-  }
-  #senhaHome{  
-    top: 2em;
-    width: 20em;
+}
+
+#senhaHome {
+    top: -6em;
+    width: 25em;
     position: relative;
-    padding: 10px;
+    padding: 15px;
     margin: 5px 0;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 7px;
     border-left: none;
     border-right: none;
     border-top: none;
     border-bottom: none;
-  }
-#link{
+}
+
+#naoTemCadastro {
     position: relative;
-    top: 3em;
+    top: -3em;
     left: 6em;
     color: black;
-    }
-#btnEntrar{
-    color:white;
-    padding: 2px;
-    border-radius: 2em;
+}
+
+#link {
+    position: relative;
+    top: -4em;
+    left: 8em;
+    color: #007bff;
+}
+
+#btnEntrar {
+    color: white;
+    padding: 12px;
+    border-radius: 20em;
     background-color: black;
     position: relative;
-    top:39px;
-    width: 20em;
+    top: -4.5em;
+    width: 27em;
 }
-#camposHome > input{
+
+#camposHome>input {
     position: relative;
     padding: 10px;
     margin: 5px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #cfc4c4;
     border-radius: 3px;
 }
-#btnEntrar:hover{
-    color:black;
-    background-color: white;
-  }
+
+#btnEntrar:hover {
+    color: black;
+    background-color: rgb(169, 25, 25);
+}
+
+#todosOsDireitos {
+    position: relative;
+    top: 8em;
+    left: 1em;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+

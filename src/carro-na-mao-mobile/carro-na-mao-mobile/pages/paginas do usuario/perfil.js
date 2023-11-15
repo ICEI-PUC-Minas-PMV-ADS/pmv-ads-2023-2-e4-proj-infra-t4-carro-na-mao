@@ -32,8 +32,8 @@ const Perfil = ()=> {
         
     },[foco]);
     
-   // recuperandoDadosLocais()
-    //recuparandoInfromacoesUsuario(jwt,dadosLocais.id)
+    recuperandoDadosLocais()
+    recuparandoInfromacoesUsuario(jwt,dadosLocais.id)
 
     async function recuperandoDadosLocais (){
         const dadosSalvos = await AsyncStorage.getItem('dados_user')
@@ -87,7 +87,7 @@ const Perfil = ()=> {
     return(
         <View> 
             <Card>
-        {}
+    
                 <Card.Content type={'contained'}>
                     <Text style={styles.title}> { dadosLocais.nome}</Text>
                     <Text style={styles.email}>Email: {meusDados.email}</Text>
@@ -95,7 +95,7 @@ const Perfil = ()=> {
                 </Card.Content>
             </Card>
             <Button onPress={()=>confirmarExclusão()}>Deletar conta</Button>
-            <Button onPress={()=>navigation.navigate('avaliacaoUsaurios',{id:dadosLocais.id})}>Carregar minhas avaliacões</Button>
+          
     
         </View>
 

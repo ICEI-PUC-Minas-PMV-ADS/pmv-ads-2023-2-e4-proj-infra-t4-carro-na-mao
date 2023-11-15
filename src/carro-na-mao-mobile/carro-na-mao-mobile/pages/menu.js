@@ -11,26 +11,26 @@ import Perfil from "../pages/paginas do usuario/perfil";
 const Menu =()=>{
 const [index, setIndex] = React.useState(0);
 const [routes] = React.useState([
-  { key: 'T', title: '', focusedIcon: 'credit-card-outline',color:'#3F51B5' },
-  { key: 'av', title: 'Avaliacao', focusedIcon: 'credit-card-outline' }
+  { key: 'av', title: 'Avaliacao', focusedIcon: 'star-outline' },
+  { key: 'T', title: 'Perfil', focusedIcon: 'account' },
  
 ]);
 
 const renderScene = BottomNavigation.SceneMap({
-  T:perfil,
-  av:Avaliacao
+  av:Avaliacao,
+  T:perfil
 });
 
 return (
   <SafeAreaProvider>
   <BottomNavigation
-    color = "green"
+    color = '#8F9098'
     navigationState={{ index, routes }}
-    activeColor='green'
-    inactiveColor='blue'
+    activeColor='#8F9098'
+    inactiveColor='#fff'
     onIndexChange={setIndex}
      renderScene={renderScene}
-     barStyle={{ backgroundColor: 'blue' }}
+     barStyle={{ backgroundColor: '#1F2024' }}
 />
   </SafeAreaProvider>
 );

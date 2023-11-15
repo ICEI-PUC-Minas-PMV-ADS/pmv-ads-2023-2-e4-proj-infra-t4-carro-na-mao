@@ -2,7 +2,6 @@ import {createNativeStackNavigator} from'@react-navigation/native-stack'
 import { NavigationContainer } from '@react-navigation/native'
 import login from '../pages/paginas do usuario/login'
 import Avaliacao from '../pages/avaliacoes/avaliacao'
-
 import Cadastro from '../pages/paginas do usuario/cadastro'
 import cadastrarAvaliacao from '../pages/avaliacoes/cadastrarAvaliacao'
 import CadastrarVistoria from '../pages/vistorias/cadastrarVistoria'

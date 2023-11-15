@@ -1,33 +1,35 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { BottomNavigation} from 'react-native-paper';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import perfil from '../pages/paginas do usuario/perfil'
+import Avaliacao from '../pages/avaliacoes/avaliacao';
 
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home!</Text>
-    </View>
-  );
-}
+const Menu =()=>{
+const [index, setIndex] = React.useState(0);
+const [routes] = React.useState([
+  { key: 'T', title: '', focusedIcon: 'credit-card-outline',color:'#3F51B5' },
+  { key: 'av', title: 'Avaliacao', focusedIcon: 'credit-card-outline' }
+ 
+]);
 
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings!</Text>
-    </View>
-  );
-}
+const renderScene = BottomNavigation.SceneMap({
+  T:perfil,
+  av:Avaliacao
+});
 
-const Tab = createBottomTabNavigator();
+return (
+  <SafeAreaProvider>
+  <BottomNavigation
+    color = "green"
+    navigationState={{ index, routes }}
+    activeColor='green'
+    inactiveColor='blue'
+    onIndexChange={setIndex}
+     renderScene={renderScene}
+     barStyle={{ backgroundColor: 'blue' }}
+/>
+  </SafeAreaProvider>
+);
+};
 
-export default function App() {
-  return (
-    <NavigationContainer>
-      <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Settings" component={SettingsScreen} />
-      </Tab.Navigator>
-    </NavigationContainer>
-  );
-}
+export default Menu

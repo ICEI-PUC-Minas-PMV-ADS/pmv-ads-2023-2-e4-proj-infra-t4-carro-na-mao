@@ -5,7 +5,7 @@ import Avaliacao from '../pages/avaliacoes/avaliacao'
 import Cadastro from '../pages/paginas do usuario/cadastro'
 import cadastrarAvaliacao from '../pages/avaliacoes/cadastrarAvaliacao'
 import Perfil from '../pages/paginas do usuario/perfil'
-import menu from '../pages/menu'
+import Menu from '../pages/menu'
 import avaliacaoUsaurios from '../pages/avaliacoes/avaliacoesEspcificasPorusuario'
 //import Cadastro from '../pages/cadastro'
 const stack = createNativeStackNavigator()
@@ -13,7 +13,14 @@ const stack = createNativeStackNavigator()
 const Main= ()=>{
     return(
         <NavigationContainer independent={true}>
-            <stack.Navigator>
+            <stack.Navigator
+              screenOptions={{
+                    headerStyle: {
+                        backgroundColor: '#1F2024', // Substitua 'blue' pela cor desejada
+                    },
+                    headerTintColor: 'white', // Cor do texto do cabeçalho
+                    }}      
+            >
                 <stack.Screen
                     name='login'
                     component={login}
@@ -25,21 +32,25 @@ const Main= ()=>{
                     options={{header:()=>null}}
                 />
                 <stack.Screen
+                    name='menu'
+                    component={Menu}
+                    options={{header:()=>null}}
+                />
+                <stack.Screen
                     name='Avalicao'
                     component={Avaliacao}
+                    options={{ title: 'Avaliações' }}
                 />
                  <stack.Screen
                     name='cadastrarAvaliacao'
                     component={cadastrarAvaliacao}
+                    options={{ title: 'Adicionar nova avaliação' }}
                 />
                  <stack.Screen
                     name='Perfil'
                     component={Perfil}
                 />
-                <stack.Screen
-                    name='avaliacaoUsaurios'
-                    component={avaliacaoUsaurios}
-                />
+               
 
             </stack.Navigator>
         </NavigationContainer>

@@ -3,15 +3,15 @@ import {StyleSheet } from "react-native";
 export default StyleSheet.create({
     titulo:{
         position:'relative',
-        top:0,
+        top:70,
         fontSize:30,
-        left:15,
+        left:10,
         textAlign:'center',
         color:'#fff'
     },
     div:{
        position:'relative',
-       top:80,
+       top:110,
        padding:5
 
     },
@@ -50,7 +50,8 @@ export default StyleSheet.create({
     width: 350,
     height: 200,
     left:22,
-    position:'relative'
+    position:'relative',
+    top:39
    }
    
 

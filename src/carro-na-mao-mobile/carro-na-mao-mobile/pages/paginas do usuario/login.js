@@ -34,7 +34,7 @@ const login = ()=> {
          axios.get('https://api-carronamao.azurewebsites.net/api/Cadastro/find-by-email/?email='+email+'&senha='+senha+'',{headers})
             .then(response =>{
                 if(response.status===200){
-                    salvarDadosLocal(response.data.nome,response.data.id)
+                    salvarDadosLocal(response.data.nome,response.data.id,response.data.email,response.data.telefone,response.data.dataNacimento,response.data.endereco)
                     navigation.navigate("Avalicao")
                     //navigation.navigate("cadastrarVistoria")
             }
@@ -46,10 +46,14 @@ const login = ()=> {
         })
     }
 
-    async function salvarDadosLocal (nome,id){
+    async function salvarDadosLocal (nome,id,email,telefone,dataNascimento,endereco){
         const dados_user = {
             'id':id,
-            'nome':nome
+            'nome':nome,
+            'endereceo':endereco,
+            'email':email,
+            'telefone':telefone,
+            'dataNascimento':dataNascimento
         }
         AsyncStorage.setItem('dados_user',JSON.stringify(dados_user))
         

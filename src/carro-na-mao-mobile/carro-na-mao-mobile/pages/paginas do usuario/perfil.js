@@ -1,11 +1,12 @@
-import{View,StyleSheet,Pressable,Alert, Modal,FlatList, TouchableOpacity} from "react-native"
+import{View,Alert} from "react-native"
 import axios from "axios";
 import React, {useState,useEffect} from "react";
-import { Button, FAB,Card } from 'react-native-paper';
+import { Card,Button,Avatar, Icon, MD3Colors,Divider } from 'react-native-paper';
 import { RecuperaToken } from "../../Autenticação/autenticacao";
-import { useNavigation,useIsFocused,Link } from '@react-navigation/native';
-import { Dialog, Portal, Text } from 'react-native-paper';
+import { useNavigation,useIsFocused,Link} from '@react-navigation/native';
+import {Text } from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import estiloPerfil from "../../estilos/estiloPerfil";
 
 
 const Perfil = ()=> {
@@ -22,6 +23,7 @@ const Perfil = ()=> {
                 const jwtToken = await RecuperaToken();
                 setjwt(jwtToken)
                 recuperandoDadosLocais()
+
                 
             }catch (error) {
                 console.error('Erro ao recuperar token:', error);
@@ -32,24 +34,22 @@ const Perfil = ()=> {
         
     },[foco]);
     
-   // recuperandoDadosLocais()
-    //recuparandoInfromacoesUsuario(jwt,dadosLocais.id)
-
+   
     async function recuperandoDadosLocais (){
         const dadosSalvos = await AsyncStorage.getItem('dados_user')
         setDadosLocais(JSON.parse(dadosSalvos))
     }
 
-    async function recuparandoInfromacoesUsuario(token,id_user){
-         const headers={
+    async function recuparandoInfromacoesUsuario(token){
+        const headers={
             "Authorization": 'Bearer ' + token
         }
-        axios.get('https://api-carronamao.azurewebsites.net/api/Cadastro/find-by-userid?id='+id_user+'',{headers}).then(response=>{
+        axios.get('https://api-carronamao.azurewebsites.net/api/Cadastro/find-by-userid?id='+dadosSalvos.id+'',{headers}).then(response=>{
             if(response.status==200){
                 setMeusDados(response.data)              
             }
         }).catch(error=>(
-            recuperandoDadosLocais(),
+
             recuparandoInfromacoesUsuario(jwt,dadosLocais.id)
         ))
     }
@@ -85,38 +85,31 @@ const Perfil = ()=> {
     }
  
     return(
-        <View> 
-            <Card>
-        {}
+        <View style={estiloPerfil.body}> 
+            <Card  style={estiloPerfil.card}>
                 <Card.Content type={'contained'}>
-                    <Text style={styles.title}> { dadosLocais.nome}</Text>
-                    <Text style={styles.email}>Email: {meusDados.email}</Text>
-                    <Text style={styles.telefone}>Telefone: {meusDados.telefone}</Text>
+                    <Avatar.Icon style={estiloPerfil.fotoUsuario } color={'#fff'}size={80} icon="account" />
+                    <Text style={estiloPerfil.title}> { dadosLocais.nome}</Text>
+                    <Icon source="email" color={'#fff'}size={20}/>
+                    <Text style={estiloPerfil.email}>{dadosLocais.email}</Text>
+                    <Icon source="phone" color={'#fff'} size={20}/>
+                    <Text style={estiloPerfil.telefone}>{dadosLocais.telefone}</Text>
+                    <Icon source="calendar-month-outline"color={'#fff'} size={20}/>
+                    <Text style={estiloPerfil.dataNascimento}>{dadosLocais.dataNascimento}</Text>
                 </Card.Content>
             </Card>
-            <Button onPress={()=>confirmarExclusão()}>Deletar conta</Button>
-            <Button onPress={()=>navigation.navigate('avaliacaoUsaurios',{id:dadosLocais.id})}>Carregar minhas avaliacões</Button>
-    
+            <View style={estiloPerfil.acessoRapido}>
+                <Text style={{color:'#fff',fontSize:26}}>Acesso Rápido</Text>
+                <Text>{'/n'}</Text> 
+                <Link  style={{color:'#fff'}} to='/Avalicao'>Avaliações</Link> 
+                <Text>{'/n'}</Text>
+                <Divider />
+                <Text>{'/n'}</Text>
+                <Link  style={{color:'#fff'}} to='/cadastrarVistoria'>Vistorias</Link>      
+            </View>
+            <Button style={estiloPerfil.apagar} onPress={()=>confirmarExclusão()} textColor={'red'} title="Deletar minha conta">Deletar minha conta</Button>
         </View>
-
-
     )
 }
-const styles = StyleSheet.create({
-    title: {
-      textAlign: 'center',
-      fontSize:20
-    },
-    email:{
-        position:'relative',
-        top:20
-    },
-    telefone:{
-        position:'relative',
-        top:3,
-        left:200
-    }
-  })
-  
 
 export default Perfil;

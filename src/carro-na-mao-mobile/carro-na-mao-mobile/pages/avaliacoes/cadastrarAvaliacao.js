@@ -6,6 +6,7 @@ import { useNavigation, Link } from "@react-navigation/native";
 import { TextInput,Button } from 'react-native-paper'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { format } from 'date-fns';
+import estiloAvaliacoes from "../../estilos/estiloAvaliacoes";
 const cadastrarAvaliacao =()=> {
 
     const [token,setToken]=useState(null)
@@ -56,57 +57,54 @@ const cadastrarAvaliacao =()=> {
     }
     
     return(
-        <View>
+        <View style={estiloAvaliacoes.body}>
+            <View style={estiloAvaliacoes.camposCadastroAvalaicao}>
+
             <TextInput
             placeholder="Observação"
             mode='outlined'
             label='Observação'
-            style={styles.input}
+            style={estiloAvaliacoes.input}
             value={observacao}
             onChangeText={observacao=>setObservao(observacao)}
+            activeOutlineColor="#fff"
+            textColor="#fff"
+            underlineColor="#fff"
+            outlineColor="#fff"
             />
             <TextInput
-            placeholder="Nota de 0 a 10"
+            placeholder="Nota de 0 a 5"
             label='Nota'
             mode='outlined'
-            style={styles.input}
+            style={estiloAvaliacoes.input}
             value={nota}
             onChangeText={nota=>setNotas(nota)}
+            maxLength={1}
+            keyboardType="numeric"
+            activeOutlineColor="#fff"
+            textColor="#fff"
+            underlineColor="#fff"
+            outlineColor="#fff"
             />
 
             <TextInput
             placeholder="Telefone"
             label='Telefone'
             mode='outlined'
-            style={styles.input}
+            style={estiloAvaliacoes.input}
             value={telefone}
             onChangeText={telefone=>setTelefone(telefone)}
+            activeOutlineColor="#fff"
+            textColor="#fff"
+            underlineColor="#fff"
+            outlineColor="#fff"
             
             />
-            <Button style={styles.botao} mode="contained" onPress={()=>registrarAvaliacao()}>Salvar</Button>
+            <Button style={estiloAvaliacoes.botao} mode="contained" onPress={()=>registrarAvaliacao()}>Salvar</Button>
+            </View>
         </View>
     )
 
 }
-const styles = StyleSheet.create({
-    titulo:{
-     position:'relative',
-     top:60,
-     fontSize:30,
-     left:10
-    },
-     campos:{
-         position:'relative',
-         top:90
-     },
-     input: {
-       height: 40,
-       margin: 12
-     },
-     botao:{
-         width:200,
-         top:50,
-         left:90
-    }
-   });
+
 export default cadastrarAvaliacao;

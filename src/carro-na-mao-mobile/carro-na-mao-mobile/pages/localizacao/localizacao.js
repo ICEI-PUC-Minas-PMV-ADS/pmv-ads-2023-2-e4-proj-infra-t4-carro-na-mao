@@ -3,21 +3,45 @@ import { StatusBar } from 'expo-status-bar';
 import { useRef, useState, useEffect } from 'react';
 import { RecuperaToken } from "../../Autenticação/autenticacao";
 import { Text, View, TextInput } from 'react-native';
-import MapView, {PROVIDER_GOOGLE } from 'react-native-maps';
+import MapView, {Marker,PROVIDER_GOOGLE } from 'react-native-maps';
 import estiloLocalizacao from '../../estilos/estiloLocalizacao';
-import {LOCAL1,LOCAL2,DEFAULT} from '../../enum/localizacao';
 
 
 // npx expo install react-native-maps
 // npx expo install expo-sharing
 // npx expo install expo-file-system
 
+let locationsOfInterest = [
+  {
+    title: "R. São Paulo, 323-225 - Centro - BH",
+    location: {
+      latitude: -19.915823,
+      longitude: -43.939082
+    },
+    description: "Seu carro está aqui!"
+  }
+]
+
+let idLocal;
+
 export default function Localizacao() {
   const [inputValue, setInputValue] = useState(''); 
-  const [localizacaoEnum, setLocalizacaoEnum] = useState(DEFAULT);
   const [showDivs, setShowDivs] = useState(false);
   const [token,setToken]=useState(null)
   const mapRef = useRef();
+
+  const showLocationsOfInterest = () => {
+    return locationsOfInterest.map((item, index) => {
+      return (
+        <Marker 
+          key={index}
+          coordinate={item.location}
+          title={item.title}
+          description={item.description}
+        />
+      )
+    });
+  };
 
   useEffect(() => {
     async function fetchData() {
@@ -43,31 +67,17 @@ export default function Localizacao() {
         .then(response => {
             console.log(response.status);
             if (response.status === 200) {
-                const idLocal = response.data.id_local;
+                idLocal = response.data.id_local;
                 console.log(idLocal);
-                const localEnum = getLocalizacao(idLocal);
-                console.log("PEGANDO INFORMAÇÂO ENUM: "+ localEnum);
-                setLocalizacaoEnum(localEnum);
-                console.log(localizacaoEnum);
-
                 setShowDivs(true);
+            } else if(response.status != 200){
+              alert("Código de Locação não encontrado.");
             }
         })
         .catch(error => {
             console.log(error);
         })
   }
-  
-  const getLocalizacao = (idLocal) => {
-    switch (idLocal) {
-      case 1:
-        return LOCAL1.lat;
-      case 2:
-        return LOCAL2;
-      default:
-        return DEFAULT;
-    }
-  };
 
   const onRegionChange = (region) => {
     console.log(region);
@@ -75,6 +85,7 @@ export default function Localizacao() {
 
   return (
     <View style={estiloLocalizacao.container}>
+      <Text>Insira abaixo o código da sua locação</Text>
       <TextInput
         style={estiloLocalizacao.input}
         placeholder="Insira o número da sua Locação"
@@ -83,15 +94,19 @@ export default function Localizacao() {
         value={inputValue}
       />
       {showDivs && (
+        <>
+        {idLocal !== 1 ? (
+            <Text style={estiloLocalizacao.mapOverlay}>Local indisponível</Text>
+          ) : (
         <MapView
         provider={PROVIDER_GOOGLE}
         ref={mapRef} 
         style={estiloLocalizacao.map}
         onRegionChange={onRegionChange}
         initialRegion={{
-          latitude: localizacaoEnum.lat,
+          latitude: -19.915823,
           latitudeDelta: 0.00488597828227,
-          longitude: localizacaoEnum.lgn,
+          longitude: -43.939082,
           longitudeDelta: 0.0040213018655,
         }}
         customMapStyle={estiloLocalizacao.mapJson}
@@ -99,6 +114,8 @@ export default function Localizacao() {
         {showLocationsOfInterest()}
         <Text style={estiloLocalizacao.mapOverlay}>Local de Retirada</Text>
       </MapView>
+      )}
+      </>
       )}
       <StatusBar style="auto" />
     </View>

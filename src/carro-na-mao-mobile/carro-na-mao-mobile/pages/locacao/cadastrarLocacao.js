@@ -177,7 +177,7 @@ const cadastrarLocacao = () => {
             <TextInput
                 placeholder="Selecione a hora da retirada"
                 id="horaRetirada"
-                type="time"
+                type={time}
                 label='Hora da Retirada'
                 mode='outlined'
                 style={styles.input}
@@ -185,13 +185,14 @@ const cadastrarLocacao = () => {
             <TextInput
                 placeholder="Selecione a hora da entrega"
                 id="horaEntrega"
-                type="time"
+                type={time}
                 label='Hora da Entrega'
                 mode='outlined'
                 style={styles.input}
             />
 
             <TextInput
+                form= "disabled"
                 placeholder="Valor Diaria"
                 id="valorCategoria"
                 label='Valor/dia (Selecione um Modelo)'

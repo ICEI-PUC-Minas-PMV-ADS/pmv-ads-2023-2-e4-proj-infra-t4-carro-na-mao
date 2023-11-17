@@ -60,7 +60,7 @@ const cadastrarLocacao = () => {
 
       const calculateTotal = () => {
         const valorAdicional = parseFloat(adicionais);
-        const valorDiario = calculateDiaria(parseFloat(valorCategoria)); // Adjusted this line
+        const valorDiario = calculateDiaria(parseFloat(valorCategoria));
         const calculatedTotal = valorAdicional + valorDiario;
         setTotal(calculatedTotal);
       };
@@ -234,7 +234,7 @@ const cadastrarLocacao = () => {
                 }}
                 mode='outlined'
                 label='Data da Entrega'
-                onChangeText={dataRetirada=>setDataRetirada(dataRetirada)}
+                onChangeText={dataEntrega=>setDataEntrega(dataEntrega)}
                 style={styles.input}
             />
 

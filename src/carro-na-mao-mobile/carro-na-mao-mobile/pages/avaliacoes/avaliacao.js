@@ -58,7 +58,7 @@ const Avaliacao =()=>{
   </TouchableOpacity>
  
 );
-
+    
     return(
         <View   style={estiloAvaliacoes.body}>
             <FlatList

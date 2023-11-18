@@ -9,6 +9,7 @@ import Perfil from '../pages/paginas do usuario/perfil'
 import Menu from '../pages/menu'
 import avaliacaoUsaurios from '../pages/avaliacoes/avaliacoesEspcificasPorusuario'
 import cadastrarVistoria from '../pages/vistorias/cadastrarVistoria'
+import menu from '../pages/menu'
 //import Cadastro from '../pages/cadastro'
 const stack = createNativeStackNavigator()
 
@@ -16,18 +17,20 @@ function Main() {
     return(
         <NavigationContainer independent={true}>
             <stack.Navigator
+            initialRouteName='login'     
               screenOptions={{
                     headerStyle: {
                         backgroundColor: '#1F2024', // Substitua 'blue' pela cor desejada
                     },
                     headerTintColor: 'white', // Cor do texto do cabeçalho
-                    }}      
+                    }} 
             >
                 <stack.Screen
                     name='login'
                     component={login}
                     options={{header:()=>null}}
                 />
+              
                 <stack.Screen
                     name='Cadastro'
                     component={Cadastro}

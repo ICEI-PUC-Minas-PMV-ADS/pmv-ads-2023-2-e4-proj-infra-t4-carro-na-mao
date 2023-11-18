@@ -37,18 +37,24 @@ const verLocacao =()=>{
           }
         ).catch(error => {}) 
   }
-  const Reserva = ({reserva}) => (
-    <TouchableOpacity >
-      <View style={styles.informacoe}>
-        <Text>{'Local '+reserva.localRetirada}</Text>
-        <Text>{'Categoria '+reserva.categoriaRetirada}</Text>
-        <Text>{'Modelo Veiculo '+reserva.modeloRetirada}</Text>
-        <Text>{'Hora Retirada '+reserva.horaRetirada}</Text>
-        <Text>{'Data Retirada '+reserva.dataRetirada}</Text>
-        <Text>{'Valor '+reserva.vlTotal}</Text>
-      </View>
-  </TouchableOpacity>
-);
+  const Reserva = ({ reserva }) => {
+    if (!reserva) {
+      return null;
+    }
+  
+    return (
+      <TouchableOpacity>
+        <View style={styles.informacoe}>
+          <Text>{'Local ' + reserva.id_local}</Text>
+          <Text>{'Categoria ' + reserva.id_categoria}</Text>
+          <Text>{'Modelo Veículo ' + reserva.modelo_veiculo}</Text>
+          <Text>{'Hora Retirada ' + reserva.hora_retirada}</Text>
+          <Text>{'Data Retirada ' + reserva.data_retirada}</Text>
+          <Text>{'Valor ' + reserva.vlTotal}</Text>
+        </View>
+      </TouchableOpacity>
+    );
+  };
 
     return(
         <View>

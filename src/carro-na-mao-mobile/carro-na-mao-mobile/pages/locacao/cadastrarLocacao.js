@@ -7,7 +7,9 @@ import { useNavigation, Link } from "@react-navigation/native";
 import { TextInput, Button } from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Picker } from "@react-native-picker/picker";
-import { TextInputMask } from 'react-native-masked-text'
+import DateTimePicker from '@react-native-community/datetimepicker'
+import estiloLocacao from "../../estilos/estiloLocacao";
+import { TouchableOpacity } from "react-native-web";
 
 
 const cadastrarLocacao = () => {
@@ -26,6 +28,8 @@ const cadastrarLocacao = () => {
     const [dataEntrega, setDataEntrega] = useState(new Date());
     const [adicionais, setAdicionais] = useState("");
     const [total, setTotal] = useState(0);
+    const [showDatePickerRetirada, setShowDatePickerRetirada] = useState(false);
+    const [showDatePickerEntrega, setShowDatePickerEntrega] = useState(false);
 
 
 
@@ -42,28 +46,51 @@ const cadastrarLocacao = () => {
         fetchData()
     }, []);
 
+    const handleDateRetiradaChange = (event, date) => {
+        setShowDatePickerRetirada(Platform.OS === 'ios' ? true : false);
+        if (date) {
+            setDataRetirada(date);
+        }
+    };
+
+    const handleDateEntregaChange = (event, date) => {
+        setShowDatePickerEntrega(Platform.OS === 'ios' ? true : false);
+        if (date) {
+            setDataEntrega(date);
+        }
+    };
+
+    const showDatepicker = () => {
+        setShowDatePicker(true);
+    };
+
+    const hideDatePicker = () => {
+        setShowDatePicker(false);
+    };
+
+
     const calculateDateDiff = () => {
         const diffInTime = Math.abs(new Date(dataEntrega) - new Date(dataRetirada));
         const timeInOneDay = 1000 * 60 * 60 * 24;
         const differenceInDays = diffInTime / timeInOneDay;
         setDiffInDays(differenceInDays);
         return differenceInDays;
-      };
+    };
 
 
-      const calculateDiaria = (diaria) => {
+    const calculateDiaria = (diaria) => {
         const daysDifference = calculateDateDiff();
         const calculatedDiaria = diaria * daysDifference;
         setDiaria(calculatedDiaria);
         return calculatedDiaria;
-      };
+    };
 
-      const calculateTotal = () => {
+    const calculateTotal = () => {
         const valorAdicional = parseFloat(adicionais);
         const valorDiario = calculateDiaria(parseFloat(valorCategoria));
         const calculatedTotal = valorAdicional + valorDiario;
         setTotal(calculatedTotal);
-      };
+    };
 
     const handleModeloChange = (itemValue) => {
         setModelo(itemValue);
@@ -235,19 +262,24 @@ const cadastrarLocacao = () => {
                 }}
                 mode='outlined'
                 label='Data da Entrega'
-                onChangeText={dataEntrega=>setDataEntrega(dataEntrega)}
+                onChangeText={dataRetirada=>setDataRetirada(dataRetirada)}
                 style={styles.input}
             />
 
             <Text id="vlTotal">O valor total da(s) diária(s) é de R$ {total}</Text>
             <Button onPress={calculateTotal}>Calcular Total</Button>
-            <Button style={styles.botao} mode="contained" onPress={() => registrarLocacao()}>Salvar</Button>
+            <Button style={styles.botaoSave} mode="contained" onPress={() => registrarLocacao()}>Salvar</Button>
         </View>
+
     )
 
 
 }
 const styles = StyleSheet.create({
+    dataEntr: {
+        borderRadius: 5,
+        overflow: 'hidden',
+    },
     titulo: {
         position: 'relative',
         top: 60,
@@ -262,11 +294,11 @@ const styles = StyleSheet.create({
         height: 40,
         margin: 12
     },
-    botao: {
+    botaoSave: {
         width: 200,
         top: 50,
         left: 90
-    }
+    },
 });
 
 export default cadastrarLocacao;

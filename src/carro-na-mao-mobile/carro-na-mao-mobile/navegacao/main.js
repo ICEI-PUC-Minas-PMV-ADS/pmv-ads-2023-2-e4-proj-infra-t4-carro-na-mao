@@ -12,7 +12,7 @@ import cadastrarVistoria from '../pages/vistorias/cadastrarVistoria'
 //import Cadastro from '../pages/cadastro'
 const stack = createNativeStackNavigator()
 
-const Main= ()=>{
+function Main() {
     return(
         <NavigationContainer independent={true}>
             <stack.Navigator
@@ -39,7 +39,7 @@ const Main= ()=>{
                     options={{header:()=>null}}
                 />
                 <stack.Screen
-                    name='Avalicao'
+                    name='Avaliacao'
                     component={Avaliacao}
                     options={{ title: 'Avaliações' }}
                 />

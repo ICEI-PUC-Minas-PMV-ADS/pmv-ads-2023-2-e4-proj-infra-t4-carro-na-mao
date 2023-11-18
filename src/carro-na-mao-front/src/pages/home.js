@@ -75,7 +75,7 @@ function Home() {
 
   }
   return (
-    <>
+    <div id="fundo">
       {loading ? (
         <Box id="carregamento" sx={{ display: 'flex' }}>
           <CircularProgress sx={{ color: 'black' }} />
@@ -86,7 +86,7 @@ function Home() {
             <div id="elementosCampos">
               <img id="logoHome" src={logo}></img>
 
-              <h3 id="tituloHome">Faça o seu login!</h3>
+              <h3 id="tituloHome">Faça o seu Login</h3>
 
               <input id="emailHome" type='email' placeholder='Email'></input>
               <input id="senhaHome" type='password' placeholder='Senha'></input>
@@ -101,7 +101,7 @@ function Home() {
           </section>
         </>
       )}
-    </>
+    </div>
   );
 }
 

@@ -32,13 +32,11 @@ const Cadastro =()=>{
             fetchData()
       },[]);
 
-      function verificarUsuarioExistente(){
-        
+    function verificarUsuarioExistente(){   
         const headers ={
             "Content-Type":"application/json",
             "Authorization": 'Bearer ' + token
             }
-            //https://localhost:50579/api/Cadastro/find-by-emailExistente
          axios.get('https://api-carronamao.azurewebsites.net/api/Cadastro/find-by-emailExistente/?email='+email+'',{headers})
             .then(response =>{
                 if(response.status!==200){
@@ -54,7 +52,7 @@ const Cadastro =()=>{
                  console.error(error)
         })
     }
-const enviar =()=>{
+    const enviar =()=>{
         const data = {
                 "nome": nome,
                 "dataNacimento": dataNasc,

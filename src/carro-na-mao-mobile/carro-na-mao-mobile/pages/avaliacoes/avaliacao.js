@@ -60,19 +60,13 @@ const Avaliacao =()=>{
 );
     
     return(
-        <View   style={estiloAvaliacoes.body}>
+        <View  style={estiloAvaliacoes.body}>
             <FlatList
                 style={estiloAvaliacoes.lista}
                 data={avaliacoes}
                 renderItem={Item}
                 keyExtractor={item => item.id}
               
-                />
-            <FAB
-                style={estiloAvaliacoes.fab}
-                icon="plus"
-                onPress={()=>navigation.navigate('Perfil')}
-                
                 />
             <FAB
                 style={estiloAvaliacoes.fab2}

@@ -35,10 +35,12 @@ export default  StyleSheet.create({
         left:25
     },
     card:{
-        backgroundColor:'#8F9098'
+        backgroundColor:'#8F9098',
+        position:'relative',
+        top:50
     },
     acessoRapido:{
-        top:10,
+        top:50,
         position:'relative',
         color:'#fff',
         left:2,

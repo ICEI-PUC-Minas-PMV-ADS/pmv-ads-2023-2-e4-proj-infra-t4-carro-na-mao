@@ -101,7 +101,7 @@ const Perfil = ()=> {
             <View style={estiloPerfil.acessoRapido}>
                 <Text style={{color:'#fff',fontSize:26}}>Acesso Rápido</Text>
                 <Text>{'/n'}</Text> 
-                <Link  style={{color:'#fff'}} to='/Avalicao'>Avaliações</Link> 
+                <Link  style={{color:'#fff'}} to='/Avaliacao'>Avaliações</Link> 
                 <Text>{'/n'}</Text>
                 <Divider />
                 <Text>{'/n'}</Text>

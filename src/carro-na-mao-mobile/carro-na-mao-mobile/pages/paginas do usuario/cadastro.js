@@ -32,6 +32,28 @@ const Cadastro =()=>{
             fetchData()
       },[]);
 
+      function verificarUsuarioExistente(){
+        
+        const headers ={
+            "Content-Type":"application/json",
+            "Authorization": 'Bearer ' + token
+            }
+            //https://localhost:50579/api/Cadastro/find-by-emailExistente
+         axios.get('https://api-carronamao.azurewebsites.net/api/Cadastro/find-by-emailExistente/?email='+email+'',{headers})
+            .then(response =>{
+                if(response.status!==200){
+                 console.log('nao entra')
+                enviar()
+    
+            }
+            else if(response.status===200){
+                alert("Usurario já cadastrado")
+            }
+            }).catch(error => {
+                 alert("Usurario já cadastrado")
+                 console.error(error)
+        })
+    }
 const enviar =()=>{
         const data = {
                 "nome": nome,
@@ -45,7 +67,6 @@ const enviar =()=>{
                 "categoriaHabilitacao":categoriaHab,
                 "usuarioAtivo": true
              }
-        
         const headers ={
           "Content-Type":"application/json",
           "Authorization": 'Bearer ' + token
@@ -53,7 +74,7 @@ const enviar =()=>{
          if(email !=='' && senha !==''){
              axios.post('https://api-carronamao.azurewebsites.net/api/Cadastro',data,{headers})
              .then(response =>{
-                 if(response.status===200){
+                 if(response.status===200 ){
                      alert('cadastrado')
                      navigation.navigate("login")
                     }
@@ -148,7 +169,7 @@ const enviar =()=>{
                 secureTextEntry={true}
                 style={estiloCadastro.input}
             />
-            <Button style={estiloCadastro.botao} mode="contained" onPress={()=>enviar()}>Cadastre-se</Button>
+            <Button style={estiloCadastro.botao} mode="contained" onPress={()=>verificarUsuarioExistente()}>Cadastre-se</Button>
          </View>
      </View>
     )

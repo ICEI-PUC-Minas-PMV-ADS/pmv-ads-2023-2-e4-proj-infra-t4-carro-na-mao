@@ -1,13 +1,14 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { RecuperaToken } from "../../Autenticação/autenticacao";
-import { View, StyleSheet,Text } from "react-native";
-import { useNavigation, Link } from "@react-navigation/native";
+import { View, StyleSheet, Text, Alert } from "react-native";
+import { useNavigation, useIsFocused, Link } from "@react-navigation/native";
 import { TextInput, Button, DatePicker } from 'react-native-paper'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { format } from 'date-fns';
+import estiloPerfil from "../../estilos/estiloPerfil";
 //import RNPickerSelect from 'react-native-picker-select';
-import {Picker} from '@react-native-picker/picker';
+import { Picker } from '@react-native-picker/picker';
 
 const cadastrarVistoria = () => {
 
@@ -72,7 +73,7 @@ const cadastrarVistoria = () => {
     }
 
     return (
-        <View>
+        <View style={estiloPerfil.body}>
             <Text style={styles.label}>ID do Veiculo:</Text>
             <TextInput
                 placeholder="Veiculo"
@@ -83,26 +84,34 @@ const cadastrarVistoria = () => {
                 value={veiculo}
                 onChangeText={veiculo => setVeiculo(veiculo)}
             />
-            <Text style={styles.label}>Tipo de Vistoria:</Text>
-            <Picker
-                selectedValue={tipo}
-                onValueChange={(value) => setTipo(value)}
-                style={styles.picker}
-            >
-                <Picker.Item label="Retorno de veiculo" value="0" />
-                <Picker.Item label="Saída de veiculo" value="1" />
-            </Picker>
 
-            <Text style={styles.label}>Data da Vistoria:</Text>
-            <TextInput
-                placeholder="Data da Vistoria"
-                mode='outlined'
-                label='Data da Vistoria'
-                type="date"
-                style={styles.input}
-                value={date}
-                onChangeText={date => setDate(date)}
-            />
+            <View style={styles.row}>
+                <View style={styles.column}>
+                    <Text style={styles.label}>Tipo de Vistoria:</Text>
+                    <Picker
+                        selectedValue={tipo}
+                        onValueChange={(value) => setTipo(value)}
+                        style={styles.picker}
+                    >
+                        <Picker.Item label="Retorno de veiculo" value="0" />
+                        <Picker.Item label="Saída de veiculo" value="1" />
+                    </Picker>
+                </View>
+
+                <View style={styles.column}>
+                    <Text style={styles.label}>Data da Vistoria:</Text>
+                    <TextInput
+                        placeholder="Seleciona a Data"
+                        mode='outlined'
+                        label='Seleciona a Data'
+                        type="date"
+                        style={styles.input}
+                        value={date}
+                        onChangeText={date => setDate(date)}
+                    />
+                </View>
+            </View>
+
             <Text style={styles.label}>Descrição da Vistoria:</Text>
             <TextInput
                 placeholder="Descrição"
@@ -112,26 +121,31 @@ const cadastrarVistoria = () => {
                 value={descricao}
                 onChangeText={descricao => setDescricao(descricao)}
             />
+
             <Text style={styles.label}>Observações da Vistoria:</Text>
             <TextInput
-                placeholder="Observações"
+                placeholder="Insira as Observações Caso Houver"
                 mode='outlined'
-                label='Observações'
+                label='Insira as Observações Caso Houver'
                 style={styles.input}
                 value={observacoes}
                 onChangeText={observacoes => setObservacoes(observacoes)}
             />
-            <Text style={styles.label}>Criar Manutenção no sistema?</Text>
+
+            <Text style={styles.label}>Cria Manutenção no sistema?</Text>
             <TextInput
-                placeholder="Cria Manutenção"
-                label='Cria Manutenção'
+                placeholder="Não Cria Manutenção"
+                label='Não Cria Manutenção'
                 mode='outlined'
                 style={styles.input}
                 value={manut}
                 onChangeText={manut => setManut(manut)}
             />
+
             <Button style={styles.botao} mode="contained" onPress={() => registrarVistoria()}>Salvar</Button>
         </View>
+
+
     )
 
 }
@@ -156,4 +170,5 @@ const styles = StyleSheet.create({
         left: 90
     }
 });
+
 export default cadastrarVistoria;

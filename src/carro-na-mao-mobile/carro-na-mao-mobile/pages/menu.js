@@ -7,7 +7,6 @@ import Perfil from '../pages/paginas do usuario/perfil';
 import { NavigationContainer } from '@react-navigation/native'
 import {createNativeStackNavigator} from'@react-navigation/native-stack' // Ajuste na importação
 import Vistorias from "../pages/vistorias/cadastrarVistoria";
-import Perfil from "../pages/paginas do usuario/perfil";
 const stack = createNativeStackNavigator()
 
 const Menu =()=>{

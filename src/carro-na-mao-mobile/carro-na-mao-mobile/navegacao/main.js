@@ -4,7 +4,6 @@ import login from '../pages/paginas do usuario/login'
 import Avaliacao from '../pages/avaliacoes/avaliacao'
 import Cadastro from '../pages/paginas do usuario/cadastro'
 import cadastrarAvaliacao from '../pages/avaliacoes/cadastrarAvaliacao'
-import CadastrarVistoria from '../pages/vistorias/cadastrarVistoria'
 import Perfil from '../pages/paginas do usuario/perfil'
 import Menu from '../pages/menu'
 import avaliacaoUsaurios from '../pages/avaliacoes/avaliacoesEspcificasPorusuario'
@@ -54,6 +53,7 @@ function Main() {
                  <stack.Screen
                     name='cadastrarVistoria'
                     component={cadastrarVistoria}
+                    options={{ title: 'Registro de Vistoria' }}
                 />
                  <stack.Screen
                     name='Perfil'

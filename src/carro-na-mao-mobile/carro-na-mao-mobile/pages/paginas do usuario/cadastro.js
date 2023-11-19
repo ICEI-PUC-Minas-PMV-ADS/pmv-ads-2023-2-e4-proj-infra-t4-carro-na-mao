@@ -96,6 +96,7 @@ const Cadastro =()=>{
                 value={nome}
                 onChangeText={nome=>setNome(nome)}
                 style={estiloCadastro.input}
+                placeholderTextColor="#fff"
             />
             <TextInputMask
                 type={'datetime'}
@@ -108,15 +109,16 @@ const Cadastro =()=>{
                 value={dataNasc}
                 onChangeText={dataNasc=>setNascimento(dataNasc)}
                 style={estiloCadastro.input}
+                placeholderTextColor="#fff"
             />
             <TextInput
                 mode='outlined'
-               
                 label="Endereco"
-                placeholder="Digite seu endereço completo. exp: Rua dos bobs,nº0"
+                placeholder="Digite seu endereço completo"
                 value={endereco}
                 onChangeText={endereco=>setEndereco(endereco)}
                 style={estiloCadastro.input}
+                placeholderTextColor="#fff"
             />
             <TextInputMask
                 type={"cpf"}
@@ -126,6 +128,7 @@ const Cadastro =()=>{
                 value={cpf}
                 onChangeText={cpf=>setCpf(cpf)}
                 style={estiloCadastro.input}
+                placeholderTextColor="#fff"
                 />
             <TextInputMask
                 type={'cel-phone'}
@@ -140,6 +143,7 @@ const Cadastro =()=>{
                 value={telefone}
                 onChangeText={telefone=>setTelefone(telefone)}
                 style={estiloCadastro.input}
+                placeholderTextColor="#fff"
             />
             <TextInput
                 mode='outlined'
@@ -148,6 +152,7 @@ const Cadastro =()=>{
                 value={categoriaHab}
                 onChangeText={categoriaHab=>setCategoriaHab(categoriaHab)}
                 style={estiloCadastro.input}
+                placeholderTextColor="#fff"
                 />
             <TextInput
                 mode='outlined'
@@ -157,6 +162,7 @@ const Cadastro =()=>{
                 value={email}
                 onChangeText={email=>setEmail(email)}
                 style={estiloCadastro.input}
+                placeholderTextColor="#fff"
             />
             <TextInput
                 mode='outlined'
@@ -166,6 +172,7 @@ const Cadastro =()=>{
                 onChangeText={senha=>setSenha(senha)}
                 secureTextEntry={true}
                 style={estiloCadastro.input}
+                placeholderTextColor="#fff"
             />
             <Button style={estiloCadastro.botao} mode="contained" onPress={()=>verificarUsuarioExistente()}>Cadastre-se</Button>
          </View>

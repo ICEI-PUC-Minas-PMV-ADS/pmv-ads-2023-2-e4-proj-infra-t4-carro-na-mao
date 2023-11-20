@@ -57,6 +57,9 @@ input[type="text"] {
     width: 26%;
     padding: 8px;
     border-bottom: none;
+    top: 2px;
+    height: 17px;
+
 }
 
 /* Estilização do campos observações */
@@ -119,4 +122,30 @@ a{
 a:hover{
     text-decoration:none;
     color: black;
+}
+#cardAvaliacoes{
+    position: relative;
+    width: 40em;  
+    border-radius: 30px;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-top: 1px solid;
+    padding: 10px;
+}
+#adicionarNovaAvaliacao{
+    position: fixed;
+    top: 40em;
+    left: 100em;
+}
+#registroNota{
+    text-align: right;
+}
+#listaAvaliacao{
+    display: grid;
+    grid-template-columns: repeat(3, 4fr);
+    grid-gap: 10px;
+    position: relative;
+    top: 4em;
+    left: 2em;
 }

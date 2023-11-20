@@ -22,6 +22,27 @@ function Cadastro() {
         fetchData()
     }, []);
 
+    function verificarUsuarioExistente(){   
+        const email = document.querySelector('#emailCadastro').value
+        const headers ={
+            "Content-Type":"application/json",
+            "Authorization": 'Bearer ' + token
+            }
+         axios.get('https://api-carronamao.azurewebsites.net/api/Cadastro/find-by-emailExistente/?email='+email+'',{headers})
+            .then(response =>{
+                if(response.status!==200){
+                 cadastrar()
+    
+            }
+            else if(response.status===200){
+                alert("Usurario já cadastrado")
+            }
+            }).catch(error => {
+                 alert(error)
+                 console.error(error)
+        })
+    }
+
     const cadastrar = () => {
         const email = document.querySelector('#emailCadastro').value
         const senha = document.querySelector('#senhaCadastro').value
@@ -36,7 +57,6 @@ function Cadastro() {
         const bairro = document.querySelector("#bairro").value
         const Numero = document.querySelector("#Numero").value
         const endereco = cidade + ', ' + municipio + ', ' + rua + ', ' + bairro + ', Nº ' + Numero
-        console.log(endereco)
         const data = {
             "nome": nome,
             "dataNacimento": dataNasc,
@@ -100,7 +120,7 @@ function Cadastro() {
                             <input type="password" id="senhaCadastro" placeholder='Digite sua senha...'></input>
                             <input type="password" id="senhaCadastroConfirma" placeholder='Repita a sua senha'></input>
 
-                            <button id="btnCadastrarUsuario" onClick={cadastrar}>Cadastre-se</button>
+                            <button id="btnCadastrarUsuario" onClick={verificarUsuarioExistente}>Cadastre-se</button>
                         </div>
                     </section>
                 </>

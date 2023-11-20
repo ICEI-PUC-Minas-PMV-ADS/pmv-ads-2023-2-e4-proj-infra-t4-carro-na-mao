@@ -10,12 +10,14 @@ export default StyleSheet.create({
       fab2:{position: 'absolute',
       margin: 16,
       right: 0,
-      top: 550,
+      top: 599,
       backgroundColor:'#8F9098'
     },
       lista:{
           padding:3,
           border:1,
+          position:'relative',
+          top:40
           
       },
       informacoe:{
@@ -39,7 +41,7 @@ export default StyleSheet.create({
       },
       body:{
         flex:1,
-        backgroundColor:'#1F2024'
+        backgroundColor:'#1F2024',
        
     },
     obs:{

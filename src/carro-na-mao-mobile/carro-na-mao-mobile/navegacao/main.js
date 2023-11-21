@@ -5,6 +5,8 @@ import Avaliacao from '../pages/avaliacoes/avaliacao'
 import Cadastro from '../pages/paginas do usuario/cadastro'
 import cadastrarAvaliacao from '../pages/avaliacoes/cadastrarAvaliacao'
 import Perfil from '../pages/paginas do usuario/perfil'
+import viewLocacao from '../pages/locacao/viewLocacao'
+import cadastrarLocacao from '../pages/locacao/cadastrarLocacao'
 import Menu from '../pages/menu'
 import avaliacaoUsaurios from '../pages/avaliacoes/avaliacoesEspcificasPorusuario'
 import cadastrarVistoria from '../pages/vistorias/cadastrarVistoria'
@@ -50,6 +52,14 @@ function Main() {
                     component={cadastrarAvaliacao}
                     options={{ title: 'Adicionar nova avaliação' }}
                 />
+                <stack.Screen
+                    name='viewLocacao'
+                    component={viewLocacao}
+                />
+                <stack.Screen
+                    name='cadastrarLocacao'
+                    component={cadastrarLocacao}
+                 />
                  <stack.Screen
                     name='cadastrarVistoria'
                     component={cadastrarVistoria}

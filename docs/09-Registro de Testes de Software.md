@@ -1,16 +1,4 @@
 # Registro de Testes de Software
- ## FRONT END: MOBILE
-
-  ### 9- Notificação
-
-**9 - Teste de envio de nova notificação**
- ![Teste com êxito](img/Testes/notif_mobile_001.png)
-
- ![Teste com êxito](img/Testes/notif_mobile_002.png)
-
- ![Teste com êxito push](img/Testes/notif_mobile_003.png)
-
-
  ## FRONT END: WEB
   ### 1 - Login/Cadastro
 
@@ -91,11 +79,18 @@
 ![Excluindo Informações](img/Testes/FRONT-Vistoria-erro-excluir.png)
 
   ### 9- Notificação
-**9 - Teste de envio de nova notificação**
- ![Teste com êxito](img/Testes/notif_web_001.png)
+**9.1 - Teste de envio de nova notificação**
+ ![Teste com êxito](img/not_test_002.jpg)
 
- ![Teste com êxito e-mail](img/Testes/notif_web_002.png)
+ ![Teste com êxito e-mail](img/not_test_003.jpg)
 
+**9.2 - Teste de leitura de nova notificação**
+ ![Teste com êxito](img/not_test_004.jpg)
+ 
+ **9.3 - Teste de exclusão de notificação**
+ ![Teste com êxito menu](img/not_test_005.jpg)
+
+ ![Teste com êxito confirmação](img//not_test_006.jpg)
 
 ##
 ## API

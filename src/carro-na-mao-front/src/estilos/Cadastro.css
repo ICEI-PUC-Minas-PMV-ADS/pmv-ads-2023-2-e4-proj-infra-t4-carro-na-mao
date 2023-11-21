@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 #cmp {
     position: relative;
     top: 35px;
@@ -16,24 +22,30 @@
 
 #tituloCadastro {
     position: relative;
-    top: 3em;
-    left: 30em;
+    top: 2em;
+    left: 20em;
+    font-size: 155%;
+
 
 }
 
 #tituloDadosPessoais {
-    top: 5em;
+    top: 60px;
     position: relative;
+    font-size: 115%;
+
 }
 
 #tituloDadosLogin {
-    bottom: -6em;
+    top: 72px;
     position: relative;
+    font-size: 115%;
+
 }
 
 #linha1 {
     position: relative;
-    top: 3em;
+    top: 2em;
     width: 83em;
 
 }
@@ -246,7 +258,7 @@
 #emailCadastro {
 
     position: relative;
-    top: 7em;
+    top: 5em;
     left: 1em;
     width: 25em;
     padding: 15px;
@@ -264,7 +276,7 @@
 
     left: 9em;
     width: 25em;
-    top: 7em;
+    top: 5em;
     position: relative;
     padding: 15px;
     margin: 5px 0;
@@ -278,7 +290,7 @@
 #senhaCadastroConfirma {
     left: 71em;
     width: 25em;
-    top: 2.6em;
+    top: 0.7em;
     position: relative;
     padding: 15px;
     margin: 5px 0;
@@ -297,13 +309,12 @@
 
 #btnCadastrarUsuario {
     position: relative;
-    top: 11em;
-    width: 25em;
+    top: 7em;
+    width: 18em;
     border-radius: 7px;
-
     color: white;
     padding: 17px;
-    right: -10em;
+    right: -14em;
     background-color: black;
 }
 

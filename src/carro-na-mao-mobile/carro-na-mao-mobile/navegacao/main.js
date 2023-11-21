@@ -20,11 +20,18 @@ function Main() {
             <stack.Navigator
                 initialRouteName='login'
                 screenOptions={{
-                    headerStyle: {
+=======
+    return(
+        <NavigationContainer independent={true}>
+            <stack.Navigator
+            initialRouteName='login'     
+              screenOptions={{      headerStyle: {
                         backgroundColor: '#1F2024', // Substitua 'blue' pela cor desejada
                     },
                     headerTintColor: 'white', // Cor do texto do cabeçalho
                 }}
+=======
+                    }} 
             >
                 <stack.Screen
                     name='login'
@@ -32,6 +39,8 @@ function Main() {
                     options={{ header: () => null }}
                 />
 
+=======
+           
                 <stack.Screen
                     name='Cadastro'
                     component={Cadastro}
@@ -49,6 +58,10 @@ function Main() {
                 <stack.Screen
                     name='cadastrarLocacao'
                     component={cadastrarLocacao}
+                 />
+                    name='menu'
+                    component={Menu}
+                    options={{header:()=>null}}
                 />
                 <stack.Screen
                     name='Avaliacao'
@@ -69,7 +82,7 @@ function Main() {
                     name='Perfil'
                     component={Perfil}
                 />
-
+=======
 
             </stack.Navigator>
         </NavigationContainer>

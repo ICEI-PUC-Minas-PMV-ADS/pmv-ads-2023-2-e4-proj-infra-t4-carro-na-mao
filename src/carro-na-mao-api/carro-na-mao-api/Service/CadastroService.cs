@@ -22,6 +22,8 @@ namespace carro_na_mao_api.Service
 
         public async Task<Cadastro> GetAsyncEmail(string email, string senha) =>
             await _cadastroCollection.Find(x => x.email == email && x.senha ==senha ).SingleOrDefaultAsync();
+        public async Task<Cadastro> GetAsyncEmailExistente(string email) =>
+            await _cadastroCollection.Find(x => x.email == email).SingleOrDefaultAsync();
         public async Task<Cadastro> GetAsyncUser(string id) =>
            await _cadastroCollection.Find(x => x.Id == id).SingleOrDefaultAsync();
 

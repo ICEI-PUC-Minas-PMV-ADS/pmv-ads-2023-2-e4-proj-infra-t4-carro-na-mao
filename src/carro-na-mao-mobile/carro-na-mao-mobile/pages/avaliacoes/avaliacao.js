@@ -4,6 +4,8 @@ import React, {useState,useEffect} from "react";
 import { FAB } from 'react-native-paper';
 import { RecuperaToken } from "../../Autenticação/autenticacao";
 import { useNavigation,useIsFocused,Link } from '@react-navigation/native';
+import StarRating from 'react-native-star-rating';
+import estiloAvaliacoes from "../../estilos/estiloAvaliacoes";
 
 
 const Avaliacao =()=>{
@@ -39,65 +41,42 @@ const Avaliacao =()=>{
   }
   const Item = ({item}) => (
     <TouchableOpacity >
-      <View style={styles.informacoe}>
-        <Text>{'Nota: '+item.nota+'/5'}</Text>
-        <Text>{'Descrição: '+item.observaceo}</Text>
-        <Text style={styles.usuarioAvaliacao}>{item.nomeUsaurio}</Text>
-        <Text style={styles.dataAvaliacao}>{item.data}</Text>
+      <View style={estiloAvaliacoes.informacoe}>
+      <Text style={estiloAvaliacoes.usuarioAvaliacao}>{item.nomeUsaurio}</Text>
+      <Text style={estiloAvaliacoes.dataAvaliacao}>{item.data}</Text>
+      <StarRating
+            disabled={false}
+            maxStars={5}
+            rating={item.nota}
+            fullStarColor="#c5be11"
+            />
+       
+        <Text style={estiloAvaliacoes.obs}>{'Descrição: '+item.observaceo}</Text>
+      
       </View>
+      <Text>{'\n'}</Text>
   </TouchableOpacity>
+ 
 );
-
+    
     return(
-        <View>
+        <View  style={estiloAvaliacoes.body}>
             <FlatList
-                style={styles.lista}
+                style={estiloAvaliacoes.lista}
                 data={avaliacoes}
                 renderItem={Item}
                 keyExtractor={item => item.id}
               
                 />
             <FAB
-                style={styles.fab}
+                style={estiloAvaliacoes.fab2}
                 icon="plus"
                 onPress={()=>navigation.navigate('cadastrarAvaliacao')}
-            />
-            <FAB
-                style={styles.fab2}
-                icon="plus"
-                onPress={()=>navigation.navigate('Perfil')}
             />
           
         </View>
 
     )
 }
-const styles = StyleSheet.create({
-    fab: {
-      position: 'absolute',
-      margin: 16,
-      right: 0,
-      top: 50,
-    },
-    fab2:{position: 'absolute',
-    margin: 16,
-    right: 0,
-    top: 550,
-  },
-    lista:{padding:3},
-    informacoe:{
-        padding:35,
-        width:370,
-        left:10,
-        position:'relative',
-    },
-    dataAvaliacao:{
-        position:'relative',
-        left:200
-    },
-    usuarioAvaliacao:{
-        position:'relative',
-        top:15
-    }
-  })
+
 export default Avaliacao

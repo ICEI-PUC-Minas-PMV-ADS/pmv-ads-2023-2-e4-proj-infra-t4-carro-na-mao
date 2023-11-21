@@ -6,7 +6,8 @@ import { RecuperaToken } from "../../Autenticação/autenticacao";
 import { useNavigation,useIsFocused,Link } from '@react-navigation/native';
 
 
-const verLocacao =()=>{
+
+const Locacao =()=>{
     const navigation = useNavigation()
     const foco = useIsFocused()
     const [locacao,setLocacao]= useState([]) 
@@ -37,20 +38,15 @@ const verLocacao =()=>{
           }
         ).catch(error => {}) 
   }
-  const Reserva = ({ reserva }) => {
-    if (!reserva) {
-      return null;
-    }
-  
-    return (
+  const Item = ({ item }) => {
+    return(
       <TouchableOpacity>
         <View style={styles.informacoe}>
-          <Text>{'Local ' + reserva.id_local}</Text>
-          <Text>{'Categoria ' + reserva.id_categoria}</Text>
-          <Text>{'Modelo Veículo ' + reserva.modelo_veiculo}</Text>
-          <Text>{'Hora Retirada ' + reserva.hora_retirada}</Text>
-          <Text>{'Data Retirada ' + reserva.data_retirada}</Text>
-          <Text>{'Valor ' + reserva.vlTotal}</Text>
+          <Text>{'Local '+item.id_local}</Text>
+          <Text>{'Categoria '+item.id_categoria}</Text>
+          <Text>{'Modelo Veículo '+item.modelo_veiculo}</Text>
+          <Text>{'Hora Retirada '+item.hora_retirada}</Text>
+          <Text>{'Data Retirada '+item.data_retirada}</Text>
         </View>
       </TouchableOpacity>
     );
@@ -61,8 +57,8 @@ const verLocacao =()=>{
             <FlatList
                 style={styles.lista}
                 data={locacao}
-                renderItem={Reserva}
-                keyExtractor={reserva => reserva.id}
+                renderItem={Item}
+                keyExtractor={item => item.id}
                 />
             <FAB
                 style={styles.fab}
@@ -94,4 +90,4 @@ const styles = StyleSheet.create({
         position:'relative',
     }
   })
-export default verLocacao
+export default Locacao

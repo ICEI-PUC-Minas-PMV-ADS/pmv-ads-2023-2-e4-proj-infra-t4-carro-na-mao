@@ -35,8 +35,8 @@ const login = ()=> {
             .then(response =>{
                 if(response.status===200){
                     salvarDadosLocal(response.data.nome,response.data.id)
+                    navigation.navigate("viewLocacao")
                     //navigation.navigate("Avaliacao")
-                    navigation.navigate("cadastrarLocacao")
             }
             else if(response.status===204){
                 alert("Usurario não cadastrado")

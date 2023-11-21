@@ -1,324 +1,236 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-#cmp {
+hr{
     position: relative;
-    top: 35px;
+    top: 1em;
+}
+#btnCadastrarUsuario{
+    position: relative;
+    top: 4em;
+    color:white;
+    padding: 20px;
+    left: 50em;
+    background-color: black;
+}
+#btnCadastrarUsuario:hover{
+    color:black;
+    background-color: white;
+}
+#cmp{
+    position: relative;
+    left: 10%;
+    top: 7em;
+    position: relative;
+    top: 50px;
     left: 1%;
     text-align: justify;
-    max-width: 80vw;
-    height: 85vh;
+    max-width: 78vw;
+    height: 81vh;
     margin: 0 auto;
     padding: 22px;
-    background-image: linear-gradient(45deg, rgb(75, 74, 74), rgb(240, 237, 237));
-    border-radius: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     box-shadow: 1px 1px 1px rgb(231, 231, 231), 1em 1em 1.4em rgb(190, 187, 187);
 }
-
-#tituloCadastro {
+#tituloCadastro{
     position: relative;
+    bottom:3.5em;
+}
+#camposParaLogin{
+    margin-bottom: 10px; 
+}
+#nomeCadastro{
+    position: relative;
+    left: 1em;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    width: 20em;
+} 
+#dataNasc{
+    position: relative;
+    left: 6em;
+    width: 100px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    width: 20em;
+}
+#cpf{
+    position: relative;
+    left: 10em;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    width: 20em;
+}
+#telefone{
+    position: relative;
+    left: 14em;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    width: 20em;
+} 
+#endereco{
+    position: relative;
+    left: 1em;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+    width: 20em;
     top: 2em;
-    left: 20em;
-    font-size: 155%;
-
 
 }
-
-#tituloDadosPessoais {
-    top: 60px;
+#Municipio{
     position: relative;
-    font-size: 115%;
-
-}
-
-#tituloDadosLogin {
-    top: 72px;
-    position: relative;
-    font-size: 115%;
-
-}
-
-#linha1 {
-    position: relative;
+    left: 5.9em;
+    width: 20em;
     top: 2em;
-    width: 83em;
-
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
 }
-
-#linha2 {
+#Rua{
     position: relative;
-    top: 8em;
-    width: 83em;
-
-
-}
-
-#nomeCadastro {
-    left: 1em;
-    top: 4em;
-    width: 25em;
-    position: relative;
-    padding: 15px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 7px;
+    left: 9.9em;
+    width: 20em;
+    top: 2em;
     border-left: none;
     border-right: none;
     border-top: none;
     border-bottom: none;
 
 }
-
-#dataNasc {
-    left: 9em;
-    top: 4em;
-    width: 25em;
+#bairro{
     position: relative;
-    padding: 15px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 7px;
+    left: 14em;
+    width: 20em;
+    top: 2em;
     border-left: none;
     border-right: none;
     border-top: none;
     border-bottom: none;
 }
-
-#cpf {
-    left: 71em;
-    top: -0.3em;
-    width: 25em;
+#Numero{
     position: relative;
-    padding: 16px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 7px;
+    left: 1.2em;
+    top: 3em;
+    width: 20em;
     border-left: none;
     border-right: none;
     border-top: none;
     border-bottom: none;
 }
-
-#telefone {
-    left: -26em;
-    top: 6em;
-    width: 25em;
+#categoria{
     position: relative;
-    padding: 15px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 7px;
+    left: 6em;
+    top: 3em;
+    width: 20em;
     border-left: none;
     border-right: none;
     border-top: none;
     border-bottom: none;
-}
-
-
-#categoria {
+    
+} 
+input {
     position: relative;
-    top: 1.8em;
-    left: 36em;
-    width: 25em;
-    padding: 15px;
+    padding: 10px;
     margin: 5px 0;
     border: 1px solid #ccc;
-    border-radius: 7px;
+    border-radius: 3px;
     border-left: none;
     border-right: none;
     border-top: none;
-    border-bottom: none;
 }
 
-#rua {
-    left: 44em;
-    top: 1.8em;
-    width: 25em;
+#camposParaLoginParteUm{
     position: relative;
-    padding: 15px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 7px;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
-
-}
-
-#numero {
-    position: relative;
-    left: 1em;
-    top: 4em;
-    width: 25em;
-    padding: 15px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 7px;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
-}
-
-#bairro {
-    position: relative;
-    left: 9em;
-    top: 4em;
-    width: 25em;
-    padding: 15px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 7px;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
-}
-
-#endereco {
-    left: 71em;
-    top: 0em;
-    width: 25em;
-    position: relative;
-    padding: 15px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 7px;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
-
-}
-
-#municipio {
-    position: relative;
-    left: -26.3em;
-    top: 6em;
-    width: 25em;
-    padding: 15px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 7px;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
-}
-
-#camposParaLoginParteUm {
-    position: relative;
-    left: 1em;
-    top: -63px;
-    width: 50vw;
+    padding: 40px;
+    left: -3em;
+    width: 70vw;
     bottom: 4em;
-
+    
 }
-
-
-#camposParaLoginParteUmVistoria {
+#tituloDadosPessoais{
+    bottom: 5em;
+    position: relative;
+}
+#camposParaLoginParteUmVistoria{
     position: flex;
     padding: 40px;
     left: -3em;
     display: flex;
     width: 1000px;
-
+    
 }
-
-#camposParaLoginParteDois {
-    position: relative;
-    left: -2em;
-    display: flex;
-
-
-}
-
-#camposParaLoginParteTres {
+#camposParaLoginParteDois{
     position: relative;
     padding: 40px;
     left: -2em;
     display: flex;
-    height: 100px;
-
+    
+    
 }
-
-#tituloDadosPessoais2 {
-    bottom: 5em;
+#camposParaLoginParteTres{
     position: relative;
-    left: 50em;
-
+    padding: 40px;
+    left: -2em;
+    display: flex;
+    height: 110px;
+    
 }
-
-#emailCadastro {
-
+#emailCadastro{
     position: relative;
-    top: 5em;
+    width: 30%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;;
+}
+#senhaCadastroConfirma{
+    position: relative;
     left: 1em;
-    width: 25em;
-    padding: 15px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 7px;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
-
-}
-
-#senhaCadastro {
-
-    left: 9em;
-    width: 25em;
-    top: 5em;
-    position: relative;
-    padding: 15px;
+    width: 30%;
+    padding: 10px;
     margin: 5px 0;
     border: 1px solid #ccc;
-    border-radius: 7px;
+    border-radius: 3px;
     border-left: none;
     border-right: none;
     border-top: none;
+    border-bottom: none;;
 }
-
-#senhaCadastroConfirma {
-    left: 71em;
-    width: 25em;
-    top: 0.7em;
+#senhaCadastro{
     position: relative;
-    padding: 15px;
+    left: 2em;
+    width: 27%;
+    padding: 10px;
     margin: 5px 0;
     border: 1px solid #ccc;
-    border-radius: 7px;
+    border-radius: 3px;
     border-left: none;
     border-right: none;
     border-top: none;
-
+    border-bottom: none;;
 }
-
-#linhaDadosPessoais {
+#linha{
     position: relative;
-    top: -4em;
+    top: 10em;
 }
-
-#btnCadastrarUsuario {
+#linhaDadosPessoais{
     position: relative;
-    top: 7em;
-    width: 18em;
-    border-radius: 7px;
-    color: white;
-    padding: 17px;
-    right: -14em;
-    background-color: black;
-}
-
-#btnCadastrarUsuario:hover {
-    color: white;
-    background-color: rgb(169, 25, 25);
+    top:-4em;
 }

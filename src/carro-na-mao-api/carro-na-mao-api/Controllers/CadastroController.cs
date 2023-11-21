@@ -37,11 +37,6 @@ namespace carro_na_mao_api.Controllers
         {
             return await _cadastroService.GetAsyncEmail(email,senha);
         }
-        [HttpGet("find-by-userid")]
-        public async Task<Cadastro> GetAsyncUser(string id)
-        {
-            return await _cadastroService.GetAsyncUser(id);
-        }
 
         [HttpDelete]
         public async Task DeleteCdastro(string id)

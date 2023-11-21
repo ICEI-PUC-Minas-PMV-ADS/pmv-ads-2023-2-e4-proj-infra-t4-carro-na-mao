@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using carro_na_mao_api.Service;
 using carro_na_mao_api.Models.Estoque;
-using carro_na_mao_api.Models.Cadastro;
 
 namespace carro_na_mao_api.Controllers
 {
@@ -33,9 +32,9 @@ namespace carro_na_mao_api.Controllers
         }
 
         [HttpDelete]
-        public async Task DeleteAvaliacao(string id)
+        public async Task DeleteAvaliacao(string id_veiculo)
         {
-            await _avaliacaoServices.RemoveAsync(id);
+            await _avaliacaoServices.RemoveAsync(id_veiculo);
 
         }
 
@@ -45,12 +44,6 @@ namespace carro_na_mao_api.Controllers
             await _avaliacaoServices.UpdateAsyn(id, avaliacao);
 
             return (Avaliacao)avaliacao;
-        }
-
-        [HttpGet("find-by-avaliacao")]
-        public async Task<Avaliacao> GetAsyncAvaliacao(string id_user)
-        {
-            return await _avaliacaoServices.GetAsyncAvaliacao(id_user);
         }
     }
 }

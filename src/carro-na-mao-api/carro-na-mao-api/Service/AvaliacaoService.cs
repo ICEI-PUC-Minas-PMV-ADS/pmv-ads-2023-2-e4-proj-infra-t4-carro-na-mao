@@ -1,5 +1,4 @@
 using carro_na_mao_api.Models.Avaliacao;
-using carro_na_mao_api.Models.Cadastro;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
 
@@ -29,9 +28,6 @@ namespace carro_na_mao_api.Service
             await _avaliacaoCollection.ReplaceOneAsync(x => x.Id == id, avalicao);
         public async Task RemoveAsync(string id) =>
             await _avaliacaoCollection.DeleteOneAsync(x => x.Id == id);
-        public async Task<Avaliacao> GetAsyncAvaliacao(string id_usuario)
-        {
-            return await _avaliacaoCollection.Find(x => x.id_usuario == id_usuario).SingleOrDefaultAsync();
-        }
+
     }
 }

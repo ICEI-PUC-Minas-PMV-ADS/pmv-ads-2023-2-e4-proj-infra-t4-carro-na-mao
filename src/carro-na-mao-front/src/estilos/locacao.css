@@ -1,56 +1,34 @@
 
-#divLocacoes{
-    float: left;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;
-    line-height: 2em;
-    width: 15%;
-    position: relative;
-    padding: 50px;
-    left: 5%;
-    padding: 22px;
-    color: #fff;
-    background-color: #000;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 1px 1px 1px rgb(231, 231, 231), 1em 1em 1.4em rgb(190, 187, 187);
+#tela{
+    border-radius: 2%;
 }
 
 #campos{
-    width: 50%;
-    line-height: 2em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #fff;
+    width: 30%;
     position: relative;
     left: 10%;
-    top: 0em;
+    top: 5em;
     display: flex;
     flex-direction: column;
-    text-align: center;
-    align-items: center;
-    max-width: 80vw;
-    padding: 50px;
-    background-color: #000;
+    text-align: justify;
+    max-width: 50vw;
+    padding: 22px;
+    background-color: #f4f4f4;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 1px 1px 1px rgb(231, 231, 231), 1em 1em 1.4em rgb(190, 187, 187);
 }
 #localRetirada{
     position: relative;
-    background-color: #696969;
-    color: #fff;
-    width: 25%;
     left: 0em;
     height: 3em;
-    border-radius: 5px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
     top: 0em;
 } 
 #categoriaRetirada{
     position: relative;
-    background-color: #696969;
-    color: #fff;
-    width: 50%;
     left: 0em;
     height: 3em;
     border-left: none;
@@ -60,9 +38,6 @@
 }
 #modeloRetirada{
     position: relative;
-    background-color: #696969;
-    color: #fff;
-    width: 50%;
     left: 0em;
     height: 3em;
     border-left: none;
@@ -72,170 +47,136 @@
 }
 #horaRetirada{
     position: relative;
-    background-color: #696969;
-    color: #fff;
-    width: 15%;
+    width: 21.5%;
+    left: 54em;
     border-left: none;
     border-right: none;
     border-top: none;
-    
+    top: -4.5em;
 } 
 #horaEntrega{
     position: relative;
-    background-color: #696969;
-    color: #fff;
-    width: 15%;
-    left: 0em;
+    width: 21.5%;
+    left: 54em;
     border-left: none;
     border-right: none;
     border-top: none;
-    top: 0em;
+    top: -4.5em;
 }
 #valorCategoria{
     position: relative;
-    background-color: #696969;
-    color: #fff;
-    width: 45%;
-    left: 0em;
+    left: 54em;
     border-left: none;
     border-right: none;
     border-top: none;
-    top: 0em;
+    top: -4.8em;
 } 
 #custosAd{
     position: relative;
-    background-color: #696969;
-    color: #fff;
-    width: 50%;
-    left: 0em;
+    left: 45em;
     height: 3em;
     border-left: none;
     border-right: none;
     border-top: none;
-    top: 0em;
+    top: -4em;
 } 
 #dataRetirada{
     position: relative;
-    background-color: #696969;
-    color: #fff;
-    width: 25%;
-    left: 0em;
+    left: 54em;
+    width: 70%;
     border-left: none;
     border-right: none;
     border-top: none;
-    top: 0em;
+    top: -33.5em;
 } 
 #dataEntrega{
     position: relative;
-    background-color: #696969;
-    color: #fff;
-    width: 25%;
-    left: 0em;
+    left: 54em;
+    width: 70%;
     border-left: none;
     border-right: none;
     border-top: none;
-    top: 0em;
+    top: -33.5em;
 } 
 
 #btnReservar{
     position: relative;
-    top: 0em;
-    color:#fff;
+    left: 15em;
+    top: -33em;
+    color:white;
     border-radius: 2em;
-    background-color: #696969;
+    background-color: black;
 }
 #btnReservar:hover{
     color:black;
-    background-color: rgb(196, 0, 0);
+    background-color: white;
 }
 
 #calc{
     position: relative;
-    top: 0em;
+    left: 68em;
+    top: -20em;
     color:white;
     padding: none;
     border-radius: 2em;
-    background-color: #696969;
+    background-color: black;
 }
 #calc:hover{
     color:black;
-    background-color: rgb(196, 0, 0);
+    background-color: white;
 }
 #vlTotal{
     position: relative;
+    top: -7em;
+    left: 43em;
 }
 #labDtEntrega{
     position: relative;
-    left: 0em;
+    left: 45em;
     border-left: none;
     border-right: none;
     border-top: none;
-    top: 0em;
+    top: -27.8em;
 }
 #labDtRetirada{
     position: relative;
-    left: 0em;
+    left: 45em;
     border-left: none;
     border-right: none;
     border-top: none;
-    top: 0em;
+    top: -27.8em;
 }
 #labHrRetirada{
     position: relative;
-    left: 0em;
+    left: 45em;
     border-left: none;
     border-right: none;
     border-top: none;
-    top: 0em;
+    top: -3.7em;
 }
 #labHrEntrega{
     position: relative;
-    left: 0em;
+    left: 45em;
     border-left: none;
     border-right: none;
     border-top: none;
-    top: 0em;
+    top: -4em;
 }
 #labValor{
     position: relative;
-    left: 0em;
+    left: 45em;
     border-left: none;
     border-right: none;
     border-top: none;
-    top: 0em;
+    top: -4em;
 }
 #labCustos{
     position: relative;
-    left: 0em;
+    left: 45em;
     border-left: none;
     border-right: none;
     border-top: none;
-    top: 0em;
+    top: -4.3em;
 }
-#titulo{
-    position: relative;
-    left: 5%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-#btnRegistro{
-    position: relative;
-    top: 0em;
-    color:#fff;
-    border-radius: 2em;
-    background-color: #696969;
-}
-#btnRegistro:hover{
-    color:black;
-    background-color: rgb(196, 0, 0);
-}
-#btnExcluir{
-    position: relative;
-    top: 0em;
-    color:#fff;
-    border-radius: 2em;
-    background-color: #696969;
-}
-#btnExcluir:hover{
-    color:black;
-    background-color: rgb(196, 0, 0);
-}
+
+

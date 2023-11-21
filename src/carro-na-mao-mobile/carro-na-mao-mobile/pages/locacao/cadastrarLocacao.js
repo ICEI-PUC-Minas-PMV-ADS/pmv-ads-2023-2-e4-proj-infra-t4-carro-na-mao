@@ -2,15 +2,20 @@ import axios from "axios";
 import { Text } from "react-native-paper";
 import React, { useState, useEffect } from "react";
 import { RecuperaToken } from "../../Autenticação/autenticacao";
-import { View, StyleSheet } from "react-native";
-import { useNavigation, Link } from "@react-navigation/native";
+import { View, StyleSheet, TouchableOpacity, Platform } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import { TextInput, Button } from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Picker } from "@react-native-picker/picker";
-import DateTimePicker from '@react-native-community/datetimepicker'
+import DateTimePicker from '@react-native-community/datetimepicker';
 import estiloLocacao from "../../estilos/estiloLocacao";
-import { TouchableOpacity } from "react-native-web";
 
+const formatDate = (date) => {
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0'); // Month is zero-based
+    const year = date.getFullYear();
+    return `${day}-${month}-${year}`;
+  };
 
 const cadastrarLocacao = () => {
     const [token, setToken] = useState(null)
@@ -23,13 +28,15 @@ const cadastrarLocacao = () => {
     const [modelo, setModelo] = useState("");
     const [horaRetirada, setHoraRetirada] = useState("");
     const [horaEntrega, setHoraEntrega] = useState("");
-    const [valorCategoria, setValorCategoria] = useState(null);
+    const [valorCategoria, setValorCategoria] = useState("");
     const [dataRetirada, setDataRetirada] = useState(new Date());
     const [dataEntrega, setDataEntrega] = useState(new Date());
     const [adicionais, setAdicionais] = useState("");
     const [total, setTotal] = useState(0);
     const [showDatePickerRetirada, setShowDatePickerRetirada] = useState(false);
     const [showDatePickerEntrega, setShowDatePickerEntrega] = useState(false);
+    const [showTimePickerRetirada, setShowTimePickerRetirada] = useState(false);
+    const [showTimePickerEntrega, setShowTimePickerEntrega] = useState(false);
 
 
 
@@ -60,21 +67,60 @@ const cadastrarLocacao = () => {
         }
     };
 
-    const showDatepicker = () => {
-        setShowDatePicker(true);
+    const handleTimeRetiradaChange = (event, date) => {
+        setShowTimePickerRetirada(Platform.OS === "ios" ? true : false);
+        if (date) {
+            setHoraRetirada(date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }));
+        }
     };
 
-    const hideDatePicker = () => {
-        setShowDatePicker(false);
+    const handleTimeEntregaChange = (event, date) => {
+        setShowTimePickerEntrega(Platform.OS === "ios" ? true : false);
+        if (date) {
+            setHoraEntrega(date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }));
+        }
     };
 
+    const renderTimePickerRetirada = () => {
+        return showTimePickerRetirada && (
+            Platform.OS === 'ios' ?
+                <DateTimePicker value={new Date()} mode="time" display="default" onChange={handleTimeRetiradaChange} />
+                :
+                <></>
+        );
+    };
+
+    const renderTimePickerEntrega = () => {
+        return showTimePickerEntrega && (
+            Platform.OS === 'ios' ?
+                <DateTimePicker value={new Date()} mode="time" display="default" onChange={handleTimeEntregaChange} />
+                :
+                <></>
+        );
+    };
+
+    const renderDatePickerRetirada = () => {
+        return showDatePickerRetirada && (
+            Platform.OS === 'ios' ?
+                <DateTimePicker value={dataRetirada} mode="date" display="default" onChange={handleDateRetiradaChange} />
+                :
+                <></>
+        );
+    };
+
+    const renderDatePickerEntrega = () => {
+        return showDatePickerEntrega && (
+            Platform.OS === 'ios' ?
+                <DateTimePicker value={dataEntrega} mode="date" display="default" onChange={handleDateEntregaChange} />
+                :
+                <></>
+        );
+    }
 
     const calculateDateDiff = () => {
-        const diffInTime = Math.abs(new Date(dataEntrega) - new Date(dataRetirada));
-        const timeInOneDay = 1000 * 60 * 60 * 24;
-        const differenceInDays = diffInTime / timeInOneDay;
-        setDiffInDays(differenceInDays);
-        return differenceInDays;
+        const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+        const diffInMilliseconds = Math.abs(dataEntrega - dataRetirada);
+        return Math.round(diffInMilliseconds / oneDay);
     };
 
 
@@ -95,7 +141,7 @@ const cadastrarLocacao = () => {
     const handleModeloChange = (itemValue) => {
         setModelo(itemValue);
         const valorCategoriaDoModelo = getValorCategoriaFromModelo(itemValue);
-        setValorCategoria(valorCategoriaDoModelo);
+        setValorCategoria(valorCategoriaDoModelo.toString());
     };
 
     const getValorCategoriaFromModelo = (selectedModelo) => {
@@ -200,26 +246,46 @@ const cadastrarLocacao = () => {
 
             </Picker>
 
+            <TouchableOpacity onPress={() => setShowTimePickerRetirada(true)}>
+                <TextInput
+                    placeholder="Selecione a hora da retirada"
+                    value={horaRetirada}
+                    mode="outlined"
+                    label="Hora da Retirada"
+                    editable={false}
+                    id="horaRetirada"
+                />
+            </TouchableOpacity>
+            {showTimePickerRetirada && (
+                <DateTimePicker
+                    value={dataRetirada}
+                    mode="time"
+                    display="default"
+                    onChange={handleTimeRetiradaChange}
+                />
+            )}
+
+            <TouchableOpacity onPress={() => setShowTimePickerEntrega(true)}>
+                <TextInput
+                    placeholder="Selecione a hora da entrega"
+                    value={horaEntrega}
+                    mode="outlined"
+                    label="Hora da Entrega"
+                    editable={false}
+                    id="horaEntrega"
+                />
+            </TouchableOpacity>
+            {showTimePickerEntrega && (
+                <DateTimePicker
+                    value={dataEntrega}
+                    mode="time"
+                    display="default"
+                    onChange={handleTimeEntregaChange}
+                />
+            )}
 
             <TextInput
-                placeholder="Selecione a hora da retirada"
-                id="horaRetirada"
-                type={time}
-                label='Hora da Retirada'
-                mode='outlined'
-                style={styles.input}
-            />
-            <TextInput
-                placeholder="Selecione a hora da entrega"
-                id="horaEntrega"
-                type={time}
-                label='Hora da Entrega'
-                mode='outlined'
-                style={styles.input}
-            />
-
-            <TextInput
-                form= "disabled"
+                form="disabled"
                 placeholder="Valor Diaria"
                 id="valorCategoria"
                 label='Valor/dia (Selecione um Modelo)'
@@ -241,30 +307,45 @@ const cadastrarLocacao = () => {
                 <Picker.Item label="GPS (R$99,00)" value="99" />
             </Picker>
 
-            <TextInputMask
-                placeholder="Digite a data da retirada"
-                id="dataRetirada"
-                type={'datetime'}
-                options={{
-                    format: 'DD/MM/YYYY'
-                }}
-                mode='outlined'
-                label='Data da Retirada'
-                onChangeText={dataRetirada=>setDataRetirada(dataRetirada)}
-                style={styles.input}
-            />
-            <TextInputMask
-                placeholder="Digite a data da entrega"
-                id="dataEntrega"
-                type={'datetime'}
-                options={{
-                    format: 'DD/MM/YYYY'
-                }}
-                mode='outlined'
-                label='Data da Entrega'
-                onChangeText={dataRetirada=>setDataRetirada(dataRetirada)}
-                style={styles.input}
-            />
+            <TouchableOpacity onPress={() => setShowDatePickerRetirada(true)}>
+                <TextInput
+                    placeholder="Selecione a data da retirada"
+                    id="dataRetirada"
+                    value={formatDate(dataRetirada)}
+                    mode="outlined"
+                    label="Data da Retirada"
+                    editable={false}
+                />
+            </TouchableOpacity>
+            {showDatePickerRetirada && (
+                <DateTimePicker
+                    value={dataRetirada}
+                    mode="date"
+                    display="default"
+                    onChange={handleDateRetiradaChange}
+                />
+            )}
+
+            <TouchableOpacity onPress={() => setShowDatePickerEntrega(true)}>
+                <TextInput
+                    placeholder="Selecione a data da entrega"
+                    id="dataEntrega"
+                    value={formatDate(dataEntrega)}
+                    mode="outlined"
+                    label="Data da Entrega"
+                    editable={false}
+                />
+            </TouchableOpacity>
+            {showDatePickerEntrega && (
+                <DateTimePicker
+                    value={dataEntrega}
+                    mode="date"
+                    display="default"
+                    onChange={handleDateEntregaChange}
+                />
+            )}
+
+
 
             <Text id="vlTotal">O valor total da(s) diária(s) é de R$ {total}</Text>
             <Button onPress={calculateTotal}>Calcular Total</Button>

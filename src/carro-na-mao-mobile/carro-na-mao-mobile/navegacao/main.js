@@ -4,7 +4,6 @@ import login from '../pages/paginas do usuario/login'
 import Avaliacao from '../pages/avaliacoes/avaliacao'
 
 import Cadastro from '../pages/paginas do usuario/cadastro'
-import editarLocacao from '../pages/locacao/editarLocacao'
 import viewLocacao from '../pages/locacao/viewLocacao'
 import cadastrarLocacao from '../pages/locacao/cadastrarLocacao'
 import cadastrarAvaliacao from '../pages/avaliacoes/cadastrarAvaliacao'
@@ -36,10 +35,6 @@ const Main = () => {
                 <stack.Screen
                     name='cadastrarAvaliacao'
                     component={cadastrarAvaliacao}
-                />
-                <stack.Screen
-                    name='editarLocacao'
-                    component={editarLocacao}
                 />
                 <stack.Screen
                     name='viewLocacao'

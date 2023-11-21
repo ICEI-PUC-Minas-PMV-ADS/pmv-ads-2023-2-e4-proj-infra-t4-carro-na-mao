@@ -1,4 +1,3 @@
-=======
 
 import * as React from 'react';
 import { BottomNavigation} from 'react-native-paper';

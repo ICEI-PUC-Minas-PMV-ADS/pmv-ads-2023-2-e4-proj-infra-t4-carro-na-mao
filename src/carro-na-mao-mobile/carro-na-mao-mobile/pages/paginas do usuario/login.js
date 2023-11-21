@@ -38,7 +38,6 @@ const login = ()=> {
                     salvarDadosLocal(response.data.nome,response.data.id)
                     navigation.navigate("viewLocacao")
                     //navigation.navigate("Avaliacao")
-=======
                     salvarDadosLocal(response.data.nome,response.data.id,response.data.email,response.data.telefone,response.data.dataNacimento,response.data.endereco)
                     AsyncStorage.setItem('dadosCompletos',JSON.stringify(response.data))
                     navigation.navigate("menu")

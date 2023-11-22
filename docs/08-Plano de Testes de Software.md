@@ -24,6 +24,21 @@
    - Obejetivo: Verificar se o registro funciona 
    - Passos: Acessar a pagina de avaliaçõe, aperta no botão de mais e adicionar
    - Criterio: Mensagem de sucesso aparecer
+
+ ### 6 - Locacao
+ **6.1 Verificar se os dados selecionados para a locação salvam de forma correta**
+   - Objetivo: Verificar se a locação cadastra de forma correta
+   - Passos: Acessar a aba locação e realizar uma reserva
+   - Criterio: Mensagem de sucesso ao terminar o processo
+ **6.2 Verificar se a reserva é excluida corretamente**
+   - Objetivo: Verificar se a locação é excluida do sistema
+   - Passos: Acessar a aba locação e selecionar a reserva que deseja excluir
+   - Criterio: Mensagem de sucesso ao terminar o processo
+ **6.2 Verificar se a reserva é editada corretamente**
+   - Objetivo: Verificar se a locação se altera conforme solicitação do usuario
+   - Passos: Acessar a aba locação e selecionar a reserva que deseja editar
+   - Criterio: Mensagem de sucesso ao terminar o processo
+
  ### 10 - Perfil
  **10.1 - Verificar se as informções do usaurio aparece de acordo com o usuario logado**
    - Obejetivo: Verificar se o sistema so mostra dados do usaurio logado

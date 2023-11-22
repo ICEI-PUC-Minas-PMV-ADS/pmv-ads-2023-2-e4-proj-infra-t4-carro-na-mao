@@ -32,7 +32,27 @@ const Cadastro =()=>{
             fetchData()
       },[]);
 
-const enviar =()=>{
+    function verificarUsuarioExistente(){   
+        const headers ={
+            "Content-Type":"application/json",
+            "Authorization": 'Bearer ' + token
+            }
+         axios.get('https://api-carronamao.azurewebsites.net/api/Cadastro/find-by-emailExistente/?email='+email+'',{headers})
+            .then(response =>{
+                if(response.status!==200){
+                 console.log('nao entra')
+                enviar()
+    
+            }
+            else if(response.status===200){
+                alert("Usurario já cadastrado")
+            }
+            }).catch(error => {
+                 alert("Usurario já cadastrado")
+                 console.error(error)
+        })
+    }
+    const enviar =()=>{
         const data = {
                 "nome": nome,
                 "dataNacimento": dataNasc,
@@ -45,7 +65,6 @@ const enviar =()=>{
                 "categoriaHabilitacao":categoriaHab,
                 "usuarioAtivo": true
              }
-        
         const headers ={
           "Content-Type":"application/json",
           "Authorization": 'Bearer ' + token
@@ -53,7 +72,7 @@ const enviar =()=>{
          if(email !=='' && senha !==''){
              axios.post('https://api-carronamao.azurewebsites.net/api/Cadastro',data,{headers})
              .then(response =>{
-                 if(response.status===200){
+                 if(response.status===200 ){
                      alert('cadastrado')
                      navigation.navigate("login")
                     }
@@ -77,6 +96,7 @@ const enviar =()=>{
                 value={nome}
                 onChangeText={nome=>setNome(nome)}
                 style={estiloCadastro.input}
+                placeholderTextColor="#fff"
             />
             <TextInputMask
                 type={'datetime'}
@@ -89,15 +109,16 @@ const enviar =()=>{
                 value={dataNasc}
                 onChangeText={dataNasc=>setNascimento(dataNasc)}
                 style={estiloCadastro.input}
+                placeholderTextColor="#fff"
             />
             <TextInput
                 mode='outlined'
-               
                 label="Endereco"
-                placeholder="Digite seu endereço completo. exp: Rua dos bobs,nº0"
+                placeholder="Digite seu endereço completo"
                 value={endereco}
                 onChangeText={endereco=>setEndereco(endereco)}
                 style={estiloCadastro.input}
+                placeholderTextColor="#fff"
             />
             <TextInputMask
                 type={"cpf"}
@@ -107,6 +128,7 @@ const enviar =()=>{
                 value={cpf}
                 onChangeText={cpf=>setCpf(cpf)}
                 style={estiloCadastro.input}
+                placeholderTextColor="#fff"
                 />
             <TextInputMask
                 type={'cel-phone'}
@@ -121,6 +143,7 @@ const enviar =()=>{
                 value={telefone}
                 onChangeText={telefone=>setTelefone(telefone)}
                 style={estiloCadastro.input}
+                placeholderTextColor="#fff"
             />
             <TextInput
                 mode='outlined'
@@ -129,6 +152,7 @@ const enviar =()=>{
                 value={categoriaHab}
                 onChangeText={categoriaHab=>setCategoriaHab(categoriaHab)}
                 style={estiloCadastro.input}
+                placeholderTextColor="#fff"
                 />
             <TextInput
                 mode='outlined'
@@ -138,6 +162,7 @@ const enviar =()=>{
                 value={email}
                 onChangeText={email=>setEmail(email)}
                 style={estiloCadastro.input}
+                placeholderTextColor="#fff"
             />
             <TextInput
                 mode='outlined'
@@ -147,8 +172,9 @@ const enviar =()=>{
                 onChangeText={senha=>setSenha(senha)}
                 secureTextEntry={true}
                 style={estiloCadastro.input}
+                placeholderTextColor="#fff"
             />
-            <Button style={estiloCadastro.botao} mode="contained" onPress={()=>enviar()}>Cadastre-se</Button>
+            <Button style={estiloCadastro.botao} mode="contained" onPress={()=>verificarUsuarioExistente()}>Cadastre-se</Button>
          </View>
      </View>
     )

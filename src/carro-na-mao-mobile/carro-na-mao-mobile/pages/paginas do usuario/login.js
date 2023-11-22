@@ -12,6 +12,7 @@ const login = ()=> {
     const [senha,setSenha] = useState()
     const [token,setToken]=useState(null)
     const navigation = useNavigation()
+    const [isAuthenticated, setIsAuthenticated] = useState(false)
     
     useEffect(() => {
         async function fetchData() {
@@ -34,22 +35,28 @@ const login = ()=> {
          axios.get('https://api-carronamao.azurewebsites.net/api/Cadastro/find-by-email/?email='+email+'&senha='+senha+'',{headers})
             .then(response =>{
                 if(response.status===200){
-                    salvarDadosLocal(response.data.nome,response.data.id)
-                    //navigation.navigate("Avaliacao")
-                    navigation.navigate("Localizacao")
+                    salvarDadosLocal(response.data.nome,response.data.id,response.data.email,response.data.telefone,response.data.dataNacimento,response.data.endereco)
+                    AsyncStorage.setItem('dadosCompletos',JSON.stringify(response.data))
+                    navigation.navigate("menu")
+    
             }
             else if(response.status===204){
                 alert("Usurario não cadastrado")
             }
             }).catch(error => {
-                 alert("error")
+                 alert("Ocorreu um erro interno.")
+                 console.error(error)
         })
     }
 
-    async function salvarDadosLocal (nome,id){
+    async function salvarDadosLocal (nome,id,email,telefone,dataNascimento,endereco){
         const dados_user = {
             'id':id,
-            'nome':nome
+            'nome':nome,
+            'endereceo':endereco,
+            'email':email,
+            'telefone':telefone,
+            'dataNascimento':dataNascimento
         }
         AsyncStorage.setItem('dados_user',JSON.stringify(dados_user))
         

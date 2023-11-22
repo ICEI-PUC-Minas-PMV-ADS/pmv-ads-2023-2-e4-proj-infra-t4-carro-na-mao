@@ -140,7 +140,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |--------|-------------------------------------------------------------------------------------------------------------|------------|
 | RF-001 | O sistema deve enviar notificações e lembretes aos clientes sobre datas de aluguel, devolução e pagamentos pendentes. | MÉDIA      |
 | RF-002 | O sistema deve permitir que os usuários se cadastrem na plataforma, fornecendo informações pessoais.               | ALTA       |
-| RF-003 | A aplicação deve o oferecer a opção de bloqueio de clientes para o usuário administrador, impedindo assim a reserva de veículos.                     | ALTA       |
+| RF-003 | A aplicação deve o oferecer a opção de bloqueio de clientes para o usuário administrador, impedindo assim a reserva de veículos.                     | MÉDIA       |
 | RF-004 | O sistema deve possibilitar aos usuários avaliar o serviço da locadora.                                        | MÉDIA      |
 | RF-005 | O sistema deve apresentar um mapa ao usuário indicando qual o local onde ele deve retirar seu veículo locado.   | BAIXA      |
 | RF-006 | O sistema deve possibilitar o cliente escolher qual carro alugar, com base no preço, modelo, data, local de retirada, cálculo de custos adicionais da locação, edição e cancelamento de reservas. | ALTA     |

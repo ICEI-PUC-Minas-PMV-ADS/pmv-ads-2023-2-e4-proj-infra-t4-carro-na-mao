@@ -1,4 +1,73 @@
 # Plano de Testes de Software 
+
+ ## FRONT END: MOBILE
+ ### 1 - Login/Cadastro
+  
+**1.1 - Verificar se o cadastro barra email já cadastrado na plataforma**
+   - Obejetivo: Evitar usuario com o mesmo login.
+   - Passos: Acessar a pagina de cadastro, preenche a fixa
+   - Criterio: Caso o email já estejá cadastrado, um alerta será emetido
+**1.2 - Verificar se cadastro está sendo realizado sem nenhum problema**
+   - Obejetivo: Ter certeza que todos os dados estão sendo enviado de maneira corrreta
+   - Passos: Acessar a pagina de cadastro, preenche a fixa
+   - Criterio: Caso estejá tudo certo, um alerta avisando que foi cadastrado ira surgi
+**1.3 - Verificar se o  sistema deixa somente usuario cadastrados entrar na plataforma**
+   - Obejetivo: Verificar se o sistema deixa somente usuario cadastrados entrar
+   - Passos: Na tela de login, digitar um usuario aleatoria
+   - Criterio: Caso o usuario n exista  o sistema deve barrar
+ ### 5 - Avaliação 
+ **5.1 - Verificar se as avaliações estão sendo recuperadas do banco de dados de maneira correta**
+   - Obejetivo:Verificar se o sistema está mostrando as avaliações dos serviço com o nome e data de quem avaliaou 
+   - Passos: acessar a pagina de avaliações
+   - Criterio: As avaliações aparecer
+ **5.2- Verficar se o campo de registro de novas avaliações aparece de forma correta**
+   - Obejetivo: Verificar se o registro funciona 
+   - Passos: Acessar a pagina de avaliaçõe, aperta no botão de mais e adicionar
+   - Criterio: Mensagem de sucesso aparecer
+
+ ### 6 - Locacao
+ **6.1 Verificar se os dados selecionados para a locação salvam de forma correta**
+   - Objetivo: Verificar se a locação cadastra de forma correta
+   - Passos: Acessar a aba locação e realizar uma reserva
+   - Criterio: Mensagem de sucesso ao terminar o processo
+ **6.2 Verificar se a reserva é excluida corretamente**
+   - Objetivo: Verificar se a locação é excluida do sistema
+   - Passos: Acessar a aba locação e selecionar a reserva que deseja excluir
+   - Criterio: Mensagem de sucesso ao terminar o processo
+ **6.2 Verificar se a reserva é editada corretamente**
+   - Objetivo: Verificar se a locação se altera conforme solicitação do usuario
+   - Passos: Acessar a aba locação e selecionar a reserva que deseja editar
+   - Criterio: Mensagem de sucesso ao terminar o processo
+
+ ### 10 - Perfil
+ **10.1 - Verificar se as informções do usaurio aparece de acordo com o usuario logado**
+   - Obejetivo: Verificar se o sistema so mostra dados do usaurio logado
+   - Passos: Acessar a pagina de perfil
+   - Criterio: Aparecer somente as informações do  usuario
+ **10.2 - Verificar se se o usuario consegue editar sua informações**
+   - Obejetivo: Verificar se o metodo put da API funcina de maneira adequada
+   - Passos: Acessar a pagina de perfil, clicar no botão de editar e depois confirmar as alteraçãoes
+   - Criterio: Mensangem de sucesso aparecer
+ **10.3 -  Verificar se o usuario consegue apagar sua conta**
+   - Obejetivo: Verificar se o usaurio consegue deletar a sua conta
+   - Passos: Acessar a pagina do perfil, clicar na lixiera e depois excluir
+   - Criterio: Usuario redirecionado para tela de login
+=======
+ ## FRONT END: MOBILE
+
+### 09 - Notificação
+   > Requisito Associado: RF-001 O sistema deve enviar notificações e lembretes aos clientes sobre datas de aluguel, devolução e pagamentos pendentes.
+
+**9 - Recebimento de notificações push**
+ - Objetivo do Teste: Verificar se o envio da Notificação push irá aparecer como alerta no dispositivo mobile.
+ - Passos:     
+    1) Acessar a aplicação em modo desenvolvimento, usando o EXPO GO
+    2) Acessar a API de envio de notificações 'push', no endereço (https://app.nativenotify.com/)
+    2) Fazer Login e acessar o a sessão App _Carro na mao_
+    3) Clicar no símbolo de notificação (_Message icon_), escrever título e conteúdo da notificação e clicar em _Send Push Notification_
+ - Critério de sucesso: Mensagem de alerta de 'Sucesso' exibida, a notificação 'push' aparecer na tela do dispositivo e na sessão de 'notificações enviadas' da API.
+
+
  ## FRONT END: WEB
  ### 1 - Login/Cadastro
 
@@ -71,30 +140,13 @@
    ### 09 - Notificação
    > Requisito Associado: RF-001 O sistema deve enviar notificações e lembretes aos clientes sobre datas de aluguel, devolução e pagamentos pendentes.
 
- **9.1 - Recebimento de notificações**
- - Objetivo do Teste: Verificar se a mensagem enviada pelo _front-end_ chegam ao destinatário. 
+ **9 - Recebimento de notificações e-mail**
+ - Objetivo do Teste: Verificar se a mensagem enviada pelo _front-end_ chega ao destinatário via e-mail. 
  - Passos: 
     1) Acessar a aplicação em modo desenvolvimento, no endereço local (http://localhost:3000/)
     2) Fazer Login ou cadastrar um usuário e acessar a sessão _Notificações_
-    3) Digitar a mensagem e clicar em enviar
- - Critério de Êxitos: Um alerta de nova mensagem, no ícone de notificação (_Bell Icon_).
-
-**9.2 - Leitura de notificações**
- - Objetivo do Teste: Verificar se após a abertura da Notificação o alerta de nova mensagem irá "desligar".
- - Passos:     
-    1) Acessar a aplicação em modo desenvolvimento, no endereço local (http://localhost:3000/)
-    2) Fazer Login ou cadastrar um usuário e acessar a sessão _Notificações_
-    3) Clicar no símbolo de notificação (_Bell Icon_), clicar na mensagem marcada como nova para fazer a leitura.
- - Critério de sucesso: O ícone de alerta de nova mensagem, no _Bell Icon_ deverá alterar para "mensagem lida".
-
-**9.3 - Apagar as notificações**
- - Objetivo do Teste: Verificar se as notificações serão apagadas após a utilização da opção "Remover Mensagem".
- - Passos:     
-    1) Acessar a aplicação em modo desenvolvimento, no endereço local (http://localhost:3000/)
-    2) Fazer Login ou cadastrar um usuário e acessar a sessão _Notificações_
-    3) Clicar no símbolo de notificação (_Bell Icon_), clicar na mensagem, selecionar "Opções" através do menu contexto "..." e selecionar a opção "Remover Mensagem".
- - Critério de sucesso: A mensagem deverá ser apagada e não ser mais listada dentro das Notificações. Caso todas as mensagem sejam apagadas, uma tela com a informação "Nenhuma mensagem nova" deverá ser exibida.
-
+    3) Digitar o tipo de mensagem desejada e clicar em enviar
+ - Critério de Êxitos: A nova mensagem será enviada para a caixa do endereço de e-mail informado e deverá aparecer na sessão 'Emails' da API Resend.
 
 ##
 ## API

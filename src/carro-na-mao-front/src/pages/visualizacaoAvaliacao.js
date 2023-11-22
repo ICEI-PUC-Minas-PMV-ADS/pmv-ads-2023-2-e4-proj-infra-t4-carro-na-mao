@@ -5,6 +5,7 @@ import { useNavigate, Link} from 'react-router-dom';
 import { Menu } from "./menu";
 import FlatList from 'flatlist-react';
 import '../estilos/avaliacoes.css';
+//import StarRating from 'react-native-star-rating';
 
 
 const  VisualizarAvaliacoes= ()=>{

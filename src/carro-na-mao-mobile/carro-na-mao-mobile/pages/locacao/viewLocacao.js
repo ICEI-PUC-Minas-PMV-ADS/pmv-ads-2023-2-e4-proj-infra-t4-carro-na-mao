@@ -4,6 +4,7 @@ import { View, Text, StyleSheet, FlatList, TouchableOpacity, Alert } from "react
 import { FAB } from 'react-native-paper';
 import { RecuperaToken } from "../../Autenticação/autenticacao";
 import { useNavigation, useIsFocused } from '@react-navigation/native';
+import estiloLocacao from "../../estilos/estiloLocacao";
 
 const Locacao = () => {
   const navigation = useNavigation();
@@ -82,51 +83,34 @@ const Locacao = () => {
   const Item = ({ item }) => {
     return (
       <TouchableOpacity onLongPress={() => handleDelete(item.id)}>
-        <View style={styles.informacoe}>
-          <Text>{'Local ' + item.id_local}</Text>
-          <Text>{'Categoria ' + item.id_categoria}</Text>
-          <Text>{'Modelo Veículo ' + item.modelo_veiculo}</Text>
-          <Text>{'Hora Retirada ' + item.hora_retirada}</Text>
-          <Text>{'Data Retirada ' + item.data_retirada}</Text>
+        <View style={estiloLocacao.informacoe}>
+          <Text>{'Local: ' + item.id_local}</Text>
+          <Text>{'Categoria: ' + item.id_categoria}</Text>
+          <Text>{'Modelo Veículo: ' + item.modelo_veiculo}</Text>
+          <Text>{'Hora Retirada: ' + item.hora_retirada}</Text>
+          <Text>{'Data Retirada: ' + item.data_retirada}</Text>
+          <Text>{'Valor da diaria: ' + item.vl_categoria}</Text>
         </View>
       </TouchableOpacity>
     );
   };
 
   return (
-    <View>
+    <View style={estiloLocacao.body}>
       <FlatList
-        style={styles.lista}
+        style={estiloLocacao.topicos}
         data={locacao}
         renderItem={Item}
         keyExtractor={item => (item.id ? item.id.toString() : null)}
       />
 
       <FAB
-        style={styles.fab}
+        style={estiloLocacao.adic}
         icon="plus"
         onPress={() => navigation.navigate('cadastrarLocacao')}
       />
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  fab: {
-    position: 'absolute',
-    margin: 16,
-    right: 0,
-    bottom: 0,
-  },
-  lista: { padding: 3 },
-  informacoe: {
-    padding: 35,
-    width: 370,
-    left: 10,
-    position: 'relative',
-    backgroundColor: '#eee',
-    marginBottom: 10,
-  }
-});
 
 export default Locacao;

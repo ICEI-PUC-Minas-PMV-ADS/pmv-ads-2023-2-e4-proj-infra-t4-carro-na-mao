@@ -8,6 +8,7 @@ import { TextInput, Button } from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Picker } from "@react-native-picker/picker";
 import DateTimePicker from '@react-native-community/datetimepicker';
+import estiloLocacao from "../../estilos/estiloLocacao";
 
 const formatDate = (date) => {
     const day = String(date.getDate()).padStart(2, '0');
@@ -194,7 +195,7 @@ const cadastrarLocacao = () => {
     }
 
     return (
-        <View>
+        <View style={estiloLocacao.body}>
             <Picker
                 id="localRetirada"
                 selectedValue={local}
@@ -249,6 +250,7 @@ const cadastrarLocacao = () => {
                 <TextInput
                     placeholder="Selecione a hora da retirada"
                     value={horaRetirada}
+                    style={estiloLocacao.select}
                     mode="outlined"
                     label="Hora da Retirada"
                     editable={false}
@@ -268,6 +270,7 @@ const cadastrarLocacao = () => {
                 <TextInput
                     placeholder="Selecione a hora da entrega"
                     value={horaEntrega}
+                    style={estiloLocacao.select}
                     mode="outlined"
                     label="Hora da Entrega"
                     editable={false}
@@ -289,13 +292,17 @@ const cadastrarLocacao = () => {
                 id="valorCategoria"
                 label='Valor/dia (Selecione um Modelo)'
                 mode='outlined'
-                style={styles.input}
+                style={estiloLocacao.input}
                 value={valorCategoria}
             />
 
             <Picker
                 id="custosAd"
                 selectedValue={adicionais}
+                activeOutlineColor="#fff"
+                textColor="#fff"
+                underlineColor="#fff"
+                outlineColor="#fff"
                 onValueChange={(itemValue) => setAdicionais(itemValue)}
                 mode="dropdown"
                 prompt="Se preferir, contrate um adicional"
@@ -311,6 +318,11 @@ const cadastrarLocacao = () => {
                     placeholder="Selecione a data da retirada"
                     id="dataRetirada"
                     value={formatDate(dataRetirada)}
+                    style={estiloLocacao.select}
+                    activeOutlineColor="#fff"
+                    textColor="#fff"
+                    underlineColor="#fff"
+                    outlineColor="#fff"
                     mode="outlined"
                     label="Data da Retirada"
                     editable={false}
@@ -330,6 +342,11 @@ const cadastrarLocacao = () => {
                     placeholder="Selecione a data da entrega"
                     id="dataEntrega"
                     value={formatDate(dataEntrega)}
+                    style={estiloLocacao.select}
+                    activeOutlineColor="#fff"
+                    textColor="#fff"
+                    underlineColor="#fff"
+                    outlineColor="#fff"
                     mode="outlined"
                     label="Data da Entrega"
                     editable={false}
@@ -346,39 +363,14 @@ const cadastrarLocacao = () => {
 
 
 
-            <Text id="vlTotal">O valor total da(s) diária(s) é de R$ {total}</Text>
-            <Button onPress={calculateTotal}>Calcular Total</Button>
-            <Button style={styles.botaoSave} mode="contained" onPress={() => registrarLocacao()}>Salvar</Button>
+            <Text style={estiloLocacao.vlTotal} id="vlTotal">O valor total da(s) diária(s) é de R$ {total}</Text>
+            <Button style={estiloLocacao.calculateTotal} mode="contained" onPress={calculateTotal}>Calcular Total</Button>
+            <Button style={estiloLocacao.botaoSave} mode="contained" onPress={() => registrarLocacao()}>Salvar</Button>
         </View>
 
     )
 
 
 }
-const styles = StyleSheet.create({
-    dataEntr: {
-        borderRadius: 5,
-        overflow: 'hidden',
-    },
-    titulo: {
-        position: 'relative',
-        top: 60,
-        fontSize: 30,
-        left: 10
-    },
-    campos: {
-        position: 'relative',
-        top: 90
-    },
-    input: {
-        height: 40,
-        margin: 12
-    },
-    botaoSave: {
-        width: 200,
-        top: 50,
-        left: 90
-    },
-});
 
 export default cadastrarLocacao;

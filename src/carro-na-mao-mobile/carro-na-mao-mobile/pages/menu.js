@@ -4,7 +4,7 @@ import { BottomNavigation} from 'react-native-paper';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import Avaliacao from '../pages/avaliacoes/avaliacao';
 import Perfil from '../pages/paginas do usuario/perfil';
-import viewLocacao from '../pages/locacao/viewLocacao' 
+import Locacao from '../pages/locacao/viewLocacao' 
 import { NavigationContainer } from '@react-navigation/native'
 import {createNativeStackNavigator} from'@react-navigation/native-stack' // Ajuste na importação
 import Vistorias from "../pages/vistorias/cadastrarVistoria";
@@ -15,16 +15,16 @@ const [index, setIndex] = React.useState(0);
 const [routes] = React.useState([
   { key: 'av', title: 'Avaliacao', focusedIcon: 'star-outline' },
   { key: 'V', title: 'Vistorias', focusedIcon: '' },
+  { key: 'L', title: 'Locacao', focusedIcon: ''},
   { key: 'T', title: 'Perfil', focusedIcon: 'account' },
-  { key: 'L', title: 'viewLocacao', focusedIcon: ''},
 ]);
 
 
 const renderScene = BottomNavigation.SceneMap({
   av:Avaliacao,
   T:Perfil,
+  L:Locacao,
   V:Vistorias,
-  L:viewLocacao
 
 });
 

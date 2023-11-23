@@ -37,7 +37,7 @@ Telas propostas na concepção do projeto:
 ![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-minhaReserva.PNG)
 
 #### Tela de notificação front-end Mobile.
-![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-notificacao.PNG)
+![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-notificacao2.PNG)
 
 #### Tela de vistoria front-end Mobile.
 ![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-vistoria.PNG)

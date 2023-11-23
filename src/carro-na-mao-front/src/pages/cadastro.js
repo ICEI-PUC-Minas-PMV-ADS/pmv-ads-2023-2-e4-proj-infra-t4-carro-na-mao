@@ -22,25 +22,26 @@ function Cadastro() {
         fetchData()
     }, []);
 
-    function verificarUsuarioExistente() {
+    function verificarUsuarioExistente(){   
         const email = document.querySelector('#emailCadastro').value
-        const headers = {
-            "Content-Type": "application/json",
+        const headers ={
+            "Content-Type":"application/json",
             "Authorization": 'Bearer ' + token
-        }
-        axios.get('https://api-carronamao.azurewebsites.net/api/Cadastro/find-by-emailExistente/?email=' + email + '', { headers })
-            .then(response => {
-                if (response.status !== 200) {
-                    cadastrar()
-
-                }
-                else if (response.status === 200) {
-                    alert("Usurario já cadastrado")
-                }
+            }
+         axios.get('https://api-carronamao.azurewebsites.net/api/Cadastro/find-by-emailExistente/?email='+email+'',{headers})
+            .then(response =>{
+                if(response.status!==200){
+                 cadastrar()
+    
+            }
+            else if(response.status===200){
+                alert("Usurario já cadastrado")
+            }
             }).catch(error => {
-                alert(error)
-                console.error(error)
-            })
+                 alert(error)
+                 console.error(error)
+        })
+
     }
 
     const cadastrar = () => {

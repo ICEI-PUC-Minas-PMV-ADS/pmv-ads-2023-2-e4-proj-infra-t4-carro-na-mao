@@ -6,6 +6,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { Menu } from './menu';
 import '../estilos/avaliacoes.css';
 
+
 function Avaliacoes() {
  
   const navigate = useNavigate()

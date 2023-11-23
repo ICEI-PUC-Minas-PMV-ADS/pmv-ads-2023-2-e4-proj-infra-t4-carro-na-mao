@@ -12,6 +12,7 @@ const login = ()=> {
     const [senha,setSenha] = useState()
     const [token,setToken]=useState(null)
     const navigation = useNavigation()
+    const [isAuthenticated, setIsAuthenticated] = useState(false)
     
     useEffect(() => {
         async function fetchData() {
@@ -35,14 +36,16 @@ const login = ()=> {
             .then(response =>{
                 if(response.status===200){
                     salvarDadosLocal(response.data.nome,response.data.id,response.data.email,response.data.telefone,response.data.dataNacimento,response.data.endereco)
-                    navigation.navigate("Avalicao")
-                    //navigation.navigate("cadastrarVistoria")
+                    AsyncStorage.setItem('dadosCompletos',JSON.stringify(response.data))
+                    navigation.navigate("menu")
+    
             }
             else if(response.status===204){
                 alert("Usurario não cadastrado")
             }
             }).catch(error => {
-                 alert("error")
+                 alert("Ocorreu um erro interno.")
+                 console.error(error)
         })
     }
 

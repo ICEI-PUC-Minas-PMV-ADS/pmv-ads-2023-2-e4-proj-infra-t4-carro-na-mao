@@ -1,10 +1,11 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { View, Text, StyleSheet, FlatList, TouchableOpacity, Alert } from "react-native";
-import { FAB } from 'react-native-paper';
+import { FAB, IconButton } from 'react-native-paper';
 import { RecuperaToken } from "../../Autenticação/autenticacao";
 import { useNavigation, useIsFocused } from '@react-navigation/native';
 import estiloLocacao from "../../estilos/estiloLocacao";
+import { format } from 'date-fns';
 
 const Locacao = () => {
   const navigation = useNavigation();
@@ -41,6 +42,7 @@ const Locacao = () => {
   }
 
   const handleDelete = async (id) => {
+    console.log('ID da reserva a ser excluída:', id);
     try {
       const jwtToken = await RecuperaToken();
 
@@ -61,14 +63,20 @@ const Locacao = () => {
               };
 
               try {
-                const response = await axios.delete(`https://api-carronamao.azurewebsites.net/api/Locacao?id=${id}`, { headers });
+                const response = await axios.delete(`https://api-carronamao.azurewebsites.net/api/Locacao/${id}`, { headers });
 
                 if (response.status === 200) {
                   alert('Reserva excluída com sucesso');
                   navigation.navigate('viewLocacao');
                 }
               } catch (error) {
-                alert('Erro ao excluir reserva');
+                if (error.response && error.response.status === 400) {
+                  console.error('Erro 404 ao excluir reserva:', error.response.data);
+                  alert('Erro 404 ao excluir reserva: ' + error.response.data.message);
+                } else {
+                console.error('Erro ao excluir reserva:', error);
+                alert('Erro ao excluir reserva' + error.message);
+                }
               }
             },
           },
@@ -82,14 +90,21 @@ const Locacao = () => {
 
   const Item = ({ item }) => {
     return (
-      <TouchableOpacity onLongPress={() => handleDelete(item.id)}>
+      <TouchableOpacity onPress={() => navigation.navigate('editarLocacao', { id: item.id })} >
+        
         <View style={estiloLocacao.informacoe}>
           <Text>{'Local: ' + item.id_local}</Text>
           <Text>{'Categoria: ' + item.id_categoria}</Text>
           <Text>{'Modelo Veículo: ' + item.modelo_veiculo}</Text>
           <Text>{'Hora Retirada: ' + item.hora_retirada}</Text>
-          <Text>{'Data Retirada: ' + item.data_retirada}</Text>
+          <Text>{'Data Retirada: ' + format(new Date(item.data_retirada), 'dd/MM/yyyy')}</Text>
           <Text>{'Valor da diaria: ' + item.vl_categoria}</Text>
+          <IconButton
+            icon="delete"
+            style={estiloLocacao.exclui}
+            iconColor='#8B0000'
+            onPress={() => handleDelete(item.id)}
+          />
         </View>
       </TouchableOpacity>
     );

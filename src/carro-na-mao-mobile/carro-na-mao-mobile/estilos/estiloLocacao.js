@@ -31,13 +31,21 @@ export default StyleSheet.create({
     select: {
         height: 40,
         margin: 12,
-        backgroundColor: '#1F2024'
+        backgroundColor: '#1F2024',
+        activeOutlineColor:"#fff",
+        textColor:"#fff",
+        underlineColor:"#fff",
+        outlineColor:"#fff",
     },
     input: {
         height: 40,
         margin: 12,
         borderWidth: 1,
-        backgroundColor: '#1F2024'
+        backgroundColor: '#1F2024',
+        activeOutlineColor:"#fff",
+        textColor:"#fff",
+        underlineColor:"#fff",
+        outlineColor:"#fff",
     },
     botaoSave: {
         width:200,
@@ -57,6 +65,8 @@ export default StyleSheet.create({
         left: 80,
         color: '#fffaf0',
     },
-    
+    exclui: {
+        size: 20,
+    },
     
 });

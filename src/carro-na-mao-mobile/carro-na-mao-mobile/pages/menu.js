@@ -15,7 +15,7 @@ const [index, setIndex] = React.useState(0);
 const [routes] = React.useState([
   { key: 'av', title: 'Avaliacao', focusedIcon: 'star-outline' },
   { key: 'V', title: 'Vistorias', focusedIcon: '' },
-  { key: 'L', title: 'Locacao', focusedIcon: ''},
+  { key: 'L', title: 'Locacao', focusedIcon: 'car-connected'},
   { key: 'T', title: 'Perfil', focusedIcon: 'account' },
 ]);
 

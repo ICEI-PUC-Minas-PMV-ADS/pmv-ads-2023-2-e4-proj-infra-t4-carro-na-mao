@@ -44,10 +44,8 @@ const EditarLocacao = ({ route, navigation }) => {
       }
       fetchData();
   
-      // Carregar dados da locação para edição
       const locacaoData = route.params?.locacaoData;
       if (locacaoData) {
-        // Atualizar os estados com os dados da locação
         setLocal(locacaoData.id_local);
         setCategoria(locacaoData.id_categoria);
         setModelo(locacaoData.modelo_veiculo);
@@ -57,7 +55,6 @@ const EditarLocacao = ({ route, navigation }) => {
         setDataRetirada(new Date(locacaoData.data_retirada));
         setDataEntrega(new Date(locacaoData.data_entrega));
         setAdicionais(locacaoData.custos_ad);
-        // Calcula a diária e total com base nos dados carregados
         calculateDiaria(parseFloat(locacaoData.vl_categoria));
         calculateTotal();
       }
@@ -129,7 +126,7 @@ const EditarLocacao = ({ route, navigation }) => {
     }
 
     const calculateDateDiff = () => {
-        const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+        const oneDay = 24 * 60 * 60 * 1000;
         const diffInMilliseconds = Math.abs(dataEntrega - dataRetirada);
         return Math.round(diffInMilliseconds / oneDay);
     };
@@ -179,12 +176,6 @@ const EditarLocacao = ({ route, navigation }) => {
     };
 
 
-
-
-
-
-
-    // Função para atualizar a locação
     const atualizarLocacao = () => {
         const data = {
             "id_local": local,

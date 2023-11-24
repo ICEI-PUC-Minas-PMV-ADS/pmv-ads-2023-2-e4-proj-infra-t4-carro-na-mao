@@ -41,8 +41,8 @@ const Locacao = () => {
       });
   }
 
-  const handleDelete = async (id) => {
-    console.log('ID da reserva a ser excluída:', id);
+  const handleDelete = async (id_locacao) => {
+    console.log('ID da reserva a ser excluída:', id_locacao);
     try {
       const jwtToken = await RecuperaToken();
 
@@ -63,7 +63,7 @@ const Locacao = () => {
               };
 
               try {
-                const response = await axios.delete(`https://api-carronamao.azurewebsites.net/api/Locacao/${id}`, { headers });
+                const response = await axios.delete(`https://api-carronamao.azurewebsites.net/api/Locacao/${id_locacao}`, { headers });
 
                 if (response.status === 200) {
                   alert('Reserva excluída com sucesso');
@@ -90,7 +90,7 @@ const Locacao = () => {
 
   const Item = ({ item }) => {
     return (
-      <TouchableOpacity onPress={() => navigation.navigate('editarLocacao', { id: item.id })} >
+      <TouchableOpacity onPress={() => navigation.navigate('editarLocacao', { id: item.id_locacao })} >
         
         <View style={estiloLocacao.informacoe}>
           <Text>{'Local: ' + item.id_local}</Text>
@@ -103,7 +103,7 @@ const Locacao = () => {
             icon="delete"
             style={estiloLocacao.exclui}
             iconColor='#8B0000'
-            onPress={() => handleDelete(item.id)}
+            onPress={() => handleDelete(item.id_locacao)}
           />
         </View>
       </TouchableOpacity>

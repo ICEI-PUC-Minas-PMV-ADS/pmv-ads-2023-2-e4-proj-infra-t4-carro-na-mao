@@ -82,3 +82,27 @@
     color: #1e72f0;
     cursor: pointer;
 }
+
+#camposCategoria {
+    width: 75%;
+    border-radius: 10px;
+    background-color: #fff;
+    line-height: 2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    top: 0em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: flex-start;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px rgb(231, 231, 231), 1em 1em 1.4em rgb(190, 187, 187);
+    justify-content: space-around;
+}
+
+#camposCategoria input {
+    margin-bottom: 5px; 
+    left: 20px;
+    position: relative;
+}

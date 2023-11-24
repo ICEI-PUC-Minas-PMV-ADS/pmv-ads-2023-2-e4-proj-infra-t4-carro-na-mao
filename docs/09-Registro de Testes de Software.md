@@ -24,6 +24,28 @@
  **1.3- Verificar se o cadastro barra campos em branco**
  ![.](img/verificandocampos.png)
 
+  ### 2 - Estoque
+
+  **2.1 - Inserção de novo regristo**
+  ![estoqueCreate](img/estoqueFrontCreate.png)
+
+  **2.2 - Edição de um regristo**
+  ![estoqueUpdate](img/estoqueFrontUpdate.png)
+
+  **2.3 - Carregar informações **
+  ![estoqueGet](img/estoqueFrontGet.png)
+
+  ### 4- Categoria
+
+   **4.1 - Inserção de novo regristo**
+   ![categoriaCreate](img/categoriaFrontCreate.png)
+
+   **4.2 - Edição de um regristo**
+   ![categoriaUpdate](img/categoriaFrontUpdate.png)
+
+   **4.3 - Carregar informações **
+   ![categoriaGet](img/categoriaFrontGet.png)
+
  ### 5- Avaliação
  **5.1 - Registro das Informações**
 

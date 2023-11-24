@@ -9,7 +9,7 @@
 
     width: 100%;
     height: 100%;
-    background-color: rgb(10, 11, 10)
+    background: dodgerblue linear-gradient(179deg, #242424, #a28888, #63191f) fixed;
 }
 
 #camposHome {
@@ -57,7 +57,7 @@
 }
 
 #emailHome {
-    color: black;
+    color: rgb(237, 30, 30);
     display: block;
     top: -5em;
     width: 25em;
@@ -66,6 +66,8 @@
     margin: 5px 0;
     border: 1px solid #c91414;
     border-radius: 7px;
+    background: #ccc;
+
 }
 
 #senhaHome {
@@ -78,13 +80,15 @@
     margin: 5px 0;
     border: 1px solid #cf1a1a;
     border-radius: 7px;
+    background-color: #ccc;
+
 
 }
 
 #btnEntrar {
     top: -3em;
     color: white;
-    padding: 12px;
+    padding: 15px;
     border: 1px solid #d72727;
     background-color: black;
     position: relative;
@@ -100,14 +104,18 @@
     top: -0.5em;
     left: 6em;
     color: black;
+    font-style: inherit;
+
 
 }
 
 #link {
     position: relative;
-    top: 0em;
-    left: 8em;
+    top: -0.5em;
+    left: 6em;
     color: #007bff;
+    font: normal 20px/1.6 system-ui, sans-serif;
+
 
 }
 
@@ -121,8 +129,10 @@
 
 #todosOsDireitos {
     position: relative;
-    top: 4em;
+    top: 3em;
     left: 1em;
     font-family: Arial, Helvetica, sans-serif;
     font-size: small;
+    font: normal 13px/1.6 system-ui, sans-serif;
+
 }

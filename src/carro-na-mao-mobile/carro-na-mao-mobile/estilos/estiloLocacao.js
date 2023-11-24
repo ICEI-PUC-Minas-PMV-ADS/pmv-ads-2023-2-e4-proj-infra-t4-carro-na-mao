@@ -19,7 +19,7 @@ export default StyleSheet.create({
         lineHeight: 100,
         top: 40,
     },
-    itemLista: {
+    informacoe: {
         padding: 35,
         width: 370,
         left: 10,
@@ -67,15 +67,6 @@ export default StyleSheet.create({
     },
     exclui: {
         size: 20,
-    },
-    modal:{
-        backgroundColor:'#1F2024'
-      
-    },
-    close:{
-        position:'relative',
-        left:300
-        
     },
     
 });

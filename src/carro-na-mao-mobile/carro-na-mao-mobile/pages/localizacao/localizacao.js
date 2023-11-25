@@ -20,7 +20,6 @@ let locationsOfInterest = [
     },
     description: "Seu carro está aqui!"
   }
-
   
 ]
 
@@ -52,34 +51,19 @@ export default function Localizacao({route, navigation}) {
             const jwtToken = await RecuperaToken();
             setToken(jwtToken);
             console.log(jwtToken);
+            findLocalizacao();
         } catch (error) {
             console.error('Erro ao recuperar token:', error);
         }
     }
     fetchData();
-    findLocalizacao(route.params);
   },[]);
 
-  const findLocalizacao = (locacao) => {
+  const findLocalizacao = () => {
   
-    const headers = {
-        "Content-Type": "application/json",
-        "Authorization": 'Bearer ' + token
+    if(route.params.id_local !== 0){
+      setShowDivs(true);
     }
-    console.log(locacao)
-    axios.get(`https://api-carronamao.azurewebsites.net/find-by-locacao?id_locacao=${locacao}`, { headers })
-        .then(response => {
-            if (response.status === 200) {
-                idLocal = response.data.id_local;
-                console.log(idLocal);
-                setShowDivs(true);
-            } else if(response.status != 200){
-              alert("Código de Locação não encontrado.");
-            }
-        })
-        .catch(error => {
-            console.log(error);
-        })
   }
 
   const onRegionChange = (region) => {
@@ -89,9 +73,10 @@ export default function Localizacao({route, navigation}) {
   return (
     <View style={estiloLocalizacao.container}>
       {showDivs && (
-        <>
-        {idLocal !== 1 ? (
-            <Text style={estiloLocalizacao.mapOverlay}>Local indisponível</Text>
+        <> 
+        {route.params.id_local !== 1 ? (
+            <Text style={estiloLocalizacao.mapOverlayError}>Local indisponível!
+            Selecione outra localização.</Text>
           ) : (
             <><Text style ={estiloLocalizacao.textoMapa}>Local de Retirada do veículo</Text>
             <MapView

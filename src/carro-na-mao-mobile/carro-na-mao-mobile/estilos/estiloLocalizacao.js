@@ -30,6 +30,14 @@ export default StyleSheet.create({
       width: "50%",
       textAlign: "center"
     },
+    mapOverlayError: {
+      backgroundColor: "#ffffff",
+      borderWidth: 2,
+      padding: 16,
+      width: "50%",
+      textAlign: "center",
+      color: "#ff0000"
+    },
     input: {
         width: '90%',
         padding: 10,

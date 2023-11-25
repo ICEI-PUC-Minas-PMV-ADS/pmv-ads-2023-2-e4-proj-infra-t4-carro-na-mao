@@ -45,7 +45,14 @@
   ![delete1](img/delete%201.PNG)
 
   ![delete2](img/delete%202.PNG)
-  
+
+  ### 11- Localização
+  **11.1 - Visualizar mapa do local da retirada**
+  ![localizacaoMobile](img/localizacaoMobile.jpeg)
+
+  **11.2 - Localização não existente**
+  ![localizcaoMobileError](img/localizacaoMobileError.jpeg)
+
 
  ## FRONT END: WEB
   ### 1 - Login/Cadastro
@@ -59,6 +66,28 @@
    
  **1.3- Verificar se o cadastro barra campos em branco**
  ![.](img/verificandocampos.png)
+
+  ### 2 - Estoque
+
+  **2.1 - Inserção de novo regristo**
+  ![estoqueCreate](img/estoqueFrontCreate.png)
+
+  **2.2 - Edição de um regristo**
+  ![estoqueUpdate](img/estoqueFrontUpdate.png)
+
+  **2.3 - Carregar informações **
+  ![estoqueGet](img/estoqueFrontGet.png)
+
+  ### 4- Categoria
+
+   **4.1 - Inserção de novo regristo**
+   ![categoriaCreate](img/categoriaFrontCreate.png)
+
+   **4.2 - Edição de um regristo**
+   ![categoriaUpdate](img/categoriaFrontUpdate.png)
+
+   **4.3 - Carregar informações **
+   ![categoriaGet](img/categoriaFrontGet.png)
 
  ### 5- Avaliação
  **5.1 - Registro das Informações**
@@ -131,6 +160,11 @@
  ![Teste com êxito](img/Testes/notif_web_001.png)
 
  ![Teste com êxito e-mail](img/Testes/notif_web_002.png)
+
+  ### 10- Categoria
+
+  **10 - Visualização do mapa**
+  ![localizacaoFrontGet](img/localizacaoFrontGet.png)
 
 
 ##

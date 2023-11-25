@@ -1,28 +1,26 @@
 import axios from "axios";
-import { Text } from "react-native-paper";
 import React, { useState, useEffect } from "react";
-import { RecuperaToken } from "../../Autenticação/autenticacao";
-import { View, StyleSheet, TouchableOpacity, Platform } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { Text, View, StyleSheet, TouchableOpacity, Platform } from "react-native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import { TextInput, Button } from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Picker } from "@react-native-picker/picker";
 import DateTimePicker from '@react-native-community/datetimepicker';
 import estiloLocacao from "../../estilos/estiloLocacao";
+import { RecuperaToken } from "../../Autenticação/autenticacao";
+
 
 const formatDate = (date) => {
     const day = String(date.getDate()).padStart(2, '0');
     const month = String(date.getMonth() + 1).padStart(2, '0');
     const year = date.getFullYear();
     return `${day}-${month}-${year}`;
-  };
+};
 
-const cadastrarLocacao = () => {
-    const [token, setToken] = useState(null)
-    const navigation = useNavigation()
-    const [diaria, setDiaria] = useState(0);
-    const [diffInDays, setDiffInDays] = useState(0);
-
+const EditarLocacao = ({ route, navigation }) => {
+    console.log(route.params.id);
+    const [token, setToken] = useState(null);
+  
     const [local, setLocal] = useState("");
     const [categoria, setCategoria] = useState("");
     const [modelo, setModelo] = useState("");
@@ -37,28 +35,41 @@ const cadastrarLocacao = () => {
     const [showDatePickerEntrega, setShowDatePickerEntrega] = useState(false);
     const [showTimePickerRetirada, setShowTimePickerRetirada] = useState(false);
     const [showTimePickerEntrega, setShowTimePickerEntrega] = useState(false);
-
-
-
-
+  
     useEffect(() => {
-        async function fetchData() {
-            try {
-                const jwtToken = await RecuperaToken();
-                setToken(jwtToken);
-            } catch (error) {
-                console.error('Erro ao recuperar token:', error);
-            }
+      async function fetchData() {
+        try {
+          const jwtToken = await RecuperaToken();
+          setToken(jwtToken);
+        } catch (error) {
+          console.error('Erro ao recuperar token:', error);
         }
-        fetchData()
-    }, []);
-
+      }
+      fetchData();
+  
+      const locacaoData = route.params?.locacaoData;
+      if (locacaoData) {
+        setLocal(locacaoData.id_local);
+        setCategoria(locacaoData.id_categoria);
+        setModelo(locacaoData.modelo_veiculo);
+        setHoraRetirada(locacaoData.hora_retirada);
+        setHoraEntrega(locacaoData.hora_entrega);
+        setValorCategoria(locacaoData.vl_categoria.toString());
+        setDataRetirada(new Date(locacaoData.data_retirada));
+        setDataEntrega(new Date(locacaoData.data_entrega));
+        setAdicionais(locacaoData.custos_ad);
+        calculateDiaria(parseFloat(locacaoData.vl_categoria));
+        calculateTotal();
+      }
+    }, [route.params?.locacaoData]);
+  
     const handleDateRetiradaChange = (event, date) => {
-        setShowDatePickerRetirada(Platform.OS === 'ios' ? true : false);
-        if (date) {
-            setDataRetirada(date);
-        }
+      setShowDatePickerRetirada(Platform.OS === 'ios' ? true : false);
+      if (date) {
+        setDataRetirada(date);
+      }
     };
+  
 
     const handleDateEntregaChange = (event, date) => {
         setShowDatePickerEntrega(Platform.OS === 'ios' ? true : false);
@@ -118,7 +129,7 @@ const cadastrarLocacao = () => {
     }
 
     const calculateDateDiff = () => {
-        const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+        const oneDay = 24 * 60 * 60 * 1000;
         const diffInMilliseconds = Math.abs(dataEntrega - dataRetirada);
         return Math.round(diffInMilliseconds / oneDay);
     };
@@ -167,7 +178,8 @@ const cadastrarLocacao = () => {
         }
     };
 
-    function registrarLocacao() {
+
+    const atualizarLocacao = () => {
         const data = {
             "id_local": local,
             "id_categoria": categoria,
@@ -178,21 +190,24 @@ const cadastrarLocacao = () => {
             "custos_ad": adicionais,
             "data_retirada": dataRetirada,
             "data_entrega": dataEntrega,
-        }
+        };
+
         const headers = {
             "Content-Type": "application/json",
             "Authorization": 'Bearer ' + token
-        }
+        };
 
-        axios.post('https://api-carronamao.azurewebsites.net/api/Locacao', data, { headers }).then(response => {
-            if (response.status == 200) {
-                alert('Cadastrado com sucesso')
-                navigation.navigate('viewLocacao')
-            }
-        }).catch(erro => {
-
-        })
-    }
+        axios.put('https://api-carronamao.azurewebsites.net/api/Locacao?id='+route.params.id+'', data, { headers })
+            .then(response => {
+                if (response.status === 200) {
+                    alert('Locação atualizada com sucesso');
+                    navigation.navigate('viewLocacao');
+                }
+            })
+            .catch(erro => {
+                console.error('Erro ao atualizar locação:', erro);
+            });
+    };
 
     return (
         <View style={estiloLocacao.body}>
@@ -349,16 +364,15 @@ const cadastrarLocacao = () => {
                 />
             )}
 
-
-
             <Text style={estiloLocacao.vlTotal} id="vlTotal">O valor total da(s) diária(s) é de R$ {total}</Text>
             <Button style={estiloLocacao.calculateTotal} mode="contained" onPress={calculateTotal}>Calcular Total</Button>
-            <Button style={estiloLocacao.botaoSave} mode="contained" onPress={() => registrarLocacao()}>Salvar</Button>
+            <Button style={estiloLocacao.botaoSave} mode="contained" onPress={atualizarLocacao}>Salvar Edições</Button>
         </View>
-
     )
 
 
 }
 
-export default cadastrarLocacao;
+
+
+export default EditarLocacao;

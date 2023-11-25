@@ -3,7 +3,7 @@
  ## FRONT END: MOBILE
  ### 1 - Login/Cadastro
   
-**1.1 - Verificar se o cadastro barra email já cadastrado na plataforma**
+**1.1 - Verificar se o cadastro email já cadastrado na plataforma**
    - Obejetivo: Evitar usuario com o mesmo login.
    - Passos: Acessar a pagina de cadastro, preenche a fixa
    - Criterio: Caso o email já estejá cadastrado, um alerta será emetido
@@ -52,6 +52,17 @@
    - Obejetivo: Verificar se o usaurio consegue deletar a sua conta
    - Passos: Acessar a pagina do perfil, clicar na lixiera e depois excluir
    - Criterio: Usuario redirecionado para tela de login
+
+  ### 11 - Localização
+  **11.1 - Visualizar mapa do local da retirada**
+   - Objetivo: Visualizar mapa.
+   - Passos: Acessar a pagina de locação, selecionar a locação desejada, e clicar no botão Localização.
+   - Criterio: Apresentar localização no mapa
+  **11.2 - Localização não existente**
+   - Objetivo: Não apresentar a localização.
+   - Passos: Acessar a pagina de locação, selecionar a locação desejada, e clicar no botão Localização.
+   - Criterio: Caso a localização não esteja mais disponível para retirada do veículo, apresentar mensagem informando que a localização está indisponível.
+  
 =======
  ## FRONT END: MOBILE
 

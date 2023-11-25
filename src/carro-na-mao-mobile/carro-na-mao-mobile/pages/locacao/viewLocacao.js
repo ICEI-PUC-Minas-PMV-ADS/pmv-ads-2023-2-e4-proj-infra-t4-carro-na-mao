@@ -77,7 +77,7 @@ const Locacao = () => {
 
 const Item = ({ item }) => {
   return (
-    <TouchableOpacity onPress={() => navigation.navigate('editarLocacao', { id: item.id_locacao })} >
+    <TouchableOpacity onPress={() => navigation.navigate('editarLocacao', { id: item })} >
 
       <View style={estiloLocacao.informacoe}>
         <Text>{'Local: ' + item.id_local}</Text>

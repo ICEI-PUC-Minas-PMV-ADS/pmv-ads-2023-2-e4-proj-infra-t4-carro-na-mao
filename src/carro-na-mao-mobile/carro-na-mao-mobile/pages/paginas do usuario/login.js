@@ -44,8 +44,8 @@ const login = ()=> {
                 alert("Usurario não cadastrado")
             }
             }).catch(error => {
-                 alert("Ocorreu um erro interno.")
-                 console.error(error)
+                 alert("Preencha todos os dados")
+                 
         })
     }
 

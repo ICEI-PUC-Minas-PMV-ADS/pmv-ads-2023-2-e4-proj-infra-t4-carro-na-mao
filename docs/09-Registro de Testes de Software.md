@@ -118,6 +118,11 @@
 
  ![Teste com êxito e-mail](img/Testes/notif_web_002.png)
 
+  ### 10- Categoria
+
+  **10 - Visualização do mapa**
+  ![localizacaoFrontGet](img/localizacaoFrontGet.png)
+
 
 ##
 ## API

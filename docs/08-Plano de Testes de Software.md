@@ -182,6 +182,13 @@
     3) Digitar o tipo de mensagem desejada e clicar em enviar
  - Critério de Êxitos: A nova mensagem será enviada para a caixa do endereço de e-mail informado e deverá aparecer na sessão 'Emails' da API Resend.
 
+  ### 10 - Localização
+
+    **10 - Visualização do mapa**
+    - Objetivo do Teste: Visualizar o mapa do local de retirada.
+    - Passos: Acessar a aplicação, ir na aba Localização e inserir o código da sua locação.
+    - Critério de sucesso: Apresentar o mapa do local de retirada.
+
 ##
 ## API
 ### 1- Cadastro 

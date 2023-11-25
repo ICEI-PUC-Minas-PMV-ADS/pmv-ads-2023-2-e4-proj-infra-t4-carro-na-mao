@@ -7,6 +7,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Picker } from "@react-native-picker/picker";
 import DateTimePicker from '@react-native-community/datetimepicker';
 import estiloLocacao from "../../estilos/estiloLocacao";
+import { RecuperaToken } from "../../Autenticação/autenticacao";
+
 
 const formatDate = (date) => {
     const day = String(date.getDate()).padStart(2, '0');
@@ -16,6 +18,7 @@ const formatDate = (date) => {
 };
 
 const EditarLocacao = ({ route, navigation }) => {
+    console.log(route.params.id);
     const [token, setToken] = useState(null);
   
     const [local, setLocal] = useState("");
@@ -194,7 +197,7 @@ const EditarLocacao = ({ route, navigation }) => {
             "Authorization": 'Bearer ' + token
         };
 
-        axios.put(`https://api-carronamao.azurewebsites.net/api/Locacao/${locacaoData.id}`, data, { headers })
+        axios.put('https://api-carronamao.azurewebsites.net/api/Locacao?id='+route.params.id+'', data, { headers })
             .then(response => {
                 if (response.status === 200) {
                     alert('Locação atualizada com sucesso');

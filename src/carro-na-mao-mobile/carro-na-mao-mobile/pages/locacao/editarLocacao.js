@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import { Text, View, StyleSheet, TouchableOpacity, Platform } from "react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { TextInput, Button } from 'react-native-paper';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Picker } from "@react-native-picker/picker";
 import DateTimePicker from '@react-native-community/datetimepicker';
 import estiloLocacao from "../../estilos/estiloLocacao";

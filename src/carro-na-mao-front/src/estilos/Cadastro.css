@@ -4,40 +4,46 @@
     box-sizing: border-box;
 }
 
+#fundo {
+
+    width: 100%;
+    height: 100%;
+    background: dodgerblue linear-gradient(179deg, #242424, #a28888, #63191f) fixed;
+
+}
 #cmp {
     position: relative;
-    top: 35px;
-    left: 1%;
+    top: 25px;
+    left: 0%;
     text-align: justify;
     max-width: 80vw;
-    height: 85vh;
+    height: 93vh;
     margin: 0 auto;
-    padding: 22px;
+    padding: 5px;
     background-image: linear-gradient(45deg, rgb(75, 74, 74), rgb(240, 237, 237));
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    box-shadow: 1px 1px 1px rgb(231, 231, 231), 1em 1em 1.4em rgb(190, 187, 187);
+    box-shadow: 1px 1px 1px rgb(231, 231, 231), 0em 1em 13em rgb(152, 27, 27);
 }
 
-#tituloCadastro {
+#titulo1 {
     position: relative;
-    top: 2em;
-    left: 20em;
-    font-size: 155%;
-
+    top: 58px;
+    left: 22em;
+    font-size: 125%;
 
 }
 
-#tituloDadosPessoais {
-    top: 60px;
+#titulo2 {
+    top: 58px;
     position: relative;
     font-size: 115%;
 
 }
 
-#tituloDadosLogin {
-    top: 72px;
+#titulo3 {
+    top: 117px;
     position: relative;
     font-size: 115%;
 
@@ -45,280 +51,226 @@
 
 #linha1 {
     position: relative;
-    top: 2em;
-    width: 83em;
+    top: 4em;
+    width: 65em;
 
 }
 
 #linha2 {
     position: relative;
-    top: 8em;
-    width: 83em;
-
+    top: 9em;
+    width: 65em;
 
 }
 
 #nomeCadastro {
-    left: 1em;
-    top: 4em;
+    left: 0em;
+    top: 6em;
     width: 25em;
     position: relative;
     padding: 15px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
+    margin: 0px 0;
+    border: 1px solid #c91414;
     border-radius: 7px;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
+    background: #ccc;
+
 
 }
 
 #dataNasc {
-    left: 9em;
-    top: 4em;
-    width: 25em;
-    position: relative;
-    padding: 15px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 7px;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
-}
-
-#cpf {
-    left: 71em;
-    top: -0.3em;
-    width: 25em;
-    position: relative;
-    padding: 16px;
-    margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 7px;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
-}
-
-#telefone {
-    left: -26em;
+    left: 2em;
     top: 6em;
     width: 25em;
     position: relative;
     padding: 15px;
     margin: 5px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #c91414;
     border-radius: 7px;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
+    background: #ccc;
+
+
+}
+
+#cpf {
+    left: 54em;
+    top: 1.7em;
+    width: 25em;
+    position: relative;
+    padding: 16px;
+    margin: 5px 0;
+    border: 1px solid #c91414;
+    border-radius: 7px;
+    background: #ccc;
+
+
+}
+
+#telefone {
+    left: -25em;
+    top: 8em;
+    width: 25em;
+    position: relative;
+    padding: 15px;
+    margin: 5px 0;
+    border: 1px solid #c91414;
+    border-radius: 7px;
+     background: #ccc;
+
+
 }
 
 
 #categoria {
     position: relative;
-    top: 1.8em;
-    left: 36em;
+    top: 3.8em;
+    left: 27em;
     width: 25em;
     padding: 15px;
     margin: 5px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #c91414;
     border-radius: 7px;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
+      background: #ccc;
+
+
 }
 
 #rua {
-    left: 44em;
-    top: 1.8em;
+    left: 29em;
+    top: 3.8em;
     width: 25em;
     position: relative;
     padding: 15px;
     margin: 5px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #c91414;
     border-radius: 7px;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
+    background: #ccc;
 
 }
 
 #numero {
     position: relative;
-    left: 1em;
-    top: 4em;
+    left: 0em;
+    top: 6em;
     width: 25em;
     padding: 15px;
     margin: 5px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #c91414;
     border-radius: 7px;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
+    background: #ccc;
+
+
 }
 
 #bairro {
     position: relative;
-    left: 9em;
-    top: 4em;
+    left: 2em;
+    top: 6em;
     width: 25em;
     padding: 15px;
     margin: 5px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #c91414;
     border-radius: 7px;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
+    background: #ccc;
+
+
 }
 
 #endereco {
-    left: 71em;
-    top: 0em;
+    left: 54em;
+    top: 2em;
     width: 25em;
     position: relative;
     padding: 15px;
     margin: 5px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #c91414;
     border-radius: 7px;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
+      background: #ccc;
+
 
 }
 
 #municipio {
     position: relative;
-    left: -26.3em;
-    top: 6em;
+    left: -25.3em;
+    top: 8em;
     width: 25em;
     padding: 15px;
     margin: 5px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #c91414;
     border-radius: 7px;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
+    background: #ccc;
+
+
 }
 
 #camposParaLoginParteUm {
     position: relative;
     left: 1em;
-    top: -63px;
-    width: 50vw;
-    bottom: 4em;
-
-}
-
-
-#camposParaLoginParteUmVistoria {
-    position: flex;
-    padding: 40px;
-    left: -3em;
-    display: flex;
-    width: 1000px;
-
-}
-
-#camposParaLoginParteDois {
-    position: relative;
-    left: -2em;
-    display: flex;
-
-
-}
-
-#camposParaLoginParteTres {
-    position: relative;
-    padding: 40px;
-    left: -2em;
-    display: flex;
-    height: 100px;
-
-}
-
-#tituloDadosPessoais2 {
-    bottom: 5em;
-    position: relative;
-    left: 50em;
+    top: -55px;
+    width: 55vw;
 
 }
 
 #emailCadastro {
 
     position: relative;
-    top: 5em;
-    left: 1em;
+    top: 10em;
+    left: 0em;
     width: 25em;
     padding: 15px;
     margin: 8px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #c91414;
     border-radius: 7px;
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
+    background: #ccc;
 
 }
 
 #senhaCadastro {
 
-    left: 9em;
+    left: 2em;
     width: 25em;
-    top: 5em;
+    top: 10em;
     position: relative;
     padding: 15px;
     margin: 5px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #c91414;
     border-radius: 7px;
-    border-left: none;
-    border-right: none;
-    border-top: none;
+     background: #ccc;
+    
+
+
 }
 
 #senhaCadastroConfirma {
-    left: 71em;
+    left: 54em;
     width: 25em;
-    top: 0.7em;
+    top: 5.6em;
     position: relative;
     padding: 15px;
     margin: 5px 0;
-    border: 1px solid #ccc;
+    border: 1px solid #c91414;
     border-radius: 7px;
-    border-left: none;
-    border-right: none;
-    border-top: none;
+    background: #ccc;
 
-}
 
-#linhaDadosPessoais {
-    position: relative;
-    top: -4em;
 }
 
 #btnCadastrarUsuario {
     position: relative;
-    top: 7em;
-    width: 18em;
+    left: 8em;
+    top: 10em;
+    width: 13em;
     border-radius: 7px;
     color: white;
-    padding: 17px;
+    padding: 10px;
     right: -14em;
+    transition: all 0.6s;
     background-color: black;
+
 }
 
 #btnCadastrarUsuario:hover {
     color: white;
     background-color: rgb(169, 25, 25);
+
 }

@@ -31,24 +31,12 @@ export function Menu() {
         <Link to="/Infracoes">Infrações</Link>
         <Link to="/Historico">Histórico</Link>
         <Link to="/Notificacoes">Notificações</Link>
-        <select value={selectedOption} onChange={handleOptionChange}>
-          <option>Adm</option>
-          <option value="Estoque">Estoque</option>
-          <option value="Categoria">Categoria</option>
-        </select>
+        <Link to="/Estoque">Estoque</Link>
+        <Link to="/Categoria">Categoria</Link>
         <Apps />
 
         <li id="sairButton"><Link to="/">Sair</Link></li>
 
-        <li id="selectAdm">
-          <a href="#">Adm</a>
-
-          <ul>
-            <li><Link to="/Estoque">Estoque</Link></li>
-            <li><Link to="/Categoria">Categoria</Link></li>
-          </ul>
-
-        </li>
       </nav>
 
     </>

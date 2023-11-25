@@ -18,3 +18,8 @@
 #listagem{
     display: flex;
 }
+
+#localizacaoStyle p{
+    padding-top: 20px;
+    padding-left: 10px;
+}

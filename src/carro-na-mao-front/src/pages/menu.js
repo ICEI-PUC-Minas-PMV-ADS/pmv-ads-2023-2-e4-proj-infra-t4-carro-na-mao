@@ -34,7 +34,7 @@ export function Menu() {
         <Link to="/Categoria">Categoria</Link>
         <Apps />
 
-        <li id="sairButton"><Link to="/">Sair</Link></li>
+        <Link id="sairButton" to="/">Sair</Link>
 
       </nav>
 

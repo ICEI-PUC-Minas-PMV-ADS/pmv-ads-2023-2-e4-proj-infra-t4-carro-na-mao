@@ -19,6 +19,14 @@ spam{
     color: red;
 }
 
+
+#logoHome2 {
+    width: 361px;
+    position: relative;
+    left: -100%;
+    display: flex;
+
+}
 .botoesHome2{
     color: black;
     border-top: 1px;

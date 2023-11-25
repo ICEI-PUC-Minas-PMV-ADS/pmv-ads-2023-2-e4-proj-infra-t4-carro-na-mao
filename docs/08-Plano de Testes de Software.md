@@ -3,7 +3,7 @@
  ## FRONT END: MOBILE
  ### 1 - Login/Cadastro
   
-**1.1 - Verificar se o cadastro barra email já cadastrado na plataforma**
+**1.1 - Verificar se o cadastro email já cadastrado na plataforma**
    - Obejetivo: Evitar usuario com o mesmo login.
    - Passos: Acessar a pagina de cadastro, preenche a fixa
    - Criterio: Caso o email já estejá cadastrado, um alerta será emetido

@@ -28,7 +28,6 @@ export function Menu() {
         <Link to="/Vistoria2">Consultar Vistorias</Link>
         <Link to="/Localizacao">Localização</Link>
         <Link to="/Manutencao">Manutencao</Link>
-        <Link to="/Infracoes">Infrações</Link>
         <Link to="/Historico">Histórico</Link>
         <Link to="/Notificacoes">Notificações</Link>
         <select value={selectedOption} onChange={handleOptionChange}>

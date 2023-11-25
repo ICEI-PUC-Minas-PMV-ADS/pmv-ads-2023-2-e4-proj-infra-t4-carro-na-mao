@@ -91,7 +91,7 @@ function Cadastro() {
         }
     }
     return (
-        <div id="fundo">
+        <div id="fundoCadastro">
         {loading ? (
                 <Box id="carregamento" sx={{ display: 'flex' }}>
                     <CircularProgress sx={{ color: 'black' }} />

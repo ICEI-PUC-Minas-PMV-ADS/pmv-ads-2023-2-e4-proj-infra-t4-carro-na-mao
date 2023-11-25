@@ -75,20 +75,20 @@ function Home() {
 
   }
   return (
-    <div id="fundo">
+    <div id="fundoHome">
       {loading ? (
         <Box id="carregamento" sx={{ display: 'flex' }}>
           <CircularProgress sx={{ color: 'black' }} />
         </Box>
       ) : (
-        <>
-          <section id="camposHome">
+        <div id="fundohome02">
+        <section id="camposHome">
             <div id="elementosCampos">
               <img id="logoHome" src={logo}></img>
 
               <h3 id="tituloHome"></h3>
 
-              <input id="emailHome" type='email' placeholder='Email, CPF ou CNPJ'></input>
+              <input id="emailHome" type='email' placeholder='Email'></input>
               <input id="senhaHome" type='password' placeholder='Senha'></input>
               <button id="btnEntrar" onClick={validarUsuario}>Entrar</button>
               
@@ -99,7 +99,7 @@ function Home() {
 
             </div>
           </section>
-        </>
+        </div>
       )}
     </div>
   );

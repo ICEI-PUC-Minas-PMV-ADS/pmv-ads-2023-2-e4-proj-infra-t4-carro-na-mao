@@ -52,12 +52,12 @@ export default function Localizacao({route, navigation}) {
             const jwtToken = await RecuperaToken();
             setToken(jwtToken);
             console.log(jwtToken);
-            findLocalizacao(route.params);
         } catch (error) {
             console.error('Erro ao recuperar token:', error);
         }
     }
-    fetchData()
+    fetchData();
+    findLocalizacao(route.params);
   },[]);
 
   const findLocalizacao = (locacao) => {

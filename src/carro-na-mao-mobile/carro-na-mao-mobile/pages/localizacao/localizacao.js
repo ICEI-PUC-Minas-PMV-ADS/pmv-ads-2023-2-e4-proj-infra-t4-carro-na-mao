@@ -13,22 +13,25 @@ import estiloLocalizacao from '../../estilos/estiloLocalizacao';
 
 let locationsOfInterest = [
   {
-    title: "R. São Paulo, 323-225 - Centro - BH",
+    title: "Av. Afonso Pena, 1.000 - Centro - BH",
     location: {
-      latitude: -19.915823,
-      longitude: -43.939082
+      latitude: -19.922255,
+      longitude: -43.936804
     },
     description: "Seu carro está aqui!"
   }
+
+  
 ]
 
 let idLocal;
 
-export default function Localizacao() {
-  const [inputValue, setInputValue] = useState(''); 
+export default function Localizacao({route, navigation}) {
+ 
   const [showDivs, setShowDivs] = useState(false);
   const [token,setToken]=useState(null)
   const mapRef = useRef();
+  const initialLocation = locationsOfInterest.length > 0 ? locationsOfInterest[0].location : null;
 
   const showLocationsOfInterest = () => {
     return locationsOfInterest.map((item, index) => {
@@ -48,6 +51,8 @@ export default function Localizacao() {
         try {
             const jwtToken = await RecuperaToken();
             setToken(jwtToken);
+            console.log(jwtToken);
+            findLocalizacao(route.params);
         } catch (error) {
             console.error('Erro ao recuperar token:', error);
         }
@@ -55,17 +60,15 @@ export default function Localizacao() {
     fetchData()
   },[]);
 
-  const findLocalizacao = () => {
-    const locacao = inputValue;
+  const findLocalizacao = (locacao) => {
   
     const headers = {
         "Content-Type": "application/json",
         "Authorization": 'Bearer ' + token
     }
-  
+    console.log(locacao)
     axios.get(`https://api-carronamao.azurewebsites.net/find-by-locacao?id_locacao=${locacao}`, { headers })
         .then(response => {
-            console.log(response.status);
             if (response.status === 200) {
                 idLocal = response.data.id_local;
                 console.log(idLocal);
@@ -85,35 +88,28 @@ export default function Localizacao() {
 
   return (
     <View style={estiloLocalizacao.container}>
-      <Text>Insira abaixo o código da sua locação</Text>
-      <TextInput
-        style={estiloLocalizacao.input}
-        placeholder="Insira o número da sua Locação"
-        onChangeText={(text) => setInputValue(text)}
-        onBlur={findLocalizacao}
-        value={inputValue}
-      />
       {showDivs && (
         <>
         {idLocal !== 1 ? (
             <Text style={estiloLocalizacao.mapOverlay}>Local indisponível</Text>
           ) : (
-        <MapView
-        provider={PROVIDER_GOOGLE}
-        ref={mapRef} 
-        style={estiloLocalizacao.map}
-        onRegionChange={onRegionChange}
-        initialRegion={{
-          latitude: -19.915823,
-          latitudeDelta: 0.00488597828227,
-          longitude: -43.939082,
-          longitudeDelta: 0.0040213018655,
-        }}
-        customMapStyle={estiloLocalizacao.mapJson}
-      >
-        {showLocationsOfInterest()}
-        <Text style={estiloLocalizacao.mapOverlay}>Local de Retirada</Text>
-      </MapView>
+            <><Text style ={estiloLocalizacao.textoMapa}>Local de Retirada do veículo</Text>
+            <MapView
+                provider={PROVIDER_GOOGLE}
+                ref={mapRef}
+                style={estiloLocalizacao.map}
+                onRegionChange={onRegionChange}
+                initialRegion={{
+                  latitude: -19.922255,
+                  latitudeDelta: 0.00488597828227,
+                  longitude: -43.936804,
+                  longitudeDelta: 0.0040213018655,
+                }}
+                customMapStyle={estiloLocalizacao.mapJson}
+              >
+                {showLocationsOfInterest()}
+                <Text style={estiloLocalizacao.mapOverlay}>Local de Retirada</Text>
+              </MapView></>
       )}
       </>
       )}

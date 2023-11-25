@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { Text, View, StyleSheet, TouchableOpacity, Platform } from "react-native";
+import { ScrollView, Text, View, StyleSheet, TouchableOpacity, Platform } from "react-native";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { TextInput, Button } from 'react-native-paper';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -155,6 +155,10 @@ const EditarLocacao = ({ route, navigation }) => {
         setValorCategoria(valorCategoriaDoModelo.toString());
     };
 
+    const localizacao = () => {
+        navigation.navigate('Localização', route.params.id);
+    };
+
     const getValorCategoriaFromModelo = (selectedModelo) => {
         switch (selectedModelo) {
             case "VW Gol":
@@ -210,6 +214,7 @@ const EditarLocacao = ({ route, navigation }) => {
     };
 
     return (
+        <ScrollView style={estiloLocacao.scrollView}>
         <View style={estiloLocacao.body}>
             <Picker
                 id="localRetirada"
@@ -365,9 +370,11 @@ const EditarLocacao = ({ route, navigation }) => {
             )}
 
             <Text style={estiloLocacao.vlTotal} id="vlTotal">O valor total da(s) diária(s) é de R$ {total}</Text>
+            <Button style={estiloLocacao.botaoLocalizacao} mode="contained" onPress={localizacao}>Localização</Button>
             <Button style={estiloLocacao.calculateTotal} mode="contained" onPress={calculateTotal}>Calcular Total</Button>
             <Button style={estiloLocacao.botaoSave} mode="contained" onPress={atualizarLocacao}>Salvar Edições</Button>
         </View>
+        </ScrollView>
     )
 
 

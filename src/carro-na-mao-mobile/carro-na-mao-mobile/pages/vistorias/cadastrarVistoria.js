@@ -1,9 +1,9 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { RecuperaToken } from "../../Autenticação/autenticacao";
-import { View, StyleSheet, Text, Alert } from "react-native";
-import { useNavigation, useIsFocused, Link } from "@react-navigation/native";
-import { TextInput, Button, DatePicker } from 'react-native-paper'
+import { View, StyleSheet, Text, Alert, TouchableOpacity, Platform  } from "react-native";
+import { useNavigation, useIsFocused, Link, view } from "@react-navigation/native";
+import { TextInput, Button, DatePicker, Icon } from 'react-native-paper'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { format } from 'date-fns';
 import estiloPerfil from "../../estilos/estiloPerfil";
@@ -74,7 +74,8 @@ const cadastrarVistoria = () => {
 
     return (
         <View style={estiloPerfil.body}>
-            <Text style={styles.label}>ID do Veiculo:</Text>
+            
+            <Text style={styles.label2}>ID do Veiculo:</Text>
             <TextInput
                 placeholder="Veiculo"
                 mode='outlined'
@@ -87,11 +88,11 @@ const cadastrarVistoria = () => {
 
             <View style={styles.row}>
                 <View style={styles.column}>
-                    <Text style={styles.label}>Tipo de Vistoria:</Text>
+                    <Text style={styles.label2}>Tipo de Vistoria:</Text>
                     <Picker
                         selectedValue={tipo}
                         onValueChange={(value) => setTipo(value)}
-                        style={styles.picker}
+                        style={styles.picker2}
                     >
                         <Picker.Item label="Retorno de veiculo" value="0" />
                         <Picker.Item label="Saída de veiculo" value="1" />
@@ -99,7 +100,10 @@ const cadastrarVistoria = () => {
                 </View>
 
                 <View style={styles.column}>
-                    <Text style={styles.label}>Data da Vistoria:</Text>
+                    
+                    
+                <Icon source="calendar-month-outline"color={'#fff'} size={20} />
+                    <Text color={'#fff'} style={styles.label2}>Data da Vistoria:</Text>
                     <TextInput
                         placeholder="Seleciona a Data"
                         mode='outlined'
@@ -112,7 +116,7 @@ const cadastrarVistoria = () => {
                 </View>
             </View>
 
-            <Text style={styles.label}>Descrição da Vistoria:</Text>
+            <Text style={styles.label2}>Descrição da Vistoria:</Text>
             <TextInput
                 placeholder="Descrição"
                 mode='outlined'
@@ -122,7 +126,7 @@ const cadastrarVistoria = () => {
                 onChangeText={descricao => setDescricao(descricao)}
             />
 
-            <Text style={styles.label}>Observações da Vistoria:</Text>
+            <Text style={styles.label2}>Observações da Vistoria:</Text>
             <TextInput
                 placeholder="Insira as Observações Caso Houver"
                 mode='outlined'
@@ -131,8 +135,9 @@ const cadastrarVistoria = () => {
                 value={observacoes}
                 onChangeText={observacoes => setObservacoes(observacoes)}
             />
+            <Icon source="email" color={'#fff'}size={20}/>
 
-            <Text style={styles.label}>Cria Manutenção no sistema?</Text>
+            <Text style={styles.label2}>Cria Manutenção no sistema?</Text>
             <TextInput
                 placeholder="Não Cria Manutenção"
                 label='Não Cria Manutenção'
@@ -168,6 +173,15 @@ const styles = StyleSheet.create({
         width: 200,
         top: 50,
         left: 90
+    },
+    label2:
+    {
+        color: '#fff'
+    },
+    picker2:{
+        color: '#000',
+        backgroundColor: '#fff'
+
     }
 });
 

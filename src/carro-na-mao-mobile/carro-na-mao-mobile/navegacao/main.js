@@ -80,7 +80,7 @@ function Main() {
                     component={avaliacaoUsaurios}
                 />
                  <stack.Screen
-                    name='Localizacao'
+                    name='Localização'
                     component={Localizacao}
                 />
 

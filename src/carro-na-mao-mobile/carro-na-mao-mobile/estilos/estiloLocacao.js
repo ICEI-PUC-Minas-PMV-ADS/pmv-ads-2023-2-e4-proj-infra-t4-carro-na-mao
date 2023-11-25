@@ -68,5 +68,13 @@ export default StyleSheet.create({
     exclui: {
         size: 20,
     },
-    
+    botaoLocalizacao : {
+        width: 200,
+        top: 50,
+        left: 90,
+        backgroundColor: '#8F9098'
+    },
+    scrollView: {
+        flex: 1, 
+      },
 });

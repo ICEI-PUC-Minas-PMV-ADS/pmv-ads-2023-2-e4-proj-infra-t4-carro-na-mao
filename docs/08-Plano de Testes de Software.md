@@ -52,6 +52,17 @@
    - Obejetivo: Verificar se o usaurio consegue deletar a sua conta
    - Passos: Acessar a pagina do perfil, clicar na lixiera e depois excluir
    - Criterio: Usuario redirecionado para tela de login
+
+  ### 11 - Localização
+  **11.1 - Visualizar mapa do local da retirada**
+   - Objetivo: Visualizar mapa.
+   - Passos: Acessar a pagina de locação, selecionar a locação desejada, e clicar no botão Localização.
+   - Criterio: Apresentar localização no mapa
+  **11.2 - Localização não existente**
+   - Objetivo: Não apresentar a localização.
+   - Passos: Acessar a pagina de locação, selecionar a locação desejada, e clicar no botão Localização.
+   - Criterio: Caso a localização não esteja mais disponível para retirada do veículo, apresentar mensagem informando que a localização está indisponível.
+  
 =======
  ## FRONT END: MOBILE
 

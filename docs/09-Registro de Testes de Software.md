@@ -10,6 +10,10 @@
 
  ![Teste com êxito push](img/Testes/notif_mobile_003.png)
 
+  ### 11- Localização
+  **11.1 - Visualizar mapa do local da retirada**
+  ![localizacaoMobile](img/localizacaoMobile.jpeg)
+
 
  ## FRONT END: WEB
   ### 1 - Login/Cadastro

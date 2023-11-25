@@ -86,9 +86,9 @@ function Home() {
             <div id="elementosCampos">
               <img id="logoHome" src={logo}></img>
 
-              <h3 id="tituloHome">Faça o seu Login</h3>
+              <h3 id="tituloHome"></h3>
 
-              <input id="emailHome" type='email' placeholder='Email'></input>
+              <input id="emailHome" type='email' placeholder='Email, CPF ou CNPJ'></input>
               <input id="senhaHome" type='password' placeholder='Senha'></input>
               <button id="btnEntrar" onClick={validarUsuario}>Entrar</button>
               

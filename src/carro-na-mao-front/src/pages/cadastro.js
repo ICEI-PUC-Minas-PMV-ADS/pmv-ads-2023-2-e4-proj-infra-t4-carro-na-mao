@@ -41,6 +41,7 @@ function Cadastro() {
                  alert(error)
                  console.error(error)
         })
+
     }
 
     const cadastrar = () => {
@@ -90,8 +91,8 @@ function Cadastro() {
         }
     }
     return (
-        <>
-            {loading ? (
+        <div id="fundo">
+        {loading ? (
                 <Box id="carregamento" sx={{ display: 'flex' }}>
                     <CircularProgress sx={{ color: 'black' }} />
                 </Box>
@@ -100,13 +101,13 @@ function Cadastro() {
                     <section id="cmp">
 
                         <div id='camposParaLoginParteUm'>
-                            <h3 id="tituloCadastro">Cadastre-se para acessar o sistema</h3>
-                            <h5 id="tituloDadosPessoais">Insira seus dados Pessoais</h5>
+                            <h3 id="titulo1">Sua experiência começa aqui!</h3>
+                            <h5 id="titulo2">Criar conta</h5>
                             <hr id="linha1"></hr>
-                            <input type="text" id="nomeCadastro" placeholder='Name'></input>
+                            <input type="text" id="nomeCadastro" placeholder='Nome completo'></input>
                             <input type="date" id="dataNasc" placeholder='Data de nascimento'></input>
                             <input type="text" id="cpf" placeholder='CPF'></input>
-                            <input type="text" id="telefone" placeholder='Telefone'></input>
+                            <input type="text" id="telefone" placeholder='Celular'></input>
                             <input type="text" id="categoria" placeholder='Categoria Habilitação'></input>
                             <input type="text" id="rua" placeholder='Logradouro'></input>
                             <input type="text" id="numero" placeholder='Número'></input>
@@ -115,9 +116,9 @@ function Cadastro() {
                             <input type="text" id="municipio" placeholder='Municipio'></input>
 
                             <hr id="linha2"></hr>
-                            <h5 id="tituloDadosLogin">Dados para Login</h5>
-                            <input type="email" id='emailCadastro' placeholder='Digite seu email...'></input>
-                            <input type="password" id="senhaCadastro" placeholder='Digite sua senha...'></input>
+                            <h5 id="titulo3">Criar E-mail</h5>
+                            <input type="email" id='emailCadastro' placeholder='Digite seu email'></input>
+                            <input type="password" id="senhaCadastro" placeholder='Digite sua senha'></input>
                             <input type="password" id="senhaCadastroConfirma" placeholder='Repita a sua senha'></input>
 
                             <button id="btnCadastrarUsuario" onClick={verificarUsuarioExistente}>Cadastre-se</button>
@@ -125,7 +126,7 @@ function Cadastro() {
                     </section>
                 </>
             )}
-        </>
+        </div>
     );
 }
 

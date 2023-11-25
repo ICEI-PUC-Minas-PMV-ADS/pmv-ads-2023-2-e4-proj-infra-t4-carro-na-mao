@@ -1,14 +1,50 @@
 # Registro de Testes de Software
  ## FRONT END: MOBILE
+  ### 1- Cadastro/Login
+
+  **1.1 - Verificar se o cadastro email já cadastrado na plataforma**
+
+  ![usuario cadastrado](img/mobile-validar-usuario-cadastrado.PNG)
+
+  **1.2 - Verificar se cadastro está sendo realizado sem nenhum problema**
+    
+  ![confirmação de cadastro](img/preenchendo-dados.PNG)
+
+  ![confirmação de cadastro](img/confirmado.PNG)
+
+  **1.3 - Verificar se o  sistema deixa somente usuario cadastrados entrar na plataforma**
+
+  ![confirmação de cadastro](img/barrar.PNG)
+
+  ### 5 - Avaliação 
+  **5.1 - Verificar se as avaliações estão sendo recuperadas do banco de dados de maneira correta**
+
+  ![Avaliacoes](img/avaliações.PNG)
+
 
   ### 9- Notificação
+  **9 - Teste de envio de nova notificação**
 
-**9 - Teste de envio de nova notificação**
- ![Teste com êxito](img/Testes/notif_mobile_001.png)
+  ![Teste com êxito](img/Testes/notif_mobile_001.png)
 
- ![Teste com êxito](img/Testes/notif_mobile_002.png)
+  ![Teste com êxito](img/Testes/notif_mobile_002.png)
 
- ![Teste com êxito push](img/Testes/notif_mobile_003.png)
+  ![Teste com êxito push](img/Testes/notif_mobile_003.png)
+
+  ### 10 - Perfil
+  **10.1 - Verificar se as informções do usaurio aparece de acordo com o usuario logado**
+  
+  ![Perfil](img/perfil.PNG)
+
+  **10.2 - Verificar se se o usuario consegue editar sua informações**
+
+  ![edicao](img/confirmar%20edição.PNG)
+  
+  **10.3 -  Verificar se o usuario consegue apagar sua conta**
+
+  ![delete1](img/delete%201.PNG)
+
+  ![delete2](img/delete%202.PNG)
 
   ### 11- Localização
   **11.1 - Visualizar mapa do local da retirada**
@@ -283,22 +319,4 @@
 
  ![](img/notification_delete.jpg)
 
-   ### 10- Historico
-**10.1 - Get**
-
- ![](img/trabalhando.png)
-
-
-**10.2 - Create**
-
- ![](img/trabalhando.png)
-
-   ### 11-Multa
-**11.1 - Get**
-
- ![](img/trabalhando.png)
-
-
-**11.2 - Create**
-
- ![](img/trabalhando.png)
+  

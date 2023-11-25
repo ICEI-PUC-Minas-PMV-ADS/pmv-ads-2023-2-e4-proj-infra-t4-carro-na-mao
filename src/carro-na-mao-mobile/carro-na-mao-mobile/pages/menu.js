@@ -1,13 +1,11 @@
 
 import * as React from 'react';
-import { Text, View } from 'react-native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { BottomNavigation } from 'react-native-paper';
+import { BottomNavigation} from 'react-native-paper';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import Avaliacao from '../pages/avaliacoes/avaliacao';
 import Perfil from '../pages/paginas do usuario/perfil';
-import Locacao from '../pages/locacao/viewLocacao' ;
-import { NavigationContainer } from '@react-navigation/native';
+import Locacao from '../pages/locacao/viewLocacao' 
+import { NavigationContainer } from '@react-navigation/native'
 import {createNativeStackNavigator} from'@react-navigation/native-stack' // Ajuste na importação
 import Vistorias from "../pages/vistorias/cadastrarVistoria";
 const stack = createNativeStackNavigator()

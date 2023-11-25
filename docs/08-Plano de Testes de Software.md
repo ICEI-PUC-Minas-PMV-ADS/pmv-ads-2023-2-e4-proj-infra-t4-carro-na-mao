@@ -86,40 +86,6 @@
   - Passos: Acessar o a aplicação e deixar algum campo em branco.
   - Critério: Alert avisando o usuario para preencher todos os campos.
 
-  ### 2 - Estoque
-
-  **2.1 - Inserção de novo regristo**
-    - Objetivo do Teste: Inserir um novo registro de estoque.
-    - Passos: Acessar a aplicação, ir na aba Estoque e inserir os dados referente ao veículo.
-    - Critério de sucesso: Alerta avisando que o veículo foi cadastrado com sucesso.
-
-    **2.2 - Edição de um regristo**
-    - Objetivo do Teste: Editar um registro do estoque.
-    - Passos: Acessar a aplicação, ir na aba Estoque, selecionar o carro desejado e alterar os dados.
-    - Critério de sucesso: Alerta avisando que o veículo foi atualizado com sucesso.
-
-    **2.3 - Carregar informações **
-    - Objetivo do Teste: Apresentar a lista de todos os registros no banco.
-    - Passos: Acessar a aplicação, ir na aba Estoque e verificar a listagem a esquerda da tela.
-    - Critério de sucesso: Apresentar todos os registro na listagem a esquerda da tela.
-
-  ### 4- Categoria
-
-    **4.1 - Inserção de novo regristo**
-    - Objetivo do Teste: Inserir um novo registro de categoria.
-    - Passos: Acessar a aplicação, ir na aba Categoria e inserir os dados referente a nova categoria.
-    - Critério de sucesso: Alerta avisando que a vcategoria foi cadastrada com sucesso.
-
-    **4.2 - Edição de um regristo**
-    - Objetivo do Teste: Editar um registro de uma categoria.
-    - Passos: Acessar a aplicação, ir na aba Categoria, selecionar a categoria desejado e alterar os dados.
-    - Critério de sucesso: Alerta avisando que a categoria foi atualizada com sucesso.
-
-    **4.3 - Carregar informações **
-    - Objetivo do Teste: Apresentar a lista de todos os registros no banco.
-    - Passos: Acessar a aplicação, ir na aba Categoria e verificar a listagem a esquerda da tela.
-    - Critério de sucesso: Apresentar todos os registro na listagem a esquerda da tela.
-
  ### 5- Avaliação
  **5.1 - Registro das Informações**
  - Objetivo do Teste: Verificar se todas as informações do usuário registram no front end web. 
@@ -181,13 +147,6 @@
     2) Fazer Login ou cadastrar um usuário e acessar a sessão _Notificações_
     3) Digitar o tipo de mensagem desejada e clicar em enviar
  - Critério de Êxitos: A nova mensagem será enviada para a caixa do endereço de e-mail informado e deverá aparecer na sessão 'Emails' da API Resend.
-
-  ### 10 - Localização
-
-    **10 - Visualização do mapa**
-    - Objetivo do Teste: Visualizar o mapa do local de retirada.
-    - Passos: Acessar a aplicação, ir na aba Localização e inserir o código da sua locação.
-    - Critério de sucesso: Apresentar o mapa do local de retirada.
 
 ##
 ## API

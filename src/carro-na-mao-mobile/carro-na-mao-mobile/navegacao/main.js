@@ -11,7 +11,6 @@ import editarLocacao from '../pages/locacao/editarLocacao'
 import Menu from '../pages/menu'
 import avaliacaoUsaurios from '../pages/avaliacoes/avaliacoesEspcificasPorusuario'
 import cadastrarVistoria from '../pages/vistorias/cadastrarVistoria'
-import Localizacao from '../pages/localizacao/localizacao'
 import menu from '../pages/menu'
 //import Cadastro from '../pages/cadastro'
 const stack = createNativeStackNavigator()
@@ -75,14 +74,7 @@ function Main() {
                     name='Perfil'
                     component={Perfil}
                 />
-                <stack.Screen
-                    name='avaliacaoUsaurios'
-                    component={avaliacaoUsaurios}
-                />
-                 <stack.Screen
-                    name='Localizacao'
-                    component={Localizacao}
-                />
+
 
             </stack.Navigator>
         </NavigationContainer>

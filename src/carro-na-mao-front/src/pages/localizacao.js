@@ -72,8 +72,8 @@ function Localizacao() {
                     <p>Modelo do Veículo: {localizacaoData.modelo_veiculo}</p>
                     <p>Hora de Retirada: {localizacaoData.hora_retirada}</p>
                     <p>Hora de Entrega: {localizacaoData.hora_entrega}</p>
-                    <p>Valor da Categoria: R$ {localizacaoData.vl_categoria}</p>
-                    <p>Custos Adicionais: R$ {localizacaoData.custos_ad}</p>
+                    <p>Valor da Categoria: {localizacaoData.vl_categoria}</p>
+                    <p>Custos Adicionais: {localizacaoData.custos_ad}</p>
                     <p>Data de Retirada: {localizacaoData.data_retirada}</p>
                     <p>Data de Entrega: {localizacaoData.data_entrega}</p>
                 </div>

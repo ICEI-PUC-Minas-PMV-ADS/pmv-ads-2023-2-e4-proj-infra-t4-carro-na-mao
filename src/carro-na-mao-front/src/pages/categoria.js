@@ -36,13 +36,13 @@ function Categoria() {
 
     const categoria = () => {
         const valor = document.querySelector("#valor").value;
-        const descricaoCategoria = document.querySelector("#descricaoCategoria").value;
-        const promocaoCategoria = document.querySelector("#promocaoCategoria").checked;
+        const descricao = document.querySelector("#descricao").value;
+        const promocao = document.querySelector("#promocao").checked;
 
         const data = {
-            "desc_categoria": descricaoCategoria,
+            "desc_categoria": descricao,
             "vl_categoria": valor,
-            "ind_promocao": promocaoCategoria
+            "ind_promocao": promocao
         }
 
         const headers = {
@@ -55,7 +55,7 @@ function Categoria() {
                 .then(response => {
                     console.log(response.status);
                     if (response.status === 200) {
-                        alert("Categoria Atualizada!");
+                        return navigate("/Categoria");
                     }
                 })
                 .catch(error => {
@@ -66,7 +66,7 @@ function Categoria() {
                 .then(response => {
                     console.log(response.status);
                     if (response.status === 200) {
-                        alert("Categoria Cadastrada!");
+                        return navigate("/Categoria");
                     }
                 })
                 .catch(error => {
@@ -77,7 +77,7 @@ function Categoria() {
 
     const excluir = () => {
 
-        const categoria = document.querySelector("#categoriaCategoria").value
+        const categoria = document.querySelector("#categoria").value
 
         const data = {
             "id": categoria
@@ -104,18 +104,18 @@ function Categoria() {
     }
 
     const limparCampos = () => {
-        document.querySelector("#categoriaCategoria").value = ""
+        document.querySelector("#categoria").value = ""
         document.querySelector("#valor").value = ""
-        document.querySelector("#descricaoCategoria").value = ""
-        document.querySelector("#promocaoCategoria").value = ""
+        document.querySelector("#descricao").value = ""
+        document.querySelector("#promocao").value = ""
     }
 
     const handleCategoriaClick = (categoria) => {
         setSelectedCategoria(categoria);
-        document.querySelector("#categoriaCategoria").value = categoria.id_categoria;
+        document.querySelector("#categoria").value = categoria.id_categoria;
         document.querySelector("#valor").value = categoria.vl_categoria;
-        document.querySelector("#descricaoCategoria").value = categoria.desc_categoria;
-        document.querySelector("#promocaoCategoria").value = categoria.ind_promocao;
+        document.querySelector("#descricao").value = categoria.desc_categoria;
+        document.querySelector("#promocao").value = categoria.ind_promocao;
     }
 
     return(
@@ -127,8 +127,7 @@ function Categoria() {
                     <div className="loading"></div>
                 </div>
             ) : (
-                 <>
-                 <div style={{ width: '25%', float: 'left' }}>
+                 <><div style={{ width: '25%', float: 'left' }}>
                             <div id="divListagem">
                                 <ul>
                                     {categorias.map(categoria => (
@@ -137,26 +136,29 @@ function Categoria() {
                                     ))}
                                 </ul>
                             </div>
-                </div>
-                        <div id="camposCategoria">
+                        </div><div style={{ width: '75%', float: 'right' }}>
                                 <div>
                                     <button id="btnRegistro" onClick={limparCampos}>Novo Registro</button>
                                 </div>
+                                <br />
                                 <div>
                                     <label>Código Categoria</label>
-                                    <input  type="text" id="categoriaCategoria" placeholder="Código do Categoria" readOnly />
+                                    <input className="input" type="text" id="categoria" placeholder="Código do Categoria" readOnly />
                                 </div>
+                                <br />
                                 <div>
                                     <label>Valor da Categoria</label>
-                                    <input type="text" id="valor" placeholder="R$50/dia" />
+                                    <input className="input" type="text" id="valor" placeholder="R$50/dia" />
                                 </div>
+                                <br />
                                 <div>
                                     <label>Descrição Categoria</label>
-                                    <input type="text" id="descricaoCategoria" placeholder="Insira a descrição" />
+                                    <input className="input" type="text" id="descricao" placeholder="Insira a descrição" />
                                 </div>
+                                <br />
                                 <div>
                                     <label>Indica Promoção</label>
-                                    <input type="checkbox" id="promocaoCategoria" />
+                                    <input type="checkbox" id="promocao" />
                                 </div>
                                 <br />
                                 <br />

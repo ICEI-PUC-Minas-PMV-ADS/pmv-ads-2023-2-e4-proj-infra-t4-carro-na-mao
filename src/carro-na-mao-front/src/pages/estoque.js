@@ -56,7 +56,7 @@ function Estoque() {
                 .then(response => {
                     console.log(response.status);
                     if (response.status === 200) {
-                        alert("Veículo Atualizado no estoque!");
+                        return navigate("/Estoque");
                     }
                 })
                 .catch(error => {
@@ -67,7 +67,7 @@ function Estoque() {
                 .then(response => {
                     console.log(response.status);
                     if (response.status === 200) {
-                        alert("Veículo Cadastrado no estoque!");
+                        return navigate("estoque");
                     }
                 })
                 .catch(error => {
@@ -113,7 +113,7 @@ function Estoque() {
                         </ul>
                     </div>
                 </div>
-                <div id="camposEstoque" >
+                <div style={{ width: '75%', float: 'right' }}>
                     <div>
                         <button id="btnRegistro" onClick={limparCampos}>Novo Registro</button>
                     </div>

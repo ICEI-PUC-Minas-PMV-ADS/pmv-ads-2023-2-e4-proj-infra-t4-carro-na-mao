@@ -14,6 +14,9 @@
   **11.1 - Visualizar mapa do local da retirada**
   ![localizacaoMobile](img/localizacaoMobile.jpeg)
 
+  **11.2 - Localização não existente**
+  ![localizcaoMobileError](img/localizacaoMobileError.jpeg)
+
 
  ## FRONT END: WEB
   ### 1 - Login/Cadastro

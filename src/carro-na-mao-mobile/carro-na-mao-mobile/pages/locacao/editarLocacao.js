@@ -179,174 +179,169 @@ const EditarLocacao = ({ route, navigation }) => {
 
 
     return (
-        <ScrollView style={estiloLocacao.scrollView}>
         <View style={estiloLocacao.body}>
-            <Picker
-                id="localRetirada"
-                selectedValue={id_local}
-                onValueChange={(value) => setId_Local(value)}
-                mode="dropdown"
-                prompt="Selecione um local para retirada"
-            >
-                <Picker.Item label="Selecione um local" value="" />
-                <Picker.Item label="Av. Afonso Pena, 1.000 - Centro - BH/MG" value="001" />
-            </Picker>
+            <ScrollView style={estiloLocacao.scrollView}>
+                <Picker
+                    id="localRetirada"
+                    selectedValue={id_local}
+                    onValueChange={(value) => setId_Local(value)}
+                    mode="dropdown"
+                    prompt="Selecione um local para retirada"
+                >
+                    <Picker.Item label="Selecione um local" value="" />
+                    <Picker.Item label="Av. Afonso Pena, 1.000 - Centro - BH/MG" value="001" />
+                </Picker>
 
-            <Picker
-                id="categoriaRetirada"
-                selectedValue={locacaoData.id_categoria}
-                style={estiloLocacao.select}
-                onValueChange={(itemValue) => setLocacaoData({ ...locacaoData, id_categoria: itemValue })}
-                mode="dropdown"
-                prompt="Selecione a categoria de veículos desejada"
-            >
-                <Picker.Item label="Selecione uma categoria" value="" />
-                <Picker.Item label="SUV's" value="SUV's" />
-                <Picker.Item label="Sedans" value="Sedans" />
-                <Picker.Item label="Hatches" value="Hatches" />
-                <Picker.Item label="Premium" value="Premium" />
-            </Picker>
-
-            <Picker
-                id="modeloRetirada"
-                value={locacaoData.modelo_veiculo}
-                onValueChange={(itemValue) => setLocacaoData({ ...locacaoData, modelo_veiculo: itemValue })}
-                mode="dropdown"
-                prompt="Selecione o modelo de veículo desejado"
-            >
-                <Picker.Item label="Selecione um modelo" value="" />
-                <Picker.Item label="VW Gol" value="VW Gol" />
-                <Picker.Item label="GM Onix" value="GM Onix" />
-                <Picker.Item label="Hyundai HB20" value="Hyundai HB20" />
-                <Picker.Item label="Ford Ka" value="Ford Ka" />
-                <Picker.Item label="GM Prisma" value="GM Prisma" />
-                <Picker.Item label="Hyundai HB20S" value="Hyundai HB20S" />
-                <Picker.Item label="Toyota Corolla" value="Toyota Corolla" />
-                <Picker.Item label="Honda Civic" value="Honda Civic" />
-                <Picker.Item label="VW T-Cross" value="VW T-Cross" />
-                <Picker.Item label="Jeep Renegade" value="Jeep Renegade" />
-                <Picker.Item label="Chevrolet Cruze" value="Chevrolet Cruze" />
-                <Picker.Item label="VW Virtus" value="VW Virtus" />
-                <Picker.Item label="Toyota Yaris" value="Toyota Yaris" />
-
-            </Picker>
-
-            <TouchableOpacity onPress={() => setShowTimePickerRetirada(true)}>
-                <TextInput
-                    placeholder="Selecione a hora da retirada"
-                    value={locacaoData.hora_retirada}
-                    onChangeText={(text) => setLocacaoData({ ...locacaoData, hora_retirada: text })}
+                <Picker
+                    id="categoriaRetirada"
+                    selectedValue={locacaoData.id_categoria}
                     style={estiloLocacao.select}
-                    mode="outlined"
-                    label="Hora da Retirada"
-                    editable={false}
-                    id="horaRetirada"
-                />
+                    onValueChange={(itemValue) => setLocacaoData({ ...locacaoData, id_categoria: itemValue })}
+                    mode="dropdown"
+                    prompt="Selecione a categoria de veículos desejada"
+                >
+                    <Picker.Item label="Selecione uma categoria" value="" />
+                    <Picker.Item label="SUV's" value="SUV's" />
+                    <Picker.Item label="Sedans" value="Sedans" />
+                    <Picker.Item label="Hatches" value="Hatches" />
+                    <Picker.Item label="Premium" value="Premium" />
+                </Picker>
 
-            </TouchableOpacity>
-            {showTimePickerRetirada && (
-                <DateTimePicker
-                    value={locacaoData.data_retirada}
-                    mode="time"
-                    display="default"
-                    onChange={handleTimeRetiradaChange}
-                />
-            )}
+                <Picker
+                    id="modeloRetirada"
+                    value={locacaoData.modelo_veiculo}
+                    onValueChange={(itemValue) => setLocacaoData({ ...locacaoData, modelo_veiculo: itemValue })}
+                    mode="dropdown"
+                    prompt="Selecione o modelo de veículo desejado"
+                >
+                    <Picker.Item label="Selecione um modelo" value="" />
+                    <Picker.Item label="VW Gol" value="VW Gol" />
+                    <Picker.Item label="GM Onix" value="GM Onix" />
+                    <Picker.Item label="Hyundai HB20" value="Hyundai HB20" />
+                    <Picker.Item label="Ford Ka" value="Ford Ka" />
+                    <Picker.Item label="GM Prisma" value="GM Prisma" />
+                    <Picker.Item label="Hyundai HB20S" value="Hyundai HB20S" />
+                    <Picker.Item label="Toyota Corolla" value="Toyota Corolla" />
+                    <Picker.Item label="Honda Civic" value="Honda Civic" />
+                    <Picker.Item label="VW T-Cross" value="VW T-Cross" />
+                    <Picker.Item label="Jeep Renegade" value="Jeep Renegade" />
+                    <Picker.Item label="Chevrolet Cruze" value="Chevrolet Cruze" />
+                    <Picker.Item label="VW Virtus" value="VW Virtus" />
+                    <Picker.Item label="Toyota Yaris" value="Toyota Yaris" />
 
-            <TouchableOpacity onPress={() => setShowTimePickerEntrega(true)}>
+                </Picker>
+
+                <TouchableOpacity onPress={() => setShowTimePickerRetirada(true)}>
+                    <TextInput
+                        placeholder="Selecione a hora da retirada"
+                        value={locacaoData.hora_retirada}
+                        onChangeText={(text) => setLocacaoData({ ...locacaoData, hora_retirada: text })}
+                        style={estiloLocacao.select}
+                        mode="outlined"
+                        label="Hora da Retirada"
+                        editable={false}
+                        id="horaRetirada"
+                    />
+
+                </TouchableOpacity>
+                {showTimePickerRetirada && (
+                    <DateTimePicker
+                        value={locacaoData.data_retirada}
+                        mode="time"
+                        display="default"
+                        onChange={handleTimeRetiradaChange}
+                    />
+                )}
+
+                <TouchableOpacity onPress={() => setShowTimePickerEntrega(true)}>
+                    <TextInput
+                        placeholder="Selecione a hora da entrega"
+                        value={locacaoData.hora_entrega}
+                        style={estiloLocacao.select}
+                        mode="outlined"
+                        label="Hora da Entrega"
+                        editable={false}
+                        id="horaEntrega"
+                    />
+                </TouchableOpacity>
+                {showTimePickerEntrega && (
+                    <DateTimePicker
+                        value={locacaoData.data_entrega}
+                        mode="time"
+                        display="default"
+                        onChange={handleTimeEntregaChange}
+                    />
+                )}
+
                 <TextInput
-                    placeholder="Selecione a hora da entrega"
-                    value={locacaoData.hora_entrega}
-                    style={estiloLocacao.select}
-                    mode="outlined"
-                    label="Hora da Entrega"
-                    editable={false}
-                    id="horaEntrega"
+                    form="disabled"
+                    placeholder="Valor Diária"
+                    id="valorCategoria"
+                    label='Valor/dia (Selecione um Modelo)'
+                    mode='outlined'
+                    style={estiloLocacao.input}
+                    value={locacaoData.vl_categoria}
                 />
-            </TouchableOpacity>
-            {showTimePickerEntrega && (
-                <DateTimePicker
-                    value={locacaoData.data_entrega}
-                    mode="time"
-                    display="default"
-                    onChange={handleTimeEntregaChange}
-                />
-            )}
 
-            <TextInput
-                form="disabled"
-                placeholder="Valor Diária"
-                id="valorCategoria"
-                label='Valor/dia (Selecione um Modelo)'
-                mode='outlined'
-                style={estiloLocacao.input}
-                value={locacaoData.vl_categoria}
-            />
+                <Picker
+                    id="custosAd"
+                    selectedValue={locacaoData.custos_ad}
+                    onValueChange={(itemValue) => setLocacaoData({ ...locacaoData, custos_ad: itemValue })}
+                    mode="dropdown"
+                    prompt="Se preferir, contrate um adicional"
+                >
+                    <Picker.Item label="Não, Obrigado" value="0" />
+                    <Picker.Item label="Proteção adicional para vidros (R$499,00)" value="499" />
+                    <Picker.Item label="Assento para crianças (R$249,00)" value="249" />
+                    <Picker.Item label="GPS (R$99,00)" value="99" />
+                </Picker>
 
-            <Picker
-                id="custosAd"
-                selectedValue={locacaoData.custos_ad}
-                onValueChange={(itemValue) => setLocacaoData({ ...locacaoData, custos_ad: itemValue })}
-                mode="dropdown"
-                prompt="Se preferir, contrate um adicional"
-            >
-                <Picker.Item label="Não, Obrigado" value="0" />
-                <Picker.Item label="Proteção adicional para vidros (R$499,00)" value="499" />
-                <Picker.Item label="Assento para crianças (R$249,00)" value="249" />
-                <Picker.Item label="GPS (R$99,00)" value="99" />
-            </Picker>
+                <TouchableOpacity onPress={() => setShowDatePickerRetirada(true)}>
+                    <TextInput
+                        placeholder="Selecione a data da retirada"
+                        id="dataRetirada"
+                        value={formatDate(locacaoData.data_retirada)}
+                        style={estiloLocacao.select}
+                        mode="outlined"
+                        label="Data da Retirada"
+                        editable={false}
+                    />
+                </TouchableOpacity>
+                {showDatePickerRetirada && (
+                    <DateTimePicker
+                        value={locacaoData.data_retirada}
+                        mode="date"
+                        display="default"
+                        onChange={handleDateRetiradaChange}
+                    />
+                )}
 
-            <TouchableOpacity onPress={() => setShowDatePickerRetirada(true)}>
-                <TextInput
-                    placeholder="Selecione a data da retirada"
-                    id="dataRetirada"
-                    value={formatDate(locacaoData.data_retirada)}
-                    style={estiloLocacao.select}
-                    mode="outlined"
-                    label="Data da Retirada"
-                    editable={false}
-                />
-            </TouchableOpacity>
-            {showDatePickerRetirada && (
-                <DateTimePicker
-                    value={locacaoData.data_retirada}
-                    mode="date"
-                    display="default"
-                    onChange={handleDateRetiradaChange}
-                />
-            )}
+                <TouchableOpacity onPress={() => setShowDatePickerEntrega(true)}>
+                    <TextInput
+                        placeholder="Selecione a data da entrega"
+                        id="dataEntrega"
+                        value={formatDate(locacaoData.data_entrega)}
+                        style={estiloLocacao.select}
+                        mode="outlined"
+                        label="Data da Entrega"
+                        editable={false}
+                    />
+                </TouchableOpacity>
+                {showDatePickerEntrega && (
+                    <DateTimePicker
+                        value={locacaoData.data_entrega}
+                        mode="date"
+                        display="default"
+                        onChange={handleDateEntregaChange}
+                    />
+                )}
 
-            <TouchableOpacity onPress={() => setShowDatePickerEntrega(true)}>
-                <TextInput
-                    placeholder="Selecione a data da entrega"
-                    id="dataEntrega"
-                    value={formatDate(locacaoData.data_entrega)}
-                    style={estiloLocacao.select}
-                    mode="outlined"
-                    label="Data da Entrega"
-                    editable={false}
-                />
-            </TouchableOpacity>
-            {showDatePickerEntrega && (
-                <DateTimePicker
-                    value={locacaoData.data_entrega}
-                    mode="date"
-                    display="default"
-                    onChange={handleDateEntregaChange}
-                />
-            )}
-
-            <Text style={estiloLocacao.vlTotal} id="vlTotal">O valor total da(s) diária(s) é de R$ {locacaoData.total}</Text>
-            <Button style={estiloLocacao.calculateTotal} mode="contained" onPress={calculateTotal}>Calcular Total</Button>
-            <Button style={estiloLocacao.botaoSave} mode="contained" onPress={atualizarLocacao}>Salvar Edições</Button>
-        </View>
-    );
-            <Text style={estiloLocacao.vlTotal} id="vlTotal">O valor total da(s) diária(s) é de R$ {total}</Text>
-            <Button style={estiloLocacao.botaoLocalizacao} mode="contained" onPress={localizacao}>Localização</Button>
-            <Button style={estiloLocacao.calculateTotal} mode="contained" onPress={calculateTotal}>Calcular Total</Button>
-            <Button style={estiloLocacao.botaoSave} mode="contained" onPress={atualizarLocacao}>Salvar Edições</Button>
-        </View>
-        </ScrollView>
+                <Text style={estiloLocacao.vlTotal} id="vlTotal">O valor total da(s) diária(s) é de R$ {locacaoData.total}</Text>
+                <Button style={estiloLocacao.botaoLocalizacao} mode="contained" onPress={localizacao}>Localização</Button>
+                <Button style={estiloLocacao.calculateTotal} mode="contained" onPress={calculateTotal}>Calcular Total</Button>
+                <Button style={estiloLocacao.botaoSave} mode="contained" onPress={atualizarLocacao}>Salvar Edições</Button>
+            </ScrollView >
+        </View >
     )
 
 

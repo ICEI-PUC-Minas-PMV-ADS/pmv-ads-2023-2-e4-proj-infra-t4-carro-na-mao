@@ -205,7 +205,6 @@ const cadastrarLocacao = () => {
             >
                 <Picker.Item label="Selecione um local" value="" />
                 <Picker.Item label="Av. Afonso Pena, 1.000 - Centro - BH/MG" value="001" />
-                <Picker.Item label="Av. Antonio Carlos, 1.001 - Pampulha - BH/MG" value="002" />
             </Picker>
 
             <Picker

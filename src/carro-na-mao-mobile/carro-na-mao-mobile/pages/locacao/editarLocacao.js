@@ -179,8 +179,8 @@ const EditarLocacao = ({ route, navigation }) => {
 
 
     return (
+        <ScrollView style={estiloLocacao.scrollView}>
         <View style={estiloLocacao.body}>
-            <ScrollView style={estiloLocacao.scrollView}>
                 <Picker
                     id="localRetirada"
                     selectedValue={id_local}
@@ -340,8 +340,8 @@ const EditarLocacao = ({ route, navigation }) => {
                 <Button style={estiloLocacao.botaoLocalizacao} mode="contained" onPress={localizacao}>Localização</Button>
                 <Button style={estiloLocacao.calculateTotal} mode="contained" onPress={calculateTotal}>Calcular Total</Button>
                 <Button style={estiloLocacao.botaoSave} mode="contained" onPress={atualizarLocacao}>Salvar Edições</Button>
-            </ScrollView >
         </View >
+        </ScrollView >
     )
 
 

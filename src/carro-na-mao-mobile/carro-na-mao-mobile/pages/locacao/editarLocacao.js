@@ -327,7 +327,6 @@ const EditarLocacao = ({ route, navigation }) => {
 
                 </Picker>
 
-
                 <TextInput
                     placeholder="Selecione a hora da retirada"
                     value={hora_retirada}
@@ -423,7 +422,6 @@ const EditarLocacao = ({ route, navigation }) => {
                 <Button style={estiloLocacao.botaoSave} mode="contained" onPress={atualizarLocacao}>Salvar Edições</Button>
             </ScrollView >
         </View >
-
     )
 
 

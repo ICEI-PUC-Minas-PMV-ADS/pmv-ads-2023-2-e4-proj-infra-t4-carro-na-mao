@@ -55,6 +55,17 @@
    - Passos: Acessar a aba vistorias e realizar uma vistoria
    - Criterio: Mensagem de sucesso ao terminar o processo
 
+   ### 09 - Notificação
+   > Requisito Associado: RF-001 O sistema deve enviar notificações e lembretes aos clientes sobre datas de aluguel, devolução e pagamentos pendentes.
+
+**9 - Recebimento de notificações push**
+ - Objetivo do Teste: Verificar se o envio da Notificação push irá aparecer como alerta no dispositivo mobile.
+ - Passos:     
+    1) Acessar a aplicação em modo desenvolvimento, usando o EXPO GO
+    2) Acessar a API de envio de notificações 'push', no endereço (https://app.nativenotify.com/)
+    2) Fazer Login e acessar o a sessão App _Carro na mao_
+    3) Clicar no símbolo de notificação (_Message icon_), escrever título e conteúdo da notificação e clicar em _Send Push Notification_
+ - Critério de sucesso: Mensagem de alerta de 'Sucesso' exibida, a notificação 'push' aparecer na tela do dispositivo e na sessão de 'notificações enviadas' da API.
 
  ### 10 - Perfil
 
@@ -85,22 +96,7 @@
    - Passos: Acessar a pagina de locação, selecionar a locação desejada, e clicar no botão Localização.
    - Criterio: Caso a localização não esteja mais disponível para retirada do veículo, apresentar mensagem informando que a localização está indisponível.
   
-=======
- ## FRONT END: MOBILE
-
-### 09 - Notificação
-   > Requisito Associado: RF-001 O sistema deve enviar notificações e lembretes aos clientes sobre datas de aluguel, devolução e pagamentos pendentes.
-
-**9 - Recebimento de notificações push**
- - Objetivo do Teste: Verificar se o envio da Notificação push irá aparecer como alerta no dispositivo mobile.
- - Passos:     
-    1) Acessar a aplicação em modo desenvolvimento, usando o EXPO GO
-    2) Acessar a API de envio de notificações 'push', no endereço (https://app.nativenotify.com/)
-    2) Fazer Login e acessar o a sessão App _Carro na mao_
-    3) Clicar no símbolo de notificação (_Message icon_), escrever título e conteúdo da notificação e clicar em _Send Push Notification_
- - Critério de sucesso: Mensagem de alerta de 'Sucesso' exibida, a notificação 'push' aparecer na tela do dispositivo e na sessão de 'notificações enviadas' da API.
-
-
+ ##
  ## FRONT END: WEB
  ### 1 - Login/Cadastro
 

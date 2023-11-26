@@ -84,43 +84,43 @@ const Locacao = () => {
 
   const Item = ({ item }) => {
     return (
-      <TouchableOpacity onPress={() => navigation.navigate('editarLocacao', { id: item })} >
+        <TouchableOpacity onPress={() => navigation.navigate('editarLocacao', { id: item })} >
 
-        <View style={estiloLocacao.informacoe}>
-          <Text>{'Local: ' + obterRotuloLocal(item.id_local)}</Text>
-          <Text>{'Categoria: ' + item.id_categoria}</Text>
-          <Text>{'Modelo Veículo: ' + item.modelo_veiculo}</Text>
-          <Text>{'Hora Retirada: ' + item.hora_retirada}</Text>
-          <Text>{'Data Retirada: ' + format(new Date(item.data_retirada), 'dd/MM/yyyy')}</Text>
-          <Text>{'Valor da diaria: ' + item.vl_categoria}</Text>
-          <IconButton
-            icon="delete"
-            style={estiloLocacao.exclui}
-            iconColor='#8B0000'
-            onPress={() => handleDelete(item.id_locacao)}
-          />
-        </View>
-      </TouchableOpacity>
-    );
+          <View style={estiloLocacao.informacoe}>
+            <Text>{'Local: ' + obterRotuloLocal(item.id_local)}</Text>
+            <Text>{'Categoria: ' + item.id_categoria}</Text>
+            <Text>{'Modelo Veículo: ' + item.modelo_veiculo}</Text>
+            <Text>{'Hora Retirada: ' + item.hora_retirada}</Text>
+            <Text>{'Data Retirada: ' + format(new Date(item.data_retirada), 'dd/MM/yyyy')}</Text>
+            <Text>{'Valor da diaria: ' + item.vl_categoria}</Text>
+            <IconButton
+              icon="delete"
+              style={estiloLocacao.exclui}
+              iconColor='#8B0000'
+              onPress={() => handleDelete(item.id_locacao)}
+            />
+          </View>
+        </TouchableOpacity>
+        );
   };
 
-  return (
-    <View style={estiloLocacao.body}>
-      <FlatList
-        style={estiloLocacao.topicos}
-        data={locacao}
-        renderItem={Item}
-        keyExtractor={item => (item.id_locacao ? item.id_locacao.toString() : null)}
-      />
+        return (
+        <View style={estiloLocacao.body}>
+          <FlatList
+            style={estiloLocacao.topicos}
+            data={locacao}
+            renderItem={Item}
+            keyExtractor={item => (item.id_locacao ? item.id_locacao.toString() : null)}
+          />
 
-      <FAB
-        style={estiloLocacao.adic}
-        icon="plus"
-        onPress={() => navigation.navigate('cadastrarLocacao')}
-      />
-    </View>
-  );
+          <FAB
+            style={estiloLocacao.adic}
+            icon="plus"
+            onPress={() => navigation.navigate('cadastrarLocacao')}
+          />
+        </View>
+        );
 }
 
 
-export default Locacao;
+        export default Locacao;

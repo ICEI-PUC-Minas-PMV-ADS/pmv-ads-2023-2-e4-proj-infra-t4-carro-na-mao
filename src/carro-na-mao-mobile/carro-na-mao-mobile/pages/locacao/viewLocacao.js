@@ -63,8 +63,8 @@ const Locacao = () => {
             axios.delete('https://api-carronamao.azurewebsites.net/api/Locacao?id_locacao=' + id_locacao + '', { headers })
               .then(response => {
                 if (response.status == 200) {
-                  alert('deletada com sucesso')
-
+                  alert('Reserva cancelada com sucesso')
+                  setLocacao(prevLocacao => prevLocacao.filter(item => item.id_locacao !== id_locacao));
                 }
               }).catch(error => {
                 alert(error)
@@ -76,8 +76,7 @@ const Locacao = () => {
 
   const listaDeLocais = [
     { id: 1, label: 'Av. Afonso Pena, 1.000 - Centro - BH/MG' },
-    { id: 2, label: 'Av. Antonio Carlos, 1.001 - Pampulha - BH/MG' },
-  ];
+    ];
   const obterRotuloLocal = (id_local) => {
     const local = listaDeLocais.find(local => local.id === id_local);
     return local ? local.label : 'Local Desconhecido';
@@ -86,7 +85,7 @@ const Locacao = () => {
 
   const Item = ({ item }) => {
     return (
-      <TouchableOpacity onPress={() => navigation.navigate('editarLocacao', { id: item.id_locacao })} >
+      <TouchableOpacity onPress={() => navigation.navigate('editarLocacao', { id: item })} >
 
         <View style={estiloLocacao.informacoe}>
           <Text>{'Local: ' + obterRotuloLocal(item.id_local)}</Text>

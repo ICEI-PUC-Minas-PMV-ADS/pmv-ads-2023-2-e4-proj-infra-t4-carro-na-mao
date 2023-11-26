@@ -1,194 +1,136 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import { Text, View, StyleSheet, TouchableOpacity, Platform } from "react-native";
-import { useNavigation, useRoute } from "@react-navigation/native";
+import { ScrollView, Text, View, StyleSheet, TouchableOpacity, Platform } from "react-native";
 import { TextInput, Button } from 'react-native-paper';
 import { Picker } from "@react-native-picker/picker";
 import DateTimePicker from '@react-native-community/datetimepicker';
 import estiloLocacao from "../../estilos/estiloLocacao";
 import { RecuperaToken } from "../../Autenticação/autenticacao";
 
-
 const formatDate = (date) => {
-    const day = String(date.getDate()).padStart(2, '0');
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    const year = date.getFullYear();
-    return `${day}-${month}-${year}`;
+    if (date instanceof Date) {
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const year = date.getFullYear();
+        return `${year}-${month}-${day}`;
+    } else {
+        return 'Data inválida';
+    }
 };
 
+
+
 const EditarLocacao = ({ route, navigation }) => {
-    console.log(route.params.id);
     const [token, setToken] = useState(null);
-  
-    const [local, setLocal] = useState("");
-    const [categoria, setCategoria] = useState("");
-    const [modelo, setModelo] = useState("");
-    const [horaRetirada, setHoraRetirada] = useState("");
-    const [horaEntrega, setHoraEntrega] = useState("");
-    const [valorCategoria, setValorCategoria] = useState("");
-    const [dataRetirada, setDataRetirada] = useState(new Date());
-    const [dataEntrega, setDataEntrega] = useState(new Date());
-    const [adicionais, setAdicionais] = useState("");
-    const [total, setTotal] = useState(0);
+
+    const [locacaoData, setLocacaoData] = useState({
+
+        id_local: "",
+        id_categoria: "",
+        modelo_veiculo: "",
+        hora_retirada: "",
+        hora_entrega: "",
+        vl_categoria: "",
+        data_retirada: new Date().toISOString(),
+        data_entrega: new Date().toISOString(),
+        custos_ad: "",
+        total: 0,
+    });
+    const [id_local, setId_Local] = useState();
+    const [id_categoria, setId_Categoria] = useState();
+    const [modelo_veiculo, setModelo_Veiculo] = useState();
+    const [hora_retirada, setHora_Retirada] = useState();
+    const [hora_entrega, setHora_Entrega] = useState();
+    const [vl_categoria, setVl_Categoria] = useState();
+    const [custos_ad, setCustos_Ad] = useState();
+    const [data_retirada, setData_Retirada] = useState();
+    const [data_entrega, setData_Entrega] = useState();
+
     const [showDatePickerRetirada, setShowDatePickerRetirada] = useState(false);
     const [showDatePickerEntrega, setShowDatePickerEntrega] = useState(false);
     const [showTimePickerRetirada, setShowTimePickerRetirada] = useState(false);
     const [showTimePickerEntrega, setShowTimePickerEntrega] = useState(false);
-  
+
     useEffect(() => {
-      async function fetchData() {
-        try {
-          const jwtToken = await RecuperaToken();
-          setToken(jwtToken);
-        } catch (error) {
-          console.error('Erro ao recuperar token:', error);
+        async function fetchData() {
+            try {
+                const jwtToken = await RecuperaToken();
+                setToken(jwtToken);
+
+                const response = await axios.get('https://api-carronamao.azurewebsites.net/api/Locacao?id=' + route.params.id + '', {
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": 'Bearer ' + jwtToken
+                    }
+                });
+                console.log(route.params.id)
+                if (response.status === 200) {
+                    setLocacaoData(response.data);
+                    setId_Local(response.data.id_local);
+                    setId_Categoria(response.data.id_categoria);
+                    setModelo_Veiculo(response.data.modelo_veiculo);
+                    setHora_Retirada(response.data.hora_retirada);
+                    setHora_Entrega(response.data.hora_entrega);
+                    setVl_Categoria(response.data.vl_categoria);
+                    setCustos_Ad(response.data.custos_ad);
+                    setData_Retirada(response.data.data_retirada);
+                    setData_Entrega(response.data.data_entrega);
+                }
+                console.log('depois de passar set', response.data)
+            } catch (error) {
+                console.error('Erro ao recuperar token ou detalhes da locação:', error);
+            }
         }
-      }
-      fetchData();
-  
-      const locacaoData = route.params?.locacaoData;
-      if (locacaoData) {
-        setLocal(locacaoData.id_local);
-        setCategoria(locacaoData.id_categoria);
-        setModelo(locacaoData.modelo_veiculo);
-        setHoraRetirada(locacaoData.hora_retirada);
-        setHoraEntrega(locacaoData.hora_entrega);
-        setValorCategoria(locacaoData.vl_categoria.toString());
-        setDataRetirada(new Date(locacaoData.data_retirada));
-        setDataEntrega(new Date(locacaoData.data_entrega));
-        setAdicionais(locacaoData.custos_ad);
-        calculateDiaria(parseFloat(locacaoData.vl_categoria));
-        calculateTotal();
-      }
-    }, [route.params?.locacaoData]);
-  
+        fetchData();
+    }, [route.params.id]);
+
     const handleDateRetiradaChange = (event, date) => {
-      setShowDatePickerRetirada(Platform.OS === 'ios' ? true : false);
-      if (date) {
-        setDataRetirada(date);
-      }
+        setShowDatePickerRetirada(Platform.OS === 'ios' ? true : false);
+        if (date) {
+            setLocacaoData({ ...locacaoData, data_retirada: date.toISOString() });
+        }
     };
-  
 
     const handleDateEntregaChange = (event, date) => {
         setShowDatePickerEntrega(Platform.OS === 'ios' ? true : false);
         if (date) {
-            setDataEntrega(date);
+            setLocacaoData({ ...locacaoData, data_entrega: date.toISOString() });
         }
     };
 
     const handleTimeRetiradaChange = (event, date) => {
         setShowTimePickerRetirada(Platform.OS === "ios" ? true : false);
         if (date) {
-            setHoraRetirada(date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }));
+            setLocacaoData({ ...locacaoData, hora_retirada: date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }), data_retirada: date.toISOString() });
         }
     };
 
     const handleTimeEntregaChange = (event, date) => {
         setShowTimePickerEntrega(Platform.OS === "ios" ? true : false);
         if (date) {
-            setHoraEntrega(date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }));
+            setLocacaoData({ ...locacaoData, hora_entrega: date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }), data_entrega: date.toISOString() });
         }
     };
 
-    const renderTimePickerRetirada = () => {
-        return showTimePickerRetirada && (
-            Platform.OS === 'ios' ?
-                <DateTimePicker value={new Date()} mode="time" display="default" onChange={handleTimeRetiradaChange} />
-                :
-                <></>
-        );
-    };
-
-    const renderTimePickerEntrega = () => {
-        return showTimePickerEntrega && (
-            Platform.OS === 'ios' ?
-                <DateTimePicker value={new Date()} mode="time" display="default" onChange={handleTimeEntregaChange} />
-                :
-                <></>
-        );
-    };
-
-    const renderDatePickerRetirada = () => {
-        return showDatePickerRetirada && (
-            Platform.OS === 'ios' ?
-                <DateTimePicker value={dataRetirada} mode="date" display="default" onChange={handleDateRetiradaChange} />
-                :
-                <></>
-        );
-    };
-
-    const renderDatePickerEntrega = () => {
-        return showDatePickerEntrega && (
-            Platform.OS === 'ios' ?
-                <DateTimePicker value={dataEntrega} mode="date" display="default" onChange={handleDateEntregaChange} />
-                :
-                <></>
-        );
-    }
-
-    const calculateDateDiff = () => {
-        const oneDay = 24 * 60 * 60 * 1000;
-        const diffInMilliseconds = Math.abs(dataEntrega - dataRetirada);
-        return Math.round(diffInMilliseconds / oneDay);
-    };
-
-
-    const calculateDiaria = (diaria) => {
-        const daysDifference = calculateDateDiff();
-        const calculatedDiaria = diaria * daysDifference;
-        setDiaria(calculatedDiaria);
-        return calculatedDiaria;
-    };
 
     const calculateTotal = () => {
-        const valorAdicional = parseFloat(adicionais);
-        const valorDiario = calculateDiaria(parseFloat(valorCategoria));
+        const valorAdicional = parseFloat(locacaoData.custos_ad);
+        const valorDiario = calculateDiaria(parseFloat(locacaoData.vl_categoria));
         const calculatedTotal = valorAdicional + valorDiario;
-        setTotal(calculatedTotal);
+        setLocacaoData({ ...locacaoData, total: calculatedTotal });
     };
-
-    const handleModeloChange = (itemValue) => {
-        setModelo(itemValue);
-        const valorCategoriaDoModelo = getValorCategoriaFromModelo(itemValue);
-        setValorCategoria(valorCategoriaDoModelo.toString());
-    };
-
-    const getValorCategoriaFromModelo = (selectedModelo) => {
-        switch (selectedModelo) {
-            case "VW Gol":
-            case "GM Onix":
-            case "Hyundai HB20":
-            case "Ford Ka":
-                return 50;
-            case "GM Prisma":
-            case "Hyundai HB20S":
-            case "VW Virtus":
-                return 70;
-            case "VW T-Cross":
-            case "Jeep Renegade":
-                return 200;
-            case "Toyota Corolla":
-            case "Honda Civic":
-            case "Chevrolet Cruze":
-                return 270;
-            default:
-                return 0;
-        }
-    };
-
 
     const atualizarLocacao = () => {
         const data = {
-            "id_local": local,
-            "id_categoria": categoria,
-            "modelo_veiculo": modelo,
-            "hora_retirada": horaRetirada,
-            "hora_entrega": horaEntrega,
-            "vl_categoria": valorCategoria,
-            "custos_ad": adicionais,
-            "data_retirada": dataRetirada,
-            "data_entrega": dataEntrega,
+            "id_local": id_local,
+            "id_categoria": id_categoria,
+            "modelo_veiculo": modelo_veiculo,
+            "hora_retirada": hora_retirada,
+            "hora_entrega": hora_entrega,
+            "vl_categoria": vl_categoria,
+            "custos_ad": custos_ad,
+            "data_retirada": data_retirada,
+            "data_entrega": data_entrega,
         };
 
         const headers = {
@@ -196,7 +138,7 @@ const EditarLocacao = ({ route, navigation }) => {
             "Authorization": 'Bearer ' + token
         };
 
-        axios.put('https://api-carronamao.azurewebsites.net/api/Locacao?id='+route.params.id+'', data, { headers })
+        axios.put('https://api-carronamao.azurewebsites.net/api/Locacao?id=' + route.params.id + '', data, { headers })
             .then(response => {
                 if (response.status === 200) {
                     alert('Locação atualizada com sucesso');
@@ -208,24 +150,25 @@ const EditarLocacao = ({ route, navigation }) => {
             });
     };
 
+
     return (
         <View style={estiloLocacao.body}>
             <Picker
                 id="localRetirada"
-                selectedValue={local}
-                onValueChange={(itemValue) => setLocal(itemValue)}
+                selectedValue={id_local}
+                onValueChange={(value) => setId_Local(value)}
                 mode="dropdown"
                 prompt="Selecione um local para retirada"
             >
                 <Picker.Item label="Selecione um local" value="" />
                 <Picker.Item label="Av. Afonso Pena, 1.000 - Centro - BH/MG" value="001" />
-                <Picker.Item label="Av. Antonio Carlos, 1.001 - Pampulha - BH/MG" value="002" />
             </Picker>
 
             <Picker
                 id="categoriaRetirada"
-                selectedValue={categoria}
-                onValueChange={(itemValue) => setCategoria(itemValue)}
+                selectedValue={locacaoData.id_categoria}
+                style={estiloLocacao.select}
+                onValueChange={(itemValue) => setLocacaoData({ ...locacaoData, id_categoria: itemValue })}
                 mode="dropdown"
                 prompt="Selecione a categoria de veículos desejada"
             >
@@ -238,8 +181,8 @@ const EditarLocacao = ({ route, navigation }) => {
 
             <Picker
                 id="modeloRetirada"
-                selectedValue={modelo}
-                onValueChange={(itemValue) => handleModeloChange(itemValue)}
+                value={locacaoData.modelo_veiculo}
+                onValueChange={(itemValue) => setLocacaoData({ ...locacaoData, modelo_veiculo: itemValue })}
                 mode="dropdown"
                 prompt="Selecione o modelo de veículo desejado"
             >
@@ -263,17 +206,19 @@ const EditarLocacao = ({ route, navigation }) => {
             <TouchableOpacity onPress={() => setShowTimePickerRetirada(true)}>
                 <TextInput
                     placeholder="Selecione a hora da retirada"
-                    value={horaRetirada}
+                    value={locacaoData.hora_retirada}
+                    onChangeText={(text) => setLocacaoData({ ...locacaoData, hora_retirada: text })}
                     style={estiloLocacao.select}
                     mode="outlined"
                     label="Hora da Retirada"
                     editable={false}
                     id="horaRetirada"
                 />
+
             </TouchableOpacity>
             {showTimePickerRetirada && (
                 <DateTimePicker
-                    value={dataRetirada}
+                    value={locacaoData.data_retirada}
                     mode="time"
                     display="default"
                     onChange={handleTimeRetiradaChange}
@@ -283,7 +228,7 @@ const EditarLocacao = ({ route, navigation }) => {
             <TouchableOpacity onPress={() => setShowTimePickerEntrega(true)}>
                 <TextInput
                     placeholder="Selecione a hora da entrega"
-                    value={horaEntrega}
+                    value={locacaoData.hora_entrega}
                     style={estiloLocacao.select}
                     mode="outlined"
                     label="Hora da Entrega"
@@ -293,7 +238,7 @@ const EditarLocacao = ({ route, navigation }) => {
             </TouchableOpacity>
             {showTimePickerEntrega && (
                 <DateTimePicker
-                    value={dataEntrega}
+                    value={locacaoData.data_entrega}
                     mode="time"
                     display="default"
                     onChange={handleTimeEntregaChange}
@@ -302,18 +247,18 @@ const EditarLocacao = ({ route, navigation }) => {
 
             <TextInput
                 form="disabled"
-                placeholder="Valor Diaria"
+                placeholder="Valor Diária"
                 id="valorCategoria"
                 label='Valor/dia (Selecione um Modelo)'
                 mode='outlined'
                 style={estiloLocacao.input}
-                value={valorCategoria}
+                value={locacaoData.vl_categoria}
             />
 
             <Picker
                 id="custosAd"
-                selectedValue={adicionais}
-                onValueChange={(itemValue) => setAdicionais(itemValue)}
+                selectedValue={locacaoData.custos_ad}
+                onValueChange={(itemValue) => setLocacaoData({ ...locacaoData, custos_ad: itemValue })}
                 mode="dropdown"
                 prompt="Se preferir, contrate um adicional"
             >
@@ -327,7 +272,7 @@ const EditarLocacao = ({ route, navigation }) => {
                 <TextInput
                     placeholder="Selecione a data da retirada"
                     id="dataRetirada"
-                    value={formatDate(dataRetirada)}
+                    value={formatDate(locacaoData.data_retirada)}
                     style={estiloLocacao.select}
                     mode="outlined"
                     label="Data da Retirada"
@@ -336,7 +281,7 @@ const EditarLocacao = ({ route, navigation }) => {
             </TouchableOpacity>
             {showDatePickerRetirada && (
                 <DateTimePicker
-                    value={dataRetirada}
+                    value={locacaoData.data_retirada}
                     mode="date"
                     display="default"
                     onChange={handleDateRetiradaChange}
@@ -347,7 +292,7 @@ const EditarLocacao = ({ route, navigation }) => {
                 <TextInput
                     placeholder="Selecione a data da entrega"
                     id="dataEntrega"
-                    value={formatDate(dataEntrega)}
+                    value={formatDate(locacaoData.data_entrega)}
                     style={estiloLocacao.select}
                     mode="outlined"
                     label="Data da Entrega"
@@ -356,22 +301,19 @@ const EditarLocacao = ({ route, navigation }) => {
             </TouchableOpacity>
             {showDatePickerEntrega && (
                 <DateTimePicker
-                    value={dataEntrega}
+                    value={locacaoData.data_entrega}
                     mode="date"
                     display="default"
                     onChange={handleDateEntregaChange}
                 />
             )}
 
-            <Text style={estiloLocacao.vlTotal} id="vlTotal">O valor total da(s) diária(s) é de R$ {total}</Text>
+            <Text style={estiloLocacao.vlTotal} id="vlTotal">O valor total da(s) diária(s) é de R$ {locacaoData.total}</Text>
             <Button style={estiloLocacao.calculateTotal} mode="contained" onPress={calculateTotal}>Calcular Total</Button>
             <Button style={estiloLocacao.botaoSave} mode="contained" onPress={atualizarLocacao}>Salvar Edições</Button>
         </View>
-    )
-
-
+    );
 }
-
 
 
 export default EditarLocacao;

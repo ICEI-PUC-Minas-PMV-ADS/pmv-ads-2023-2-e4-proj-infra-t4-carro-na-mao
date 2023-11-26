@@ -29,13 +29,15 @@ export default StyleSheet.create({
         backgroundColor: '#8F9098'
     },
     select: {
-        height: 40,
+        height: 30,
+        left: 0,
         margin: 12,
+        borderColor: "#fff",
         backgroundColor: '#1F2024',
         activeOutlineColor:"#fff",
         textColor:"#fff",
         underlineColor:"#fff",
-        outlineColor:"#fff",
+        processColor:"#fff",
     },
     input: {
         height: 40,

@@ -4,7 +4,7 @@ import '../estilos/home.css';
 import { useEffect, useState } from 'react';
 import { RecuperaToken } from '../autenticação/chave_de_acesso';
 import { useNavigate, Link } from 'react-router-dom'
-import logo from '../img/logo.png'
+import logo from '../img/logo2.png'
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import Alert from '@mui/material/Alert';
@@ -75,20 +75,20 @@ function Home() {
 
   }
   return (
-    <div id="fundo">
+    <div id="fundoHome">
       {loading ? (
         <Box id="carregamento" sx={{ display: 'flex' }}>
           <CircularProgress sx={{ color: 'black' }} />
         </Box>
       ) : (
         <>
-          <section id="camposHome">
+        <section id="camposHome">
             <div id="elementosCampos">
               <img id="logoHome" src={logo}></img>
 
               <h3 id="tituloHome"></h3>
 
-              <input id="emailHome" type='email' placeholder='Email, CPF ou CNPJ'></input>
+              <input id="emailHome" type='email' placeholder='Email'></input>
               <input id="senhaHome" type='password' placeholder='Senha'></input>
               <button id="btnEntrar" onClick={validarUsuario}>Entrar</button>
               
@@ -107,3 +107,4 @@ function Home() {
 
 
 export default Home;
+

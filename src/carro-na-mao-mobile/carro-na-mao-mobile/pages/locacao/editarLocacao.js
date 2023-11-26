@@ -1,28 +1,20 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { ScrollView, Text, View, StyleSheet, TouchableOpacity, Platform } from "react-native";
-import { useNavigation, useRoute } from "@react-navigation/native";
-import { TextInput, Button } from 'react-native-paper';
+import { useNavigation, useRoute, useIsFocused } from "@react-navigation/native";
+import { TextInput, Button, FAB } from 'react-native-paper';
 import { Picker } from "@react-native-picker/picker";
 import DateTimePicker from '@react-native-community/datetimepicker';
 import estiloLocacao from "../../estilos/estiloLocacao";
 import { RecuperaToken } from "../../Autenticação/autenticacao";
 
-const formatDate = (date) => {
-    if (date instanceof Date) {
-        const day = String(date.getDate()).padStart(2, '0');
-        const month = String(date.getMonth() + 1).padStart(2, '0');
-        const year = date.getFullYear();
-        return `${year}-${month}-${day}`;
-    } else {
-        return 'Data inválida';
-    }
-};
-
 
 
 const EditarLocacao = ({ route, navigation }) => {
+    const foco = useIsFocused()
     const [token, setToken] = useState(null);
+    const [diaria, setDiaria] = useState(0);
+    const [diffInDays, setDiffInDays] = useState(0);
 
     const [locacaoData, setLocacaoData] = useState({
 
@@ -46,7 +38,7 @@ const EditarLocacao = ({ route, navigation }) => {
     const [custos_ad, setCustos_Ad] = useState();
     const [data_retirada, setData_Retirada] = useState();
     const [data_entrega, setData_Entrega] = useState();
-
+    const [total, setTotal] = useState(0);
     const [showDatePickerRetirada, setShowDatePickerRetirada] = useState(false);
     const [showDatePickerEntrega, setShowDatePickerEntrega] = useState(false);
     const [showTimePickerRetirada, setShowTimePickerRetirada] = useState(false);
@@ -56,18 +48,38 @@ const EditarLocacao = ({ route, navigation }) => {
         async function fetchData() {
             try {
                 const jwtToken = await RecuperaToken();
-                setToken(jwtToken);
+                setToken(jwtToken)
+                // recuperarDadosParaEdicao(jwtToken)
+                //console.log(route.params.id.custos_ad)
+                setId_Local(route.params.id.id_local)
+                setId_Categoria(route.params.id.id_categoria)
+                setModelo_Veiculo(route.params.id.modelo_veiculo)
+                setHora_Retirada(route.params.id.hora_retirada)
+                setHora_Entrega(route.params.id.hora_entrega)
+                setVl_Categoria(route.params.id.vl_categoria)
+                setCustos_Ad(route.params.id.custos_ad)
+                setData_Retirada(route.params.id.data_retirada)
+                setData_Entrega(route.params.id.data_entrega)
 
-                const response = await axios.get('https://api-carronamao.azurewebsites.net/api/Locacao?id=' + route.params.id + '', {
-                    headers: {
-                        "Content-Type": "application/json",
-                        "Authorization": 'Bearer ' + jwtToken
-                    }
-                });
-                console.log(route.params.id)
+
+            } catch (erro) { console.log('Algo deu errado') }
+        }
+        fetchData();
+        //recuperarDadosParaEdicao(token)
+    }, [foco]);
+
+    function recuperarDadosParaEdicao(jwtToken) {
+        console.log(route.params.id)
+        const headers = {
+            "Content-Type": "application/json",
+            "Authorization": 'Bearer ' + jwtToken
+        }
+        axios.get('https://api-carronamao.azurewebsites.net/api/Locacao?id=' + route.params.id + '', { headers }).then(
+            response => {
                 if (response.status === 200) {
-                    setLocacaoData(response.data);
-                    setId_Local(response.data.id_local);
+                    //console.log(response.data);
+                    //setId_Local(response.data.id_local)
+                    /* setId_Local(response.data.id_local);
                     setId_Categoria(response.data.id_categoria);
                     setModelo_Veiculo(response.data.modelo_veiculo);
                     setHora_Retirada(response.data.hora_retirada);
@@ -76,14 +88,19 @@ const EditarLocacao = ({ route, navigation }) => {
                     setCustos_Ad(response.data.custos_ad);
                     setData_Retirada(response.data.data_retirada);
                     setData_Entrega(response.data.data_entrega);
+                    console.log(response.data.id_local)*/
+                    //  console.log(response.data)
+                    // setId_Categoria(id_local.id_local);
+                    //  console.log(response.data.data_entrega)
                 }
-                console.log('depois de passar set', response.data)
-            } catch (error) {
-                console.error('Erro ao recuperar token ou detalhes da locação:', error);
-            }
-        }
-        fetchData();
-    }, [route.params.id]);
+            }).catch(error => {
+                alert(error)
+            })
+
+        //setId_Categoria(id_local.id_local);
+        //console.log(id_categoria)
+    }
+
 
     const handleDateRetiradaChange = (event, date) => {
         setShowDatePickerRetirada(Platform.OS === 'ios' ? true : false);
@@ -106,6 +123,56 @@ const EditarLocacao = ({ route, navigation }) => {
         }
     };
 
+    const formatarData = (data) => {
+        const date = new Date(data);
+        const dia = date.getDate();
+        const mes = date.getMonth() + 1; // Mês começa do zero
+        const ano = date.getFullYear();
+
+        // Adiciona zero à esquerda se o dia ou mês for menor que 10
+        const diaFormatado = dia < 10 ? `0${dia}` : dia;
+        const mesFormatado = mes < 10 ? `0${mes}` : mes;
+
+        return `${diaFormatado}/${mesFormatado}/${ano}`;
+    };
+
+
+    const renderTimePickerRetirada = () => {
+        return showTimePickerRetirada && (
+            Platform.OS === 'ios' ?
+                <DateTimePicker value={new Date()} mode="time" display="default" onChange={handleTimeRetiradaChange} />
+                :
+                <></>
+        );
+    };
+
+    const renderTimePickerEntrega = () => {
+        return showTimePickerEntrega && (
+            Platform.OS === 'ios' ?
+                <DateTimePicker value={new Date()} mode="time" display="default" onChange={handleTimeEntregaChange} />
+                :
+                <></>
+        );
+    };
+
+    const renderDatePickerRetirada = () => {
+        return showDatePickerRetirada && (
+            Platform.OS === 'ios' ?
+                <DateTimePicker value={data_retirada} mode="date" display="default" onChange={handleDateRetiradaChange} />
+                :
+                <></>
+        );
+    };
+
+    const renderDatePickerEntrega = () => {
+        return showDatePickerEntrega && (
+            Platform.OS === 'ios' ?
+                <DateTimePicker value={data_entrega} mode="date" display="default" onChange={handleDateEntregaChange} />
+                :
+                <></>
+        );
+    }
+
     const handleTimeEntregaChange = (event, date) => {
         setShowTimePickerEntrega(Platform.OS === "ios" ? true : false);
         if (date) {
@@ -113,16 +180,37 @@ const EditarLocacao = ({ route, navigation }) => {
         }
     };
 
+    const calculateDateDiff = () => {
+        const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+        const diffInMilliseconds = Math.abs(data_entrega - data_retirada);
+        return Math.round(diffInMilliseconds / oneDay);
+    };
+
+
+    const calculateDiaria = (diaria) => {
+        const daysDifference = calculateDateDiff();
+        const calculatedDiaria = diaria * daysDifference;
+        setDiaria(calculatedDiaria);
+        return calculatedDiaria;
+    };
+
 
     const calculateTotal = () => {
-        const valorAdicional = parseFloat(locacaoData.custos_ad);
-        const valorDiario = calculateDiaria(parseFloat(locacaoData.vl_categoria));
+        const valorAdicional = parseFloat(custos_ad);
+        const valorDiario = calculateDiaria(parseFloat(vl_categoria));
         const calculatedTotal = valorAdicional + valorDiario;
-        setLocacaoData({ ...locacaoData, total: calculatedTotal });
+        setTotal(calculatedTotal);
     };
+
 
     const localizacao = () => {
         navigation.navigate('Localização', route.params.id);
+    };
+
+    const handleModeloChange = (itemIdex) => {
+        setModelo_Veiculo(itemIdex);
+        const valorCategoriaDoModelo = getValorCategoriaFromModelo(itemIdex);
+        setVl_Categoria(valorCategoriaDoModelo.toString());
     };
 
     const getValorCategoriaFromModelo = (selectedModelo) => {
@@ -179,14 +267,17 @@ const EditarLocacao = ({ route, navigation }) => {
 
 
     return (
-        <ScrollView style={estiloLocacao.scrollView}>
-            <View style={estiloLocacao.body}>
+        <View style={estiloLocacao.body}>
+            <ScrollView style={estiloLocacao.scrollView}>
                 <Picker
                     id="localRetirada"
                     selectedValue={id_local}
-                    onValueChange={(value) => setId_Local(value)}
+                    onValueChange={(id_local, itemIdex) => setId_Local(id_local)}
                     mode="dropdown"
                     prompt="Selecione um local para retirada"
+                    textColor="#fff"
+                    style={estiloLocacao.select}
+                    itemStyle={estiloLocacao.selectItem}
                 >
                     <Picker.Item label="Selecione um local" value="" />
                     <Picker.Item label="Av. Afonso Pena, 1.000 - Centro - BH/MG" value="001" />
@@ -194,11 +285,13 @@ const EditarLocacao = ({ route, navigation }) => {
 
                 <Picker
                     id="categoriaRetirada"
-                    selectedValue={locacaoData.id_categoria}
-                    style={estiloLocacao.select}
-                    onValueChange={(itemValue) => setLocacaoData({ ...locacaoData, id_categoria: itemValue })}
+                    selectedValue={id_categoria}
+                    onValueChange={(id_categoria, itemIdex) => setId_Categoria(id_categoria)}
                     mode="dropdown"
                     prompt="Selecione a categoria de veículos desejada"
+                    textColor="#fff"
+                    style={estiloLocacao.select}
+                    itemStyle={estiloLocacao.selectItem}
                 >
                     <Picker.Item label="Selecione uma categoria" value="" />
                     <Picker.Item label="SUV's" value="SUV's" />
@@ -209,10 +302,13 @@ const EditarLocacao = ({ route, navigation }) => {
 
                 <Picker
                     id="modeloRetirada"
-                    value={locacaoData.modelo_veiculo}
-                    onValueChange={(itemValue) => setLocacaoData({ ...locacaoData, modelo_veiculo: itemValue })}
+                    selectedValue={modelo_veiculo}
+                    onValueChange={(modelo_veiculo, itemIdex) => handleModeloChange(modelo_veiculo)}
                     mode="dropdown"
                     prompt="Selecione o modelo de veículo desejado"
+                    textColor="#fff"
+                    style={estiloLocacao.select}
+                    itemStyle={estiloLocacao.selectItem}
                 >
                     <Picker.Item label="Selecione um modelo" value="" />
                     <Picker.Item label="VW Gol" value="VW Gol" />
@@ -231,47 +327,37 @@ const EditarLocacao = ({ route, navigation }) => {
 
                 </Picker>
 
-                <TouchableOpacity onPress={() => setShowTimePickerRetirada(true)}>
-                    <TextInput
-                        placeholder="Selecione a hora da retirada"
-                        value={locacaoData.hora_retirada}
-                        onChangeText={(text) => setLocacaoData({ ...locacaoData, hora_retirada: text })}
-                        style={estiloLocacao.select}
-                        mode="outlined"
-                        label="Hora da Retirada"
-                        editable={false}
-                        id="horaRetirada"
-                    />
 
-                </TouchableOpacity>
-                {showTimePickerRetirada && (
-                    <DateTimePicker
-                        value={locacaoData.data_retirada}
-                        mode="time"
-                        display="default"
-                        onChange={handleTimeRetiradaChange}
-                    />
-                )}
+                <TextInput
+                    placeholder="Selecione a hora da retirada"
+                    value={hora_retirada}
+                    onChangeText={(hora_retirada) => setLocacaoData(hora_retirada)}
+                    style={estiloLocacao.input}
+                    mode="outlined"
+                    label="Hora da Retirada"
+                    editable={true}
+                    id="horaRetirada"
+                    textColor="#fff"
+                    outlineColor="#fff"
+                    display="default"
+                    onChange={handleTimeRetiradaChange}
+                />
 
-                <TouchableOpacity onPress={() => setShowTimePickerEntrega(true)}>
-                    <TextInput
-                        placeholder="Selecione a hora da entrega"
-                        value={locacaoData.hora_entrega}
-                        style={estiloLocacao.select}
-                        mode="outlined"
-                        label="Hora da Entrega"
-                        editable={false}
-                        id="horaEntrega"
-                    />
-                </TouchableOpacity>
-                {showTimePickerEntrega && (
-                    <DateTimePicker
-                        value={locacaoData.data_entrega}
-                        mode="time"
-                        display="default"
-                        onChange={handleTimeEntregaChange}
-                    />
-                )}
+
+                <TextInput
+                    placeholder="Selecione a hora da entrega"
+                    value={hora_entrega}
+                    onChangeText={(hora_entrega) => setLocacaoData(hora_entrega)}
+                    style={estiloLocacao.input}
+                    mode="outlined"
+                    label="Hora da Entrega"
+                    editable={true}
+                    id="horaEntrega"
+                    textColor="#fff"
+                    outlineColor="#fff"
+                    display="default"
+                    onChange={handleTimeEntregaChange}
+                />
 
                 <TextInput
                     form="disabled"
@@ -280,15 +366,20 @@ const EditarLocacao = ({ route, navigation }) => {
                     label='Valor/dia (Selecione um Modelo)'
                     mode='outlined'
                     style={estiloLocacao.input}
-                    value={locacaoData.vl_categoria}
+                    textColor="#fff"
+                    outlineColor="#fff"
+                    value={vl_categoria}
                 />
 
                 <Picker
                     id="custosAd"
-                    selectedValue={locacaoData.custos_ad}
-                    onValueChange={(itemValue) => setLocacaoData({ ...locacaoData, custos_ad: itemValue })}
+                    selectedValue={custos_ad}
+                    onValueChange={(custos_ad, itemIdex) => setCustos_Ad(custos_ad)}
                     mode="dropdown"
                     prompt="Se preferir, contrate um adicional"
+                    textColor="#fff"
+                    style={estiloLocacao.select}
+                    itemStyle={estiloLocacao.selectItem}
                 >
                     <Picker.Item label="Não, Obrigado" value="0" />
                     <Picker.Item label="Proteção adicional para vidros (R$499,00)" value="499" />
@@ -296,52 +387,43 @@ const EditarLocacao = ({ route, navigation }) => {
                     <Picker.Item label="GPS (R$99,00)" value="99" />
                 </Picker>
 
-                <TouchableOpacity onPress={() => setShowDatePickerRetirada(true)}>
-                    <TextInput
-                        placeholder="Selecione a data da retirada"
-                        id="dataRetirada"
-                        value={formatDate(locacaoData.data_retirada)}
-                        style={estiloLocacao.select}
-                        mode="outlined"
-                        label="Data da Retirada"
-                        editable={false}
-                    />
-                </TouchableOpacity>
-                {showDatePickerRetirada && (
-                    <DateTimePicker
-                        value={locacaoData.data_retirada}
-                        mode="date"
-                        display="default"
-                        onChange={handleDateRetiradaChange}
-                    />
-                )}
+                <TextInput
+                    placeholder="Selecione a data da retirada"
+                    id="dataRetirada"
+                    value={formatarData(data_retirada)}
+                    onChangeText={(data_retirada) => setLocacaoData(data_retirada)}
+                    style={estiloLocacao.input}
+                    mode="outlined"
+                    textColor="#fff"
+                    outlineColor="#fff"
+                    label="Data da Retirada"
+                    editable={true}
+                    onChange={handleDateRetiradaChange}
+                    display="default"
+                />
 
-                <TouchableOpacity onPress={() => setShowDatePickerEntrega(true)}>
-                    <TextInput
-                        placeholder="Selecione a data da entrega"
-                        id="dataEntrega"
-                        value={formatDate(locacaoData.data_entrega)}
-                        style={estiloLocacao.select}
-                        mode="outlined"
-                        label="Data da Entrega"
-                        editable={false}
-                    />
-                </TouchableOpacity>
-                {showDatePickerEntrega && (
-                    <DateTimePicker
-                        value={locacaoData.data_entrega}
-                        mode="date"
-                        display="default"
-                        onChange={handleDateEntregaChange}
-                    />
-                )}
+                <TextInput
+                    placeholder="Selecione a data da entrega"
+                    id="dataEntrega"
+                    value={formatarData(data_entrega)}
+                    onChangeText={(data_entrega) => setLocacaoData(data_entrega)}
+                    style={estiloLocacao.input}
+                    mode="outlined"
+                    textColor="#fff"
+                    outlineColor="#fff"
+                    label="Data da Entrega"
+                    editable={true}
+                    display="default"
+                    onChange={handleDateEntregaChange}
+                />
 
-                <Text style={estiloLocacao.vlTotal} id="vlTotal">O valor total da(s) diária(s) é de R$ {locacaoData.total}</Text>
-                <Button style={estiloLocacao.botaoLocalizacao} mode="contained" onPress={localizacao}>Localização</Button>
+                <Text style={estiloLocacao.vlTotal} id="vlTotal">O valor total da(s) diária(s) é de R$ {total}</Text>
+                <FAB style={estiloLocacao.botaoLocalizacao} icon="map-marker-outline" onPress={localizacao}></FAB>
                 <Button style={estiloLocacao.calculateTotal} mode="contained" onPress={calculateTotal}>Calcular Total</Button>
                 <Button style={estiloLocacao.botaoSave} mode="contained" onPress={atualizarLocacao}>Salvar Edições</Button>
-            </View>
-        </ScrollView>
+            </ScrollView >
+        </View >
+
     )
 
 

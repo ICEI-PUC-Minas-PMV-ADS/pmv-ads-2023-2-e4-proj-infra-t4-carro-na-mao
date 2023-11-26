@@ -202,6 +202,9 @@ const cadastrarLocacao = () => {
                 onValueChange={(itemValue) => setLocal(itemValue)}
                 mode="dropdown"
                 prompt="Selecione um local para retirada"
+                textColor="#fff"
+                style={estiloLocacao.select}
+                itemStyle={estiloLocacao.selectItem}
             >
                 <Picker.Item label="Selecione um local" value="" />
                 <Picker.Item label="Av. Afonso Pena, 1.000 - Centro - BH/MG" value="001" />
@@ -213,6 +216,9 @@ const cadastrarLocacao = () => {
                 onValueChange={(itemValue) => setCategoria(itemValue)}
                 mode="dropdown"
                 prompt="Selecione a categoria de veículos desejada"
+                textColor="#fff"
+                style={estiloLocacao.select}
+                itemStyle={estiloLocacao.selectItem}
             >
                 <Picker.Item label="Selecione uma categoria" value="" />
                 <Picker.Item label="SUV's" value="SUV's" />
@@ -227,6 +233,9 @@ const cadastrarLocacao = () => {
                 onValueChange={(itemValue) => handleModeloChange(itemValue)}
                 mode="dropdown"
                 prompt="Selecione o modelo de veículo desejado"
+                textColor="#fff"
+                style={estiloLocacao.select}
+                itemStyle={estiloLocacao.selectItem}
             >
                 <Picker.Item label="Selecione um modelo" value="" />
                 <Picker.Item label="VW Gol" value="VW Gol" />
@@ -249,7 +258,9 @@ const cadastrarLocacao = () => {
                 <TextInput
                     placeholder="Selecione a hora da retirada"
                     value={horaRetirada}
-                    style={estiloLocacao.select}
+                    style={estiloLocacao.input}
+                    textColor="#fff"
+                    outlineColor="#fff"
                     mode="outlined"
                     label="Hora da Retirada"
                     editable={false}
@@ -269,11 +280,13 @@ const cadastrarLocacao = () => {
                 <TextInput
                     placeholder="Selecione a hora da entrega"
                     value={horaEntrega}
-                    style={estiloLocacao.select}
                     mode="outlined"
                     label="Hora da Entrega"
                     editable={false}
                     id="horaEntrega"
+                    style={estiloLocacao.input}
+                    textColor="#fff"
+                    outlineColor="#fff"
                 />
             </TouchableOpacity>
             {showTimePickerEntrega && (
@@ -291,8 +304,10 @@ const cadastrarLocacao = () => {
                 id="valorCategoria"
                 label='Valor/dia (Selecione um Modelo)'
                 mode='outlined'
-                style={estiloLocacao.input}
                 value={valorCategoria}
+                style={estiloLocacao.input}
+                textColor="#fff"
+                outlineColor="#fff"
             />
 
             <Picker
@@ -301,6 +316,9 @@ const cadastrarLocacao = () => {
                 onValueChange={(itemValue) => setAdicionais(itemValue)}
                 mode="dropdown"
                 prompt="Se preferir, contrate um adicional"
+                textColor="#fff"
+                style={estiloLocacao.select}
+                itemStyle={estiloLocacao.selectItem}
             >
                 <Picker.Item label="Não, Obrigado" value="0" />
                 <Picker.Item label="Proteção adicional para vidros (R$499,00)" value="499" />
@@ -313,7 +331,9 @@ const cadastrarLocacao = () => {
                     placeholder="Selecione a data da retirada"
                     id="dataRetirada"
                     value={formatDate(dataRetirada)}
-                    style={estiloLocacao.select}
+                    style={estiloLocacao.input}
+                    textColor="#fff"
+                    outlineColor="#fff"
                     mode="outlined"
                     label="Data da Retirada"
                     editable={false}
@@ -333,7 +353,9 @@ const cadastrarLocacao = () => {
                     placeholder="Selecione a data da entrega"
                     id="dataEntrega"
                     value={formatDate(dataEntrega)}
-                    style={estiloLocacao.select}
+                    style={estiloLocacao.input}
+                    textColor="#fff"
+                    outlineColor="#fff"
                     mode="outlined"
                     label="Data da Entrega"
                     editable={false}

@@ -30,17 +30,11 @@ export default StyleSheet.create({
     },
     select: {
         height: 30,
-        left: 0,
-        margin: 12,
-        borderColor: "#fff",
-        backgroundColor: '#1F2024',
-        activeOutlineColor:"#fff",
-        textColor:"#fff",
-        underlineColor:"#fff",
-        processColor:"#fff",
+        margin: 10,
+        backgroundColor: "8B0000"
     },
     input: {
-        height: 40,
+        height: 35,
         margin: 12,
         borderWidth: 1,
         backgroundColor: '#1F2024',
@@ -50,20 +44,20 @@ export default StyleSheet.create({
         outlineColor:"#fff",
     },
     botaoSave: {
-        width:200,
-        top:60,
-        left:90,
+        width:150,
+        top:-18,
+        left:190,
         backgroundColor:'#8F9098'
     },
     calculateTotal: {
-        width:200,
-        top:50,
-        left:90,
+        width: 150,
+        top:20,
+        left:30,
         backgroundColor:'#8F9098'
     },
     vlTotal: {
         position: 'relative',
-        top: 30,
+        top: 10,
         left: 80,
         color: '#fffaf0',
     },
@@ -71,12 +65,25 @@ export default StyleSheet.create({
         size: 20,
     },
     botaoLocalizacao : {
-        width: 200,
-        top: 50,
-        left: 90,
+        width:55,
+        left: 320,
+        borderRadius: 30,
+        top: 0,
         backgroundColor: '#8F9098'
     },
     scrollView: {
         flex: 1, 
       },
+      select: {
+        color: '#fff',
+        backgroundColor: 'transparent',
+        borderColor: '#fff',
+        borderWidth: 1,
+        borderRadius: 8,
+        marginBottom: 10,
+    },
+    selectItem: {
+        color: '#fff',
+        backgroundColor: 'transparent',
+    },
 });

@@ -57,6 +57,8 @@ function Main() {
                 <stack.Screen
                     name='viewLocacao'
                     component={viewLocacao}
+                    options={{ title: 'Minhas Reservas' }}
+
                 />
                 <stack.Screen
                     name='cadastrarLocacao'

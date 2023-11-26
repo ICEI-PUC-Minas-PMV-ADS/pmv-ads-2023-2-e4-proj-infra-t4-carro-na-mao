@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { ScrollView, Text, View, StyleSheet, TouchableOpacity, Platform } from "react-native";
-import { useNavigation, useRoute } from "@react-navigation/native";
+import { useNavigation, useRoute,useIsFocused } from "@react-navigation/native";
 import { TextInput, Button } from 'react-native-paper';
 import { Picker } from "@react-native-picker/picker";
 import DateTimePicker from '@react-native-community/datetimepicker';
@@ -22,6 +22,7 @@ const formatDate = (date) => {
 
 
 const EditarLocacao = ({ route, navigation }) => {
+    const foco = useIsFocused()
     const [token, setToken] = useState(null);
 
     const [locacaoData, setLocacaoData] = useState({
@@ -56,18 +57,29 @@ const EditarLocacao = ({ route, navigation }) => {
         async function fetchData() {
             try {
                 const jwtToken = await RecuperaToken();
-                setToken(jwtToken);
+                setToken(jwtToken)
+               // recuperarDadosParaEdicao(jwtToken)
+                //console.log(route.params.id.custos_ad)    
+                setId_Categoria(route.params.id.id_categoria)  
+                   
+        }catch(erro){console.log('Algo deu errado')}    
+    }
+    fetchData();
+    //recuperarDadosParaEdicao(token)
+    },[foco]);
 
-                const response = await axios.get('https://api-carronamao.azurewebsites.net/api/Locacao?id=' + route.params.id + '', {
-                    headers: {
-                        "Content-Type": "application/json",
-                        "Authorization": 'Bearer ' + jwtToken
-                    }
-                });
-                console.log(route.params.id)
+function recuperarDadosParaEdicao(jwtToken){
+    console.log(route.params.id)
+    const headers= {
+        "Content-Type": "application/json",
+        "Authorization": 'Bearer ' + jwtToken
+    }
+    axios.get('https://api-carronamao.azurewebsites.net/api/Locacao?id=' + route.params.id + '', {headers}).then(
+        response=>{
                 if (response.status === 200) {
-                    setLocacaoData(response.data);
-                    setId_Local(response.data.id_local);
+                    //console.log(response.data);
+                    //setId_Local(response.data.id_local)
+                    /* setId_Local(response.data.id_local);
                     setId_Categoria(response.data.id_categoria);
                     setModelo_Veiculo(response.data.modelo_veiculo);
                     setHora_Retirada(response.data.hora_retirada);
@@ -76,14 +88,19 @@ const EditarLocacao = ({ route, navigation }) => {
                     setCustos_Ad(response.data.custos_ad);
                     setData_Retirada(response.data.data_retirada);
                     setData_Entrega(response.data.data_entrega);
-                }
-                console.log('depois de passar set', response.data)
-            } catch (error) {
-                console.error('Erro ao recuperar token ou detalhes da locação:', error);
+                    console.log(response.data.id_local)*/
+                  //  console.log(response.data)
+                 // setId_Categoria(id_local.id_local);
+               //  console.log(response.data.data_entrega)
+                    }
+                }).catch(error=>{
+                    alert(error)
+                })
+
+                //setId_Categoria(id_local.id_local);
+                //console.log(id_categoria)
             }
-        }
-        fetchData();
-    }, [route.params.id]);
+
 
     const handleDateRetiradaChange = (event, date) => {
         setShowDatePickerRetirada(Platform.OS === 'ios' ? true : false);
@@ -184,7 +201,7 @@ const EditarLocacao = ({ route, navigation }) => {
                 <Picker
                     id="localRetirada"
                     selectedValue={id_local}
-                    onValueChange={(value) => setId_Local(value)}
+                    onValueChange={(id_local,itemIdex) => setId_Local(id_local)}
                     mode="dropdown"
                     prompt="Selecione um local para retirada"
                 >
@@ -194,9 +211,9 @@ const EditarLocacao = ({ route, navigation }) => {
 
                 <Picker
                     id="categoriaRetirada"
-                    selectedValue={locacaoData.id_categoria}
+                    selectedValue={id_categoria}
                     style={estiloLocacao.select}
-                    onValueChange={(itemValue) => setLocacaoData({ ...locacaoData, id_categoria: itemValue })}
+                    onValueChange={(id_categoria,itemIdex) => setId_Categoria(id_categoria)}
                     mode="dropdown"
                     prompt="Selecione a categoria de veículos desejada"
                 >
@@ -234,8 +251,8 @@ const EditarLocacao = ({ route, navigation }) => {
                 <TouchableOpacity onPress={() => setShowTimePickerRetirada(true)}>
                     <TextInput
                         placeholder="Selecione a hora da retirada"
-                        value={locacaoData.hora_retirada}
-                        onChangeText={(text) => setLocacaoData({ ...locacaoData, hora_retirada: text })}
+                        value={hora_retirada}
+                        onChangeText={(hora_retirada) => setLocacaoData(hora_retirada)}
                         style={estiloLocacao.select}
                         mode="outlined"
                         label="Hora da Retirada"

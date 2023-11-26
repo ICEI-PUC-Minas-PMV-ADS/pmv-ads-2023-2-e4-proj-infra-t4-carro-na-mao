@@ -82,6 +82,9 @@ const Locacao = () => {
     return local ? local.label : 'Local Desconhecido';
   };
 
+const Item = ({ item }) => {
+  return (
+    <TouchableOpacity onPress={() => navigation.navigate('editarLocacao', { id: item })} >
 
   const Item = ({ item }) => {
     return (

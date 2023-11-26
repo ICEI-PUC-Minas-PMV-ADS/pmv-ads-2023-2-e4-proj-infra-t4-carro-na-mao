@@ -13,7 +13,7 @@ import avaliacaoUsaurios from '../pages/avaliacoes/avaliacoesEspcificasPorusuari
 import cadastrarVistoria from '../pages/vistorias/cadastrarVistoria'
 import Localizacao from '../pages/localizacao/localizacao'
 import menu from '../pages/menu'
-//import Cadastro from '../pages/cadastro'
+
 const stack = createNativeStackNavigator()
 
 function Main() {
@@ -80,7 +80,7 @@ function Main() {
                     component={avaliacaoUsaurios}
                 />
                  <stack.Screen
-                    name='Localizacao'
+                    name='Localização'
                     component={Localizacao}
                 />
 

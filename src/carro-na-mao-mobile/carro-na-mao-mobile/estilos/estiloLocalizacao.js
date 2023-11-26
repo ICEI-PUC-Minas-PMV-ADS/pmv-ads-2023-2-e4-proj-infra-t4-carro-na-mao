@@ -3,16 +3,21 @@ import {StyleSheet } from "react-native";
 export default StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '##1F2024',
+      backgroundColor: '#1F2024',
       alignItems: 'center',
       justifyContent: 'center',
     },
     map: {
       width:'90%',
-      height: '60%',
+      height: '80%',
       borderRadius: '10px',
       alignItems: 'center',
       justifyContent: 'center',
+    },
+    textoMapa: {
+      color: '#fff',
+      fontSize: 20,
+      fontWeight: 'bold',
     },
     mapOverlay: {
       position: "absolute",
@@ -24,6 +29,14 @@ export default StyleSheet.create({
       left: "25%",
       width: "50%",
       textAlign: "center"
+    },
+    mapOverlayError: {
+      backgroundColor: "#ffffff",
+      borderWidth: 2,
+      padding: 16,
+      width: "50%",
+      textAlign: "center",
+      color: "#ff0000"
     },
     input: {
         width: '90%',

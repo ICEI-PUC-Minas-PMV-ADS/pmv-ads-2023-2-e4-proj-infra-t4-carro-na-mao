@@ -1,57 +1,90 @@
 # Plano de Testes de Software 
 
  ## FRONT END: MOBILE
+ 
  ### 1 - Login/Cadastro
   
-**1.1 - Verificar se o cadastro barra email já cadastrado na plataforma**
+**1.1 - Verificar se o cadastro email já cadastrado na plataforma**
    - Obejetivo: Evitar usuario com o mesmo login.
    - Passos: Acessar a pagina de cadastro, preenche a fixa
    - Criterio: Caso o email já estejá cadastrado, um alerta será emetido
+
 **1.2 - Verificar se cadastro está sendo realizado sem nenhum problema**
    - Obejetivo: Ter certeza que todos os dados estão sendo enviado de maneira corrreta
    - Passos: Acessar a pagina de cadastro, preenche a fixa
    - Criterio: Caso estejá tudo certo, um alerta avisando que foi cadastrado ira surgi
+
 **1.3 - Verificar se o  sistema deixa somente usuario cadastrados entrar na plataforma**
    - Obejetivo: Verificar se o sistema deixa somente usuario cadastrados entrar
    - Passos: Na tela de login, digitar um usuario aleatoria
    - Criterio: Caso o usuario n exista  o sistema deve barrar
+
  ### 5 - Avaliação 
+
  **5.1 - Verificar se as avaliações estão sendo recuperadas do banco de dados de maneira correta**
    - Obejetivo:Verificar se o sistema está mostrando as avaliações dos serviço com o nome e data de quem avaliaou 
    - Passos: acessar a pagina de avaliações
    - Criterio: As avaliações aparecer
+
  **5.2- Verficar se o campo de registro de novas avaliações aparece de forma correta**
    - Obejetivo: Verificar se o registro funciona 
    - Passos: Acessar a pagina de avaliaçõe, aperta no botão de mais e adicionar
    - Criterio: Mensagem de sucesso aparecer
 
  ### 6 - Locacao
+
  **6.1 Verificar se os dados selecionados para a locação salvam de forma correta**
    - Objetivo: Verificar se a locação cadastra de forma correta
    - Passos: Acessar a aba locação e realizar uma reserva
    - Criterio: Mensagem de sucesso ao terminar o processo
+
  **6.2 Verificar se a reserva é excluida corretamente**
    - Objetivo: Verificar se a locação é excluida do sistema
    - Passos: Acessar a aba locação e selecionar a reserva que deseja excluir
    - Criterio: Mensagem de sucesso ao terminar o processo
- **6.2 Verificar se a reserva é editada corretamente**
+
+ **6.3 Verificar se a reserva é editada corretamente**
    - Objetivo: Verificar se a locação se altera conforme solicitação do usuario
    - Passos: Acessar a aba locação e selecionar a reserva que deseja editar
    - Criterio: Mensagem de sucesso ao terminar o processo
 
+   ### 7 - Vistoria
+
+ **7.1 Verificar se os dados selecionados para a vistoria salvam de forma correta**
+   - Objetivo: Verificar se a vistoria cadastra de forma correta
+   - Passos: Acessar a aba vistorias e realizar uma vistoria
+   - Criterio: Mensagem de sucesso ao terminar o processo
+
+
  ### 10 - Perfil
+
  **10.1 - Verificar se as informções do usaurio aparece de acordo com o usuario logado**
    - Obejetivo: Verificar se o sistema so mostra dados do usaurio logado
    - Passos: Acessar a pagina de perfil
    - Criterio: Aparecer somente as informações do  usuario
+
  **10.2 - Verificar se se o usuario consegue editar sua informações**
    - Obejetivo: Verificar se o metodo put da API funcina de maneira adequada
    - Passos: Acessar a pagina de perfil, clicar no botão de editar e depois confirmar as alteraçãoes
    - Criterio: Mensangem de sucesso aparecer
+
  **10.3 -  Verificar se o usuario consegue apagar sua conta**
    - Obejetivo: Verificar se o usaurio consegue deletar a sua conta
    - Passos: Acessar a pagina do perfil, clicar na lixiera e depois excluir
    - Criterio: Usuario redirecionado para tela de login
+
+  ### 11 - Localização
+
+  **11.1 - Visualizar mapa do local da retirada**
+   - Objetivo: Visualizar mapa.
+   - Passos: Acessar a pagina de locação, selecionar a locação desejada, e clicar no botão Localização.
+   - Criterio: Apresentar localização no mapa
+
+  **11.2 - Localização não existente**
+   - Objetivo: Não apresentar a localização.
+   - Passos: Acessar a pagina de locação, selecionar a locação desejada, e clicar no botão Localização.
+   - Criterio: Caso a localização não esteja mais disponível para retirada do veículo, apresentar mensagem informando que a localização está indisponível.
+  
 =======
  ## FRONT END: MOBILE
 

@@ -49,7 +49,7 @@ const cadastrarAvaliacao =()=> {
         axios.post('https://api-carronamao.azurewebsites.net/api/Avaliacao',data,{headers}).then(response=>{
                 if(response.status==200){
                     alert('Cadastrado com sucesso')
-                    navigation.navigate('Avalicao')
+                    navigation.navigate('Avaliacao')
                 }
         }).catch(erro=>{
 

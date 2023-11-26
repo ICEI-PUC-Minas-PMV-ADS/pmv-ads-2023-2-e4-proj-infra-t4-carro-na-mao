@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { ScrollView, Text, View, StyleSheet, TouchableOpacity, Platform } from "react-native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import { TextInput, Button } from 'react-native-paper';
 import { Picker } from "@react-native-picker/picker";
 import DateTimePicker from '@react-native-community/datetimepicker';
@@ -120,6 +121,32 @@ const EditarLocacao = ({ route, navigation }) => {
         setLocacaoData({ ...locacaoData, total: calculatedTotal });
     };
 
+    const localizacao = () => {
+        navigation.navigate('Localização', route.params.id);
+    };
+
+    const getValorCategoriaFromModelo = (selectedModelo) => {
+        switch (selectedModelo) {
+            case "VW Gol":
+            case "GM Onix":
+            case "Hyundai HB20":
+            case "Ford Ka":
+                return 50;
+            case "GM Prisma":
+            case "Hyundai HB20S":
+            case "VW Virtus":
+                return 70;
+            case "VW T-Cross":
+            case "Jeep Renegade":
+                return 200;
+            case "Toyota Corolla":
+            case "Honda Civic":
+            case "Chevrolet Cruze":
+                return 270;
+            default:
+                return 0;
+        }
+    };
     const atualizarLocacao = () => {
         const data = {
             "id_local": id_local,
@@ -152,6 +179,7 @@ const EditarLocacao = ({ route, navigation }) => {
 
 
     return (
+        <ScrollView style={estiloLocacao.scrollView}>
         <View style={estiloLocacao.body}>
             <Picker
                 id="localRetirada"
@@ -313,6 +341,15 @@ const EditarLocacao = ({ route, navigation }) => {
             <Button style={estiloLocacao.botaoSave} mode="contained" onPress={atualizarLocacao}>Salvar Edições</Button>
         </View>
     );
+            <Text style={estiloLocacao.vlTotal} id="vlTotal">O valor total da(s) diária(s) é de R$ {total}</Text>
+            <Button style={estiloLocacao.botaoLocalizacao} mode="contained" onPress={localizacao}>Localização</Button>
+            <Button style={estiloLocacao.calculateTotal} mode="contained" onPress={calculateTotal}>Calcular Total</Button>
+            <Button style={estiloLocacao.botaoSave} mode="contained" onPress={atualizarLocacao}>Salvar Edições</Button>
+        </View>
+        </ScrollView>
+    )
+
+
 }
 
 

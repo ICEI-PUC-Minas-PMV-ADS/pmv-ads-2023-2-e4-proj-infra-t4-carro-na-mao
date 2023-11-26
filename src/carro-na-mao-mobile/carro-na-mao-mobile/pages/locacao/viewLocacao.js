@@ -76,15 +76,11 @@ const Locacao = () => {
 
   const listaDeLocais = [
     { id: 1, label: 'Av. Afonso Pena, 1.000 - Centro - BH/MG' },
-    ];
+  ];
   const obterRotuloLocal = (id_local) => {
     const local = listaDeLocais.find(local => local.id === id_local);
     return local ? local.label : 'Local Desconhecido';
   };
-
-const Item = ({ item }) => {
-  return (
-    <TouchableOpacity onPress={() => navigation.navigate('editarLocacao', { id: item })} >
 
   const Item = ({ item }) => {
     return (

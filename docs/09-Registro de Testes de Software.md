@@ -21,9 +21,18 @@
 
   ![Avaliacoes](img/avaliações.PNG)
 
+### 7 - Vistoria
+
+**7.1 Verificar se os dados selecionados para a vistoria salvam de forma correta**
+
+ ![Teste com êxito](img/Testes/Vistoria_mobile_004.png)
+
+  ![Teste com êxito](img/Testes/Vistoria_mobile_005-erro.png)
 
   ### 9- Notificação
   **9 - Teste de envio de nova notificação**
+
+  ![Teste com êxito](img/Testes/notif_mobile_001.png)
 
   ![Teste com êxito](img/Testes/notif_mobile_001.png)
 

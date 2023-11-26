@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import React, { useState } from 'react';
 import '../estilos/Menu.css'
@@ -24,14 +25,14 @@ export function Menu() {
         <Link to="/visualizarAvaliacao">Avaliações</Link>
         <Link to="/Dashboard">Dashboard</Link>
         <Link to="/Locacao">Alugar</Link>
-        <Link to="/Vistoria">Cadastrar Vistoria</Link>
+        <Link to="/Vistoria">Cadastrar Vistorias</Link>
         <Link to="/Vistoria2">Consultar Vistorias</Link>
-        <Link to="/Localizacao">Localização</Link>
-        <Link to="/Manutencao">Manutencao</Link>
+        <Link to="/Localizacao">Localizações</Link>
+        <Link to="/Manutencao">Manutenções</Link>
         <Link to="/Historico">Histórico</Link>
         <Link to="/Notificacoes">Notificações</Link>
-        <Link to="/Estoque">Estoque</Link>
-        <Link to="/Categoria">Categoria</Link>
+        <Link to="/Estoque">Estoques</Link>
+        <Link to="/Categoria">Categorias</Link>
         <Apps />
 
         <Link id="sairButton" to="/">Sair</Link>

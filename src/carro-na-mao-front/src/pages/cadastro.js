@@ -101,7 +101,7 @@ function Cadastro() {
                     <section id="cmp">
 
                         <div id='camposParaLoginParteUm'>
-                            <h3 id="titulo1">Sua experiência começa aqui!</h3>
+                            <h3 id="titulo1">Seja bem-vindo, sua experiência começa aqui.</h3>
                             <h5 id="titulo2">Criar conta</h5>
                             <hr id="linha1"></hr>
                             <input type="text" id="nomeCadastro" placeholder='Nome completo'></input>

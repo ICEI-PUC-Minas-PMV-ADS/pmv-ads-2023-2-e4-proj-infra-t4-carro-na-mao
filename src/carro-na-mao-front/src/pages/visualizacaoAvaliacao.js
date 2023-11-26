@@ -1,70 +1,70 @@
 import axios from "axios";
-import React,{useEffect,useState} from "react";
+import React, { useEffect, useState } from "react";
 import { RecuperaToken } from "../autenticação/chave_de_acesso";
-import { useNavigate, Link} from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Menu } from "./menu";
 import FlatList from 'flatlist-react';
 import '../estilos/avaliacoes.css';
 //import StarRating from 'react-native-star-rating';
 
 
-const  VisualizarAvaliacoes= ()=>{
-    const[dadosRequisitados, setDadosRequisitdos] = useState([])
+const VisualizarAvaliacoes = () => {
+    const [dadosRequisitados, setDadosRequisitdos] = useState([])
     useEffect(() => {
         async function fetchData() {
             try {
                 const jwtToken = await RecuperaToken();
                 recuparandoAvaliacoes(jwtToken)
-             }catch (error) {
+            } catch (error) {
                 console.error('Erro ao recuperar token:', error);
-             }
-          }
+            }
+        }
 
-            fetchData()
-        },[]);
+        fetchData()
+    }, []);
 
-    function recuparandoAvaliacoes(jwtToken){
-        const headers ={
-            "Content-Type":"application/json",
+    function recuparandoAvaliacoes(jwtToken) {
+        const headers = {
+            "Content-Type": "application/json",
             "Authorization": 'Bearer ' + jwtToken
-        } 
+        }
 
-    axios.get('https://api-carronamao.azurewebsites.net/api/Avaliacao',{headers})
-        .then(response =>{
-            if(response.status===200){
-                setDadosRequisitdos(response.data)
+        axios.get('https://api-carronamao.azurewebsites.net/api/Avaliacao', { headers })
+            .then(response => {
+                if (response.status === 200) {
+                    setDadosRequisitdos(response.data)
                 }
             }
-            ).catch(error => {}) 
+            ).catch(error => { })
     }
-    const carregarAvaliacoes = (dadosRequisitados,index) =>{
-        return(
+    const carregarAvaliacoes = (dadosRequisitados, index) => {
+        return (
             <div id="cardAvaliacoes" key={index}>
                 <p id="registroNota">{dadosRequisitados.data}</p>
                 <p>{dadosRequisitados.nomeUsaurio}</p>
                 <p>Nota: {dadosRequisitados.nota}</p>
                 <p>Observação: {dadosRequisitados.observaceo}</p>
             </div>
-    
+
         )
     }
-    return(
-        <>
-        <Menu/>
-       
-        <div id="listaAvaliacao">
-            <FlatList
-            list={dadosRequisitados}
-            renderItem={carregarAvaliacoes}   
-            horizontal={true}  
-            />
-        </div>
-       
+    return (
+        <div id="fundoAvaliacao1">
+            <Menu />
 
-        <button id="adicionarNovaAvaliacao">
-        <Link color="#000"to="/avaliacoes">+</Link>
-        </button>
-        </>
+            <div id="listaAvaliacao">
+                <FlatList
+                    list={dadosRequisitados}
+                    renderItem={carregarAvaliacoes}
+                    horizontal={true}
+                />
+            </div>
+
+
+            <button id="adicionarNovaAvaliacao">
+                <Link to="/avaliacoes">Adicionar Avaliações</Link>
+            </button>
+        </div>
     )
 }
 

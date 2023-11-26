@@ -8,10 +8,10 @@ import '../estilos/avaliacoes.css';
 
 
 function Avaliacoes() {
- 
+
   const navigate = useNavigate()
   const [token, setToken] = useState(null)
-  const [dados_user,setDados] = useState([])
+  const [dados_user, setDados] = useState([])
   useEffect(() => {
     async function fetchData() {
       try {
@@ -25,45 +25,45 @@ function Avaliacoes() {
     fetchData()
   }, []);
 
-  async function recuperarDadosLocal(){
+  async function recuperarDadosLocal() {
     const dadosSalvos = localStorage.getItem('dados_user')
     setDados(JSON.parse(dadosSalvos))
-}
-
-
-async function avaliar(){
-  const observacao = document.querySelector("#obs").value
-  const nota = document.querySelector("#nota").value
-  
-  const data= {
-    "observacao": observacao,
-    "nota": nota,
-    "nomeUsuario":dados_user.nome,
-    "id_usuario": dados_user.id,
-    "data":new Date().toLocaleDateString('pt-BR')
   }
-  const headers={
-    "Content-Type":"application/json",
-    "Authorization": 'Bearer ' + token
-}
-  axios.post('https://api-carronamao.azurewebsites.net/api/Avaliacao',data,{headers}).then(response=>{
-    if(response.status==200){
-      alert('ok')
-      console.log(data)
-    }
-  }).catch(erro=>{
-    alert(erro)
-    console.log(data)
-  })
-}
 
- async function recuperarDadosLocal(){
+
+  async function avaliar() {
+    const observacao = document.querySelector("#obs").value
+    const nota = document.querySelector("#nota").value
+
+    const data = {
+      "observacao": observacao,
+      "nota": nota,
+      "nomeUsuario": dados_user.nome,
+      "id_usuario": dados_user.id,
+      "data": new Date().toLocaleDateString('pt-BR')
+    }
+    const headers = {
+      "Content-Type": "application/json",
+      "Authorization": 'Bearer ' + token
+    }
+    axios.post('https://api-carronamao.azurewebsites.net/api/Avaliacao', data, { headers }).then(response => {
+      if (response.status == 200) {
+        alert('ok')
+        console.log(data)
+      }
+    }).catch(erro => {
+      alert(erro)
+      console.log(data)
+    })
+  }
+
+  async function recuperarDadosLocal() {
     const dadosSalvos = localStorage.getItem('dados_user')
     setDados(JSON.parse(dadosSalvos))
   }
 
   return (
-    <>
+    <div id="fundoAvaliacao2">
       <Menu />
       <section id="conteudoPagina">
         <div class="container-1">
@@ -85,9 +85,7 @@ async function avaliar(){
             <div>
               <label>Nota:</label>
               <input type="number" id="nota" placeholder='Insira sua nota...' ></input>
-            </div>
 
-            <div>
               <label>E-mail:</label>
               <input type="text" id="email" placeholder='Insira seu e-mail...'></input>
 
@@ -100,7 +98,7 @@ async function avaliar(){
 
             <div>
               <label>Observações:</label><br></br>
-              <textarea id="obs"class="msg"></textarea>
+              <textarea id="obs" class="msg"></textarea>
             </div>
 
             <br>
@@ -113,7 +111,7 @@ async function avaliar(){
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 

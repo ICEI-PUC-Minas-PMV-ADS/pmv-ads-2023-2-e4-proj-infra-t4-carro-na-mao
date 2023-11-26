@@ -4,7 +4,7 @@ import '../estilos/home.css';
 import { useEffect, useState } from 'react';
 import { RecuperaToken } from '../autenticação/chave_de_acesso';
 import { useNavigate, Link } from 'react-router-dom'
-import logo from '../img/logo.png'
+import logo from '../img/logo2.png'
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import Alert from '@mui/material/Alert';
@@ -81,7 +81,7 @@ function Home() {
           <CircularProgress sx={{ color: 'black' }} />
         </Box>
       ) : (
-        <div id="fundohome02">
+        <>
         <section id="camposHome">
             <div id="elementosCampos">
               <img id="logoHome" src={logo}></img>
@@ -99,7 +99,7 @@ function Home() {
 
             </div>
           </section>
-        </div>
+        </>
       )}
     </div>
   );
@@ -107,3 +107,4 @@ function Home() {
 
 
 export default Home;
+

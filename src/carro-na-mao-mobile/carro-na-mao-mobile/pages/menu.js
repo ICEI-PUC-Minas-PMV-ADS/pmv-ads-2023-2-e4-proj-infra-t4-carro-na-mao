@@ -15,7 +15,7 @@ const [routes] = React.useState([
   { key: 'av', title: 'Avaliacao', focusedIcon: 'star-outline' },
   { key: 'T', title: 'Perfil', focusedIcon: 'account' },
   { key: 'V', title: 'Vistorias', focusedIcon: 'account' },
-  { key: 'H', title: 'Historico',  focusedIcon: 'account'},
+  { key: 'H', title: 'Historico',  focusedIcon: 'account-details'},
 ]);
 
 const renderScene = BottomNavigation.SceneMap({

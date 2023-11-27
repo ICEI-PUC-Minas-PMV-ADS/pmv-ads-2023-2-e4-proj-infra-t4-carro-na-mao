@@ -14,74 +14,89 @@ export function Historico() {
 
   useEffect(() => {
     async function fetchData() {
-      try {
-        const jwtToken = await RecuperaToken();
-        setToken(jwtToken);
-      } catch (error) {
-        console.error('Erro ao recuperar token:', error);
-      }
+        try {
+            const jwtToken = await RecuperaToken();
+            setToken(jwtToken);
+            //recuperarDadosLocal()
+        } catch (error) {
+            console.error('Erro ao recuperar token:', error);
+        }
     }
+    fetchData()
+}, []);
 
-    fetchData();
-  }, []);
+const consultarHistorico = async () => {
+  try {
+    setLoading(true);
 
-  const consultarHistorico = async () => {
-    try {
-      setLoading(true);
-      console.log('Consultando histórico...');
+    const headers = {
+      "Content-Type": "application/json",
+      "Authorization": `Bearer ${token}`
+    };
+
+    const response = await axios.get('https://api-carronamao.azurewebsites.net/api/Historico', {
+      headers
+    });
+
+    if (response.status === 200) {
+      console.log('Resposta bem-sucedida:', response.data);
       
-      const headers = {
-        Authorization: `Bearer ${token}`,
-      };
+      // Realiza a filtragem no cliente com base no número do contrato
+      const historicoFiltrado = Array.isArray(response.data)
+        ? response.data.filter(item => item.historicoContrato === input)
+        : [];
 
-      const response = await axios.get('https://api-carronamao.azurewebsites.net/api/Historico', { headers });
-
-      if (response.status === 200) {
-        console.log('Resposta bem-sucedida:', response.data);
-        setHistorico(response.data);
-      } else {
-        console.error('Resposta inesperada do servidor:', response.status, response.data);
-      }
-    } catch (error) {
-      console.error('Erro durante a solicitação:', error);
-    } finally {
-      setLoading(false);
+      setHistorico(historicoFiltrado);
+    } else {
+      console.error('Resposta inesperada do servidor:', response.status, response.data);
     }
-  };
+  } catch (error) {
+    console.error('Erro durante a solicitação:', error);
+  } finally {
+    setLoading(false);
+  }
+};
 
-  return (
-    <View style={estiloHistorico.container}>
-      <Text style={estiloHistorico.title}>Histórico de suas locações</Text>
+return (
+  <View style={estiloHistorico.container}>
+    <Text style={estiloHistorico.title}>Histórico de suas locações</Text>
 
-      <View style={estiloHistorico.inputContainer}>
-        <TextInput
-          style={estiloHistorico.input}
-          value={input}
-          onChangeText={input => setInput(input)}
-          placeholder="Digite número do contrato..."
-        />
-        <TouchableOpacity
-          style={estiloHistorico.button}
-          onPress={() => consultarHistorico()}
-          disabled={loading || input.trim() === ''}
-        >
-          <Text>Consultar Histórico</Text>
-        </TouchableOpacity>
-      </View>
-
-      {loading && <Text>Loading...</Text>}
-
-      {historico && (
-        <ScrollView style={estiloHistorico.resultContainer}>
-          <Text style={estiloHistorico.resultText}>Número de contrato: {historico.historicoContrato}</Text>
-          <Text style={estiloHistorico.resultText}>Data de encerramento: {historico.encerramento}</Text>
-          <Text style={estiloHistorico.resultText}>Veículo: {historico.veiculo}</Text>
-          <Text style={estiloHistorico.resultText}>Valor da Locação: {historico.valores}</Text>
-          <Text style={estiloHistorico.resultText}>Observação: {historico.historicoObservacao}</Text>
-        </ScrollView>
-      )}
+    <View style={estiloHistorico.inputContainer}>
+      <TextInput
+        style={estiloHistorico.input}
+        value={input}
+        onChangeText={input => setInput(input)}
+        placeholder="Digite número do contrato..."
+      />
+      <TouchableOpacity
+        style={estiloHistorico.button}
+        onPress={() => consultarHistorico()}
+        disabled={loading || input.trim() === ''}
+      >
+        <Text>Consultar Histórico</Text>
+      </TouchableOpacity>
     </View>
-  );
+
+    {loading && <Text>Loading...</Text>}
+
+    {historico && Array.isArray(historico) && historico.length > 0 ? (
+      <ScrollView style={estiloHistorico.resultContainer}>
+        {historico.map((item, index) => (
+          <View key={index}>
+            <Text style={estiloHistorico.resultText}>Número de contrato: {item.historicoContrato}</Text>
+            <Text style={estiloHistorico.resultText}>Data de encerramento: {item.encerramento}</Text>
+            <Text style={estiloHistorico.resultText}>Veículo: {item.veiculo}</Text>
+            <Text style={estiloHistorico.resultText}>Valor da Locação: {item.valores}</Text>
+            <Text style={estiloHistorico.resultText}>Observação: {item.historicoObservacao}</Text>
+          </View>
+        ))}
+      </ScrollView>
+    ) : (
+      <Text>Nenhum histórico disponível.</Text>
+    )}
+  </View>
+);
+
 }
 
 export default Historico;

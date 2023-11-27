@@ -21,6 +21,23 @@
 
   ![Avaliacoes](img/avaliações.PNG)
 
+  ### 6- Locação
+
+  **6.1 - Verificar se as locações são cadastradas corretamente**
+
+  ![Preenchendo Locacao](img/Preenchendo_Locacao.jpeg)
+  ![Cadastrada com Sucesso](img/Cadastrado_Com_Sucesso.jpeg)
+
+  **6.2 - Verificar se as locações são excluídas corretamente**
+  ![Exclusão de Locação](img/Excluindo_Locacao.jpeg)
+  ![Confirmando Exclusão](img/Locacao_Excluida_Sucesso.jpeg)
+
+  **6.3 - Verificar se as locações aparecem corretamente**
+  ![Listagem de Locações](img/Aparecendo_Locacoes.jpeg)
+
+  **6.4 - Verificar se as locações são editadas corretamente**
+  ![Edição de Locação](img/Editando_Locacao.jpeg)
+
 ### 7 - Vistoria
 
 **7.1 Verificar se os dados selecionados para a vistoria salvam de forma correta**

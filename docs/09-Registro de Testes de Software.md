@@ -79,6 +79,13 @@
   **11.2 - Localização não existente**
   ![localizcaoMobileError](img/localizacaoMobileError.jpeg)
 
+ ### 12- Histórico
+  **12.1 - Visualizar o histórico de locações realizadas**
+  ![historicoMobile](img/Testes/hist-02.jpeg)
+
+  **12.2 - Contrato não existente**
+  ![historicoMobileError](img/Testes/hist-erro-msg.jpeg)
+
 
  ## FRONT END: WEB
   ### 1 - Login/Cadastro

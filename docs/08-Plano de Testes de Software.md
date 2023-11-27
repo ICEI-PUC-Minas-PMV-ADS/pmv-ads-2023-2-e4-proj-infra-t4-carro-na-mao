@@ -95,6 +95,19 @@
    - Objetivo: Não apresentar a localização.
    - Passos: Acessar a pagina de locação, selecionar a locação desejada, e clicar no botão Localização.
    - Criterio: Caso a localização não esteja mais disponível para retirada do veículo, apresentar mensagem informando que a localização está indisponível.
+
+ ### 12 - Histórico
+
+  **12.1 - Visualizar o histórico de locações realizadas**
+   - Objetivo: Visualizar o histórico de locações feitas pelo usuário.
+   - Passos: Acessar a pagina de histórico , digitar o número do contrato , e clicar no botão Consultar Histórico.
+   - Criterio: Apresentar as locações na tela.
+
+  **12.2 - Contrato não existente**
+   - Objetivo: Não apresentar nenhum resultado.
+    - Passos: Acessar a pagina de histórico , digitar o número do contrato ou deixar em branco , e clicar no botão Consultar Histórico.
+   - Criterio: Caso o contrato não seja localizado, apresentar mensagem informando que nenhum contrato foi encontrado.
+
   
  ##
  ## FRONT END: WEB

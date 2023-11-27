@@ -1,7 +1,8 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import{Menu} from './menu';
-import '../estilos/dashboard.css'
+/*import '../estilos/dashboard.css'*/
+
 
 
 function Dashboard(){

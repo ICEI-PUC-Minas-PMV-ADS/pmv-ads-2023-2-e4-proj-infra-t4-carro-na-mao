@@ -57,14 +57,18 @@ function Main() {
                 <stack.Screen
                     name='viewLocacao'
                     component={viewLocacao}
+                    options={{ title: 'Minhas Reservas' }}
+
                 />
                 <stack.Screen
                     name='cadastrarLocacao'
                     component={cadastrarLocacao}
+                    options={{title: 'Cadastrar Nova Reserva'}}
                 />
                 <stack.Screen
                     name='editarLocacao'
                     component={editarLocacao}
+                    options={{title: 'Editar Locação'}}
                 />
                 <stack.Screen
                     name='cadastrarVistoria'

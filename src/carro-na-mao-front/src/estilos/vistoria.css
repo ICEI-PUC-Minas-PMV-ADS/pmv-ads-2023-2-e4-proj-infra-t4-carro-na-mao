@@ -1,3 +1,26 @@
+#fundoVistoria {
+
+  width: 100vw;
+  height: 100vh;
+  background: #35383d;
+
+}
+
+#camposVistoria {
+  position: relative;
+  top: 25px;
+  left: 0%;
+  text-align: justify;
+  max-width: 60vw;
+  height: 70vh;
+  margin: 0 auto;
+  padding: 5px;
+  background: #35383d;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
@@ -73,23 +96,89 @@ body {
 
  #btnCadastrarVistoria{
   position: relative;
-  bottom: 10em;
+  top: -12em;
   left: 60em;
+  width: 15%;
+  border-radius: 2em;
+  background-color: black;
+  border: 1px solid #ff0000; 
+  
  }
+
+ #btnCadastrarVistoria:hover {
+  background-color: #ff0000;
+  color: white;
+  transition: all 0.6s;
+}
+
+ #btnVoltarVistoria{
+  position: relative;
+  left: 24%;
+  top: -14.6em;
+  width: 15%;
+  border-radius: 2em;
+ background-color: black;
+  border: 1px solid #ff0000; 
+
+ }
+ 
+#btnVoltarVistoria:hover {
+  background-color: #ff0000;
+  color: white;
+  transition: all 0.6s;
+}
+
+
  #veiculo {
   border-bottom: none;
   bottom: 1em;
+  padding: 5px;
+  border-radius: 7px;
+  background: #ccc;
+  border: 1px solid #000000;
  }
  #date{
   border-bottom: none;
   bottom: 1em;
+  padding: 5px;
+  border-radius: 7px;
+  background: #ccc;
+  border: 1px solid #000000;
  }
  #tipo{
-   bottom: 1em;
+  padding: 5px;
    border-bottom: none;
   border-top: none;
   border-left: none;
   border-right: none;
-  bottom: 1em;
   position: relative;
+  border-radius: 7px;
+  background: #ccc;
+  border: 1px solid #000000;
  }
+ #descricao{
+  border-bottom: none;
+  bottom: 1em;
+  padding: 5px;
+  border-radius: 7px;
+  background: #ccc;
+  border: 1px solid #000000;
+ }
+ #observacoes{
+  border-bottom: none;
+  bottom: 1em;
+  padding: 5px;
+  border-radius: 7px;
+  background: #ccc;
+  border: 1px solid #000000;
+ }
+
+#manut{
+ border-bottom: none;
+ bottom: 1em;
+ padding: 5px;
+ border-radius: 7px;
+ background: #ccc;
+ border: 1px solid #000000;
+}
+ 

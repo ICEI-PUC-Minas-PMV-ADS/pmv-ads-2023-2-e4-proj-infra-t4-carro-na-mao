@@ -1,3 +1,9 @@
+#fundoLocacao {
+
+    width: 100vw;
+    height: 167vh;
+    background: #35383d;
+}
 
 #divLocacoes{
     float: left;
@@ -5,164 +11,203 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     line-height: 2em;
-    width: 15%;
+    width: 22%;
+    top: 2em;
     position: relative;
     padding: 50px;
-    left: 5%;
-    padding: 22px;
+    left: 39%;
+    padding: 24px;
     color: #fff;
-    background-color: #000;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 1px 1px 1px rgb(231, 231, 231), 1em 1em 1.4em rgb(190, 187, 187);
+    border: 1px solid #ff0000;
+    background: #35383d;
 }
 
 #campos{
-    width: 50%;
+    width: 75%;
     line-height: 2em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #fff;
     position: relative;
-    left: 10%;
-    top: 0em;
+    left: -9%;
+    top: 9em;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
     max-width: 80vw;
-    padding: 50px;
-    background-color: #000;
-    border: 1px solid #ccc;
+    padding: 5px;
+    background: #35383d;
     border-radius: 5px;
-    box-shadow: 1px 1px 1px rgb(231, 231, 231), 1em 1em 1.4em rgb(190, 187, 187);
+
+
 }
 #localRetirada{
     position: relative;
     background-color: #696969;
     color: #fff;
-    width: 25%;
+    width: 35%;
     left: 0em;
     height: 3em;
     border-radius: 5px;
     top: 0em;
+    
 } 
 #categoriaRetirada{
     position: relative;
     background-color: #696969;
     color: #fff;
-    width: 50%;
+    width: 35%;
     left: 0em;
     height: 3em;
     border-left: none;
     border-right: none;
     border-top: none;
     top: 0em;
+    border-radius: 5px;
+
 }
 #modeloRetirada{
     position: relative;
     background-color: #696969;
     color: #fff;
-    width: 50%;
+    width: 35%;
     left: 0em;
     height: 3em;
     border-left: none;
     border-right: none;
     border-top: none;
     top: 0em;
+    border-radius: 5px;
+
 }
 #horaRetirada{
     position: relative;
     background-color: #696969;
     color: #fff;
-    width: 15%;
+    width: 35%;
     border-left: none;
     border-right: none;
     border-top: none;
+    border-radius: 5px;
+    height: 3em;
+
+
     
 } 
 #horaEntrega{
     position: relative;
     background-color: #696969;
     color: #fff;
-    width: 15%;
+    width: 35%;
     left: 0em;
     border-left: none;
     border-right: none;
     border-top: none;
     top: 0em;
+    border-radius: 5px;
+    height: 3em;
+
+
 }
 #valorCategoria{
     position: relative;
     background-color: #696969;
     color: #fff;
-    width: 45%;
+    width: 35%;
     left: 0em;
     border-left: none;
     border-right: none;
     border-top: none;
     top: 0em;
+    border-radius: 5px;
+    height: 3em;
+
+
 } 
 #custosAd{
     position: relative;
     background-color: #696969;
     color: #fff;
-    width: 50%;
+    width: 35%;
     left: 0em;
     height: 3em;
     border-left: none;
     border-right: none;
     border-top: none;
     top: 0em;
+    border-radius: 5px;
+    height: 3em;
+
+
 } 
 #dataRetirada{
     position: relative;
     background-color: #696969;
     color: #fff;
-    width: 25%;
+    width: 35%;
     left: 0em;
     border-left: none;
     border-right: none;
     border-top: none;
     top: 0em;
+    border-radius: 5px;
+    height: 3em;
+
+
 } 
 #dataEntrega{
     position: relative;
     background-color: #696969;
     color: #fff;
-    width: 25%;
+    width: 35%;
     left: 0em;
     border-left: none;
     border-right: none;
     border-top: none;
     top: 0em;
+    border-radius: 5px;
+    height: 3em;
+
 } 
 
 #btnReservar{
     position: relative;
-    top: 0em;
-    color:#fff;
+    top: 5em;
+    left: -22em;
+    color:white;
     border-radius: 2em;
-    background-color: #696969;
+    background: black;
+    border: 1px solid #ff0000;
+
 }
 #btnReservar:hover{
-    color:black;
+    color:white;
     background-color: rgb(196, 0, 0);
+    transition: all 0.6s;
+
 }
 
 #calc{
     position: relative;
     top: 0em;
+    left: 0em;
     color:white;
     padding: none;
     border-radius: 2em;
-    background-color: #696969;
+    background: black;
+    border: 1px solid #ff0000;
 }
 #calc:hover{
-    color:black;
+    color:white;
     background-color: rgb(196, 0, 0);
+    transition: all 0.6s;
+
 }
 #vlTotal{
     position: relative;
+    top: 2em;
+
+
 }
 #labDtEntrega{
     position: relative;
@@ -222,7 +267,9 @@
     top: 0em;
     color:#fff;
     border-radius: 2em;
-    background-color: #696969;
+    background-color: black;
+    border: 1px solid #ff0000;
+        
 }
 #btnRegistro:hover{
     color:black;
@@ -234,8 +281,11 @@
     color:#fff;
     border-radius: 2em;
     background-color: #696969;
+    
 }
 #btnExcluir:hover{
     color:black;
     background-color: rgb(196, 0, 0);
+    transition: all 0.6s;
+
 }

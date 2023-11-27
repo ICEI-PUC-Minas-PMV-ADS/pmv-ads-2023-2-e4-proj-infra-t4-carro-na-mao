@@ -11,29 +11,40 @@
 }
 
 #btnRegistro{
-    background-color: #8f959b; 
+    top: 0em;
+    left: 6em;
     color: #fff; 
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     margin-bottom: 10px;
+    background-color: black;
+    border: 1px solid #ff0000;
 }
 #btnRegistro:hover{
-    background-color: #1e72f0; 
+    background-color: rgb(196, 0, 0);
     color: #fff;
+    transition: all 0.6s;
+
+ 
 }
 
 #btnExcluir{
-    background-color: #8f959b; 
+    top: 0em;
+    left: 12em;
     color: #fff; 
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     margin-left: 20px;
+    background-color: black;
+    border: 1px solid #ff0000;
 }
 #btnExcluir:hover{
     background-color: #dd0606; 
     color: #fff;
+    transition: all 0.6s;
+
 }
 
 .input{ 

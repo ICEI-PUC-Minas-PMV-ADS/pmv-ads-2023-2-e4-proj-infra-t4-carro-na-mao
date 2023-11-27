@@ -66,7 +66,7 @@ function Manutencao() {
   }
 
   return (
-    <>
+    <div id="fundoVistoria">
       <Menu />
 
 
@@ -128,11 +128,11 @@ function Manutencao() {
             <button id="btnCadastrar" onClick={arrumar}>Cadastrar Manutenção</button>
           </div>
           <br></br>
-          <a href="javascript:history.back()">Voltar</a>
-        
+          <button id='btnVoltarManutencao'> <a href="javascript:history.back()">Voltar</a> </button>
+
       </section>
 
-    </>
+    </div>
   );
 }
 

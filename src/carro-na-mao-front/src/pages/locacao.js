@@ -172,10 +172,10 @@ function Locacao() {
     const handleModeloChange = () => {
         const select = document.getElementById('modeloRetirada');
         const input = document.getElementById('valorCategoria');
-    
+
         const selectedValue = select.value;
         const selectedOption = select.options[select.selectedIndex];
-    
+
         if (selectedValue !== "Selecione um modelo") {
             input.value = selectedOption.getAttribute('value');
         } else {
@@ -184,9 +184,8 @@ function Locacao() {
     };
 
     return (
-        <>
+    <div id="fundoLocacao">
             <Menu />
-            <h1 id="titulo">Locacao</h1>
 
             {isLoading ? (
                 <div className="loading-container">
@@ -227,7 +226,7 @@ function Locacao() {
                 </select>
 
                 <label id="labModelo">Selecione o modelo de veículo desejado</label>
-                <select id="modeloRetirada" onChange={handleModeloChange}> 
+                <select id="modeloRetirada" onChange={handleModeloChange}>
                     <option id="Selec">Selecione um modelo</option>
                     <option id="HatchGol" value="50">VW Gol</option>
                     <option id="HatchOnix" value="50">GM Onix</option>
@@ -265,27 +264,23 @@ function Locacao() {
                 <input type="date" id="dataEntrega" placeholder='Selecione a data de entrega'></input>
 
                 <h3 id="vlTotal">O valor total da(s) diária(s) é de R$ <span>{total}</span></h3>
-                
+
                 <div>
                     <button id="btnReservar" onClick={reservar}>Reservar</button>
                 </div>
-                <br />
+               <br />
                 <div>
                     <button id="calc" onClick={calculateTotal}>Calcular Total</button>
-                </div>
-                <br />
-                <div>
-                    <label>Deseja limpar os campos? </label>
+             
                     <button id="btnRegistro" onClick={limparCampos}>Novo Registro</button>
-                </div>
-                <br />
-                <div>
-                    <label>Deseja excluir a reserva?</label>
+       
                     <button id="btnExcluir" onClick={excluir}>Excluir</button>
+                    <br />
+
                 </div>
 
             </section>
-        </>
+        </div>
     )
 }
 export default Locacao;

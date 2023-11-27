@@ -63,13 +63,13 @@ function Vistoria() {
   }
 
   return (
-    <>
+    <div id="fundoVistoria">
       <Menu />
 
-      <section id="cmp">
+      <section id="camposVistoria">
         <h3>Tela de realização de Vistoria de Veiculos</h3>
         <h5>Dados da Reserva e Vistoria:</h5>
-       <hr></hr>
+        <hr></hr>
         <div id='camposParaLoginParteUmVistoria'>
           <label >ID do Veiculo: </label>
           <input type="text" id="veiculo" placeholder='3111' ></input>
@@ -79,9 +79,9 @@ function Vistoria() {
           <select id="tipo">
             <option value="0">Retorno de veiculo</option>
             <option value="1">Saída de veiculo</option>
-            
+
           </select>
-          
+
 
         </div>
         <h5>Detalhamento da Vistoria:</h5>
@@ -91,38 +91,28 @@ function Vistoria() {
           <input type="text" id="descricao" placeholder='Descrição da Vistoria'></input>
           <label>Observações da Vistoria:</label>
           <input type="text" id="observacoes" placeholder='Observações da Vistoria'></input>
-          
+
         </div>
 
         <div id='camposParaLoginParteUmVistoria'>
-        <label>Criar Manutenção no sistema?:</label>
-        <select id="manut">
-          <option value="true">Criar Manutenção</option>
-          <option value="false">Não Criar Manutenção</option>
-        </select>
+          <label>Criar Manutenção no sistema?:</label>
+          <select id="manut">
+            <option value="true">Criar Manutenção</option>
+            <option value="false">Não Criar Manutenção</option>
+          </select>
         </div>
 
       </section>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
 
       <section>
 
+        <div >
+          <button id="btnCadastrarVistoria" onClick={vistoriar}>Cadastrar Vistoria</button>
+        </div>
+        <button id='btnVoltarVistoria'> <a href="javascript:history.back()">Voltar</a> </button>
 
-
-
-
-        
-          <div >
-            <button id="btnCadastrarVistoria" onClick={vistoriar}>Cadastrar Vistoria</button>           
-          </div>
-          <br></br>
-          <a href="javascript:history.back()">Voltar</a>
-        
       </section>
-    </>
+    </div>
   );
 }
 

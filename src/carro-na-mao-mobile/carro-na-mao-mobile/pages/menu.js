@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { BottomNavigation } from 'react-native-paper';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import Avaliacao from '../pages/avaliacoes/avaliacao';
+import Historico from '../pages/Historico/Historico';
 import Perfil from '../pages/paginas do usuario/perfil';
 import Locacao from '../pages/locacao/viewLocacao' ;
 import { NavigationContainer } from '@react-navigation/native';
@@ -19,6 +20,7 @@ const [routes] = React.useState([
   { key: 'V', title: 'Vistorias', focusedIcon: 'car-cog' },
   { key: 'L', title: 'Locacao', focusedIcon: 'car-connected'},
   { key: 'T', title: 'Perfil', focusedIcon: 'account' },
+  { key: 'H', title: 'Historico', focusedIcon: 'account-details' },
 ]);
 
 
@@ -27,6 +29,7 @@ const renderScene = BottomNavigation.SceneMap({
   T:Perfil,
   L:Locacao,
   V:Vistorias,
+  H:Historico,
 
 });
 

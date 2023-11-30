@@ -67,10 +67,11 @@ function Vistoria() {
       <Menu />
 
       <section id="camposVistoria">
-        <h3>Tela de realização de Vistoria de Veiculos</h3>
-        <h5>Dados da Reserva e Vistoria:</h5>
-        <hr></hr>
-        <div id='camposParaLoginParteUmVistoria'>
+        <h3 id="tituloVistoria1">Tela de realização de Vistoria de Veiculos</h3>
+        <h5 id="tituloVistoria2" >Dados da Reserva e Vistoria:</h5>
+        <hr id="linhaVistoria1"></hr>
+        
+        <div id="camposParaLoginParteUmVistoria">
           <label >ID do Veiculo: </label>
           <input type="text" id="veiculo" placeholder='3111' ></input>
           <label>Data da Vistoria:</label>
@@ -84,8 +85,8 @@ function Vistoria() {
 
 
         </div>
-        <h5>Detalhamento da Vistoria:</h5>
-        <hr></hr>
+        <h5 id="tituloVistoria3">Detalhamento da Vistoria:</h5>
+        <hr id="linhaVistoria2"></hr>
         <div id='camposParaLoginParteTres'>
           <label >Descrição da Vistoria:</label>
           <input type="text" id="descricao" placeholder='Descrição da Vistoria'></input>

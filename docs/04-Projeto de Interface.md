@@ -20,36 +20,54 @@ O diagrama de fluxo pode ser desenvolvido com “boxes” que possuem internamen
 ## Wireframes
 
 Telas propostas na concepção do projeto:
+ ## MODELO FRONT END: MOBILE
 
 #### Tela de login front-end Mobile.
-![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-login.PNG)
+
+<img src="img/Wireframes/wireframe-mobile-login.PNG" whidth="500px" height="500px">
+
 
 #### Tela de cadastro front-end Mobile.
-![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-cadastro.PNG)
+
+<img src="img/Wireframes/wireframe-mobile-cadastro.PNG" whidth="500px" height="500px">
+
 
 #### Tela de localização front-end Mobile.
-![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-localizacao.PNG)
+
+<img src="img/Wireframes/wireframe-mobile-localizacao.PNG" whidth="500px" height="500px">
+
 
 #### Tela de reservas front-end Mobile.
-![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-reserva.PNG)
+
+<img src="img/Wireframes/wireframe-mobile-reserva.PNG" whidth="500px" height="500px">
+
 
 #### Tela das minhas reservas front-end Mobile.
-![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-minhaReserva.PNG)
+
+<img src="img/Wireframes/wireframe-mobile-minhaReserva.PNG" whidth="500px" height="500px">
+
 
 #### Tela de notificação front-end Mobile.
-![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-notificacao2.PNG)
+
+<img src="img/Wireframes/wireframe-mobile-notificacao2.PNG" whidth="500px" height="500px">
+
 
 #### Tela de vistoria front-end Mobile.
-![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-vistoria.PNG)
+
+<img src="img/Wireframes/wireframe-mobile-vistoria.PNG" whidth="500px" height="500px">
+
 
 #### Tela de avaliação front-end Mobile.
-![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-avaliacao.PNG)
+
+<img src="img/Wireframes/wireframe-mobile-avaliacao.PNG" whidth="500px" height="500px">
+
 
 #### Tela de Registro de avaliação front-end Mobile.
-![Exemplo de Wireframe](img/Wireframes/wireframe-mobile-registroAvaliacao.PNG)
+
+<img src="img/Wireframes/wireframe-mobile-registroAvaliacao.PNG" whidth="500px" height="500px">
 
 
-
+ ## MODELO FRONT END: WEB
 
 #### Tela de login front-end WEB.
 ![Exemplo de Wireframe](img/Wireframes/Wireframe-login.jpg)

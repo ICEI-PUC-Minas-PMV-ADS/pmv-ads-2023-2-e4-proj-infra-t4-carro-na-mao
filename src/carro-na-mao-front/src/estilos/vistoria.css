@@ -5,12 +5,52 @@
   background: #35383d;
 
 }
+#tituloVistoria1{
+  position: relative;
+  top: -75px;
+  left: 10em;
+  font-size: 125%;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+}
+
+#tituloVistoria2{
+  top: -75px;
+  position: relative;
+  font-size: 115%;
+  color: white;
+
+}
+
+#tituloVistoria3{
+  top: 0px;
+  position: relative;
+  font-size: 115%;
+  color: white;
+
+}
+
+#linhaVistoria1 {
+  position: relative;
+  top: -7em;
+  width: 51em;
+
+}
+
+#linhaVistoria2 {
+  position: relative;
+  top: -5em;
+  width: 51em;
+
+}
 
 #camposVistoria {
   position: relative;
-  top: 25px;
+  top: 86px;
   left: 0%;
-  text-align: justify;
   max-width: 60vw;
   height: 70vh;
   margin: 0 auto;
@@ -21,107 +61,108 @@
   flex-direction: column;
 }
 
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
   margin: 0;
   padding: 0;
- }
- 
- .container {
+}
+
+.container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
- }
- 
- header {
+}
+
+header {
   background-color: #282c34;
   padding: 30px 0;
   color: white;
   text-align: center;
- }
- 
- header h1 {
+}
+
+header h1 {
   margin: 0;
   font-size: 32px;
- }
- 
- main {
+}
+
+main {
   display: flex;
   justify-content: space-between;
   margin-top: 30px;
- }
- 
- main aside {
+}
+
+main aside {
   background-color: #e4e4e4;
   width: 30%;
   padding: 20px;
   box-sizing: border-box;
- }
- 
- main aside h2 {
+}
+
+main aside h2 {
   font-size: 24px;
   margin-bottom: 20px;
- }
- 
- main aside p {
+}
+
+main aside p {
   line-height: 1.6;
- }
- 
- main .content {
+}
+
+main .content {
   width: 70%;
   padding: 20px;
   box-sizing: border-box;
- }
- 
- main .content h2 {
+}
+
+main .content h2 {
   font-size: 24px;
   margin-bottom: 20px;
- }
- 
- main .content p {
+}
+
+main .content p {
   line-height: 1.6;
- }
- 
- footer {
+}
+
+footer {
   background-color: #282c34;
   padding: 20px 0;
   text-align: center;
   color: white;
- }
- 
- footer p {
-  margin: 0;
- }
+}
 
- #btnCadastrarVistoria{
+footer p {
+  margin: 0;
+}
+
+#btnCadastrarVistoria {
   position: relative;
-  top: -12em;
+  top: -3em;
   left: 60em;
   width: 15%;
   border-radius: 2em;
   background-color: black;
-  border: 1px solid #ff0000; 
-  
- }
+  border: 1px solid #ff0000;
 
- #btnCadastrarVistoria:hover {
+}
+
+#btnCadastrarVistoria:hover {
   background-color: #ff0000;
   color: white;
   transition: all 0.6s;
 }
 
- #btnVoltarVistoria{
+#btnVoltarVistoria {
   position: relative;
   left: 24%;
-  top: -14.6em;
+  top: -5.6em;
   width: 15%;
   border-radius: 2em;
- background-color: black;
-  border: 1px solid #ff0000; 
+  background-color: black;
+  border: 1px solid #ff0000;
 
- }
- 
+}
+
 #btnVoltarVistoria:hover {
   background-color: #ff0000;
   color: white;
@@ -129,56 +170,58 @@ body {
 }
 
 
- #veiculo {
-  border-bottom: none;
+#veiculo {
+  left: 24%;
+  width: 15%;
   bottom: 1em;
   padding: 5px;
   border-radius: 7px;
   background: #ccc;
   border: 1px solid #000000;
- }
- #date{
-  border-bottom: none;
+}
+
+#date {
+  width: 15%;
   bottom: 1em;
   padding: 5px;
   border-radius: 7px;
   background: #ccc;
   border: 1px solid #000000;
- }
- #tipo{
+}
+
+#tipo {
+  width: 15%;
   padding: 5px;
-   border-bottom: none;
-  border-top: none;
-  border-left: none;
-  border-right: none;
+  border-bottom: none;
   position: relative;
   border-radius: 7px;
   background: #ccc;
   border: 1px solid #000000;
- }
- #descricao{
-  border-bottom: none;
-  bottom: 1em;
-  padding: 5px;
-  border-radius: 7px;
-  background: #ccc;
-  border: 1px solid #000000;
- }
- #observacoes{
-  border-bottom: none;
-  bottom: 1em;
-  padding: 5px;
-  border-radius: 7px;
-  background: #ccc;
-  border: 1px solid #000000;
- }
-
-#manut{
- border-bottom: none;
- bottom: 1em;
- padding: 5px;
- border-radius: 7px;
- background: #ccc;
- border: 1px solid #000000;
 }
- 
+
+#descricao {
+  border-bottom: none;
+  bottom: 1em;
+  padding: 5px;
+  border-radius: 7px;
+  background: #ccc;
+  border: 1px solid #000000;
+}
+
+#observacoes {
+  border-bottom: none;
+  bottom: 1em;
+  padding: 5px;
+  border-radius: 7px;
+  background: #ccc;
+  border: 1px solid #000000;
+}
+
+#manut {
+  border-bottom: none;
+  bottom: 1em;
+  padding: 5px;
+  border-radius: 7px;
+  background: #ccc;
+  border: 1px solid #000000;
+}

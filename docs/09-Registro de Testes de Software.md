@@ -1,83 +1,101 @@
 # Registro de Testes de Software
  ## FRONT END: MOBILE
-  ### 1- Cadastro/Login
+  ### 01- Cadastro/Login
 
   **1.1 - Verificar se o cadastro email já cadastrado na plataforma**
 
-  ![usuario cadastrado](img/mobile-validar-usuario-cadastrado.PNG)
+  <img src="img/mobile-validar-usuario-cadastrado.PNG" whidth="500px" height="500px">
+
 
   **1.2 - Verificar se cadastro está sendo realizado sem nenhum problema**
-    
-  ![confirmação de cadastro](img/preenchendo-dados.PNG)
 
-  ![confirmação de cadastro](img/confirmado.PNG)
+  <img src="img/preenchendo-dados.PNG" whidth="500px" height="500px">
+
+  <img src="img/confirmado.PNG" whidth="500px" height="500px">
+
 
   **1.3 - Verificar se o  sistema deixa somente usuario cadastrados entrar na plataforma**
 
-  ![confirmação de cadastro](img/barrar.PNG)
+  <img src="img/barrar.PNG" whidth="500px" height="500px">
 
-  ### 5 - Avaliação 
-  **5.1 - Verificar se as avaliações estão sendo recuperadas do banco de dados de maneira correta**
 
-  ![Avaliacoes](img/avaliações.PNG)
+  ### 02 - Avaliação 
+  **2.1 - Verificar se as avaliações estão sendo recuperadas do banco de dados de maneira correta**
 
-  ### 6- Locação
+  <img src="img/avaliações.PNG" whidth="500px" height="500px">
 
-  **6.1 - Verificar se as locações são cadastradas corretamente**
+  ### 03- Locação
 
-  ![Preenchendo Locacao](img/Preenchendo_Locacao.jpeg)
-  ![Cadastrada com Sucesso](img/Cadastrado_Com_Sucesso.jpeg)
+  **3.1 - Verificar se as locações são cadastradas corretamente**
 
-  **6.2 - Verificar se as locações são excluídas corretamente**
-  ![Exclusão de Locação](img/Excluindo_Locacao.jpeg)
-  ![Confirmando Exclusão](img/Locacao_Excluida_Sucesso.jpeg)
+  <img src="img/Preenchendo_Locacao.jpeg" whidth="500px" height="500px">
 
-  **6.3 - Verificar se as locações aparecem corretamente**
-  ![Listagem de Locações](img/Aparecendo_Locacoes.jpeg)
+  <img src="img/Cadastrado_Com_Sucesso.jpeg" whidth="500px" height="500px">
 
-  **6.4 - Verificar se as locações são editadas corretamente**
-  ![Edição de Locação](img/Editando_Locacao.jpeg)
 
-### 7 - Vistoria
+  **3.2 - Verificar se as locações são excluídas corretamente**
+  
+  <img src="img/Excluindo_Locacao.jpeg" whidth="500px" height="500px">
 
-**7.1 Verificar se os dados selecionados para a vistoria salvam de forma correta**
+  <img src="img/Locacao_Excluida_Sucesso.jpeg" whidth="500px" height="500px">
 
- ![Teste com êxito](img/Testes/Vistoria_mobile_004.png)
 
-  ![Teste com êxito](img/Testes/Vistoria_mobile_005-erro.png)
+  **3.3 - Verificar se as locações aparecem corretamente**
 
-  ### 9- Notificação
-  **9 - Teste de envio de nova notificação**
+  <img src="img/Aparecendo_Locacoes.jpeg" whidth="500px" height="500px">
 
-  ![Teste com êxito](img/Testes/notif_mobile_001.png)
+
+  **3.4 - Verificar se as locações são editadas corretamente**
+
+  <img src="img/Editando_Locacao.jpeg" whidth="500px" height="500px">
+
+
+### 04 - Vistoria
+
+**4.1 Verificar se os dados selecionados para a vistoria salvam de forma correta**
+
+  <img src="img/Testes/Vistoria_mobile_004.png" whidth="500px" height="500px">
+
+  <img src="img/Testes/Vistoria_mobile_005-erro.png" whidth="500px" height="500px">
+
+
+
+  ### 05 - Notificação
+  **5.1 - Teste de envio de nova notificação**
 
   ![Teste com êxito](img/Testes/notif_mobile_001.png)
 
   ![Teste com êxito](img/Testes/notif_mobile_002.png)
 
-  ![Teste com êxito push](img/Testes/notif_mobile_003.png)
+  <img src="img/Testes/notif_mobile_003.png" whidth="500px" height="500px">
 
-  ### 10 - Perfil
-  **10.1 - Verificar se as informções do usaurio aparece de acordo com o usuario logado**
+
+  ### 06 - Perfil
+  **6.1 - Verificar se as informções do usaurio aparece de acordo com o usuario logado**
   
-  ![Perfil](img/perfil.PNG)
+  <img src="img/perfil.PNG" whidth="500px" height="500px">
 
-  **10.2 - Verificar se se o usuario consegue editar sua informações**
 
-  ![edicao](img/confirmar%20edição.PNG)
-  
-  **10.3 -  Verificar se o usuario consegue apagar sua conta**
+  **6.2 - Verificar se se o usuario consegue editar sua informações**
 
-  ![delete1](img/delete%201.PNG)
+  <img src="img/confirmar%20edição.PNG" whidth="500px" height="500px">
 
-  ![delete2](img/delete%202.PNG)
 
-  ### 11- Localização
-  **11.1 - Visualizar mapa do local da retirada**
-  ![localizacaoMobile](img/localizacaoMobile.jpeg)
+  **6.3 -  Verificar se o usuario consegue apagar sua conta**
 
-  **11.2 - Localização não existente**
-  ![localizcaoMobileError](img/localizacaoMobileError.jpeg)
+  <img src="img/delete%201.PNG" whidth="500px" height="500px">
+
+  <img src="img/delete%202.PNG" whidth="500px" height="500px">
+
+
+  ### 07- Localização
+  **7.1 - Visualizar mapa do local da retirada**
+
+  <img src="img/localizacaoMobile.jpeg" whidth="500px" height="500px">
+
+  **7.2 - Localização não existente**
+
+  <img src="img/localizacaoMobileError.jpeg" whidth="500px" height="500px">
 
  ### 12- Histórico
   **12.1 - Visualizar o histórico de locações realizadas**
@@ -88,7 +106,7 @@
 
 
  ## FRONT END: WEB
-  ### 1 - Login/Cadastro
+  ### 01 - Login/Cadastro
 
   **1.1 - Verificar se o login barra campos em branco**
  
@@ -100,7 +118,7 @@
  **1.3- Verificar se o cadastro barra campos em branco**
  ![.](img/verificandocampos.png)
 
-  ### 2 - Estoque
+  ### 02 - Estoque
 
   **2.1 - Inserção de novo regristo**
   ![estoqueCreate](img/estoqueFrontCreate.png)
@@ -108,10 +126,10 @@
   **2.2 - Edição de um regristo**
   ![estoqueUpdate](img/estoqueFrontUpdate.png)
 
-  **2.3 - Carregar informações **
+  **2.3 - Carregar informações**
   ![estoqueGet](img/estoqueFrontGet.png)
 
-  ### 4- Categoria
+  ### 04- Categoria
 
    **4.1 - Inserção de novo regristo**
    ![categoriaCreate](img/categoriaFrontCreate.png)
@@ -119,10 +137,10 @@
    **4.2 - Edição de um regristo**
    ![categoriaUpdate](img/categoriaFrontUpdate.png)
 
-   **4.3 - Carregar informações **
+   **4.3 - Carregar informações**
    ![categoriaGet](img/categoriaFrontGet.png)
 
- ### 5- Avaliação
+ ### 05- Avaliação
  **5.1 - Registro das Informações**
 
  **5.1.1 - Teste sem Informações**
@@ -166,7 +184,7 @@
  **6.3.1 - Teste de Exclusão**
 ![Excluindo Informações](img/DadosNaoPreenchLocacao.png)
 
- ### 7- Vistoria
+ ### 07- Vistoria
  **7.1 - Registro da vistoria**
 
  **7.1.1 - Teste sem Informações**
@@ -188,21 +206,21 @@
  **7.3.1 - Teste de Exclusão**
 ![Excluindo Informações](img/Testes/FRONT-Vistoria-erro-excluir.png)
 
-  ### 9- Notificação
-**9 - Teste de envio de nova notificação**
+  ### 08- Notificação
+**8.1 - Teste de envio de nova notificação**
  ![Teste com êxito](img/Testes/notif_web_001.png)
 
  ![Teste com êxito e-mail](img/Testes/notif_web_002.png)
 
-  ### 10- Categoria
+  ### 09 - Categoria
 
-  **10 - Visualização do mapa**
+  **9.1 - Visualização do mapa**
   ![localizacaoFrontGet](img/localizacaoFrontGet.png)
 
 
 ##
 ## API
-### 1- Cadastro 
+### 01 - Cadastro 
  **1.1 - Post**
 
   ![](img/post-api-cadastro.png)
@@ -219,7 +237,7 @@
 
  ![](img/get-api-cadastro.png)
 
-#### 2 - Estoque
+#### 02 - Estoque
 **2.1 - Create**
 
  ![](img/post-api-estoque.png)
@@ -236,7 +254,7 @@
 
   ![](img/get-api-estoque.png)
 
-### 3- Retirada
+### 03- Retirada
 **3.1 - Create**
 
   ![](img/post-api-retirada.png)
@@ -249,11 +267,10 @@
 
  ![](img/get-api-retirada.png)
 
-  ### 4- Categoria
+  ### 04- Categoria
 **4.1 - Create**
 
  ![](img/get-api-categoria.png)
-
 
 **4.2 - Delete**
 
@@ -267,7 +284,7 @@
 
 ![](img/get-api-categoria.png)
 
- ### 5- Avaliação
+ ### 05- Avaliação
 
 **5.1 - Get**
 
@@ -285,7 +302,7 @@
 
 ![](img/put-api-avaliacao.jpg)
 
- ### 6- Locação
+ ### 06- Locação
 
 **6.1 - Get**
 
@@ -296,13 +313,12 @@
 ![](img/Post_LOC1.png)
 ![](img/Post_LOC2.png)
 
-
 **6.3 - Delete**
 
 ![](img/Delete%20LOC.png)
 ![](img/Delete%20LOC2.png)
 
-  ### 7- Vistorias
+  ### 07- Vistorias
 **7.1 - Create**
 
  ![](img/post-api-vistoria.png)
@@ -320,7 +336,7 @@
 
 ![](img/get-api-vistoria.png)
 
-  ### 8- Manutenções
+### 08- Manutenções
 **8.1 - Create**
 
  ![](img/post-api-manutencao.png)

@@ -4,95 +4,47 @@ import { useEffect, useState } from 'react';
 import { RecuperaToken } from '../autenticação/chave_de_acesso';
 import { useNavigate, Link } from 'react-router-dom';
 import { Menu } from './menu';
-import '../estilos/manutencao.css';
+import NovuBell from "../component/NovuBell";
+import "../estilos/App.css";
 
 function Notificacoes() {
-  const navigate = useNavigate()
-  const [token, setToken] = useState(null)
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const jwtToken = await RecuperaToken();
-        setToken(jwtToken);
-      } catch (error) {
-        console.error('Erro ao recuperar token:', error);
-      }
-    }
-    fetchData()
-  }, []);
+  const [status, setStatus] = useState(); // status of passed/failed notificaiton
 
-  const notificar = () => {
-
-    const assunto = document.querySelector("#assunto").value
-
-
-
-    const data = {
-
-      "assunto": assunto,
-      "corpomensagem": "string"
-     
-
-    }
-
-    const headers = {
-      "Content-Type": "application/json",
-      "Authorization": 'Bearer ' + token
-    }
-
-    axios.post('https://api-carronamao.azurewebsites.net/api/Notificacao/Enviar%20Notificacao', data, { headers })
-      .then(response => {
-        console.log(response.status)
-        if (response.status === 200) {
-
-          alert("Notificação Registrada com Sucesso.");
-          return navigate("/Notificacoes")
-        }
-      }
-      ).catch(error => {
-        alert("Ops, encontramos um problema!");
+  const sendNotification = async () => {
+    await axios
+      .post("http://localhost:8000", {
+        subscriberId: `${process.env.REACT_APP_SUBSCRIBER_ID}`,
       })
+      .then((res) => {
+        setStatus(res.status);
+      });
+  };
 
-  }
 
   return (
+    <div id="fundoAvaliacao1">
     <>
       <Menu />
 
       <section>
-        <div class="container">
-          <div>
-            <h3 >Tela de lançamentos Modelo</h3>
-          </div>
-        </div >
-        <div class="container">
-          <h5 >Dados da notificação:</h5>
-        </div>
+      <div className="App">
+      <div className="NavBar">
+        <br/>
+        <h1>Workflow de Notificações:</h1>
+        <h2>InApp & E-mail</h2>
+        <br/>
+      </div>      
+      <button onClick={sendNotification}>Enviar Notificação</button>
+      {status === 201 && <h1><br/>Notificação enviada!</h1>}
+      {status === 400 && <h1>Erro ao enviar notificação =/</h1>}
+    </div>
 
-        <div>
-          <div class="container">
-            <div>
-              <label>Registrar:</label>
-              <input type="text" id="assunto" placeholder='insira a mensagem' ></input>
-            </div>
-
-          </div>
-        </div>
-
-
-
-        <hr></hr>
-
-        
-          <div >
-            <button id="btnCadastrar" onClick={notificar}>Enviar Notificação</button>
-          </div>
-          <br></br>
-          <a href="javascript:history.back()">Voltar</a>
+       
         
       </section>
 
     </>
+    </div>
   );
 }
 

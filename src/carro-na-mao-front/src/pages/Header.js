@@ -8,7 +8,7 @@ import {
 export const Header = () => {
   return (
     <NovuProvider subscriberId={'6536a63d306c4d8cf78b906f'} applicationIdentifier={'Li1TX1F_6CWE'}>
-      <PopoverNotificationCenter colorScheme={'light'}>
+      <PopoverNotificationCenter colorScheme={'dark'}>
         {({ unseenCount }) => <NotificationBell unseenCount={unseenCount} />}
       </PopoverNotificationCenter>
     </NovuProvider>

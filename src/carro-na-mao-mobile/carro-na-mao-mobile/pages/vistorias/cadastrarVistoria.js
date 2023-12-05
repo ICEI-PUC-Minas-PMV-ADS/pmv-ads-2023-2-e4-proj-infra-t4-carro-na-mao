@@ -15,13 +15,9 @@ const cadastrarVistoria = () => {
     const [token, setToken] = useState(null)
     const [dados_user, setDados] = useState([])
     const navigation = useNavigation()
-
-    const [veiculo, setVeiculo] = useState()
-    //const [tipo,setTipo]= useState()
+    const [veiculo, setVeiculo] = useState()    
     const [tipo, setTipo] = useState('0');
-
     const [date, setDate] = useState()
-
     const [descricao, setDescricao] = useState()
     const [observacoes, setObservacoes] = useState()
     const [manut, setManut] = useState()
@@ -40,10 +36,7 @@ const cadastrarVistoria = () => {
         fetchData()
     }, []);
 
-    //async function recuperarDadosLocal(){
-    //const dadosSalvos = await AsyncStorage.getItem('dados_user')
-    // setDados(JSON.parse(dadosSalvos))
-    // }
+  
     function registrarVistoria() {
         const data = {
 
@@ -65,7 +58,7 @@ const cadastrarVistoria = () => {
         axios.post('https://api-carronamao.azurewebsites.net/api/Vistorias', data, { headers }).then(response => {
             if (response.status == 200) {
                 alert('Vistoria Inserida com Sucesso.')
-                navigation.navigate('Avalicao')
+                navigation.navigate('Avaliacao')
             }
         }).catch(erro => {
             alert("Ops, encontramos um problema!");

@@ -4,49 +4,56 @@ import {StyleSheet } from "react-native";
 export default StyleSheet.create
 ({
 
-    container: {
-      color: 'green',
-      textAlign: 'center',
-      flex: 10,
-      padding: 20,
-      backgroundColor: '#121212',
-    },
-    title: {
-      fontSize: 20,
-      fontWeight: 'bold',
-      marginBottom: 10,
-    },
-    inputContainer: {
-      marginBottom: 20,
-    },
-    input: {
-      color: 'red',
-      height: 40,
-      borderColor: '#ffff',
-      borderWidth: 5,
-      paddingHorizontal: 10,
-      marginBottom: 10,
-    },
-    button: {
-      backgroundColor: '#ffff', // Cor de destaque
-      paddingVertical: 10,
-      paddingHorizontal: 15,
-      borderRadius: 5,
-    },
-    buttonText: {
-      color: 'blue', // Cor do texto do botão
-      fontSize: 30,
-      textAlign: 'center',
-    },
-    resultContainer: {
-      marginTop: 20,
-    },
-    resultText: {  color: '#ffff',
-    height: 40,
-    borderColor: '#ffff',
-    borderWidth: 1,
-    paddingHorizontal: 15,
-    marginBottom: 10,
+  container:{
+    position:'relative',
+    top:70
   },
+  body:{
+    backgroundColor:'#1F2024',
+    flex:1
+  },
+  title:{
+    color:'#fff',
+    position:'relative',
+    left:90,
+    fontSize:20
+  },
+  resultContainer:{
+    color:'#fff'
+  },
+  resultText:{
+    color:'#fff'
+  },
+  texto:{
+    color:'#fff',
+    position:'relative', 
+    left:29
+  },
+  texto2:{
+    color:'#fff',
+    position:'relative',
+    left:100,
+    top:200
+  },
+  input: {
+    height: 40,
+    margin: 12,
+    backgroundColor:'#1F2024'
+},
+button:{
+  position:'relative',
+  left:90,
+  top:30,
+  borderRadius:4,
+  borderColor:'#8F9098',
+  width: 200,
+  padding:10,
+  backgroundColor:'#8F9098'
+},
+resultContainer:{
+  position:'relative',
+  top:80,
+  left:10
+}
       
   });

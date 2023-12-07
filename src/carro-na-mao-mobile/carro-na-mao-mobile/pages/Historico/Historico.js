@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { View, Text, TextInput, TouchableOpacity, ScrollView, Alert } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView, Alert } from 'react-native';
+import { TextInput, Button, DatePicker, Icon } from 'react-native-paper'
 import axios from "axios";
 import { RecuperaToken } from "../../Autenticação/autenticacao";
 import { useNavigation } from '@react-navigation/native';
@@ -64,6 +65,7 @@ const consultarHistorico = async () => {
 };
  
 return (
+  <View style={estiloHistorico.body}>
   <View style={estiloHistorico.container}>
     <Text style={estiloHistorico.title}>Histórico de suas locações</Text>
  
@@ -73,13 +75,19 @@ return (
         value={input}
         onChangeText={input => setInput(input)}
         placeholder="Digite número do contrato..."
+        label='Nº do contrato'
+        mode='outlined'
+        activeOutlineColor="#fff"
+        textColor="#fff"
+        underlineColor="#fff"
+        outlineColor="#fff"
       />
       <TouchableOpacity
         style={estiloHistorico.button}
         onPress={() => consultarHistorico()}
         disabled={loading || input.trim() === ''}
       >
-        <Text>Consultar Histórico</Text>
+        <Text style={estiloHistorico.texto}>Consultar Histórico</Text>
       </TouchableOpacity>
     </View>
  
@@ -98,8 +106,9 @@ return (
         ))}
       </ScrollView>
     ) : (
-      <Text>Nenhum histórico disponível.</Text>
+      <Text style={estiloHistorico.texto2}>Nenhum histórico disponível.</Text>
     )}
+  </View>
   </View>
 );
  

@@ -8,7 +8,7 @@
 
 #cmp {
     position: relative;
-    top: 25px;
+    top: -5px;
     left: 0%;
     text-align: justify;
     max-width: 80vw;
@@ -36,7 +36,7 @@
 }
 
 #titulo2 {
-    top: 58px;
+    top: 3em;
     position: relative;
     font-size: 115%;
     color: white;
@@ -44,7 +44,7 @@
 }
 
 #titulo3 {
-    top: 117px;
+    top: 0.2em;
     position: relative;
     font-size: 115%;
     color: white;
@@ -54,22 +54,22 @@
 
 #linha1 {
     position: relative;
-    top: 4em;
+    top: 2em;
     width: 65em;
 
 }
 
 #linha2 {
     position: relative;
-    top: 9em;
+    top: 4em;
     width: 65em;
 
 }
 
 #nomeCadastro {
     left: 0em;
-    top: 6em;
-    width: 25em;
+    top: 3em;
+    width: 22em;
     position: relative;
     padding: 15px;
     margin: 0px 0;
@@ -82,8 +82,8 @@
 
 #dataNasc {
     left: 2em;
-    top: 6em;
-    width: 25em;
+    top: 3em;
+    width: 22em;
     position: relative;
     padding: 15px;
     margin: 5px 0;
@@ -96,8 +96,8 @@
 
 #cpf {
     left: 54em;
-    top: 1.7em;
-    width: 25em;
+    top: -1.6em;
+    width: 22em;
     position: relative;
     padding: 16px;
     margin: 5px 0;
@@ -109,9 +109,9 @@
 }
 
 #telefone {
-    left: -25em;
-    top: 8em;
-    width: 25em;
+    left: -24.8em;
+    top: 4em;
+    width: 22em;
     position: relative;
     padding: 15px;
     margin: 5px 0;
@@ -120,14 +120,14 @@
     border: 1px solid #000000;
 
 
-}
+}   
 
 
 #categoria {
     position: relative;
-    top: 3.8em;
-    left: 27em;
-    width: 25em;
+    top: -0.2em;
+    left: 26em;
+    width: 22em;
     padding: 15px;
     margin: 5px 0;
     border-radius: 7px;
@@ -138,9 +138,9 @@
 }
 
 #rua {
-    left: 29em;
-    top: 3.8em;
-    width: 25em;
+    left: 30em;
+    top: -0.2em;
+    width: 22em;
     position: relative;
     padding: 15px;
     margin: 5px 0;
@@ -153,8 +153,8 @@
 #numero {
     position: relative;
     left: 0em;
-    top: 6em;
-    width: 25em;
+    top: 1em;
+    width: 22em;
     padding: 15px;
     margin: 5px 0;
     border-radius: 7px;
@@ -167,8 +167,8 @@
 #bairro {
     position: relative;
     left: 2em;
-    top: 6em;
-    width: 25em;
+    top: 1em;
+    width: 22em;
     padding: 15px;
     margin: 5px 0;
     border-radius: 7px;
@@ -180,8 +180,8 @@
 
 #endereco {
     left: 54em;
-    top: 2em;
-    width: 25em;
+    top: -3em;
+    width: 22em;
     position: relative;
     padding: 15px;
     margin: 5px 0;
@@ -194,9 +194,9 @@
 
 #municipio {
     position: relative;
-    left: -25.3em;
-    top: 8em;
-    width: 25em;
+    left: -24.3em;
+    top: 2em;
+    width: 22em;
     padding: 15px;
     margin: 5px 0;
     border-radius: 7px;
@@ -217,9 +217,9 @@
 #emailCadastro {
 
     position: relative;
-    top: 10em;
+    top: 0em;
     left: 0em;
-    width: 25em;
+    width: 22em;
     padding: 15px;
     margin: 8px 0;
     border-radius: 7px;
@@ -232,8 +232,8 @@
 #senhaCadastro {
 
     left: 2em;
-    width: 25em;
-    top: 10em;
+    width: 22em;
+    top: 0em;
     position: relative;
     padding: 15px;
     margin: 5px 0;
@@ -247,8 +247,8 @@
 
 #senhaCadastroConfirma {
     left: 54em;
-    width: 25em;
-    top: 5.6em;
+    width: 22em;
+    top: -4.6em;
     position: relative;
     padding: 15px;
     margin: 5px 0;
@@ -262,8 +262,8 @@
 
 #btnCadastrarUsuario {
     position: relative;
-    left: 5em;
-    top: 10em;
+    left: 4em;
+    top: 1em;
     width: 20em;
     border-radius: 16px;
     color: white;

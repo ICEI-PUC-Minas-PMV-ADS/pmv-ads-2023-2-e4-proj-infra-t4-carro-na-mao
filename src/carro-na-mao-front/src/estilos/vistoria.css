@@ -5,10 +5,11 @@
   background: #35383d;
 
 }
+
 #tituloVistoria1{
   position: relative;
-  top: -75px;
-  left: 10em;
+  top: -28px;
+  left: 15em;
   font-size: 125%;
   color: white;
   font-weight: 600;
@@ -18,7 +19,7 @@
 }
 
 #tituloVistoria2{
-  top: -75px;
+  top: 0em;
   position: relative;
   font-size: 115%;
   color: white;
@@ -35,23 +36,24 @@
 
 #linhaVistoria1 {
   position: relative;
-  top: -7em;
-  width: 51em;
+  top: -1em;
+  width: 68em;
 
 }
 
 #linhaVistoria2 {
   position: relative;
-  top: -5em;
-  width: 51em;
+  top: -1em;
+  width: 68em;
 
 }
 
+
 #camposVistoria {
   position: relative;
-  top: 86px;
+  top: 30px;
   left: 0%;
-  max-width: 60vw;
+  max-width: 80vw;
   height: 70vh;
   margin: 0 auto;
   padding: 5px;
@@ -60,14 +62,14 @@
   display: flex;
   flex-direction: column;
 }
-
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  margin: 0;
-  padding: 0;
+/*
+#camposParaLoginParteUmVistoria {
+  position: relative;
+  top: 80px;
 }
+*/
+
+
 
 .container {
   max-width: 1200px;
@@ -224,4 +226,61 @@ footer p {
   border-radius: 7px;
   background: #ccc;
   border: 1px solid #000000;
+}
+
+
+
+
+/*PARTE DO CSS DA TELA DE VISTORIA 2*/
+
+#fundoVistoria2 {
+
+  width: 100vw;
+  height: 200vh;
+  background: #35383d;
+
+}
+
+#camposVistoria2 {
+  position: relative;
+  top: 30px;
+  left: 0%;
+  text-align: justify;
+  max-width: 97vw;
+  height: 183vh;
+  margin: 0 auto;
+  padding: 5px;
+  background: #1258d1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+#inputPesquisaVistoria2 {
+  width: 80%;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: rgb(185 185 185);
+
+}
+
+#buttontoria2 {
+  position: relative;
+  left: 27%;
+  top: 0px;
+  width: 25%;
+  padding: 9px;
+  color: white;
+  border-radius: 2em;
+  background-color: black;
+  border: 1px solid #ff0000;
+
+}
+
+#buttontoria2:hover {
+  background-color: #ff0000;
+  color: white;
+  transition: all 0.6s;
 }

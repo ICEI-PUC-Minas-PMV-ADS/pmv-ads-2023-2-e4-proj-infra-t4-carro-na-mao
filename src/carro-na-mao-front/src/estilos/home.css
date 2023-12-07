@@ -8,8 +8,7 @@
 
 #camposHome {
     position: relative;
-    top: 35px;
-    left: 0%;
+    top: -28px;
     text-align: justify;
     max-width: 45vw;
     height: 85vh;
@@ -24,7 +23,7 @@
 }
 
 #logoHome {
-    width: 320px;
+    width: 345px;
     position: relative;
     left: 0%;
     display: flex;
@@ -33,7 +32,7 @@
 
 #elementosCampos {
     position: relative;
-    left: 27%;
+    left: 22%;
     display: flex;
     flex-direction: column;
     top: -78px;
@@ -84,7 +83,7 @@
     border: 1px solid #ffffff;
     background-color: black;
     position: relative;
-    width: 25em;
+    width: 27em;
     transition: all 0.6s;
     border-radius: 16px;
 
@@ -92,7 +91,7 @@
 
 #naoTemCadastro {
     position: relative;
-    top: -0.5em;
+    top: -2.5em;
     left: 6em;
     color: white;
     font-style: inherit;
@@ -101,7 +100,7 @@
 
 #link {
     position: relative;
-    top: -0.5em;
+    top: -3em;
     left: 6em;
     color: #007bff;
     font: normal 20px/1.6 system-ui, sans-serif;
@@ -117,8 +116,8 @@
 
 #todosOsDireitos {
     position: relative;
-    top: 3em;
-    left: 1em;
+    top: -2em;
+    left: 2em;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: small;

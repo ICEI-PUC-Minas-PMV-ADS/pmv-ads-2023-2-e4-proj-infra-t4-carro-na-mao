@@ -133,14 +133,14 @@ function BuscarVistorias() {
   };
 
   return (
-    <>
+    <div id="fundoVistoria2">
       <Menu />
 
-      <section id="cmp">
+      <section id="camposVistoria2">
         <h3>Buscar Vistorias por Veículo</h3>
         <label>Digite o ID do Veículo:</label>
-        <input type="text" value={veiculo} onChange={(e) => setVeiculo(e.target.value)} />
-        <button onClick={buscarVistorias}>Buscar Vistorias</button>
+        <input id="inputPesquisaVistoria2" type="text" value={veiculo} onChange={(e) => setVeiculo(e.target.value)} />
+        <button id="buttontoria2" onClick={buscarVistorias}>Buscar Vistorias</button>
 
         <h4>Últimas 20 Vistorias do Veículo:</h4>
         <div>
@@ -247,7 +247,7 @@ function BuscarVistorias() {
         </div>
       </section>
       <br></br>
-    </>
+    </div>
   );
 }
 

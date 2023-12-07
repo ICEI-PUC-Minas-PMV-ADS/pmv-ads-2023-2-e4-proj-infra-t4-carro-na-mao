@@ -68,34 +68,40 @@ const cadastrarVistoria = () => {
     return (
         <View style={estiloPerfil.body}>
             
-            <Text style={styles.label2}>ID do Veiculo:</Text>
-            <TextInput
-                placeholder="Veiculo"
-                mode='outlined'
-                label='Veiculo'
-                type="text"
-                style={styles.input}
-                value={veiculo}
-                onChangeText={veiculo => setVeiculo(veiculo)}
-            />
-
-            <View style={styles.row}>
-                <View style={styles.column}>
+           
+        
+              
+                   
+                    <View style={styles.campos} >
                     <Text style={styles.label2}>Tipo de Vistoria:</Text>
                     <Picker
                         selectedValue={tipo}
                         onValueChange={(value) => setTipo(value)}
                         style={styles.picker2}
-                    >
-                        <Picker.Item label="Retorno de veiculo" value="0" />
-                        <Picker.Item label="Saída de veiculo" value="1" />
+                        textColor='#fff'
+                        >
+                        <Picker.Item color="#fff"label="Retorno de veiculo" value="0" />
+                        <Picker.Item color="#fff" label="Saída de veiculo" value="1" />
                     </Picker>
                 </View>
+            <Text style={styles.label2}>ID do Veiculo:</Text>
+              <TextInput
+                    placeholder="Veiculo"
+                    mode='outlined'
+                    label='Veiculo'
+                    type="text"
+                    style={styles.input}
+                    value={veiculo}
+                    onChangeText={veiculo => setVeiculo(veiculo)}
+                    activeOutlineColor="#fff"
+                    textColor="#fff"
+                    underlineColor="#fff"
+                    outlineColor="#fff"
+                />
 
-                <View style={styles.column}>
+             
                     
                     
-                <Icon source="calendar-month-outline"color={'#fff'} size={20} />
                     <Text color={'#fff'} style={styles.label2}>Data da Vistoria:</Text>
                     <TextInput
                         placeholder="Seleciona a Data"
@@ -105,9 +111,12 @@ const cadastrarVistoria = () => {
                         style={styles.input}
                         value={date}
                         onChangeText={date => setDate(date)}
+                        activeOutlineColor="#fff"
+                        textColor="#fff"
+                        underlineColor="#fff"
+                        outlineColor="#fff"
                     />
-                </View>
-            </View>
+              
 
             <Text style={styles.label2}>Descrição da Vistoria:</Text>
             <TextInput
@@ -117,6 +126,10 @@ const cadastrarVistoria = () => {
                 style={styles.input}
                 value={descricao}
                 onChangeText={descricao => setDescricao(descricao)}
+                activeOutlineColor="#fff"
+                textColor="#fff"
+                underlineColor="#fff"
+                outlineColor="#fff"
             />
 
             <Text style={styles.label2}>Observações da Vistoria:</Text>
@@ -127,8 +140,12 @@ const cadastrarVistoria = () => {
                 style={styles.input}
                 value={observacoes}
                 onChangeText={observacoes => setObservacoes(observacoes)}
+                activeOutlineColor="#fff"
+                textColor="#fff"
+                underlineColor="#fff"
+                outlineColor="#fff"
             />
-            <Icon source="email" color={'#fff'}size={20}/>
+         
 
             <Text style={styles.label2}>Cria Manutenção no sistema?</Text>
             <TextInput
@@ -138,6 +155,10 @@ const cadastrarVistoria = () => {
                 style={styles.input}
                 value={manut}
                 onChangeText={manut => setManut(manut)}
+                activeOutlineColor="#fff"
+                textColor="#fff"
+                underlineColor="#fff"
+                outlineColor="#fff"
             />
 
             <Button style={styles.botao} mode="contained" onPress={() => registrarVistoria()}>Salvar</Button>
@@ -156,24 +177,27 @@ const styles = StyleSheet.create({
     },
     campos: {
         position: 'relative',
-        top: 90
+        top: 60
     },
     input: {
         height: 40,
-        margin: 12
+        margin: 12,
+        backgroundColor:'#1F2024'
     },
     botao: {
         width: 200,
-        top: 50,
-        left: 90
+        top: 5,
+        left: 90,
+        backgroundColor:'#8F9098'
     },
     label2:
     {
         color: '#fff'
     },
     picker2:{
-        color: '#000',
-        backgroundColor: '#fff'
+        color: '#fff',
+        backgroundColor:'#1F2024'
+        
 
     }
 });

@@ -19,8 +19,8 @@ const [routes] = React.useState([
   { key: 'av', title: 'Avaliacao', focusedIcon: 'star-outline' },
   { key: 'V', title: 'Vistorias', focusedIcon: 'car-cog' },
   { key: 'L', title: 'Locacao', focusedIcon: 'car-connected'},
-  { key: 'T', title: 'Perfil', focusedIcon: 'account' },
   { key: 'H', title: 'Historico', focusedIcon: 'account-details' },
+  { key: 'T', title: 'Perfil', focusedIcon: 'account' },
 ]);
 
 

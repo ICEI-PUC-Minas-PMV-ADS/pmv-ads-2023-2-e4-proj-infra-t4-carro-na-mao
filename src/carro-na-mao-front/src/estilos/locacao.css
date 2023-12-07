@@ -1,7 +1,7 @@
 #fundoLocacao {
 
     width: 100vw;
-    height: 167vh;
+    height: 200vh;
     background: #35383d;
 }
 
@@ -28,8 +28,8 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #fff;
     position: relative;
-    left: -9%;
-    top: 9em;
+    left: 14%;
+    top: 3em;
     display: flex;
     flex-direction: column;
     text-align: center;

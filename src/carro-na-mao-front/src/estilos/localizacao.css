@@ -1,25 +1,58 @@
-#localizacaoStyle{
+#fundoLocalizacao {
+    width: 100vw;
+    height: 100vh;
+    background: #35383d;
+
+}
+
+#textoLocalizacao1 {
+    position: relative;
+    top: 20px;
+    left: 20em;
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#textoLocalizacao2 {
+    position: relative;
+    top: 33px;
+    left: 34em;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+}
+
+#localizacaoStyle {
     padding-top: 20px;
     padding-left: 10px;
 }
-#textMap{
+
+#textMap {
     font-size: 20px;
     font-weight: bold;
     color: #000000;
     text-align: center;
 }
-#divMap{
+
+#divMap {
     width: 75%;
     align-items: center;
-    display:flex;
+    display: flex;
     flex-direction: column;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 }
-#listagem{
+
+#listagem {
     display: flex;
 }
 
-#localizacaoStyle p{
+#localizacaoStyle p {
     padding-top: 20px;
     padding-left: 10px;
 }

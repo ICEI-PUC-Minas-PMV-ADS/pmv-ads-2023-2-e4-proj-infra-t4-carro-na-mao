@@ -137,14 +137,18 @@ function BuscarVistorias() {
       <Menu />
 
       <section id="camposVistoria2">
-        <h3>Buscar Vistorias por Veículo</h3>
+        <h3 id="tituloTela2">Buscar Vistorias por Veículo</h3>
         <label>Digite o ID do Veículo:</label>
         <input id="inputPesquisaVistoria2" type="text" value={veiculo} onChange={(e) => setVeiculo(e.target.value)} />
-        <button id="buttontoria2" onClick={buscarVistorias}>Buscar Vistorias</button>
 
-        <h4>Últimas 20 Vistorias do Veículo:</h4>
         <div>
-          <table>
+          <button id="btnBuscarVistoria2" onClick={buscarVistorias}>Buscar Vistorias</button>
+          <button id='btnVoltarVistoria2'> <a href="/vistoria2">Voltar</a> </button>
+        </div>
+
+        <h4>Últimas 20 Vistorias dos seus Veículos:</h4>
+        <div>
+          <table border="1" class="tabelaVistoria2">
             <thead>
               <tr>
                 <th>ID da Vistoria</th>
@@ -222,18 +226,21 @@ function BuscarVistorias() {
                     </>
                   )}
                   <td>{vistoria.cria_ordem_manut ? 'Sim' : 'Não'}</td>
-                  <td>
+                  <td class="tableBtn">
                     {vistoria.id_vistoria === editingVistoriaId ? (
                       <>
                         <button onClick={() => handleSaveEdit(vistoria.id_vistoria)}>Salvar</button>
+
                         <button onClick={handleCancelEdit}>Cancelar</button>
                       </>
                     ) : (
                       <>
-                        <button onClick={() => handleEditVistoria(vistoria.id_vistoria, vistoria.descricao, vistoria.observacoes, vistoria.id_veiculo, vistoria.tipo, vistoria.data, vistoria.cria_ordem_manut)}>
+                        <button id="btnEditarVistoriaTela2" onClick={() => handleEditVistoria(vistoria.id_vistoria, vistoria.descricao, vistoria.observacoes, vistoria.id_veiculo, vistoria.tipo, vistoria.data, vistoria.cria_ordem_manut)}>
                           Editar
                         </button>
-                        <button onClick={() => handleDeleteVistoria(vistoria.id_vistoria)}>Excluir</button>
+                        <button id="btnExcluirVistoriaTela2" onClick={() => handleDeleteVistoria(vistoria.id_vistoria)}>
+                          Excluir
+                        </button>
                       </>
                     )}
                   </td>
@@ -242,11 +249,7 @@ function BuscarVistorias() {
             </tbody>
           </table>
         </div>
-        <div>
-          <a href="javascript:history.back()">Voltar</a>
-        </div>
       </section>
-      <br></br>
     </div>
   );
 }

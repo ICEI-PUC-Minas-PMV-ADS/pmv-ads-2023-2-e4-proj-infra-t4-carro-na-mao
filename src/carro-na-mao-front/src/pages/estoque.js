@@ -94,7 +94,7 @@ function Estoque() {
     }
 
     return (
-        <>
+        <div id="fundoManutencao">
         <Menu/>
         <section id="estoqueStyle">
             {isLoading ? (
@@ -150,7 +150,7 @@ function Estoque() {
                 </>
             )}
         </section>
-        </>
+        </div>
     )
 }
 

@@ -31,7 +31,7 @@ function Notificacoes() {
       <div className="NavBar">
         <br/>
         <h1>Workflow de Notificações:</h1>
-        <h2>InApp & E-mail</h2>
+        <h1>InApp & E-mail</h1>
         <br/>
       </div>      
       <button onClick={sendNotification}>Enviar Notificação</button>

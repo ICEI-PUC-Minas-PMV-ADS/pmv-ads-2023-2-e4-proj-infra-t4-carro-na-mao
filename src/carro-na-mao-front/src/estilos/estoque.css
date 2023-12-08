@@ -1,3 +1,12 @@
+
+#fundoManutencao {
+
+    width: 100vw;
+    height: 200vh;
+    background: #35383d;
+
+}
+
 #btnGravar{
     background-color: #8f959b; 
     color: #fff; 
@@ -41,7 +50,7 @@
 }
 
 #divListagem{
-    border: 2px solid black;
+    border: 2px solid #fff;
     border-radius: 10px;
     overflow: auto;
     width: 400px;
@@ -49,7 +58,7 @@
 }
 
 li:hover {
-    color: #1e72f0;
+    color: #dd0606;
     cursor: pointer;
 }
 

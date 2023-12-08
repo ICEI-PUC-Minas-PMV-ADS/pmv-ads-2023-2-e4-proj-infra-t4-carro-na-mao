@@ -6,7 +6,7 @@
 
 }
 
-#tituloVistoria1{
+#tituloVistoria1 {
   position: relative;
   top: -28px;
   left: 15em;
@@ -18,7 +18,7 @@
 
 }
 
-#tituloVistoria2{
+#tituloVistoria2 {
   top: 0em;
   position: relative;
   font-size: 115%;
@@ -26,7 +26,7 @@
 
 }
 
-#tituloVistoria3{
+#tituloVistoria3 {
   top: 0px;
   position: relative;
   font-size: 115%;
@@ -62,6 +62,7 @@
   display: flex;
   flex-direction: column;
 }
+
 /*
 #camposParaLoginParteUmVistoria {
   position: relative;
@@ -236,7 +237,7 @@ footer p {
 #fundoVistoria2 {
 
   width: 100vw;
-  height: 200vh;
+  height: 210vh;
   background: #35383d;
 
 }
@@ -250,14 +251,26 @@ footer p {
   height: 183vh;
   margin: 0 auto;
   padding: 5px;
-  background: #1258d1;
+  background: #35383d;
   display: flex;
   flex-direction: column;
 }
 
+#tituloTela2 {
+  position: relative;
+  top: -41px;
+  left: 18em;
+  width: 37%;
+  font-size: 163%;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+}
 
 #inputPesquisaVistoria2 {
-  width: 80%;
+  width: 30%;
   padding: 8px;
   margin: 10px 0;
   border: 1px solid #ccc;
@@ -266,21 +279,103 @@ footer p {
 
 }
 
-#buttontoria2 {
-  position: relative;
-  left: 27%;
-  top: 0px;
-  width: 25%;
+#btnBuscarVistoria2 {
+  width: 14%;
   padding: 9px;
   color: white;
   border-radius: 2em;
   background-color: black;
   border: 1px solid #ff0000;
+  cursor: pointer;
+
 
 }
 
-#buttontoria2:hover {
+#btnBuscarVistoria2:hover {
   background-color: #ff0000;
   color: white;
   transition: all 0.6s;
+  border-color: #ff0000
+}
+
+#btnVoltarVistoria2 {
+  position: relative;
+  left: 3%;
+  width: 14%;
+  padding: 9px;
+  border-radius: 2em;
+  background-color: black;
+  border: 1px solid #ff0000;
+  cursor: pointer;
+
+}
+
+#btnVoltarVistoria2:hover {
+  background-color: #ff0000;
+  color: white;
+  transition: all 0.6s;
+  border-color: #ff0000
+
+}
+
+#btnEditarVistoriaTela2 {
+  position: relative;
+  background-color: #000000;
+  clip-path: padding-box;
+  color: #fff;
+  padding: 10px 35px;
+  border-radius: 7px;
+  cursor: pointer;
+
+
+
+
+}
+
+#btnEditarVistoriaTela2:hover {
+  background-color: #23c240;
+  color: white;
+  transition: all 0.6s;
+
+}
+
+#btnExcluirVistoriaTela2 {
+  background-color: #000000;
+  clip-path: padding-box;
+  color: #fff;
+  padding: 10px 35px;
+  border-radius: 7px;
+  cursor: pointer;
+
+
+
+}
+
+#btnExcluirVistoriaTela2:hover {
+  background-color: #ff0000;
+  color: white;
+  transition: all 0.6s;
+}
+
+.tabelaVistoria2,
+th,
+td {
+  background-color: rgb(185 185 185);
+  border-collapse: separate;
+  /*define a separação entre as bordar*/
+  text-align: center;
+
+
+}
+
+th {
+  background-color: lightgray;
+  padding: 0px 10px;
+
+}
+
+.tableBtn {
+  display: flex;
+  border: none;
+
 }

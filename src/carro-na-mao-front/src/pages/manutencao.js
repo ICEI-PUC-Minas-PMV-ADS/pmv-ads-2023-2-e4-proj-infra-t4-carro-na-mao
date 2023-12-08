@@ -71,12 +71,12 @@ function Manutencao() {
 
 
 
-      <section id="cmp">
+      <section id="cmpManutencao">
         <h3 >Tela de lançamentos de Manutenções realizadas.</h3>
         <h5 >Dados do Veiculo e Manutenções:</h5>
 
 
-        <div id='camposParaLoginParteUmVistoria'>
+        <div className="campos" id='camposParaLoginParteUmVistoria'>
           <label>ID de Veiculo:</label>
           <input type="text" id="veiculo" placeholder='5211' ></input>
 
@@ -91,31 +91,31 @@ function Manutencao() {
           </select>
          
           <label>ID da Vistoria:</label>
-            <input type="text" id="id_vistoria" placeholder='3111' ></input>
+            <input className="inputs"type="text" id="id_vistoria" placeholder='3111' ></input>
 
         </div>
-        <div id='camposParaLoginParteUmVistoria'>
-        <label>Data Inicio Manutenção:</label>
-              <input type="date" id="date1" placeholder='Data da Manutenção'></input>
-          <label>Data Prevista Fim da Manutenção:</label>
-          <input type="date" id="date2" placeholder='Data do Término da Manutenção'></input>
+        <div className="campos"id='camposParaLoginParteUmVistoria'>
+        <label>Data Inicial:</label>
+              <input className="inputs" type="date" id="date1" placeholder='Data da Manutenção'></input>
+          <label>Data Final:</label>
+          <input className="inputs" type="date" id="date2" placeholder='Data do Término da Manutenção'></input>
         </div>
 
         <hr></hr>
         <h5>Detalhamento da Manutenção:</h5>
-        <div id='camposParaLoginParteTres'>
+        <div className="campos" id='camposParaLoginParteTres'>
          
           <label>Descrição da Manutenção:</label>
-            <input type="text" id="descricao" placeholder='Descrição da Manutenção'></input>
+            <input type="text"className="inputs" id="descricao" placeholder='Descrição da Manutenção'></input>
             
 
         </div>
         
-        <div id='camposParaLoginParteUmVistoria'>
+        <div className="campos" id='camposParaLoginParteUmVistoria'>
         <label>Horas de oficina previstas para a Manutenção:</label>
-              <input type="text" id="hora_oficina" placeholder='Quantidade de horas de oficina na manutenção realizada'></input>
+              <input type="text" className="inputs" id="hora_oficina" placeholder='Quantidade de horas de oficina na manutenção realizada'></input>
               <label>Valores das Nota fiscal da Manutenção:</label>
-              <input type="text" id="valor_nf" placeholder='Valor da Nota Fiscal da operação'></input>
+              <input type="text" className="inputs" id="valor_nf" placeholder='Valor da Nota Fiscal da operação'></input>
         </div>
 
 
@@ -125,7 +125,7 @@ function Manutencao() {
 
         
           <div >
-            <button id="btnCadastrar" onClick={arrumar}>Cadastrar Manutenção</button>
+            <button id="btnCadastrarManutencao" onClick={arrumar}>Cadastrar Manutenção</button>
           </div>
           <br></br>
           <button id='btnVoltarManutencao'> <a href="javascript:history.back()">Voltar</a> </button>

@@ -11,7 +11,7 @@
     width: 29em;
     height: 24em;
     padding: 1em;
-    left: 40em;
+    left: 28em;
     top: 15em;
     text-align: justify;
     font-size: large;
@@ -47,10 +47,9 @@ p {
 
 #logoHome2 {
     position: relative;
-    left: -40em;
+    left: -56em;
     display: flex;
-    top: 20em;
-
+    top: 15em;
 }
 
 .botoesHome2 {

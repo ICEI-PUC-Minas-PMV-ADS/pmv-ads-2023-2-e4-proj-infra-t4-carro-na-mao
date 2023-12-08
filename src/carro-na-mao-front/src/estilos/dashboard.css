@@ -1,16 +1,9 @@
 #fundoDashboard {
-
-  width: 100vw;
-  height: 100vh;
   background: #35383d;
 
 }
-#textDashboard{
-    position: fixed;
-    width: 9em;
-    height: 1em;
-    padding: 1em;
-    left: 24em;
-    top: 23em;
-    text-align: justify;
+
+#dashboard{
+  width:98.9vw; 
+  height:100vh;
 }

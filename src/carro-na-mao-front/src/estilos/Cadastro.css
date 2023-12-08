@@ -66,8 +66,7 @@
 }
 
 #nomeCadastro {
-    left: 0em;
-    top: 3em;
+   
     width: 22em;
     position: relative;
     padding: 15px;
@@ -80,8 +79,7 @@
 }
 
 #dataNasc {
-    left: 2em;
-    top: 3em;
+   
     width: 22em;
     position: relative;
     padding: 15px;
@@ -94,8 +92,7 @@
 }
 
 #cpf {
-    left: 54em;
-    top: -1.6em;
+    
     width: 22em;
     position: relative;
     padding: 16px;
@@ -108,8 +105,7 @@
 }
 
 #telefone {
-    left: -24.8em;
-    top: 4em;
+    
     width: 22em;
     position: relative;
     padding: 15px;
@@ -124,8 +120,7 @@
 
 #categoria {
     position: relative;
-    top: -0.2em;
-    left: 26em;
+    
     width: 22em;
     padding: 15px;
     margin: 5px 0;
@@ -137,8 +132,7 @@
 }
 
 #rua {
-    left: 30em;
-    top: -0.2em;
+    
     width: 22em;
     position: relative;
     padding: 15px;
@@ -151,8 +145,7 @@
 
 #numero {
     position: relative;
-    left: 0em;
-    top: 1em;
+   
     width: 22em;
     padding: 15px;
     margin: 5px 0;
@@ -165,8 +158,7 @@
 
 #bairro {
     position: relative;
-    left: 2em;
-    top: 1em;
+   
     width: 22em;
     padding: 15px;
     margin: 5px 0;
@@ -178,8 +170,7 @@
 }
 
 #endereco {
-    left: 54em;
-    top: -3em;
+    
     width: 22em;
     position: relative;
     padding: 15px;
@@ -193,8 +184,7 @@
 
 #municipio {
     position: relative;
-    left: -24.3em;
-    top: 2em;
+   
     width: 22em;
     padding: 15px;
     margin: 5px 0;
@@ -207,7 +197,7 @@
 
 #camposParaLoginParteUm {
     position: relative;
-    left: 1em;
+    left: 20em;
     top: -55px;
     width: 55vw;
 
@@ -216,8 +206,6 @@
 #emailCadastro {
 
     position: relative;
-    top: 0em;
-    left: 0em;
     width: 22em;
     padding: 15px;
     margin: 8px 0;
@@ -230,9 +218,7 @@
 
 #senhaCadastro {
 
-    left: 2em;
     width: 22em;
-    top: 0em;
     position: relative;
     padding: 15px;
     margin: 5px 0;
@@ -245,24 +231,19 @@
 }
 
 #senhaCadastroConfirma {
-    left: 54em;
     width: 22em;
-    top: -4.6em;
     position: relative;
     padding: 15px;
     margin: 5px 0;
     border-radius: 7px;
     background: #ccc;
     border: 1px solid #000000;
-
-
-
 }
 
 #btnCadastrarUsuario {
     position: relative;
-    left: 4em;
-    top: 1em;
+    left: 27em;
+    top: 10em;
     width: 20em;
     border-radius: 16px;
     color: white;
@@ -278,4 +259,19 @@
     color: white;
     background-color: rgb(169, 25, 25);
     border: 1px solid rgb(0, 0, 0)
+}
+#informacoesPrinciapis{
+    position: relative;
+    top: 2em;
+    display: inline-grid;
+    grid-template-columns: repeat(3, 4fr);
+    grid-gap: 10px;
+    position: relative;
+}
+#informacoesLogin{
+    position: relative;
+    display: inline-grid;
+    grid-template-columns: repeat(3, 4fr);
+    grid-gap: 10px;
+    position: relative;
 }

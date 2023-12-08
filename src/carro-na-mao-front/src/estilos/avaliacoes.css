@@ -1,14 +1,13 @@
 #fundoAvaliacao1 {
 
-    width: 100vw;
-    height: 190vh;
+    
     background: #35383d;
+    height:100em;
 
 }
 #fundoAvaliacao2 {
 
-    width: 100vw;
-    height: 100vh;
+    
     background: #35383d;
 
 }
@@ -199,10 +198,11 @@ a:hover {
 #adicionarNovaAvaliacao {
     position: fixed;
     top: 41em;
-    left: 43em;
-    width: 18%;
+    left: 99em;
+    width: 11%;
     padding: 15px;
     border: 1px solid #ff0000;
+    border-radius: 49px;
 
 }
 
@@ -220,7 +220,6 @@ a:hover {
 
     
 }
-
 #listaAvaliacao {
     display: inline-grid;
     grid-template-columns: repeat(3, 4fr);

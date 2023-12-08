@@ -1,43 +1,44 @@
 #fundoLocacao {
-
-    width: 100vw;
-    height: 200vh;
     background: #35383d;
 }
 
 #divLocacoes{
-    float: left;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;
-    line-height: 2em;
-    width: 22%;
-    top: 2em;
-    position: relative;
-    padding: 50px;
-    left: 39%;
-    padding: 24px;
-    color: #fff;
-    border: 1px solid #ff0000;
-    background: #35383d;
+    
+        /* float: left; */
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        display: flex;
+        line-height: 2em;
+        width: 22%;
+        top: 2em;
+        position: relative;
+        padding: 50px;
+        left: 39%;
+        padding: 24px;
+        color: #fff;
+        border: 1px solid #ff0000;
+        background: #35383d;
+    
 }
 
 #campos{
-    width: 75%;
-    line-height: 2em;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #fff;
-    position: relative;
-    left: 14%;
-    top: 3em;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    max-width: 80vw;
-    padding: 5px;
-    background: #35383d;
-    border-radius: 5px;
+
+        /* width: 75%; */
+        line-height: 2em;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #fff;
+        position: relative;
+        /* left: 14%; */
+        top: 3em;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        /* max-width: 80vw; */
+        padding: 5px;
+        background: #35383d;
+        /* border-radius: 5px; */
+    
 
 
 }

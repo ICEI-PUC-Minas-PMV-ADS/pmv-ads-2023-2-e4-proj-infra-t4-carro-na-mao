@@ -104,22 +104,25 @@ function Cadastro() {
                             <h3 id="titulo1">Seja bem-vindo, sua experiência começa aqui.</h3>
                             <h5 id="titulo2">Criar conta</h5>
                             <hr id="linha1"></hr>
-                            <input type="text" id="nomeCadastro" placeholder='Nome completo'></input>
-                            <input type="date" id="dataNasc" placeholder='Data de nascimento'></input>
-                            <input type="text" id="cpf" placeholder='CPF'></input>
-                            <input type="text" id="telefone" placeholder='Celular'></input>
-                            <input type="text" id="categoria" placeholder='Categoria Habilitação'></input>
-                            <input type="text" id="rua" placeholder='Logradouro'></input>
-                            <input type="text" id="numero" placeholder='Número'></input>
-                            <input type="text" id="bairro" placeholder='Bairro'></input>
-                            <input type="text" id="endereco" placeholder='Cidade'></input>
-                            <input type="text" id="municipio" placeholder='Municipio'></input>
-
+                            <div id='informacoesPrinciapis'>
+                                <input type="text" id="nomeCadastro" placeholder='Nome completo'></input>
+                                <input type="date" id="dataNasc" placeholder='Data de nascimento'></input>
+                                <input type="text" id="cpf" placeholder='CPF'></input>
+                                <input type="text" id="telefone" placeholder='Celular'></input>
+                                <input type="text" id="categoria" placeholder='Categoria Habilitação'></input>
+                                <input type="text" id="rua" placeholder='Logradouro'></input>
+                                <input type="text" id="numero" placeholder='Número'></input>
+                                <input type="text" id="bairro" placeholder='Bairro'></input>
+                                <input type="text" id="endereco" placeholder='Cidade'></input>
+                                <input type="text" id="municipio" placeholder='Municipio'></input>
+                            </div>
                             <hr id="linha2"></hr>
                             <h5 id="titulo3">Criar E-mail</h5>
-                            <input type="email" id='emailCadastro' placeholder='Digite seu email'></input>
-                            <input type="password" id="senhaCadastro" placeholder='Digite sua senha'></input>
-                            <input type="password" id="senhaCadastroConfirma" placeholder='Repita a sua senha'></input>
+                            <div id='informacoesLogin'>
+                                <input type="email" id='emailCadastro' placeholder='Digite seu email'></input>
+                                <input type="password" id="senhaCadastro" placeholder='Digite sua senha'></input>
+                                <input type="password" id="senhaCadastroConfirma" placeholder='Repita a sua senha'></input>
+                            </div>
 
                             <button id="btnCadastrarUsuario" onClick={verificarUsuarioExistente}>Cadastre-se</button>
                         </div>

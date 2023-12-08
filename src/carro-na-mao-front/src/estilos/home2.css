@@ -11,7 +11,7 @@
     width: 29em;
     height: 24em;
     padding: 1em;
-    left: 24em;
+    left: 40em;
     top: 15em;
     text-align: justify;
     font-size: large;
@@ -22,7 +22,7 @@
 
 #partedois {
     position: relative;
-    left: 70em;
+    left: 86em;
     width: 10em;
     bottom: 47vh;
 }
@@ -46,11 +46,10 @@ p {
 }
 
 #logoHome2 {
-    width: 398px;
     position: relative;
     left: -40em;
     display: flex;
-    top: 13em;
+    top: 20em;
 
 }
 

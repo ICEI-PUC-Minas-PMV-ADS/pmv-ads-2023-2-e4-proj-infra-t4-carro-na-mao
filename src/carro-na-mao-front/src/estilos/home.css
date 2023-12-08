@@ -32,10 +32,10 @@
 
 #elementosCampos {
     position: relative;
-    left: 22%;
+    left:15em;
     display: flex;
     flex-direction: column;
-    top: -78px;
+    
 }
 
 #carregamento {

@@ -29,7 +29,6 @@ export function Menu() {
         <Link to="/Vistoria2">Consultar Vistorias</Link>
         <Link to="/Localizacao">Localizações</Link>
         <Link to="/Manutencao">Manutenções</Link>
-        <Link to="/Notificacoes">Notificações</Link>
         <Link to="/Estoque">Estoques</Link>
         <Link to="/Categoria">Categorias</Link>
         <Apps />

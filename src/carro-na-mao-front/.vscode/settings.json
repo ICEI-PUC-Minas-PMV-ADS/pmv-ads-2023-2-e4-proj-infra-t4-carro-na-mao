@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/bc380427-2735-4db5-8d16-94b50de31039/resourceGroups/carronamao_group/providers/Microsoft.Web/sites/carronamao",
+    "appService.deploySubpath": "build"
+}

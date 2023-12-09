@@ -1,104 +1,157 @@
-#btnGravar{
-    background-color: #8f959b; 
-    color: #fff; 
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-#btnGravar:hover{
-    background-color: #00cc00; 
-    color: #fff;
+#fundoCategoria {
+
+    width: 100vw;
+    height: 100vh;
+    background: #35383d;
+
 }
 
-#btnRegistro{
-    top: 0em;
-    left: 6em;
-    color: #fff; 
+
+#btnRegistroCategoria {
+    top: -7em;
+    left: 14em;
+    color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 37px;
     cursor: pointer;
     margin-bottom: 10px;
     background-color: black;
     border: 1px solid #ff0000;
+    border-radius: 7px;
+    position: relative;
+    border-collapse: separate;
+
 }
-#btnRegistro:hover{
-    background-color: rgb(196, 0, 0);
+
+#btnRegistroCategoria:hover {
+    background-color: rgb(169, 25, 25);
     color: #fff;
     transition: all 0.6s;
 
- 
 }
 
-#btnExcluir{
+#btnGravarCategoria {
+    background-color: black;
+    color: #fff;
+    padding: 12px 53px;
+    cursor: pointer;
+    border-radius: 7px;
+    border: 1px solid #ff0000;
+
+}
+
+#btnGravarCategoria:hover {
+    background-color: #00cc00;
+    color: #fff;
+    transition: all 0.6s;
+}
+
+
+#btnExcluirCategoria {
     top: 0em;
-    left: 12em;
-    color: #fff; 
+    left: 0em;
+    color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 53px;
     cursor: pointer;
     margin-left: 20px;
     background-color: black;
     border: 1px solid #ff0000;
+    border-radius: 7px;
+    border-collapse: separate;
+
 }
-#btnExcluir:hover{
-    background-color: #dd0606; 
+
+#btnExcluirCategoria:hover {
+    background-color: #dd0606;
     color: #fff;
     transition: all 0.6s;
 
+
 }
 
-.input{ 
-    border-radius: 10px;
+.input {
+    position: relative;
+    margin-bottom: 20px;
+    left: 20px;
+    padding: 5px;
+    border-radius: 7px;
+    background: #ccc;
+    border: 1px solid #000000;
 }
+input[type="checkbox"] {
+    margin: 5px 0;
+    width: 15px;
+    height: 15px;
 
-#categoriaStyle{
+  }
+ #checkboxCategoria{
+top: 0;
+
+ }
+
+
+#categoriaStyle {
     padding-top: 20px;
     padding-left: 10px;
 }
 
-#divListagem{
+#divListagem {
     border: 2px solid black;
     border-radius: 10px;
     overflow: auto;
     width: 400px;
-    height: 500px;
+    height: 677px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 3em;
+    border: 1px solid #ff0000;
+
 }
 
-.loading{
+.loading {
     border: 4px solid #f3f3f3;
-  border-top: 4px solid #3498db;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  animation: spin 2s linear infinite;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
 }
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  .loading-container{
-    position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5); 
-  z-index: 999;
-  }
 
-  li:hover {
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+li:hover {
     color: #1e72f0;
     cursor: pointer;
 }
 
 #camposCategoria {
-    width: 75%;
-    border-radius: 10px;
-    background-color: #fff;
-    line-height: 2em;
+    width: 21%;
+    height: 638px;
+    line-height: 3em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: relative;
     top: 0em;
@@ -106,14 +159,21 @@
     flex-direction: column;
     text-align: center;
     align-items: flex-start;
-    padding: 10px;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 1px rgb(231, 231, 231), 1em 1em 1.4em rgb(190, 187, 187);
+    padding: 20px;
     justify-content: space-around;
+    background: #35383d;
+    border: 2px solid black;
+    border-radius: 10px;
+    border: 1px solid #ff0000;
+
 }
 
 #camposCategoria input {
-    margin-bottom: 5px; 
-    left: 20px;
     position: relative;
+    margin-bottom: 20px;
+    left: 20px;
+    padding: 5px;
+    border-radius: 7px;
+    background: #ccc;
+    border: 1px solid #000000;
 }

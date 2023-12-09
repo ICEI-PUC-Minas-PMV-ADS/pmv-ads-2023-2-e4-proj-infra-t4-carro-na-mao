@@ -1,9 +1,9 @@
 import axios from "axios";
-import React, {Component} from "react";
+import React, { Component } from "react";
 import { useEffect, useState } from 'react';
 import { RecuperaToken } from '../autenticação/chave_de_acesso';
 import { useNavigate, Link } from 'react-router-dom';
-import{Menu} from './menu';
+import { Menu } from './menu';
 import '../estilos/categoria.css'
 
 
@@ -16,10 +16,10 @@ function Categoria() {
 
     useEffect(() => {
         async function fetchData() {
-            try{
+            try {
                 const jwtToken = await RecuperaToken();
                 setToken(jwtToken);
-                
+
                 const response = await axios.get('https://api-carronamao.azurewebsites.net/api/Categorias', {
                     headers: {
                         "Authorization": 'Bearer ' + jwtToken
@@ -89,18 +89,18 @@ function Categoria() {
         }
 
         if (selectedCategoria && selectedCategoria.id_categoria) {
-            axios.delete(`https://api-carronamao.azurewebsites.net/api/Categorias?id=${selectedCategoria.id_categoria}`, data, {headers})
-            .then(response => {
-                console.log(response.status)
-                if(response.status == 200){
-                    return navigate("/Categoria")
+            axios.delete(`https://api-carronamao.azurewebsites.net/api/Categorias?id=${selectedCategoria.id_categoria}`, data, { headers })
+                .then(response => {
+                    console.log(response.status)
+                    if (response.status == 200) {
+                        return navigate("/Categoria")
+                    }
                 }
-            }
-            ).catch(error => {
-                alert(error.status)
-            })
+                ).catch(error => {
+                    alert(error.status)
+                })
         }
-        
+
     }
 
     const limparCampos = () => {
@@ -118,17 +118,17 @@ function Categoria() {
         document.querySelector("#promocaoCategoria").value = categoria.ind_promocao;
     }
 
-    return(
-        <>
-        <Menu/>
-        <section id="categoriaStyle">
-            {isLoading ? (
-                <div className="loading-container">
-                    <div className="loading"></div>
-                </div>
-            ) : (
-                 <>
-                 <div style={{ width: '25%', float: 'left' }}>
+    return (
+        <div id="fundoCategoria">
+            <Menu />
+            <section id="categoriaStyle">
+                {isLoading ? (
+                    <div className="loading-container">
+                        <div className="loading"></div>
+                    </div>
+                ) : (
+                    <>
+                        <div style={{ width: '25%', float: 'left' }}>
                             <div id="divListagem">
                                 <ul>
                                     {categorias.map(categoria => (
@@ -137,43 +137,43 @@ function Categoria() {
                                     ))}
                                 </ul>
                             </div>
-                </div>
+                        </div>
                         <div id="camposCategoria">
-                                <div>
-                                    <button id="btnRegistro" onClick={limparCampos}>Novo Registro</button>
+
+                            <div>
+                                <label>Código Categoria</label>
+                                <input type="text" id="categoriaCategoria" placeholder="Código do Categoria" readOnly />
+                            </div>
+                            <div>
+                                <label>Valor da Categoria</label>
+                                <input type="text" id="valor" placeholder="R$50/dia" />
+                            </div>
+                            <div>
+                                <label>Descrição Categoria</label>
+                                <input type="text" id="descricaoCategoria" placeholder="Insira a descrição" />
+                            </div>
+                            <div>
+                                <label>Indica Promoção</label>
+                                <input class="checkboxCategoria" type="checkbox" id="promocaoCategoria" />
                                 </div>
+
                                 <div>
-                                    <label>Código Categoria</label>
-                                    <input  type="text" id="categoriaCategoria" placeholder="Código do Categoria" readOnly />
-                                </div>
-                                <div>
-                                    <label>Valor da Categoria</label>
-                                    <input type="text" id="valor" placeholder="R$50/dia" />
-                                </div>
-                                <div>
-                                    <label>Descrição Categoria</label>
-                                    <input type="text" id="descricaoCategoria" placeholder="Insira a descrição" />
-                                </div>
-                                <div>
-                                    <label>Indica Promoção</label>
-                                    <input type="checkbox" id="promocaoCategoria" />
-                                </div>
-                                <br />
-                                <br />
-                                <div>
-                                    <label>Deseja excluir o estoque deste veículo?</label>
-                                    <button id="btnExcluir" onClick={excluir}>Excluir</button>
-                                </div>
-                                <br />
-                                <br />
-                                <div>
-                                    <button id="btnGravar" onClick={categoria}>Gravar</button>
-                                </div>
-                            </div></>
-            )}
-           
-        </section>
-        </>
+                                <button id="btnRegistroCategoria" onClick={limparCampos}>Novo Registro</button>
+                            </div>
+
+                            <div>
+                                <label>Deseja excluir o estoque deste veículo?</label>
+                            </div>
+
+                            <div>
+                                <button id="btnGravarCategoria" onClick={categoria}>Gravar</button>
+                                <button id="btnExcluirCategoria" onClick={excluir}>Excluir</button>
+                            </div>
+                        </div>
+                    </>
+                )}
+            </section>
+        </div>
     )
 }
 

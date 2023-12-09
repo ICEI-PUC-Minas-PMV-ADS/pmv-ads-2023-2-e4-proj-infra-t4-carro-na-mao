@@ -2,46 +2,63 @@
 #fundoManutencao {
 
     width: 100vw;
-    height: 200vh;
+    height: 100vh;
     background: #35383d;
 
 }
 
-#btnGravar{
-    background-color: #8f959b; 
-    color: #fff; 
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-#btnGravar:hover{
-    background-color: #00cc00; 
-    color: #fff;
-}
 
-#btnRegistro{
-    background-color: #8f959b; 
+#btnRegistroEstoque{
+    background-color: black;
     color: #fff; 
-    border: none;
-    padding: 10px 20px;
+    padding: 12px 120px;
     cursor: pointer;
     margin-bottom: 10px;
+    border-radius: 7px;
+    position: relative;
+    border: 1px solid #ff0000;
+
+
 }
-#btnRegistro:hover{
-    background-color: #1e72f0; 
+#btnRegistroEstoque:hover{
+    background-color: rgb(169, 25, 25);
     color: #fff;
+    transition: all 0.6s;
+
+
 }
-#btnExcluir{
-    background-color: #8f959b; 
+#btnGravarEstoque{
+    background-color: black;
     color: #fff; 
-    border: none;
-    padding: 10px 20px;
+    padding: 12px 53px;
+    cursor: pointer;
+    border-radius: 7px;
+    border: 1px solid #ff0000;
+
+
+}
+#btnGravarEstoque:hover{
+    background-color: #00cc00; 
+    color: #fff;
+    transition: all 0.6s;
+
+}
+#btnExcluirEstoque{
+    background-color: black;
+    color: #fff; 
+    padding: 12px 53px;
     cursor: pointer;
     margin-left: 20px;
+    border-radius: 7px;
+    border: 1px solid #ff0000;
+
+
 }
-#btnExcluir:hover{
+#btnExcluirEstoque:hover{
     background-color: #dd0606; 
     color: #fff;
+    transition: all 0.6s;
+
 }
 
 #estoqueStyle{
@@ -50,11 +67,17 @@
 }
 
 #divListagem{
-    border: 2px solid #fff;
+    border: 2px solid black;
     border-radius: 10px;
     overflow: auto;
     width: 400px;
-    height: 500px;
+    height: 677px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 3em;
+
 }
 
 li:hover {
@@ -63,11 +86,9 @@ li:hover {
 }
 
 #camposEstoque {
-    width: 75%;
-    border-radius: 10px;
-    height: 500px;
-    background-color: #fff;
-    line-height: 2em;
+    width: 20%;
+    height: 575px;
+    line-height: 1em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     position: relative;
     top: 0em;
@@ -76,13 +97,29 @@ li:hover {
     text-align: center;
     align-items: flex-start;
     padding: 50px;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 1px rgb(231, 231, 231), 1em 1em 1.4em rgb(190, 187, 187);
     justify-content: space-around;
+    background: #35383d;
+    border: 2px solid black;
+    border-radius: 10px;
+    border: 1px solid #ff0000;
+
+
 }
 
+
 #camposEstoque input {
-    margin-bottom: 5px; 
+    position:relative;
+    margin-bottom: 20px; 
     left: 20px;
-    position: relative;
+    padding: 5px;
+    border-radius: 7px;
+    background: #ccc;
+    border: 1px solid #000000;
+
+        
 }
+/*
+width: 22em;
+position: relative;
+margin: 5px 0;
+*/

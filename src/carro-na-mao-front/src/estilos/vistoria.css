@@ -9,13 +9,14 @@
 #tituloVistoria1 {
   position: relative;
   top: -28px;
-  left: 7em;
-  font-size: 125%;
+  left: 15em;
+  font-size: 146%;
+  width: 50%;
   color: white;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-
+  
 }
 
 #tituloVistoria2 {
@@ -33,22 +34,6 @@
   color: white;
 
 }
-
-#linhaVistoria1 {
-  position: relative;
-  top: -1em;
-  width: 68em;
-
-}
-
-#linhaVistoria2 {
-  position: relative;
-  top: -1em;
-  width: 68em;
-
-}
-
-
 #camposVistoria {
   position: relative;
   top: 30px;
@@ -141,9 +126,11 @@ footer p {
 #btnCadastrarVistoria {
   position: relative;
   top: -3em;
-  left: 60em;
+  left: 30em;
   width: 15%;
+  padding: 10px;
   border-radius: 2em;
+  color: white;
   background-color: black;
   border: 1px solid #ff0000;
 
@@ -157,10 +144,12 @@ footer p {
 
 #btnVoltarVistoria {
   position: relative;
-  left: 24%;
-  top: -5.6em;
+  left: 50%;
+  top: -6em;
   width: 15%;
+  padding: 10px;
   border-radius: 2em;
+  color: white;
   background-color: black;
   border: 1px solid #ff0000;
 

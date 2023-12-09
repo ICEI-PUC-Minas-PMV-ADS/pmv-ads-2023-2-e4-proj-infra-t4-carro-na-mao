@@ -72,7 +72,6 @@ function Vistoria() {
 
         <h3 id="tituloVistoria1">Tela de realização de Vistoria de Veiculos</h3>
         <h5 id="tituloVistoria2" >Dados da Reserva e Vistoria:</h5>
-        <hr id="linhaVistoria1"></hr>
 
           <label >ID do Veiculo: </label>
           <input type="text" id="veiculo" placeholder='3111' ></input>
@@ -84,15 +83,12 @@ function Vistoria() {
             <option value="1">Saída de veiculo</option>
           </select>
     
-    
         <h5 id="tituloVistoria3">Detalhamento da Vistoria:</h5>
-        <hr id="linhaVistoria2"></hr>
      
           <label >Descrição da Vistoria:</label>
           <input type="text" id="descricao" placeholder='Descrição da Vistoria'></input>
           <label>Observações da Vistoria:</label>
           <input type="text" id="observacoes" placeholder='Observações da Vistoria'></input>
-
 
           <label>Criar Manutenção no sistema?:</label>
           <select id="manut">
@@ -100,12 +96,9 @@ function Vistoria() {
             <option value="false">Não Criar Manutenção</option>
           </select>
      
-     
         </div>
 
       </section>
-
-
 
       <section>
 

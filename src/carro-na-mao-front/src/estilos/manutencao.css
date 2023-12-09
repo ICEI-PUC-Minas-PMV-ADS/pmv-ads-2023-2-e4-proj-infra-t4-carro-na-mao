@@ -1,15 +1,15 @@
 /* Estilização do contêiner da tela de manutenção */
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  /* Estilização dos campos de entrada */
-  /*input[type="number"],
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilização dos campos de entrada */
+/*input[type="number"],
   input[type="date"],
   input[type="text"] {
     width: 50%;
@@ -19,68 +19,89 @@
     border-radius: 3px;
   }/*
   
-  /* Estilização dos campos de checkbox */
-  input[type="checkbox"] {
-    margin: 5px 0;
-  }
-  
-  /* Estilização do botão de salvar */
-  button {
-    background-color: #000000;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  /* Estilização do título */
-  h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  #cmpManutencao {
-    position: relative;
-    top: -5px;
-    left: 0%;
-    text-align: justify;
-    /* height: 93vh; */
-    margin: 22px auto;
-    padding: 5px;
-    background: #35383d;
-    border-radius: 20px;
+
+
+/* Estilização do título */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
-#btnVoltarManutencao{
-  position: relative;
-    left: 5%;
-    top: 0px;
-    width: 25%;
-    padding: 9px;
-    color: white;
-    border-radius: 2em;
-    background-color: black;
-    border: 1px solid #ff0000
+.tituloManutencao1 {
+  color: #fff;
+  font-size: 30px;
+  left: 15%;
 }
-#btnCadastrarManutencao{
-  position: relative;
-  left: 70%;
-  top: 56px;
-    width: 25%;
-    padding: 9px;
-    color: white;
-    border-radius: 2em;
-    background-color: black;
-    border: 1px solid #ff0000
- 
+
+.tituloManutencao2 {
+  color: #fff;
+  font-size: 20px;
+
 }
-.campos{
+
+.tituloManutencao3 {
+  color: #fff;
+  font-size: 20px;
+}
+
+#cmpManutencao {
+  position: relative;
+  top: 0px;
+  left: 0%;
+  text-align: justify;
+  margin: 22px auto;
+  background: #35383d;
+  width: 60%;
+
+}
+
+/* Estilização do botão de salvar */
+
+#btnVoltarManutencao {
+  position: relative;
+  left: 5%;
+  top: -20px;
+  width: 20%;
+  padding: 12px;
+  color: white;
+  border-radius: 7em;
+  background-color: black;
+  border: 1px solid #ff0000
+}
+
+#btnVoltarManutencao:hover {
+  color: white;
+  background-color: rgb(169, 25, 25);
+  border: 1px solid rgb(0, 0, 0)
+}
+
+#btnCadastrarManutencao {
+  position: relative;
+  left: 65%;
+  top: 40px;
+  width: 20%;
+  padding: 12px;
+  color: white;
+  border-radius: 7em;
+  background-color: black;
+  border: 1px solid #ff0000
+}
+
+#btnCadastrarManutencao:hover {
+  color: white;
+  background-color: rgb(169, 25, 25);
+  border: 1px solid rgb(0, 0, 0)
+}
+
+
+.campos {
   padding: 1em;
   position: relative;
-    left: 0em;
+  left: 0em;
 
 }
-.inputs{
+
+.inputs {
   width: 15%;
   padding: 5px;
   border-radius: 7px;

@@ -1,10 +1,10 @@
 import axios from "axios";
-import React, {Component} from "react";
+import React, { Component } from "react";
 import { useEffect, useState } from 'react';
 import { RecuperaToken } from '../autenticação/chave_de_acesso';
 import { useNavigate, Link } from 'react-router-dom';
-import{Menu} from './menu';
-import  '../estilos/estoque.css'
+import { Menu } from './menu';
+import '../estilos/estoque.css'
 
 function Estoque() {
     const navigate = useNavigate()
@@ -15,7 +15,7 @@ function Estoque() {
 
     useEffect(() => {
         async function fetchData() {
-            try{
+            try {
                 const jwtToken = await RecuperaToken();
                 setToken(jwtToken);
 
@@ -37,7 +37,7 @@ function Estoque() {
         const modelo = document.querySelector("#modelo").value;
         const marca = document.querySelector("#marca").value;
         const cor = document.querySelector("#cor").value;
-        const quantidade = parseInt(document.querySelector("#quantidade").value,10);
+        const quantidade = parseInt(document.querySelector("#quantidade").value, 10);
 
         const data = {
             "modelo_veiculo": modelo,
@@ -95,61 +95,65 @@ function Estoque() {
 
     return (
         <div id="fundoManutencao">
-        <Menu/>
-        <section id="estoqueStyle">
-            {isLoading ? (
-                <div className="loading-container">
-                    <div className="loading"></div>
-                </div>
-            ) : (
-            <>
-                <div style={{ width: '25%', float: 'left'}}>
-                    <div id="divListagem">
-                        <ul>
-                        {estoques.map(estoque => (
+            <Menu />
+            <section id="estoqueStyle">
+                {isLoading ? (
+                    <div className="loading-container">
+                        <div className="loading"></div>
+                    </div>
+                ) : (
+                    <>
+                        <div style={{ width: '25%', float: 'left' }}>
+                            <div id="divListagem">
+                                <ul>
+                                    {estoques.map(estoque => (
                                         <li key={estoque.id_estoque} onClick={() => handleEstoqueClick(estoque)}
                                         >{estoque.modelo_veiculo} - {estoque.cor_veiculo}</li>
                                     ))}
-                        </ul>
-                    </div>
-                </div>
-                <div id="camposEstoque" >
-                    <div>
-                        <button id="btnRegistro" onClick={limparCampos}>Novo Registro</button>
-                    </div>
-                    <div>
-                        <label>Código Estoque</label>
-                        <input type="text" id="estoque" placeholder="Código do Estoque" readOnly/>
-                    </div>
-                    <div>
-                        <label>Modelo</label>
-                        <input type="text" id="modelo" placeholder="Modelo Veículo"/>
-                    </div>
-                    <div>
-                        <label>Marca</label>
-                        <input type="text" id="marca" placeholder="Marca Veículo"/>
-                    </div>
-                    <div>
-                        <label>Cor Veículo</label>
-                        <input type="text" id="cor" placeholder="Cor do veículo"/>
-                    </div>
-                    <div>
-                        <label>Quantidade</label>
-                        <input type="number" id="quantidade" placeholder="Quantidade em estoque"/>
-                    </div>
-                    <div>
-                        <label>Deseja excluir o estoque deste veículo?</label>
-                        <button id="btnExcluir">Excluir</button>
-                    </div>
-                    <br />
-                    <br />
-                    <div>
-                    <button id="btnGravar" onClick={estoque}>Gravar</button>
-                    </div>
-                </div>
-                </>
-            )}
-        </section>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="camposEstoque" >
+                            <div>
+                                <label>Código Estoque:</label>
+                                <input type="text" id="estoque" placeholder="Código do Estoque" readOnly />
+                            </div>
+                            <div>
+                                <label>Modelo:</label>
+                                <input type="text" id="modelo" placeholder="Modelo Veículo" />
+                            </div>
+                            <div>
+                                <label>Marca:</label>
+                                <input type="text" id="marca" placeholder="Marca Veículo" />
+                            </div>
+                            <div>
+                                <label>Cor Veículo:</label>
+                                <input type="text" id="cor" placeholder="Cor do veículo" />
+                            </div>
+                            <div>
+                                <label>Quantidade:</label>
+                                <input type="number" id="quantidade" placeholder="Quantidade em estoque" />
+                            </div>
+                            <div>
+                                <button id="btnRegistroEstoque" onClick={limparCampos}>Novo Registro</button>
+                            </div>
+
+                            <br></br>
+
+                            <div>
+                                <label>Deseja excluir o estoque deste veículo?</label>
+                            </div>
+                            
+                            <div>
+
+                                <button id="btnGravarEstoque" onClick={estoque}>Gravar</button>
+                                <button id="btnExcluirEstoque">Excluir</button>
+
+                            </div>
+                        </div>
+                    </>
+                )}
+            </section>
         </div>
     )
 }

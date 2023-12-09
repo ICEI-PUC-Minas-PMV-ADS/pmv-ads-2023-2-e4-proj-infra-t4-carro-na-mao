@@ -7,7 +7,7 @@
 #textoLocalizacao1 {
     position: relative;
     top: 20px;
-    left: 20em;
+    left: 25em;
     color: white;
     font-size: 24px;
     font-weight: 600;
@@ -15,10 +15,25 @@
     letter-spacing: 1px;
 }
 
+#locacao{
+
+    width: 22em;
+    top: 35px;
+    left: 45em;
+    position: relative;
+    padding: 15px;
+    margin: 0px 0;
+    border-radius: 7px;
+    background: #ccc;
+    border: 1px solid #000000;
+}
+
+
+
 #textoLocalizacao2 {
     position: relative;
-    top: 33px;
-    left: 34em;
+    left: 43em;
+    top: 20px;
     color: white;
     font-size: 15px;
     font-weight: 600;

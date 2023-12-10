@@ -7,9 +7,12 @@ O software será desenvolvido baseado no modelo de arquitetura de sistemas distr
 Em (COLOURIS, 2013) um sistema distribuído é definido “como aquele no qual os componentes de hardware ou software, localizados em computadores interligados em rede, comunicam-se e coordenam suas ações apenas enviando mensagens entre si”. 
 
 Esses computadores podem estar em qualquer distância, separados ou não geograficamente (na "nuvem"), representados pela Figura 1 abaixo.
+<br></br>
+
+Figura 1 - Arquitetura de Software Distribuído:
+<br></br>
 
 ![Arquitetura da Solução](img/arquitetura_v2.png)
-Figura 1 - Arquitetura de Software Distribuído
 
 ## Diagrama de Classes
 
@@ -24,15 +27,7 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de
 
 O Modelo ER representa através de um diagrama como as entidades (coisas, objetos) se relacionam entre si na aplicação interativa.
 
-![Modelo ER](img/DiagramaER02.png)
-
-## Esquema Relacional
-
-O Esquema Relacional corresponde à representação dos dados em tabelas juntamente com as restrições de integridade e chave primária.
- 
-As referências abaixo irão auxiliá-lo na geração do artefato “Esquema Relacional”.
-
-> - [Criando um modelo relacional - Documentação da IBM](https://www.ibm.com/docs/pt-br/cognos-analytics/10.2.2?topic=designer-creating-relational-model)
+![Modelo ER](img/modeloER.png)
 
 ## Projeto de Base de Dados
 
@@ -44,11 +39,6 @@ O projeto de base de dados corresponde à representação das entidades e relaci
 
 Para o desenvolvimento do sistema utilizaremos a linguagem C# com o Enty Framework, para a manipulação do banco de dados usaremos o MongoDB. Usaremos o visual studio 2022 para desenvolvimento da aplicação, já para o gerenciamento de código usamos o github.
 
-## Hospedagem
-
-O local de hospedagem ainda está sendo descudida pela equipe, breve disponibilizaremos o link para acesso do Software.
-=======
-Todas teconologias foram pensadas de forma a facilitar a expansão da aplicação à medida em que ela cresce, permitindo que as equipes de desenvolvimento trabalhem de forma mais eficiente e concomitante.
 
 **Principais Tecnologias**
 
@@ -72,7 +62,14 @@ Além disso, faz conexão de programas, podendo ser locais ou em nuvem, dando fl
 
 ## Hospedagem
 
-Modo de hospedagem não definada até o momento pelo grupo.
+A hospedagem de sites é um serviço online que permite que o conteúdo do seu site fique acessível na internet. Por escolha da equipe de desenvolvimento do projeto carro na mão, decidimos armazenar todos os seus dados e arquivos na Vercel. 
+
+A Vercel é uma plataforma voltada para a hospedagem de aplicações de uma forma bem simples e rápida. Ela é conhecida por ser a empresa criadora do framework Next JS, voltado para o React. Entretanto, também é possível realizar o deploy de aplicações Nuxt nesta plataforma.
+
+Todas teconologias foram pensadas de forma a facilitar a expansão da aplicação à medida em que ela cresce, permitindo que as equipes de desenvolvimento trabalhem de forma mais eficiente e concomitante. Segue a baixo o link de acesso a plataforma com o projeto carro na mão hospedado e totalmente funcional:
+
+
+* <a href="https://carronamao-three.vercel.app/">Site web: Carro na Mão - Locadora</a>
 
 
 ## Qualidade de Software

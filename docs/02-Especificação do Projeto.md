@@ -124,11 +124,6 @@ Esse processo tem como característica apresentar o modelo futuro de agendamento
 
 ![Processo 2](<img/diagrama_bpm_v1.png>)
 
-## Indicadores de Desempenho
-
-> Em desenvolvimento.<br>
-
-![Work in Progress](<img/trabalhando.png>)
 
 ## Mapeamento de Requisitos
 
@@ -192,7 +187,7 @@ De acordo com o PMBoK v6 as dez áreas que constituem os pilares para gerenciar 
 
 ## Gerenciamento de Tempo
 
-O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utilizada para controlar e gerenciar o cronograma de atividades de um projeto. Com ele, é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las. A imagem a seguir e uma representação de como  ficara dividido as etapas do nosso projeto nesse semestre 
+O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utilizada para controlar e gerenciar o cronograma de atividades de um projeto. Com ele, é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las. A imagem a seguir e uma representação de como  ficara dividido as etapas do nosso projeto nesse semestre:
 
 ![Gráfico de Gantt](img/gerenciador%20do%20projeto%20.png)
 

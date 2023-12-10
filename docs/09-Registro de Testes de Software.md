@@ -99,10 +99,14 @@
 
  ### 12- Histórico
   **12.1 - Visualizar o histórico de locações realizadas**
-  ![historicoMobile](img/Testes/hist-02.jpeg)
 
+  <img src="img/Testes/hist-02.jpeg" whidth="500px" height="500px">
+
+  
   **12.2 - Contrato não existente**
-  ![historicoMobileError](img/Testes/hist-erro-msg.jpeg)
+
+  <img src="img/Testes/hist-erro-msg.jpeg" whidth="500px" height="500px">
+
 
 
  ## FRONT END: WEB

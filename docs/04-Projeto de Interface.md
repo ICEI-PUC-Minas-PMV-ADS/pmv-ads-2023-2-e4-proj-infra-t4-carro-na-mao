@@ -108,5 +108,3 @@ Telas propostas na concepção do projeto:
 #### Tela de Dashboard front-end WEB.
 ![Exemplo de Wireframe](img/Wireframes/wireframe-dashboard.jpg)
 
-
-OBS.: Etapa em desenvolvimento e constante atualização.

@@ -20,19 +20,19 @@ foi utilizado para hospedagem do repositório.
 
 O projeto segue a seguinte convenção para o nome de branches:
 
-- `main`: versão estável já testada do software
-- `dev`: versão de desenvolvimento do software
-- `feat/(requisito) -> branch de cada requisito individual`:crianção de novas funcionalidades 
-- `fix/(bug) -> branch de cada bug fix individual` : correções de bugs
+- `main`: Versão estável já testada do software;
+- `dev`: Versão de desenvolvimento do software;
+- `feat/(requisito) -> branch de cada requisito individual`: Crianção de novas funcionalidades;
+- `fix/(bug) -> branch de cada bug fix individual` : Correções de bugs.
 
 
 Quanto à gerência de issues, o projeto adota a seguinte convenção para
 etiquetas:
 
-- `documentation`: melhorias ou acréscimos à documentação
-- `bug`: uma funcionalidade encontra-se com problemas
-- `enhancement`: uma funcionalidade precisa ser melhorada
-- `feature`: uma nova funcionalidade precisa ser introduzida
+- `documentation`: Melhorias ou acréscimos à documentação;
+- `bug`: Uma funcionalidade encontra-se com problemas;
+- `enhancement`: Uma funcionalidade precisa ser melhorada;
+- `feature`: Uma nova funcionalidade precisa ser introduzida.
 
 Discuta como a configuração do projeto foi feita na ferramenta de versionamento escolhida. Exponha como a gerência de tags, merges, commits e branchs é realizada. Discuta como a gerência de issues foi realizada.
 
@@ -43,9 +43,9 @@ Discuta como a configuração do projeto foi feita na ferramenta de versionament
 
 A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento. A equipe está organizada da seguinte maneira:
 
- - Scrum Master:Roger Bastos
- - Product Owner: Pedro Assis
- - Equipe de Desenvolvimento: Matheus Sampaio, Matheus Ferreira, Daniel de Souza, ,Maykon Edésio, Roger Bastos, Vitor Hugo 
+ - Scrum Master: Roger Bastos;
+ - Product Owner: Pedro Assis;
+ - Equipe de Desenvolvimento: Matheus Sampaio, Matheus Ferreira, Daniel de Souza, Maykon Edésio, Pedro Assis, Roger Bastos, Vitor Hugo.
 
 Para organização e distribuição de tarefas do projeto, utilizaremos o Trello estruturado da seguinte forma:
  - Backlog: Parte onde está todas as tarefas que será desenvolvidas no projeto. Caso apareça nova atividades será redirecionada nessa parte.
@@ -81,13 +81,11 @@ Para a gerenciar os processos e automatizar os fluxos de tarefas do projeto, o t
 
 A seguir temos as ferramentas empregadas no projeto:
 
-- Ferramentas de comunicação: Para a comunicação utilizaremos o Microsoft Teams para as reuiniões com o professor orientador é, utilizaremos o discord para reuniões separada
+- Ferramentas de comunicação: Para a comunicação utilizaremos o Microsoft Teams para as reuiniões com o professor orientador é, utilizaremos o discord para reuniões separada.
 
 - Ferramentas de banco de dados: Para o banco de dados pretedemos utilizar o mongoDB, pois e uma ferramenta que nos foi apresentado nos microfundamentos.
 
 - Ferramentas de controle de versão: Para o gerenciamento de versão do código, utilizaremos o Git com o suporte do GitHub hospedando as versões.
 
-- Ferramentas de gerenciamento de projeto: Para gerenciar o projeto, utilizaremos o trello com o quadro Kabam 
-
-
+- Ferramentas de gerenciamento de projeto: Para gerenciar o projeto, utilizaremos o trello com o quadro Kabam.
 

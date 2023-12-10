@@ -1,6 +1,6 @@
 # CARRO NA MÃO
 
-![Logo](/docs/img/Logo.jpeg)
+![Logo](/docs/img/Logo1.jpeg)
 
 `ANÁLISE E DESENVOLVIMENTO DE SISTEMAS`
 
@@ -8,21 +8,22 @@
 
 `Quarto semestre - Eixo 4`
 
-O Carro na Mão é um aplicativo inovador que foi projetado para simplificar e agilizar o processo de locação de veículos. Com uma interface intuitiva e facilitada, o aplicativo oferece uma experiência agradável e conveniente para locatários e locadoras, tornando a locação e reserva de veículos mais simples, e descomplicada.
+O Carro na Mão é um sistema e aplicativo inovador que foi projetado para simplificar e agilizar o processo de locação de veículos. Com uma interface intuitiva e facilitada, o aplicativo oferece uma experiência agradável e conveniente para locatários e locadoras, tornando a locação e reserva de veículos mais simples, e descomplicada.
 
 ## Integrantes
 
-* Daniel de Souza Marcolino
-* Matheus Ferreira Pires
-* Matheus Lemos Sampaio
-* Maykon Edésio Rosa
-* Pedro Assis Silva de Almeida
-* Roger Bastos Mendes
-* Vitor Hugo Silva Ribeiro
+* <a href="https://www.linkedin.com/in/daniel-marcolino-624106101/">Daniel de Souza Marcolino</a>
+* <a href="https://www.linkedin.com/in/matheus-ferreira-3b26a823b/">Matheus Ferreira Pires</a>
+* <a href="https://www.linkedin.com/in/sampaiotech/">Matheus Lemos Sampaio</a>
+* <a href="https://www.linkedin.com/in/maykon-ed%C3%A9sio-05857b210/">Maykon Edésio Rosa</a>
+* <a href="https://www.linkedin.com/in/pedro-almeida-5427b3187/">Pedro Assis Silva de Almeida</a>
+* <a href="https://www.linkedin.com/in/roger-mendes-22734a45/">Roger Bastos Mendes</a>
+* <a href="https://www.linkedin.com/in/vitorhugosilvaribeiro/">Vitor Hugo Silva Ribeiro</a>
 
 ## Orientador
 
-* Pedro Alves de Oliveira
+* <a href="https://www.linkedin.com/in/pedro-alves-de-oliveira-9b108511/">Pedro Alves de Oliveira</a>
+
 
 ## Instruções de utilização
 

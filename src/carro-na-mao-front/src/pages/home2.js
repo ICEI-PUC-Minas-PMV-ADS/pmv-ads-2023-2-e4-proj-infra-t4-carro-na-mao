@@ -14,9 +14,9 @@ function Home2() {
       <Menu style="background-color: transparent;"/>
       <section id="parteum">
         <h1>Seja bem-vindo ao Carro na <spam>mão</spam>!</h1>
-        <p>Sua plataforma rápida e descomplicada para voçê escolher o que mais te agrada. Como podemos te ajudar?</p>
+        <p>Sua plataforma rápida e descomplicada para você escolher o que mais te agrada. Como podemos te ajudar?</p>
         <Link className="botoesHome2"id="redirecinarAlocacao"to="/Locacao">Alugar Veículos</Link>
-        <Link className="botoesHome2"id="rediriecionarVistoria"to="/Vistoria2">Acopanhar Vistorias</Link>  
+        <Link className="botoesHome2"id="rediriecionarVistoria"to="/Vistoria2">Acompanhar Vistorias</Link>  
       </section>
      
       <section id="partedois">
